@@ -7,6 +7,7 @@ Diversity in Mare island (Loyalty island, New-Caledonia) yam's crop (*Dioscorea 
 1. FastQC on both ITS2 (Fungi) and V4 (bacteria) raw sequences for quality check
      * run **00_quality_check_by_FastQC.sh** script (FastQC tool)
      * run **01_exploring_data_with_ReadFastQC.R** script (ReadFastQC R package, https://github.com/PLStenger/ReadFastQC) for quick results exploration 
+     * run multiqc . 
 2. Trimming and quality cleanning sequences with the script **02_trimmomatic_q30.sh**
      * ILLUMINACLIP:"$ADAPTERFILE":2:30:10
      * LEADING:30
@@ -16,6 +17,7 @@ Diversity in Mare island (Loyalty island, New-Caledonia) yam's crop (*Dioscorea 
 3. FastQC on both ITS2 (Fungi) and V4 (bacteria) cleanned sequences for double check
      * run **03_cleaned_data_quality_check_by_FastQC.sh** script (FastQC tool)
      * run **04_exploring_cleaned_data_with_ReadFastQC.R** script (ReadFastQC R package, https://github.com/PLStenger/ReadFastQC) for quick results exploration 
+     * run multiqc .
 
 ## Run this pipeline
 
@@ -35,6 +37,7 @@ First, open your terminal. Then, run these two command lines :
     cd 99_softwares/
     conda install -c bioconda fastqc
     conda install -c bioconda trimmomatic
+    conda install -c bioconda multiqc
 
 ### Run scripts in local by :
 
