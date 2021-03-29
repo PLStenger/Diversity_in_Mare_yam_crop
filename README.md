@@ -27,6 +27,7 @@ First, open your terminal. Then, run these two command lines :
 
     cd 99_softwares/
     conda install -c bioconda fastqc
+    conda install -c bioconda trimmomatic
 
 ### Run scripts in local by :
 
