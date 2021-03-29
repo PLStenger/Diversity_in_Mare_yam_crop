@@ -30,5 +30,5 @@ First, open your terminal. Then, run these two command lines :
 
 ### Run scripts in local by :
 
-    cd /Users/pierre-louisstenger/Documents/PostDoc\ 02\ MetaBarcoding\ IAC/02\ -\ Data/05\ -\ Mare\ ignames/Diversity_in_Mare_yam_crop/00_scripts
+    cd /Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop
     nohup bash 00_quality_check_by_FastQC.sh &> 00_quality_check_by_FastQC.out
