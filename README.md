@@ -1,5 +1,14 @@
 # Diversity_in_Mare_yam_crop
-Diversity in Mare island (Loyalty island, New-Caledonia) yam's crop (*Dioscorea sp*.) - DNA metabarcoding on ITS2 -(Fungi) and V4 (bacteria)
+Diversity in Mare island (Loyalty island, New-Caledonia) yam's crop (*Dioscorea sp*.) - DNA metabarcoding on ITS2 (Fungi) and V4 (bacteria)
+
+
+## Pipeline
+
+1. FastQC on both ITS2 (Fungi) and V4 (bacteria) raw sequences for quality check
+     * run 00_quality_check_by_FastQC.sh script (FastQC tool)
+     * run 01_XXXX   script (ReadFastQC R package, https://github.com/PLStenger/ReadFastQC) for quick results exploration 
+2. Trimming and quality cleanning sequences
+3. FastQC on both ITS2 (Fungi) and V4 (bacteria) cleanned sequences for double check
 
 ## Run this pipeline
 
