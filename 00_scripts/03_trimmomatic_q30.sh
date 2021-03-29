@@ -34,25 +34,26 @@ sed 's/_R2_001.fastq.gz//g' list_02.txt > list_03.txt
 sort -u list_03.txt > list_04.txt # keep unnique values
 
 #for FILE in $(ls $DATADIRECTORY_ITS2_fungi/*.fastq.gz)
-for FILE in $($DATADIRECTORY_ITS2_fungi/list_04.txt)
+#for FILE in $($DATADIRECTORY_ITS2_fungi/list_04.txt)
+while IFS='' read -r LINE || [ -n "${LINE}" ];
 do
 
 trimmomatic PE -Xmx60G \
         -threads 8 \
         -phred33 \
-        $DATADIRECTORY_ITS2_fungi/"$FILE"_R1_001.fastq.gz \ 
-        $DATADIRECTORY_ITS2_fungi/"$FILE"_R2_001.fastq.gz \
-        $DATAOUTPUT_ITS2_fungi/"$FILE"_R1.paired.fastq.gz \
-        $DATAOUTPUT_ITS2_fungi/"$FILE"_R1.single.fastq.gz \
-        $DATAOUTPUT_ITS2_fungi/"$FILE"_R2.paired.fastq.gz \
-        $DATAOUTPUT_ITS2_fungi/"$FILE"_R2.single.fastq.gz \
+        $DATADIRECTORY_ITS2_fungi/${LINE}_R1_001.fastq.gz \ 
+        $DATADIRECTORY_ITS2_fungi/${LINE}_R2_001.fastq.gz \
+        $DATAOUTPUT_ITS2_fungi/${LINE}_R1.paired.fastq.gz \
+        $DATAOUTPUT_ITS2_fungi/${LINE}_R1.single.fastq.gz \
+        $DATAOUTPUT_ITS2_fungi/${LINE}_R2.paired.fastq.gz \
+        $DATAOUTPUT_ITS2_fungi/${LINE}_R2.single.fastq.gz \
         ILLUMINACLIP:"$ADAPTERFILE":2:30:10 \ #Cut adapter and other illumina-specific sequences from the read.
         LEADING:30 \ # Cut FILEs off the start of a read, if below a threshold quality
         TRAILING:30 \ # Cut FILEs off the end of a read, if below a threshold quality
         SLIDINGWINDOW:26:30 \ # Performs a sliding window trimming approach. It starts scanning at the 5‟ end and clips the read once the average quality within the window falls below a threshold.
         MINLEN:150  # Drop the read if it is below a specified length
         
-done
+done < list_04.txt
 
 # For bacteria :
 
