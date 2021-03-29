@@ -59,20 +59,7 @@ sort -u list_03.txt > list_04.txt # keep unnique values
 #        
 #done < list_04.txt
 
-trimmomatic PE -Xmx60G \
-        -threads 8 \
-        -phred33 \
-        $DATADIRECTORY_ITS2_fungi/JL5_S287_L001_R1_001.fastq \ 
-        $DATADIRECTORY_ITS2_fungi/JL5_S287_L001_R2_001.fastq \
-        $DATAOUTPUT_ITS2_fungi/JL5_S287_L001_R1.paired.fastq \
-        $DATAOUTPUT_ITS2_fungi/JL5_S287_L001_R1.single.fastq \
-        $DATAOUTPUT_ITS2_fungi/JL5_S287_L001_R2.paired.fastq \
-        $DATAOUTPUT_ITS2_fungi/JL5_S287_L001_R2.single.fastq \
-        ILLUMINACLIP:"$ADAPTERFILE":2:30:10 \
-        LEADING:30 \
-        TRAILING:30 \
-        SLIDINGWINDOW:26:30 \
-        MINLEN:150
+trimmomatic PE -Xmx60G -threads 8 -phred33 $DATADIRECTORY_ITS2_fungi/JL5_S287_L001_R1_001.fastq $DATADIRECTORY_ITS2_fungi/JL5_S287_L001_R2_001.fastq $DATAOUTPUT_ITS2_fungi/JL5_S287_L001_R1.paired.fastq $DATAOUTPUT_ITS2_fungi/JL5_S287_L001_R1.single.fastq $DATAOUTPUT_ITS2_fungi/JL5_S287_L001_R2.paired.fastq $DATAOUTPUT_ITS2_fungi/JL5_S287_L001_R2.single.fastq ILLUMINACLIP:"$ADAPTERFILE":2:30:10 LEADING:30 TRAILING:30 SLIDINGWINDOW:26:30 MINLEN:150
 
 
 
