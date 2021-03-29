@@ -18,22 +18,34 @@ ADAPTERFILE=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02
 #>ScriptSeqR1 AGATCGGAAGAGCACACGTCTGAAC
 #>ScriptSeqR2 AGATCGGAAGAGCGTCGTGTAGGGA
 #>TruSeqRibo AGATCGGAAGAGCACACGTCT
+
+SCRIPT=$0
+HEADER=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/99_softwares/header.txt
+TIMESTAMP=$(date +%Y-%m-%d_%Hh%Mm%Ss)
+LOG_FOLDER=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/98_log_files/
+NAME=$(basename $0)
+
+#cd $PBS_O_WORKDIR
 cd $DATADIRECTORY
 
+base=__BASE__
+cp $SCRIPT $LOG_FOLDER/"$TIMESTAMP"_"$NAME"
+
+
 # For fungi :
-for FILE in $(ls $DATADIRECTORY_ITS2_fungi/*.fastq.gz)
+for base in $(ls $DATADIRECTORY_ITS2_fungi/*.fastq.gz)
 do
 
 trimmomatic PE -Xmx60G \
         -threads 8 \
         -phred33 \
-        $DATADIRECTORY_ITS2_fungi/"$FILE"_R1_001.fastq.gz \ 
-        $DATADIRECTORY_ITS2_fungi/"$FILE"_R2_001.fastq.gz \
-        $DATAOUTPUT_ITS2_fungi/"$FILE"_R1.paired.fastq.gz \
-        $DATAOUTPUT_ITS2_fungi/"$FILE"_R1.single.fastq.gz \
-        $DATAOUTPUT_ITS2_fungi/"$FILE"_R2.paired.fastq.gz \
-        $DATAOUTPUT_ITS2_fungi/"$FILE"_R2.single.fastq.gz \
-        ILLUMINACLIP:"$ADAPTERFILE":2:30:10 \ #Cut adapter and other illumina-specific sequences from the read.
+        $DATADIRECTORY_ITS2_fungi/"$base"_R1_001.fastq.gz \ 
+        $DATADIRECTORY_ITS2_fungi/"$base"_R2_001.fastq.gz \
+        $DATAOUTPUT_ITS2_fungi/"$base"_R1.paired.fastq.gz \
+        $DATAOUTPUT_ITS2_fungi/"$base"_R1.single.fastq.gz \
+        $DATAOUTPUT_ITS2_fungi/"$base"_R2.paired.fastq.gz \
+        $DATAOUTPUT_ITS2_fungi/"$base"_R2.single.fastq.gz \
+        ILLUMINACLIP:"$ADAPTERbase":2:30:10 \ #Cut adapter and other illumina-specific sequences from the read.
         LEADING:30 \ # Cut bases off the start of a read, if below a threshold quality
         TRAILING:30 \ # Cut bases off the end of a read, if below a threshold quality
         SLIDINGWINDOW:26:30 \ # Performs a sliding window trimming approach. It starts scanning at the 5‟ end and clips the read once the average quality within the window falls below a threshold.
@@ -42,19 +54,19 @@ trimmomatic PE -Xmx60G \
 done
 
 # For bacteria :
-for FILE in $(ls $DATADIRECTORY_V4_bacteria/*.fastq.gz)
+for base in $(ls $DATADIRECTORY_V4_bacteria/*.fastq.gz)
 do
 
 trimmomatic PE -Xmx60G \
         -threads 8 \
         -phred33 \
-        $DATADIRECTORY_V4_bacteria/"$FILE"_R1_001.fastq.gz \ 
-        $DATADIRECTORY_V4_bacteria/"$FILE"_R2_001.fastq.gz \
-        $DATAOUTPUT_V4_bacteria/"$FILE"_R1.paired.fastq.gz \
-        $DATAOUTPUT_V4_bacteria/"$FILE"_R1.single.fastq.gz \
-        $DATAOUTPUT_V4_bacteria/"$FILE"_R2.paired.fastq.gz \
-        $DATAOUTPUT_V4_bacteria/"$FILE"_R2.single.fastq.gz \
-        ILLUMINACLIP:"$ADAPTERFILE":2:30:10 \ #Cut adapter and other illumina-specific sequences from the read.
+        $DATADIRECTORY_V4_bacteria/"$base"_R1_001.fastq.gz \ 
+        $DATADIRECTORY_V4_bacteria/"$base"_R2_001.fastq.gz \
+        $DATAOUTPUT_V4_bacteria/"$base"_R1.paired.fastq.gz \
+        $DATAOUTPUT_V4_bacteria/"$base"_R1.single.fastq.gz \
+        $DATAOUTPUT_V4_bacteria/"$base"_R2.paired.fastq.gz \
+        $DATAOUTPUT_V4_bacteria/"$base"_R2.single.fastq.gz \
+        ILLUMINACLIP:"$ADAPTERbase":2:30:10 \ #Cut adapter and other illumina-specific sequences from the read.
         LEADING:30 \ # Cut bases off the start of a read, if below a threshold quality
         TRAILING:30 \ # Cut bases off the end of a read, if below a threshold quality
         SLIDINGWINDOW:26:30 \ # Performs a sliding window trimming approach. It starts scanning at the 5‟ end and clips the read once the average quality within the window falls below a threshold.
