@@ -41,12 +41,12 @@ do
 trimmomatic PE -Xmx60G \
         -threads 8 \
         -phred33 \
-        $DATADIRECTORY_ITS2_fungi/${LINE}_R1_001.fastq.gz \ 
-        $DATADIRECTORY_ITS2_fungi/${LINE}_R2_001.fastq.gz \
-        $DATAOUTPUT_ITS2_fungi/${LINE}_R1.paired.fastq.gz \
-        $DATAOUTPUT_ITS2_fungi/${LINE}_R1.single.fastq.gz \
-        $DATAOUTPUT_ITS2_fungi/${LINE}_R2.paired.fastq.gz \
-        $DATAOUTPUT_ITS2_fungi/${LINE}_R2.single.fastq.gz \
+        $DATADIRECTORY_ITS2_fungi/"${LINE}"_R1_001.fastq.gz \ 
+        $DATADIRECTORY_ITS2_fungi/"${LINE}"_R2_001.fastq.gz \
+        $DATAOUTPUT_ITS2_fungi/"${LINE}"_R1.paired.fastq.gz \
+        $DATAOUTPUT_ITS2_fungi/"${LINE}"_R1.single.fastq.gz \
+        $DATAOUTPUT_ITS2_fungi/"${LINE}"_R2.paired.fastq.gz \
+        $DATAOUTPUT_ITS2_fungi/"${LINE}"_R2.single.fastq.gz \
         ILLUMINACLIP:"$ADAPTERFILE":2:30:10 \ #Cut adapter and other illumina-specific sequences from the read.
         LEADING:30 \ # Cut FILEs off the start of a read, if below a threshold quality
         TRAILING:30 \ # Cut FILEs off the end of a read, if below a threshold quality
