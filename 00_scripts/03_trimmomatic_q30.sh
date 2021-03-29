@@ -48,10 +48,10 @@ trimmomatic PE -Xmx60G \
         $DATAOUTPUT_ITS2_fungi/"${LINE}"_R2.paired.fastq.gz \
         $DATAOUTPUT_ITS2_fungi/"${LINE}"_R2.single.fastq.gz \
         ILLUMINACLIP:"$ADAPTERFILE":2:30:10 \ #Cut adapter and other illumina-specific sequences from the read.
-        LEADING:30 \ # Cut FILEs off the start of a read, if below a threshold quality
-        TRAILING:30 \ # Cut FILEs off the end of a read, if below a threshold quality
-        SLIDINGWINDOW:26:30 \ # Performs a sliding window trimming approach. It starts scanning at the 5‟ end and clips the read once the average quality within the window falls below a threshold.
-        MINLEN:150  # Drop the read if it is below a specified length
+        LEADING:28 \ # Cut FILEs off the start of a read, if below a threshold quality
+        TRAILING:28 \ # Cut FILEs off the end of a read, if below a threshold quality
+        SLIDINGWINDOW:24:28 \ # Performs a sliding window trimming approach. It starts scanning at the 5‟ end and clips the read once the average quality within the window falls below a threshold.
+        MINLEN:40  # Drop the read if it is below a specified length
         
 done < list_04.txt
 
