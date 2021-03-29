@@ -56,33 +56,33 @@ trimmomatic PE -Xmx60G \
 done < list_04.txt
 
 # For bacteria :
-
-ls *_001.fastq.gz > list.txt
-sed 's/_R1_001.fastq.gz//g' list.txt > list_02.txt
-sed 's/_R2_001.fastq.gz//g' list_02.txt > list_03.txt
-sort -u list_03.txt > list_04.txt # keep unnique values
-
-cd $DATADIRECTORY_V4_bacteria
-
-for FILE in $($DATADIRECTORY_V4_bacteria/list_04.txt)
-do
-
-trimmomatic PE -Xmx60G \
-        -threads 8 \
-        -phred33 \
-        $DATADIRECTORY_V4_bacteria/"$FILE"_R1_001.fastq.gz \ 
-        $DATADIRECTORY_V4_bacteria/"$FILE"_R2_001.fastq.gz \
-        $DATAOUTPUT_V4_bacteria/"$FILE"_R1.paired.fastq.gz \
-        $DATAOUTPUT_V4_bacteria/"$FILE"_R1.single.fastq.gz \
-        $DATAOUTPUT_V4_bacteria/"$FILE"_R2.paired.fastq.gz \
-        $DATAOUTPUT_V4_bacteria/"$FILE"_R2.single.fastq.gz \
-        ILLUMINACLIP:"$ADAPTERFILE":2:30:10 \ #Cut adapter and other illumina-specific sequences from the read.
-        LEADING:30 \ # Cut FILEs off the start of a read, if below a threshold quality
-        TRAILING:30 \ # Cut FILEs off the end of a read, if below a threshold quality
-        SLIDINGWINDOW:26:30 \ # Performs a sliding window trimming approach. It starts scanning at the 5‟ end and clips the read once the average quality within the window falls below a threshold.
-        MINLEN:150  # Drop the read if it is below a specified length
-        
-done
+#
+#ls *_001.fastq.gz > list.txt
+#sed 's/_R1_001.fastq.gz//g' list.txt > list_02.txt
+#sed 's/_R2_001.fastq.gz//g' list_02.txt > list_03.txt
+#sort -u list_03.txt > list_04.txt # keep unnique values
+#
+#cd $DATADIRECTORY_V4_bacteria
+#
+#for FILE in $($DATADIRECTORY_V4_bacteria/list_04.txt)
+#do
+#
+#trimmomatic PE -Xmx60G \
+#        -threads 8 \
+#        -phred33 \
+#        $DATADIRECTORY_V4_bacteria/"$FILE"_R1_001.fastq.gz \ 
+#        $DATADIRECTORY_V4_bacteria/"$FILE"_R2_001.fastq.gz \
+#        $DATAOUTPUT_V4_bacteria/"$FILE"_R1.paired.fastq.gz \
+#        $DATAOUTPUT_V4_bacteria/"$FILE"_R1.single.fastq.gz \
+#        $DATAOUTPUT_V4_bacteria/"$FILE"_R2.paired.fastq.gz \
+#        $DATAOUTPUT_V4_bacteria/"$FILE"_R2.single.fastq.gz \
+#        ILLUMINACLIP:"$ADAPTERFILE":2:30:10 \ #Cut adapter and other illumina-specific sequences from the read.
+#        LEADING:30 \ # Cut FILEs off the start of a read, if below a threshold quality
+#        TRAILING:30 \ # Cut FILEs off the end of a read, if below a threshold quality
+#        SLIDINGWINDOW:26:30 \ # Performs a sliding window trimming approach. It starts scanning at the 5‟ end and clips the read once the average quality within the window falls below a threshold.
+#        MINLEN:150  # Drop the read if it is below a specified length
+#        
+#done
 
 
 
