@@ -33,8 +33,8 @@ cp $SCRIPT $LOG_FOLDER/"$TIMESTAMP"_"$NAME"
 
 
 # For fungi :
-for base in $(ls $DATADIRECTORY_ITS2_fungi/*.fastq.gz)
-do
+#for base in $(ls $DATADIRECTORY_ITS2_fungi/*.fastq.gz)
+#do
 
 trimmomatic PE -Xmx60G \
         -threads 8 \
@@ -51,11 +51,11 @@ trimmomatic PE -Xmx60G \
         SLIDINGWINDOW:26:30 \ # Performs a sliding window trimming approach. It starts scanning at the 5‟ end and clips the read once the average quality within the window falls below a threshold.
         MINLEN:150  # Drop the read if it is below a specified length
         
-done
+#done
 
 # For bacteria :
-for base in $(ls $DATADIRECTORY_V4_bacteria/*.fastq.gz)
-do
+#for base in $(ls $DATADIRECTORY_V4_bacteria/*.fastq.gz)
+#do
 
 trimmomatic PE -Xmx60G \
         -threads 8 \
@@ -72,7 +72,7 @@ trimmomatic PE -Xmx60G \
         SLIDINGWINDOW:26:30 \ # Performs a sliding window trimming approach. It starts scanning at the 5‟ end and clips the read once the average quality within the window falls below a threshold.
         MINLEN:150  # Drop the read if it is below a specified length
         
-done
+#done
 
 
 
