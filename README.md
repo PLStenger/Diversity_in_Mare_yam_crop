@@ -36,5 +36,6 @@ First, open your terminal. Then, run these two command lines :
     bash
     nohup bash 00_quality_check_by_FastQC.sh &> 00_quality_check_by_FastQC.out
     nohup Rscript 01_exploring_data_with_ReadFastQC.R &> 01_exploring_data_with_ReadFastQC.out
-    nohup bash 03_trimmomatic_q30.sh &> 03_trimmomatic_q30.out
+    nohup bash 02_trimmomatic_q30.sh &> 02_trimmomatic_q30.out
+    nohup bash 03_cleaned_data_quality_check_by_FastQC.sh &> 03_cleaned_data_quality_check_by_FastQC.out
 
