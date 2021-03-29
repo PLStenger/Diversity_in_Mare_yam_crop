@@ -35,25 +35,47 @@ sort -u list_03.txt > list_04.txt # keep unnique values
 
 #for FILE in $(ls $DATADIRECTORY_ITS2_fungi/*.fastq.gz)
 #for FILE in $($DATADIRECTORY_ITS2_fungi/list_04.txt)
-while IFS='' read -r LINE || [ -n "${LINE}" ];
-do
+
+
+
+
+#while IFS='' read -r LINE || [ -n "${LINE}" ];
+#do
+#
+#trimmomatic PE -Xmx60G \
+#        -threads 8 \
+#        -phred33 \
+#        $DATADIRECTORY_ITS2_fungi/"${LINE}"_R1_001.fastq.gz \ 
+#        $DATADIRECTORY_ITS2_fungi/"${LINE}"_R2_001.fastq.gz \
+#        $DATAOUTPUT_ITS2_fungi/"${LINE}"_R1.paired.fastq.gz \
+#        $DATAOUTPUT_ITS2_fungi/"${LINE}"_R1.single.fastq.gz \
+#        $DATAOUTPUT_ITS2_fungi/"${LINE}"_R2.paired.fastq.gz \
+#        $DATAOUTPUT_ITS2_fungi/"${LINE}"_R2.single.fastq.gz \
+#        ILLUMINACLIP:"$ADAPTERFILE":2:30:10 \
+#        LEADING:30 \
+#        TRAILING:30 \
+#        SLIDINGWINDOW:26:30 \
+#        MINLEN:150
+#        
+#done < list_04.txt
 
 trimmomatic PE -Xmx60G \
         -threads 8 \
         -phred33 \
-        $DATADIRECTORY_ITS2_fungi/"${LINE}"_R1_001.fastq.gz \ 
-        $DATADIRECTORY_ITS2_fungi/"${LINE}"_R2_001.fastq.gz \
-        $DATAOUTPUT_ITS2_fungi/"${LINE}"_R1.paired.fastq.gz \
-        $DATAOUTPUT_ITS2_fungi/"${LINE}"_R1.single.fastq.gz \
-        $DATAOUTPUT_ITS2_fungi/"${LINE}"_R2.paired.fastq.gz \
-        $DATAOUTPUT_ITS2_fungi/"${LINE}"_R2.single.fastq.gz \
+        $DATADIRECTORY_ITS2_fungi/JL5_S287_L001_R1_001.fastq.gz \ 
+        $DATADIRECTORY_ITS2_fungi/JL5_S287_L001_R2_001.fastq.gz \
+        $DATAOUTPUT_ITS2_fungi/JL5_S287_L001_R1.paired.fastq.gz \
+        $DATAOUTPUT_ITS2_fungi/JL5_S287_L001_R1.single.fastq.gz \
+        $DATAOUTPUT_ITS2_fungi/JL5_S287_L001_R2.paired.fastq.gz \
+        $DATAOUTPUT_ITS2_fungi/JL5_S287_L001_R2.single.fastq.gz \
         ILLUMINACLIP:"$ADAPTERFILE":2:30:10 \
         LEADING:30 \
         TRAILING:30 \
         SLIDINGWINDOW:26:30 \
         MINLEN:150
-        
-done < list_04.txt
+
+
+
 
 # For bacteria :
 #
