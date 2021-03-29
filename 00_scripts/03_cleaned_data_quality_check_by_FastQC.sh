@@ -13,11 +13,11 @@ OUT_PUT_V4_bacteria=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcodin
 
 cd $WORKING_DIRECTORY
 
-# For ITS2_fungi
-for FILE in $(ls $DATA_DIRECTORY_ITS2_fungi/*.fastq.gz)
-do
-      fastqc $FILE -o $OUT_PUT_ITS2_fungi
-done ;
+## For ITS2_fungi
+#for FILE in $(ls $DATA_DIRECTORY_ITS2_fungi/*.fastq.gz)
+#do
+#      fastqc $FILE -o $OUT_PUT_ITS2_fungi
+#done ;
 
 # For V4_bacteria
 for FILE in $(ls $DATA_DIRECTORY_V4_bacteria/*.fastq.gz)
