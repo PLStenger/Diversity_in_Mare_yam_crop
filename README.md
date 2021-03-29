@@ -11,6 +11,11 @@ Diversity in Mare island (Loyalty island, New-Caledonia) yam's crop (Dioscorea s
 ### Update the pipeline in local by :
 
     git pull
+    
+### If necessary, install softwares by :   
+
+    cd 99_softwares/
+    conda install -c bioconda fastqc
 
 ### Run scripts in local by :
 
