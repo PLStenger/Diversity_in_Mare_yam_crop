@@ -14,5 +14,5 @@ Diversity in Mare island (Loyalty island, New-Caledonia) yam's crop (Dioscorea s
 
 ### Run scripts in local by :
 
-    cd /Users/pierre-louisstenger/Documents/PostDoc\ 02\ MetaBarcoding\ IAC/02\ -\ Data/05\ -\ Mare\ ignames/Diversity_in_Mare_yam_crop/00\ -\ scripts
+    cd /Users/pierre-louisstenger/Documents/PostDoc\ 02\ MetaBarcoding\ IAC/02\ -\ Data/05\ -\ Mare\ ignames/Diversity_in_Mare_yam_crop/00_scripts
     nohup bash 00_quality_check_by_FastQC.sh &> 00_quality_check_by_FastQC.out
