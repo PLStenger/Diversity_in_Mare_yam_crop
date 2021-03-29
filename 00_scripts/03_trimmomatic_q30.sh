@@ -26,7 +26,7 @@ ADAPTERFILE=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02
 #NAME=$(basename $0)
 
 # For fungi :
-cd DATADIRECTORY_ITS2_fungi
+cd $DATADIRECTORY_ITS2_fungi
 
 ls *_001.fastq.gz > list.txt
 sed 's/_R1_001.fastq.gz//g' list.txt > list_02.txt
@@ -61,7 +61,7 @@ sed 's/_R1_001.fastq.gz//g' list.txt > list_02.txt
 sed 's/_R2_001.fastq.gz//g' list_02.txt > list_03.txt
 sort -u list_03.txt > list_04.txt # keep unnique values
 
-cd DATADIRECTORY_V4_bacteria
+cd $DATADIRECTORY_V4_bacteria
 
 for FILE in $($DATADIRECTORY_V4_bacteria/list_04.txt)
 do
