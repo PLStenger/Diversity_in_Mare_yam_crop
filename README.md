@@ -49,4 +49,5 @@ First, open your terminal. Then, run these two command lines :
     nohup bash 02_trimmomatic_q30.sh &> 02_trimmomatic_q30.out
     nohup bash 03_cleaned_data_quality_check_by_FastQC.sh &> 03_cleaned_data_quality_check_by_FastQC.out
     nohup Rscript 04_exploring_cleaned_data_with_ReadFastQC.R &> 04_exploring_cleaned_data_with_ReadFastQC.out
+    nohup bash 05_cutadapt_for_rebellious_seq.sh &> 05_cutadapt_for_rebellious_seq.out
 
