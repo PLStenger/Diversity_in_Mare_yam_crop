@@ -5,5 +5,5 @@ DATA_OUTPUT_V4_bacteria=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarc
 
 for FILE in $(ls $DATA_DIRECTORY_V4_bacteria/*.fastq.gz)
 do
-      cutadapt -a ADAPTER TGGAATTCTCGGGTGCCAAGG -o $DATA_OUTPUT_V4_bacteria/${FILE##*/} $DATA_DIRECTORY_V4_bacteria/${FILE##*/}
+      cutadapt -a TGGAATTCTCGGGTGCCAAGG -o $DATA_OUTPUT_V4_bacteria/${FILE##*/} $DATA_DIRECTORY_V4_bacteria/${FILE##*/}
 done ;
