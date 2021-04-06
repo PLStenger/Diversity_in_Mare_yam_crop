@@ -52,3 +52,14 @@ First, open your terminal. Then, run these two command lines :
     nohup bash 05_cutadapt_for_rebellious_seq.sh &> 05_cutadapt_for_rebellious_seq.out
     nohup bash 06_FastQC_on_rebellious.sh &> 06_FastQC_on_rebellious.out
 
+### Python problems?
+
+    alias python=python3
+    conda create --name py3.9.2 python=3.9.2
+    # conda activate py3.9.2
+    activate py3.9.2 # especially for macOS and Linux
+    conda install -c bioconda -c conda-forge multiqc
+    multiqc .
+    
+    
+    # Or? python3 -m multiqc .
