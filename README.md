@@ -52,17 +52,10 @@ First, open your terminal. Then, run these two command lines :
     nohup bash 05_cutadapt_for_rebellious_seq.sh &> 05_cutadapt_for_rebellious_seq.out
     nohup bash 06_FastQC_on_rebellious.sh &> 06_FastQC_on_rebellious.out
 
-### Python problems?
+### For running MultiQC (work now only in Python3) :
 
-    alias python=python3
-    conda create --name py3.9.2 python=3.9.2
-    # conda activate py3.9.2
-    activate py3.9.2 # especially for macOS and Linux
-    conda install -c bioconda -c conda-forge multiqc
-    multiqc .
+    /Library/Frameworks/Python.framework/Versions/3.9/bin/python3.9 -m pip install --upgrade pip' 
+    python3.9 -m pip install multiqc
+    python3 -m multiqc .
     
-    
-    # Or? python3 -m multiqc .
-    
-https://multiqc.info/docs/
-https://dev.to/malwarebo/how-to-set-python3-as-a-default-python-version-on-mac-4jjf
+
