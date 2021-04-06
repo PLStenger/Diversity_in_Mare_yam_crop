@@ -63,3 +63,6 @@ First, open your terminal. Then, run these two command lines :
     
     
     # Or? python3 -m multiqc .
+    
+https://multiqc.info/docs/
+https://dev.to/malwarebo/how-to-set-python3-as-a-default-python-version-on-mac-4jjf
