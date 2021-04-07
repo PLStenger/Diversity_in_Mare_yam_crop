@@ -9,6 +9,7 @@ MANIFEST_FUNGI=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC
 
 cd $DATADIRECTORY_ITS2_fungi
 
+conda init bash
 conda activate qiime2-2019.10
 
 qiime tools import --type 'SampleData[SequencesWithQuality]' \
