@@ -54,6 +54,7 @@ First, open your terminal. Then, run these two command lines :
     nohup bash 06_FastQC_on_rebellious.sh &> 06_FastQC_on_rebellious.out
     nohup bash 07_fastq-join.sh &> 07_fastq-join.out
     nohup bash 08_qiime2_import.sh &> 08_qiime2_import.out
+    nohup bash 09_qiime2_denoise.sh &> 09_qiime2_denoise.out
 
 ### For running MultiQC (work now only in Python3) :
 
