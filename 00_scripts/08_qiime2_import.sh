@@ -15,5 +15,5 @@ conda activate qiime2-2019.10
 
 qiime tools import --type 'SampleData[SequencesWithQuality]' \
 			    --input-path  $MANIFEST_FUNGI \
-			    --output-path $OUTPUT_ITS2_fungi \
+			    --output-path $OUTPUT_ITS2_fungi/demux.qza \
 			    --input-format SingleEndFastqManifestPhred33
