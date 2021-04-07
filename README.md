@@ -52,6 +52,7 @@ First, open your terminal. Then, run these two command lines :
     nohup Rscript 04_exploring_cleaned_data_with_ReadFastQC.R &> 04_exploring_cleaned_data_with_ReadFastQC.out
     nohup bash 05_cutadapt_for_rebellious_seq.sh &> 05_cutadapt_for_rebellious_seq.out
     nohup bash 06_FastQC_on_rebellious.sh &> 06_FastQC_on_rebellious.out
+    nohup bash 07_fastq-join.sh &> 07_fastq-join.out
 
 ### For running MultiQC (work now only in Python3) :
 
