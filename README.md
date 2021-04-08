@@ -69,6 +69,7 @@ First, open your terminal. Then, run these two command lines :
         >real	5m00.489s
         >user	1m23.374s
         >sys	1m6.505s
+    time nohup bash 12_qiime2_calculate_and_explore_diversity_metrics.sh &> 12_qiime2_calculate_and_explore_diversity_metrics.out
 
 ### For running MultiQC (work now only in Python3) :
 
