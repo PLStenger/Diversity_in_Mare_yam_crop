@@ -46,7 +46,7 @@ conda activate qiime2-2019.10
 qiime diversity alpha-rarefaction \
   --i-table Table.qza \
   --i-phylogeny rooted-tree.qza \
-  --p-max-depth 78 \
+  --p-max-depth 5797 \
   --m-metadata-file sample-metadata.tsv \
   --o-visualization alpha-rarefaction.qzv
   
