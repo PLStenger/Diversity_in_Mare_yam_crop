@@ -56,6 +56,9 @@ First, open your terminal. Then, run these two command lines :
     nohup bash 08_qiime2_import.sh &> 08_qiime2_import.out
     nohup bash 09_qiime2_denoise.sh &> 09_qiime2_denoise.out
     time nohup bash 10_qiime2_tree.sh &> 10_qiime2_tree.out
+        >real	35m4.471s
+        >user	21m19.925s
+        >sys	0m44.076s
 
 ### For running MultiQC (work now only in Python3) :
 
