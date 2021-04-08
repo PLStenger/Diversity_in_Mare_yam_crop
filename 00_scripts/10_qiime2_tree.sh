@@ -14,27 +14,32 @@ cd $DATADIRECTORY_ITS2_fungi
 eval "$(conda shell.bash hook)"
 conda activate qiime2-2019.10
 
-#carry out a multiple seqeunce alignment using Mafft
- qiime alignment mafft \
-  --i-sequences RepSeq.qza \
-  --o-alignment aligned-RepSeq.qza
-
-#mask (or filter) the alignment to remove positions that are highly variable. These positions are generally considered to add noise to a resulting phylogenetic tree.
-qiime alignment mask \
-  --i-alignment aligned-RepSeq.qza \
-  --o-masked-alignment masked-aligned-RepSeq.qza
-
-#create the tree using the Fasttree program
-qiime phylogeny fasttree \
-  --i-alignment masked-aligned-RepSeq.qza \
-  --o-tree unrooted-tree.qza
-
-#root the tree using the longest root
-qiime phylogeny midpoint-root \
-  --i-tree unrooted-tree.qza \
-  --o-rooted-tree rooted-tree.qza
+##carry out a multiple seqeunce alignment using Mafft
+# qiime alignment mafft \
+#  --i-sequences RepSeq.qza \
+#  --o-alignment aligned-RepSeq.qza
+#
+##mask (or filter) the alignment to remove positions that are highly variable. These positions are generally considered to add noise to a resulting phylogenetic tree.
+#qiime alignment mask \
+#  --i-alignment aligned-RepSeq.qza \
+#  --o-masked-alignment masked-aligned-RepSeq.qza
+#
+##create the tree using the Fasttree program
+#qiime phylogeny fasttree \
+#  --i-alignment masked-aligned-RepSeq.qza \
+#  --o-tree unrooted-tree.qza
+#
+##root the tree using the longest root
+#qiime phylogeny midpoint-root \
+#  --i-tree unrooted-tree.qza \
+#  --o-rooted-tree rooted-tree.qza
   
-  ###############################################################
+#export the tree  
+qiime tools export \
+  unrooted-tree.qza \
+  --output-dir exported-tree  
+  
+###############################################################
 ### For Bacteria
 ###############################################################
 
@@ -44,22 +49,28 @@ eval "$(conda shell.bash hook)"
 conda activate qiime2-2019.10
 
 
-#carry out a multiple seqeunce alignment using Mafft
- qiime alignment mafft \
-  --i-sequences RepSeq.qza \
-  --o-alignment aligned-RepSeq.qza
-
-#mask (or filter) the alignment to remove positions that are highly variable. These positions are generally considered to add noise to a resulting phylogenetic tree.
-qiime alignment mask \
-  --i-alignment aligned-RepSeq.qza \
-  --o-masked-alignment masked-aligned-RepSeq.qza
-
-#create the tree using the Fasttree program
-qiime phylogeny fasttree \
-  --i-alignment masked-aligned-RepSeq.qza \
-  --o-tree unrooted-tree.qza
-
-#root the tree using the longest root
-qiime phylogeny midpoint-root \
-  --i-tree unrooted-tree.qza \
-  --o-rooted-tree rooted-tree.qza
+##carry out a multiple seqeunce alignment using Mafft
+# qiime alignment mafft \
+#  --i-sequences RepSeq.qza \
+#  --o-alignment aligned-RepSeq.qza
+#
+##mask (or filter) the alignment to remove positions that are highly variable. These positions are generally considered to add noise to a resulting phylogenetic tree.
+#qiime alignment mask \
+#  --i-alignment aligned-RepSeq.qza \
+#  --o-masked-alignment masked-aligned-RepSeq.qza
+#
+##create the tree using the Fasttree program
+#qiime phylogeny fasttree \
+#  --i-alignment masked-aligned-RepSeq.qza \
+#  --o-tree unrooted-tree.qza
+#
+##root the tree using the longest root
+#qiime phylogeny midpoint-root \
+#  --i-tree unrooted-tree.qza \
+#  --o-rooted-tree rooted-tree.qza
+  
+  
+#export the tree  
+qiime tools export \
+  unrooted-tree.qza \
+  --output-dir exported-tree    
