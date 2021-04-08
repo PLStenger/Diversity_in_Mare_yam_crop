@@ -39,6 +39,7 @@ qiime tools export \
   unrooted-tree.qza \
   --output-dir exported-tree  
   
+# This out put is in Newick format, see http://scikit-bio.org/docs/latest/generated/skbio.io.format.newick.html  
 # See it on https://itol.embl.de
 
 ###############################################################
@@ -77,4 +78,5 @@ qiime tools export \
   unrooted-tree.qza \
   --output-dir exported-tree    
 
+# This out put is in Newick format, see http://scikit-bio.org/docs/latest/generated/skbio.io.format.newick.html  
 # See it on https://itol.embl.de
