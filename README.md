@@ -55,6 +55,7 @@ First, open your terminal. Then, run these two command lines :
     nohup bash 07_fastq-join.sh &> 07_fastq-join.out
     nohup bash 08_qiime2_import.sh &> 08_qiime2_import.out
     nohup bash 09_qiime2_denoise.sh &> 09_qiime2_denoise.out
+    time nohup bash 10_qiime2_tree.sh &> 10_qiime2_tree.out
 
 ### For running MultiQC (work now only in Python3) :
 
