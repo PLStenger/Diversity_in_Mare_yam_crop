@@ -13,7 +13,9 @@ cd $DATADIRECTORY_ITS2_fungi
 eval "$(conda shell.bash hook)"
 conda activate qiime2-2019.10
 
-qiime tools import --type 'SampleData[SequencesWithQuality]' \
-			    --input-path  $MANIFEST_FUNGI \
-			    --output-path $OUTPUT_ITS2_fungi/demux.qza \
-			    --input-format SingleEndFastqManifestPhred33
+#qiime tools import --type 'SampleData[SequencesWithQuality]' \
+#			    --input-path  $MANIFEST_FUNGI \
+#			    --output-path $OUTPUT_ITS2_fungi/demux.qza \
+#			    --input-format SingleEndFastqManifestPhred33
+
+qiime demux summarize --i-data demux.qza --o-visualization demux.qzv
