@@ -53,8 +53,12 @@ First, open your terminal. Then, run these two command lines :
     nohup bash 05_cutadapt_for_rebellious_seq.sh &> 05_cutadapt_for_rebellious_seq.out
     nohup bash 06_FastQC_on_rebellious.sh &> 06_FastQC_on_rebellious.out
     nohup bash 07_fastq-join.sh &> 07_fastq-join.out
-    nohup bash 08_qiime2_import.sh &> 08_qiime2_import.out
-    nohup bash 09_qiime2_denoise.sh &> 09_qiime2_denoise.out
+    time nohup bash 08_qiime2_import.sh &> 08_qiime2_import.out
+        >real	18m50.406s
+        >user	12m41.991s
+        >sys	0m30.152s
+    time nohup bash 09_qiime2_denoise.sh &> 09_qiime2_denoise.out
+        
     time nohup bash 10_qiime2_tree.sh &> 10_qiime2_tree.out
         >real	35m4.471s
         >user	21m19.925s
