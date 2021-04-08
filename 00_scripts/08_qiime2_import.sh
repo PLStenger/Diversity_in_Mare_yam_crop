@@ -18,4 +18,6 @@ conda activate qiime2-2019.10
 #			    --output-path $OUTPUT_ITS2_fungi/demux.qza \
 #			    --input-format SingleEndFastqManifestPhred33
 
+cd $OUTPUT_ITS2_fungi
+
 qiime demux summarize --i-data demux.qza --o-visualization demux.qzv
