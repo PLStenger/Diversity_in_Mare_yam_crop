@@ -37,7 +37,7 @@ conda activate qiime2-2019.10
 #export the tree  
 qiime tools export \
   unrooted-tree.qza \
-  --output-dir exported-tree  
+  --output-path $DATADIRECTORY_ITS2_fungi 
   
 # This out put is in Newick format, see http://scikit-bio.org/docs/latest/generated/skbio.io.format.newick.html  
 # See it on https://itol.embl.de
@@ -76,7 +76,7 @@ conda activate qiime2-2019.10
 #export the tree  
 qiime tools export \
   unrooted-tree.qza \
-  --output-dir exported-tree    
-
+  --output-path $DATADIRECTORY_ITS2_fungi 
+  
 # This out put is in Newick format, see http://scikit-bio.org/docs/latest/generated/skbio.io.format.newick.html  
 # See it on https://itol.embl.de
