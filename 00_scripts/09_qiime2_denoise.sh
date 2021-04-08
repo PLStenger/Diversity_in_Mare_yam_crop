@@ -16,27 +16,27 @@ DATADIRECTORY_V4_bacteria=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBa
 ### For Fungi
 ###############################################################
 
-cd $DATADIRECTORY_ITS2_fungi
-
-eval "$(conda shell.bash hook)"
-conda activate qiime2-2019.10
-
-qiime dada2 denoise-single --i-demultiplexed-seqs demux.qza \
-                           --p-n-threads 6 \
-                           --p-chimera-method 'consensus' \
-                           --p-trunc-len 0 \
-                           --p-trunc-q 0 \
-                           --o-representative-sequences RepSeq.qza \
-                           --o-table Table.qza \
-                           --o-denoising-stats Stats.qza
-                           
-qiime feature-table summarize \
-  --i-table Table.qza \
-  --o-visualization Table.qzv \
-  --m-sample-metadata-file sample-metadata.tsv
-qiime feature-table tabulate-seqs \
-  --i-data RepSeq.qza \
-  --o-visualization RepSeq.qzv                           
+#cd $DATADIRECTORY_ITS2_fungi
+#
+#eval "$(conda shell.bash hook)"
+#conda activate qiime2-2019.10
+#
+#qiime dada2 denoise-single --i-demultiplexed-seqs demux.qza \
+#                           --p-n-threads 6 \
+#                           --p-chimera-method 'consensus' \
+#                           --p-trunc-len 0 \
+#                           --p-trunc-q 0 \
+#                           --o-representative-sequences RepSeq.qza \
+#                           --o-table Table.qza \
+#                           --o-denoising-stats Stats.qza
+#                           
+#qiime feature-table summarize \
+#  --i-table Table.qza \
+#  --o-visualization Table.qzv \
+#  --m-sample-metadata-file sample-metadata.tsv
+#qiime feature-table tabulate-seqs \
+#  --i-data RepSeq.qza \
+#  --o-visualization RepSeq.qzv                           
 
 ###############################################################
 ### For Bacteria
