@@ -39,6 +39,8 @@ qiime tools export \
   unrooted-tree.qza \
   --output-dir exported-tree  
   
+# See it on https://itol.embl.de
+
 ###############################################################
 ### For Bacteria
 ###############################################################
@@ -74,3 +76,5 @@ conda activate qiime2-2019.10
 qiime tools export \
   unrooted-tree.qza \
   --output-dir exported-tree    
+
+# See it on https://itol.embl.de
