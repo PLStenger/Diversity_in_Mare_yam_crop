@@ -89,7 +89,7 @@ First, open your terminal. Then, run these two command lines :
 #### ITS2
 
 <div align="center">
-![alt tag](https://github.com/PLStenger/Diversity_in_Mare_yam_crop/tree/main/999_stock/Taxonomy_site_occurences_Capture d’écran 2021-04-09 à 16.04.58 copie.png)
+<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/tree/main/999_stock/Taxonomy_site_occurences_Capture_d’écran_2021-04-09_à_16.04.58_copie.png" width="300">
 </div>
   
 
