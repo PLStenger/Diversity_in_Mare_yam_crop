@@ -140,6 +140,29 @@ JL5 (137 counts), F2 (246 counts), JC3 (2292 counts) and JL2 (3999 counts) are m
 <img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_demultiplex_ITS2_run01.png" width="800">
 </div>
 
+##### Alpha rarefaction steps
+
+Legend
+
+<div align="center">
+<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_legend_ITS2_run01.png" width="100">
+</div>
+
+Shannon
+<div align="center">
+<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_Shannon_ITS2_run01.png" width="800">
+</div>
+
+Faith PD
+<div align="center">
+<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_faith_pd_ITS2_run01.png" width="800">
+</div>
+
+Observed OTUs
+<div align="center">
+<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_observed_otu_ITS2_run01.png" width="800">
+</div>
+
 ##### Tree test
 
 <div align="center">
