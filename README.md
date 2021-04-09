@@ -83,8 +83,16 @@ First, open your terminal. Then, run these two command lines :
     /Library/Frameworks/Python.framework/Versions/3.9/bin/python3.9 -m pip install --upgrade pip' 
     python3.9 -m pip install multiqc
     python3 -m multiqc .
-    
 
-### Run 2 for ITS2 :
+### First run results
+
+#### ITS2
+
+<div align="center">
+<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/tree/main/999_stock/Taxonomy_site_occurences_Capture d’écran 2021-04-09 à 16.04.58 copie.png" width="300">
+</div>
+  
+
+### Second run for ITS2 :
 
 Delete **JL5** (137 counts), **F2** (246 counts), **JC3** (2292 counts) and **JL2** (3999 counts) (the next one is F5 with 25768 counts) 
