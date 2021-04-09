@@ -90,7 +90,7 @@ First, open your terminal. Then, run these two command lines :
 
 
 <div align="center">
-<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_Taxonomy_site_occurences_ITS2_run01.png" width="500">
+<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_Taxonomy_site_occurences_ITS2_run01.png" width="800">
 </div>
   
 
