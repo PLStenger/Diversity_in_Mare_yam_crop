@@ -129,6 +129,9 @@ Adpaters content verification :
 | F2_S245_joined.fastq.gzjoin  | 246            |
 | JL5_S287_joined.fastq.gzjoin | 137            |
 
+
+JL5 (137 counts), F2 (246 counts), JC3 (2292 counts) and JL2 (3999 counts) are may be too low..
+
 ##### Quality after demultiplexing check
 
 --> Almost nothing below 20 : ok !
