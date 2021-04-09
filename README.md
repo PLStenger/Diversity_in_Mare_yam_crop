@@ -169,6 +169,34 @@ Observed OTUs
 <img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_tree_ITS2_run01.png" width="800">
 </div>
 
+##### Diversity metrix results
+
+###### relationships between alpha diversity and study metadata
+
+- Faith PD group significance --> Nothing significatif
+- Evenness (Pielou) group significance --> Nothing significatif
+- Shannon group significance --> Nothing significatif
+
+###### relationships between beta diversity and study metadata 
+
+- unweighted-unifrac-body-site-significance --> Bof
+- unweighted-unifrac-subject-group-significance --> Bof
+
+###### PCoA plot to explore beta diversity metric
+
+- unweighted unifrac data as input --> Bof
+- bray curtis as input --> Slighlty better ?
+
+<div align="center">
+<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_Color_legend_Bray_ITS2_run01.png" width="100">
+</div>
+
+Bray-Curtis distance PCoA
+
+<div align="center">
+<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_bray_curtis_ITS2_run01.png" width="800">
+</div>
+
 ##### BarPlot ok site/occurences 
 
 <div align="center">
