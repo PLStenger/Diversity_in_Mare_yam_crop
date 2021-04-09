@@ -74,6 +74,9 @@ First, open your terminal. Then, run these two command lines :
         >user	2m25.299s
         >sys	0m46.509s
     time nohup bash 13_qiime2_assign_taxonomy.sh &> 13_qiime2_assign_taxonomy.out
+        >real	75m29.388s
+        >user	50m12.821s
+        >sys	3m7.610s
 
 ### For running MultiQC (work now only in Python3) :
 
