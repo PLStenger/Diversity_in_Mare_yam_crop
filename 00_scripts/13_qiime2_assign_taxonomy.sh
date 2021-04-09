@@ -19,70 +19,70 @@ DATADIRECTORY_V4_bacteria=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBa
 ### For Fungi
 ###############################################################
 
-cd $DATADIRECTORY_ITS2_fungi
-
-eval "$(conda shell.bash hook)"
-conda activate qiime2-2019.10
-
-
-qiime tools import --type 'FeatureData[Taxonomy]' \
-  --input-format HeaderlessTSVTaxonomyFormat \
-  --input-path Taxonomy-UNITE-V7-S-2017.12.01-dynamic.txt \
-  --output-path RefTaxo.qza
-
-qiime tools import --type 'FeatureData[Sequence]' \
-  --input-path Sequence-UNITE-V7-S-2017.12.01-dynamic.fasta \
-  --output-path DataSeq.qza
-
-
-# Fungal ITS classifiers trained on the UNITE reference database do NOT benefit
-# from extracting / trimming reads to primer sites.
-# We recommend training UNITE classifiers on the full reference sequences !!!
-
-# Furthermore, we recommend the 'developer' sequences
-# (located within the QIIME-compatible release download),
-# because the standard versions of the sequences have already been trimmed to
-# the ITS region, excluding portions of flanking rRNA genes that may be present
-# in amplicons generated with standard ITS primers.
-
-# Aim: Rename import ITS2 DataSeq in ITS2 RefSeq for training.
-
-cp DataSeq.qza RefSeq.qza
-
-# Aim: Create a scikit-learn naive_bayes classifier for reads
-
-qiime feature-classifier fit-classifier-naive-bayes \
-  --i-reference-reads RefSeq.qza \
-  --i-reference-taxonomy RefTaxo.qza \
-  --o-classifier Classifier.qza
-
-# Aim: Classify reads by taxon using a fitted classifier
-
+#cd $DATADIRECTORY_ITS2_fungi
+#
+#eval "$(conda shell.bash hook)"
+#conda activate qiime2-2019.10
+#
+#
+#qiime tools import --type 'FeatureData[Taxonomy]' \
+#  --input-format HeaderlessTSVTaxonomyFormat \
+#  --input-path Taxonomy-UNITE-V7-S-2017.12.01-dynamic.txt \
+#  --output-path RefTaxo.qza
+#
+#qiime tools import --type 'FeatureData[Sequence]' \
+#  --input-path Sequence-UNITE-V7-S-2017.12.01-dynamic.fasta \
+#  --output-path DataSeq.qza
+#
+#
+## Fungal ITS classifiers trained on the UNITE reference database do NOT benefit
+## from extracting / trimming reads to primer sites.
+## We recommend training UNITE classifiers on the full reference sequences !!!
+#
+## Furthermore, we recommend the 'developer' sequences
+## (located within the QIIME-compatible release download),
+## because the standard versions of the sequences have already been trimmed to
+## the ITS region, excluding portions of flanking rRNA genes that may be present
+## in amplicons generated with standard ITS primers.
+#
+## Aim: Rename import ITS2 DataSeq in ITS2 RefSeq for training.
+#
+#cp DataSeq.qza RefSeq.qza
+#
+## Aim: Create a scikit-learn naive_bayes classifier for reads
+#
+#qiime feature-classifier fit-classifier-naive-bayes \
+#  --i-reference-reads RefSeq.qza \
+#  --i-reference-taxonomy RefTaxo.qza \
+#  --o-classifier Classifier.qza
+#
+## Aim: Classify reads by taxon using a fitted classifier
+#
+##qiime feature-classifier classify-sklearn \
+##   --i-classifier Classifier.qza \
+##   --i-reads ConRepSeq.qza \ ???????????????????????????????
+##   --p-reads-per-batch {params.batch_size} \ ???????????
+##   --p-n-jobs {params.threads} \
+##   --o-classification Taxonomy.qza
+#
+## Switch to https://chmi-sops.github.io/mydoc_qiime2.html#step-9-assign-taxonomy
+#
 #qiime feature-classifier classify-sklearn \
-#   --i-classifier Classifier.qza \
-#   --i-reads ConRepSeq.qza \ ???????????????????????????????
-#   --p-reads-per-batch {params.batch_size} \ ???????????
-#   --p-n-jobs {params.threads} \
-#   --o-classification Taxonomy.qza
-
-# Switch to https://chmi-sops.github.io/mydoc_qiime2.html#step-9-assign-taxonomy
-
-qiime feature-classifier classify-sklearn \
-  --i-classifier Classifier.qza \
-  --i-reads RepSeq.qza \
-  --o-classification taxonomy.qza
-
-qiime metadata tabulate \
-  --m-input-file taxonomy.qza \
-  --o-visualization taxonomy.qzv
-
-# Now create a visualization of the classified sequences.
-
-qiime taxa barplot \
-  --i-table Table.qza \
-  --i-taxonomy taxonomy.qza \
-  --m-metadata-file sample-metadata.tsv \
-  --o-visualization taxa-bar-plots.qzv
+#  --i-classifier Classifier.qza \
+#  --i-reads RepSeq.qza \
+#  --o-classification taxonomy.qza
+#
+#qiime metadata tabulate \
+#  --m-input-file taxonomy.qza \
+#  --o-visualization taxonomy.qzv
+#
+## Now create a visualization of the classified sequences.
+#
+#qiime taxa barplot \
+#  --i-table Table.qza \
+#  --i-taxonomy taxonomy.qza \
+#  --m-metadata-file sample-metadata.tsv \
+#  --o-visualization taxa-bar-plots.qzv
   
   
 ###############################################################
@@ -94,15 +94,15 @@ cd $DATADIRECTORY_V4_bacteria
 eval "$(conda shell.bash hook)"
 conda activate qiime2-2019.10
 
+#qiime tools import --type 'FeatureData[Taxonomy]' \
+#  --input-format HeaderlessTSVTaxonomyFormat \
+#  --input-path Taxonomy-SILVA-V132-2018.04.10-99.txt \
+#  --output-path RefTaxo.qza
+#
+#qiime tools import --type 'FeatureData[Sequence]' \
+#  --input-path Sequence-SILVA-V132-2018.04.10-99.fasta \
+#  --output-path DataSeq.qza
 
-qiime tools import --type 'FeatureData[Taxonomy]' \
-  --input-format HeaderlessTSVTaxonomyFormat \
-  --input-path Taxonomy-SILVA-V132-2018.04.10-99.txt \
-  --output-path RefTaxo.qza
-
-qiime tools import --type 'FeatureData[Sequence]' \
-  --input-path Sequence-SILVA-V132-2018.04.10-99.fasta \
-  --output-path DataSeq.qza
    
 # Aim: Extract sequencing-like reads from a reference database.
 # Warning: For v4 only !!! Not for its2 !!! 
@@ -133,8 +133,10 @@ qiime tools import --type 'FeatureData[Sequence]' \
 qiime feature-classifier extract-reads --i-sequences DataSeq.qza \
         --p-f-primer 'GTGCCAGCMGCCGCGGTAA' \
         --p-r-primer 'TCCTCCGCTTATTGATATGC' \
-        #--p-trunc-len {params.length} \
         --o-reads RefSeq.qza 
+        
+        #--p-trunc-len {params.length} \
+        
 
 # Aim: Create a scikit-learn naive_bayes classifier for reads
 
