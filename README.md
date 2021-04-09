@@ -107,7 +107,19 @@ First, open your terminal. Then, run these two command lines :
 | JL5_S287_joined.fastq.gzjoin | 137            |
 
 <div align="center">
+<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_fastqc_per_base_sequence_quality_plot_ITS2_run01.png" width="800">
+</div>
+
+<div align="center">
+<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_adapter_content_ITS2_run01.png" width="800">
+</div>
+
+<div align="center">
 <img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_demultiplex_ITS2_run01.png" width="800">
+</div>
+
+<div align="center">
+<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_tree_ITS2_run01.png" width="800">
 </div>
 
 <div align="center">
