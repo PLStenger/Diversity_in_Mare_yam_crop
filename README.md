@@ -85,3 +85,6 @@ First, open your terminal. Then, run these two command lines :
     python3 -m multiqc .
     
 
+### Run 2 for ITS2 :
+
+Delete **JL5** (137 counts), **F2** (246 counts), **JC3** (2292 counts) and **JL2** (3999 counts) (the next one is F5 with 25768 counts) 
