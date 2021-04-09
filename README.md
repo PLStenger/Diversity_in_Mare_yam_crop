@@ -88,6 +88,27 @@ First, open your terminal. Then, run these two command lines :
 
 #### ITS2
 
+| Sample name                  | Sequence count |
+|------------------------------|----------------|
+| F4_S249_joined.fastq.gzjoin  | 65331          |
+| F3_S247_joined.fastq.gzjoin  | 62521          |
+| JC5_S277_joined.fastq.gzjoin | 59947          |
+| F1_S243_joined.fastq.gzjoin  | 51272          |
+| JC2_S255_joined.fastq.gzjoin | 40401          |
+| JL1_S279_joined.fastq.gzjoin | 37641          |
+| JC4_S275_joined.fastq.gzjoin | 36987          |
+| JL4_S285_joined.fastq.gzjoin | 33234          |
+| JC1_S253_joined.fastq.gzjoin | 32209          |
+| JL3_S283_joined.fastq.gzjoin | 29839          |
+| F5_S251_joined.fastq.gzjoin  | 25768          |
+| JL2_S281_joined.fastq.gzjoin | 3999           |
+| JC3_S273_joined.fastq.gzjoin | 2292           |
+| F2_S245_joined.fastq.gzjoin  | 246            |
+| JL5_S287_joined.fastq.gzjoin | 137            |
+
+<div align="center">
+<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_demultiplex_ITS2_run01.png" width="800">
+</div>
 
 <div align="center">
 <img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_Taxonomy_site_occurences_ITS2_run01.png" width="800">
