@@ -92,6 +92,8 @@ First, open your terminal. Then, run these two command lines :
 <img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/tree/main/999_stock/Taxonomy_site_occurences_ITS2_run01.png" width="300">
 </div>
   
+![alt tag](https://github.com/PLStenger/Diversity_in_Mare_yam_crop/tree/main/999_stock/Taxonomy_site_occurences_ITS2_run01.png)
+  
 
 ### Second run for ITS2 :
 
