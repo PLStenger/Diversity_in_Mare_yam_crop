@@ -88,18 +88,12 @@ First, open your terminal. Then, run these two command lines :
 
 #### ITS2
 
-<div align="center">
-<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/tree/main/999_stock/Taxonomy_site_occurences_ITS2_run01.png" width="300">
-</div>
 
 <div align="center">
-<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_Taxonomy_site_occurences_ITS2_run01.png" width="300">
+<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_Taxonomy_site_occurences_ITS2_run01.png" width="500">
 </div>
   
-![alt tag](https://github.com/PLStenger/Diversity_in_Mare_yam_crop/tree/main/999_stock/Taxonomy_site_occurences_ITS2_run01.png)
 
-![alt tag](https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_Taxonomy_site_occurences_ITS2_run01.png)
-  
 
 ### Second run for ITS2 :
 
