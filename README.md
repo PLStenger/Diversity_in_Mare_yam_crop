@@ -54,9 +54,9 @@ First, open your terminal. Then, run these two command lines :
     nohup bash 06_FastQC_on_rebellious.sh &> 06_FastQC_on_rebellious.out
     nohup bash 07_fastq-join.sh &> 07_fastq-join.out
     time nohup bash 08_qiime2_import.sh &> 08_qiime2_import.out
-        >real	18m50.406s
-        >user	12m41.991s
-        >sys	0m30.152s
+        >real	3m38.017s
+        >user	1m27.684s
+        >sys	0m20.047s
     time nohup bash 09_qiime2_denoise.sh &> 09_qiime2_denoise.out
         >real	94m10.219s # Only for V4
         >user	246m37.209s # Only for V4
@@ -109,28 +109,31 @@ Adpaters content verification :
 <img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_adapter_content_ITS2_run01.png" width="800">
 </div>
 
-##### Per-sample sequence counts by Qiime2 
+##### Per-sample sequence counts by Qiime2 before Denoise
 
-| Sample name                  | Sequence count |
-|------------------------------|----------------|
-| F4_S249_joined.fastq.gzjoin  | 65331          |
-| F3_S247_joined.fastq.gzjoin  | 62521          |
-| JC5_S277_joined.fastq.gzjoin | 59947          |
-| F1_S243_joined.fastq.gzjoin  | 51272          |
-| JC2_S255_joined.fastq.gzjoin | 40401          |
-| JL1_S279_joined.fastq.gzjoin | 37641          |
-| JC4_S275_joined.fastq.gzjoin | 36987          |
-| JL4_S285_joined.fastq.gzjoin | 33234          |
-| JC1_S253_joined.fastq.gzjoin | 32209          |
-| JL3_S283_joined.fastq.gzjoin | 29839          |
-| F5_S251_joined.fastq.gzjoin  | 25768          |
-| JL2_S281_joined.fastq.gzjoin | 3999           |
-| JC3_S273_joined.fastq.gzjoin | 2292           |
-| F2_S245_joined.fastq.gzjoin  | 246            |
-| JL5_S287_joined.fastq.gzjoin | 137            |
+| Sample ID                    | Before denoise | After denoise |
+|------------------------------|----------------|---------------|
+| F4_S249_joined.fastq.gzjoin  | 65331          | 50859         |
+| F3_S247_joined.fastq.gzjoin  | 62521          | 50043         |
+| JC5_S277_joined.fastq.gzjoin | 59947          | 47324         |
+| F1_S243_joined.fastq.gzjoin  | 51272          | 41188         |
+| JC2_S255_joined.fastq.gzjoin | 40401          | 32038         |
+| JC4_S275_joined.fastq.gzjoin | 37641          | 30307         |
+| JL1_S279_joined.fastq.gzjoin | 36987          | 30052         |
+| JL4_S285_joined.fastq.gzjoin | 33234          | 28133         |
+| JC1_S253_joined.fastq.gzjoin | 32209          | 25286         |
+| JL3_S283_joined.fastq.gzjoin | 29839          | 24892         |
+| F5_S251_joined.fastq.gzjoin  | 25768          | 21618         |
+| JL2_S281_joined.fastq.gzjoin | 3999           | 3972          |
+| JC3_S273_joined.fastq.gzjoin | 2292           | 1818          |
+| F2_S245_joined.fastq.gzjoin  | 246            | 223           |
+| JL5_S287_joined.fastq.gzjoin | 137            | 78            |
 
 
-JL5 (137 counts), F2 (246 counts), JC3 (2292 counts) and JL2 (3999 counts) are may be too low..
+JL5 (78 counts), F2 (223 counts), JC3 (1818 counts) and JL2 (3972 counts) are may be too low..
+
+These informations will be important for chosen the "good" rarefaction cut-off.
+
 
 ##### Quality after demultiplexing check
 
