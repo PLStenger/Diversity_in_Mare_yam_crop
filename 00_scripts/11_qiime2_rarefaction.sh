@@ -12,19 +12,19 @@ DATADIRECTORY_V4_bacteria=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBa
 ### For Fungi
 ###############################################################
 
-#cd $DATADIRECTORY_ITS2_fungi
-#
-#eval "$(conda shell.bash hook)"
-#conda activate qiime2-2019.10
-#
-## Note: max-depth should be chosen based on table.qzv
-#
-#qiime diversity alpha-rarefaction \
-#  --i-table Table.qza \
-#  --i-phylogeny rooted-tree.qza \
-#  --p-max-depth 78 \
-#  --m-metadata-file sample-metadata.tsv \
-#  --o-visualization alpha-rarefaction.qzv
+cd $DATADIRECTORY_ITS2_fungi
+
+eval "$(conda shell.bash hook)"
+conda activate qiime2-2019.10
+
+# Note: max-depth should be chosen based on table.qzv
+
+qiime diversity alpha-rarefaction \
+  --i-table Table.qza \
+  --i-phylogeny rooted-tree.qza \
+  --p-max-depth 1818 \
+  --m-metadata-file sample-metadata.tsv \
+  --o-visualization alpha-rarefaction.qzv
   
 # Note: Interpreting alpha diversity metrics: it is important to understand that certain metrics are stricly qualitative (presence/absence), 
 # that is they only take diversity into account, often referred to as richness of the community (e.g. observed otus). 
@@ -46,7 +46,7 @@ conda activate qiime2-2019.10
 qiime diversity alpha-rarefaction \
   --i-table Table.qza \
   --i-phylogeny rooted-tree.qza \
-  --p-max-depth 5797 \
+  --p-max-depth 29544 \
   --m-metadata-file sample-metadata.tsv \
   --o-visualization alpha-rarefaction.qzv
   
