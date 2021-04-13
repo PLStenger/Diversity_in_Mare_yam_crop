@@ -143,6 +143,19 @@ These informations will be important for chosen the "good" rarefaction cut-off.
 <img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_demultiplex_ITS2_run01.png" width="800">
 </div>
 
+##### Alpha rarefaction steps with rarefaction on 78
+
+<div align="center">
+<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_ITS2-alpha-rarefaction78_shannon.png" width="800">
+</div>
+<div align="center">
+<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_ITS2-alpha-rarefaction78_faith_pd.png" width="800">
+</div>
+<div align="center">
+<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_ITS2-alpha-rarefaction78_observed_otu.png" width="800">
+</div>
+
+
 ##### Alpha rarefaction steps with rarefaction on 1818
 
 <div align="center">
