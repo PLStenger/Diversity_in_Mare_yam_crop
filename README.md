@@ -143,27 +143,22 @@ These informations will be important for chosen the "good" rarefaction cut-off.
 <img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_demultiplex_ITS2_run01.png" width="800">
 </div>
 
-##### Alpha rarefaction steps
+##### Alpha rarefaction steps with rarefaction on 1818
 
-Legend
-
-<div align="center">
-<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_legend_ITS2_run01.png" width="100">
-</div>
 
 Shannon
 <div align="center">
-<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_Shannon_ITS2_run01.png" width="800">
+<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_ITS2-alpha_rarefaction_1818_shannon.pdf" width="800">
 </div>
 
 Faith PD
 <div align="center">
-<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_faith_pd_ITS2_run01.png" width="800">
+<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_ITS2-alpha_rarefaction_1818_faith_pd.pdf" width="800">
 </div>
 
 Observed OTUs
 <div align="center">
-<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_observed_otu_ITS2_run01.png" width="800">
+<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_ITS2-alpha_rarefaction_1818_observed_otu.pdf" width="800">
 </div>
 
 ##### Tree test
