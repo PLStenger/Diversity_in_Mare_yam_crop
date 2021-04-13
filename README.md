@@ -145,20 +145,14 @@ These informations will be important for chosen the "good" rarefaction cut-off.
 
 ##### Alpha rarefaction steps with rarefaction on 1818
 
-
-Shannon
 <div align="center">
-<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_ITS2-alpha_rarefaction_1818_shannon.pdf" width="800">
+<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_ITS2-alpha_rarefaction_1818_shannon.png" width="800">
 </div>
-
-Faith PD
 <div align="center">
-<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_ITS2-alpha_rarefaction_1818_faith_pd.pdf" width="800">
+<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_ITS2-alpha_rarefaction_1818_faith_pd.png" width="800">
 </div>
-
-Observed OTUs
 <div align="center">
-<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_ITS2-alpha_rarefaction_1818_observed_otu.pdf" width="800">
+<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_ITS2-alpha_rarefaction_1818_observed_otu.png" width="800">
 </div>
 
 ##### Tree test
