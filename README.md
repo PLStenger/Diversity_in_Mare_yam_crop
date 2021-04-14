@@ -120,6 +120,9 @@ Adpaters content verification :
 
 ##### Per-sample sequence counts by Qiime2 before Denoise
 
+<details>
+  <summary>Click here to expand and see the result!</summary>
+
 | Sample ID                    | Before denoise | After denoise |
 |------------------------------|----------------|---------------|
 | F4_S249_joined.fastq.gzjoin  | 65331          | 50859         |
@@ -143,16 +146,24 @@ JL5 (78 counts), F2 (223 counts), JC3 (1818 counts) and JL2 (3972 counts) are ma
 
 These informations will be important for chosen the "good" rarefaction cut-off.
 
+</details>
 
 ##### Quality after demultiplexing check
 
---> Almost nothing below 20 : ok !
+<details>
+  <summary>Click here to expand and see the result!</summary>
 
 <div align="center">
 <img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_demultiplex_ITS2_run01.png" width="800">
 </div>
 
+--> Almost nothing below 20 : ok !
+</details>
+
 ##### Alpha rarefaction steps with rarefaction on 78
+
+<details>
+  <summary>Click here to expand and see the result!</summary>
 
 <div align="center">
 <img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_ITS2-alpha-rarefaction78_shannon.png" width="800">
@@ -163,9 +174,12 @@ These informations will be important for chosen the "good" rarefaction cut-off.
 <div align="center">
 <img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_ITS2-alpha-rarefaction78_observed_otu.png" width="800">
 </div>
-
+</details>
 
 ##### Alpha rarefaction steps with rarefaction on 1818
+
+<details>
+  <summary>Click here to expand and see the result!</summary>
 
 <div align="center">
 <img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_ITS2-alpha_rarefaction_1818_shannon.png" width="800">
@@ -176,6 +190,7 @@ These informations will be important for chosen the "good" rarefaction cut-off.
 <div align="center">
 <img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_ITS2-alpha_rarefaction_1818_observed_otu.png" width="800">
 </div>
+</details>
 
 ##### Alpha rarefaction steps with rarefaction on 3972
 
@@ -188,8 +203,12 @@ These informations will be important for chosen the "good" rarefaction cut-off.
 <div align="center">
 <img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_ITS2-alpha-rarefaction3972_observed_otu.png" width="800">
 </div>
+</details>
 
 ##### Alpha rarefaction steps with rarefaction on 21618
+
+<details>
+  <summary>Click here to expand and see the result!</summary>
 
 <div align="center">
 <img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_ITS2-alpha-rarefaction21618_shannon.png" width="800">
@@ -200,14 +219,22 @@ These informations will be important for chosen the "good" rarefaction cut-off.
 <div align="center">
 <img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_ITS2-alpha-rarefaction21618_observed_otu.png" width="800">
 </div>
+</details>
 
 ##### Tree test
+
+<details>
+  <summary>Click here to expand and see the result!</summary>
 
 <div align="center">
 <img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_tree_ITS2_run01.png" width="800">
 </div>
+</details>
 
 ##### Diversity metrix results
+
+<details>
+  <summary>Click here to expand and see the result!</summary>
 
 ###### relationships between alpha diversity and study metadata
 
@@ -235,13 +262,18 @@ Bray-Curtis distance PCoA
 <img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_bray_curtis_ITS2_run01.png" width="800">
 </div>
 
+</details>
+
 ##### BarPlot ok site/occurences 
+
+<details>
+  <summary>Click here to expand and see the result!</summary>
 
 <div align="center">
 <img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_Taxonomy_site_occurences_ITS2_run01.png" width="800">
 </div>
   
-
+</details>
 
 ### Second run for ITS2 :
 
