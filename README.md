@@ -267,6 +267,22 @@ Bray-Curtis distance PCoA
 </div>
 </details>
 
+### Alpha rarefaction steps with rarefaction on 50859 (maximum)
+
+<details>
+  <summary>Click here for alpha-diversity index</summary>
+
+<div align="center">
+<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_ITS2-alpha-rarefaction50859_shannon.png" width="800">
+</div>
+<div align="center">
+<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_ITS2-alpha-rarefaction50859_faith_pd.png" width="800">
+</div>
+<div align="center">
+<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_ITS2-alpha-rarefaction50859_observed_otu.png" width="800">
+</div>
+</details>
+
 ## Second run for ITS2 :
 
 Delete **JL5** (137 counts), **F2** (246 counts), **JC3** (2292 counts) and **JL2** (3999 counts) (the next one is F5 with 25768 counts) 
