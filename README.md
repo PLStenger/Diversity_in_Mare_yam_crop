@@ -283,6 +283,8 @@ Bray-Curtis distance PCoA
 </div>
 </details>
 
+--> So we're go in 21618
+
 ## Second run for ITS2 :
 
 Delete **JL5** (137 counts), **F2** (246 counts), **JC3** (2292 counts) and **JL2** (3999 counts) (the next one is F5 with 25768 counts) 
