@@ -98,7 +98,7 @@ The ITS region is the most widely sequenced DNA region in **molecular ecology of
 
 ##### Per base sequence quality plot
 
-Only for paired sequences, after cleanning steps. Per base sequence quality plot :
+1. Only for paired sequences, after cleanning steps. Per base sequence quality plot :
 
 <details>
   <summary>Click here to expand and see the result!</summary>
@@ -109,7 +109,7 @@ Only for paired sequences, after cleanning steps. Per base sequence quality plot
 
 </details>
 
-Adpaters content verification :
+2. Adpaters content verification :
 
 <details>
   <summary>Click here to expand and see the result!</summary>
