@@ -85,18 +85,18 @@ First, open your terminal. Then, run these two command lines :
     python3.9 -m pip install multiqc
     python3 -m multiqc .
 
-## Preliminary results
+# Preliminary results
 
-### ITS2
+## ITS2
 
-#### Context
+### Context
 Internal transcribed spacer (**ITS**) is the spacer DNA situated between the small-subunit ribosomal RNA (rRNA) and large-subunit rRNA genes in the chromosome or the corresponding transcribed region in the polycistronic rRNA precursor transcript.
 In bacteria and archaea, there is a single ITS, located between the 16S and 23S rRNA genes. Conversely, there are two ITSs in eukaryotes: ITS1 is located between 18S and 5.8S rRNA genes, while **ITS2** is between 5.8S and 28S (in opisthokonts, or 25S in plants) rRNA genes. ITS1 corresponds to the ITS in bacteria and archaea, while ITS2 originated as an insertion that interrupted the ancestral 23S rRNA gene.
 The ITS region is the most widely sequenced DNA region in **molecular ecology of fungi** (*Peay et al 2008*) and has been recommended as the **universal fungal barcode sequence** (*Schoch et al 2012*).
 
-#### Sequences quality results
+### Sequences quality results
 
-##### Per base sequence quality plot
+#### Per base sequence quality plot
 
 1. Only for paired sequences, after cleanning steps. Per base sequence quality plot :
 
@@ -118,7 +118,7 @@ The ITS region is the most widely sequenced DNA region in **molecular ecology of
 </div>
 </details>
 
-##### Per-sample sequence counts by Qiime2 before Denoise
+#### Per-sample sequence counts by Qiime2 before Denoise
 
 <details>
   <summary>Click here to expand and see the result!</summary>
@@ -148,7 +148,7 @@ These informations will be important for chosen the "good" rarefaction cut-off.
 
 </details>
 
-##### Quality after demultiplexing check
+#### Quality after demultiplexing check
 
 <details>
   <summary>Click here to expand and see the result!</summary>
@@ -160,7 +160,7 @@ These informations will be important for chosen the "good" rarefaction cut-off.
 --> Almost nothing below 20 : ok !
 </details>
 
-##### Alpha rarefaction steps with rarefaction on 78
+### Alpha rarefaction steps with rarefaction on 78
 
 <details>
   <summary>Click here to expand and see the result!</summary>
@@ -176,55 +176,8 @@ These informations will be important for chosen the "good" rarefaction cut-off.
 </div>
 </details>
 
-##### Alpha rarefaction steps with rarefaction on 1818
 
-<details>
-  <summary>Click here to expand and see the result!</summary>
-
-<div align="center">
-<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_ITS2-alpha_rarefaction_1818_shannon.png" width="800">
-</div>
-<div align="center">
-<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_ITS2-alpha_rarefaction_1818_faith_pd.png" width="800">
-</div>
-<div align="center">
-<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_ITS2-alpha_rarefaction_1818_observed_otu.png" width="800">
-</div>
-</details>
-
-##### Alpha rarefaction steps with rarefaction on 3972
-
-<details>
-  <summary>Click here to expand and see the result!</summary>
-
-<div align="center">
-<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_ITS2-alpha-rarefaction3972_shannon.png" width="800">
-</div>
-<div align="center">
-<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_ITS2-alpha-rarefaction3972_faith_pd.png" width="800">
-</div>
-<div align="center">
-<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_ITS2-alpha-rarefaction3972_observed_otu.png" width="800">
-</div>
-</details>
-
-##### Alpha rarefaction steps with rarefaction on 21618
-
-<details>
-  <summary>Click here to expand and see the result!</summary>
-
-<div align="center">
-<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_ITS2-alpha-rarefaction21618_shannon.png" width="800">
-</div>
-<div align="center">
-<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_ITS2-alpha-rarefaction21618_faith_pd.png" width="800">
-</div>
-<div align="center">
-<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_ITS2-alpha-rarefaction21618_observed_otu.png" width="800">
-</div>
-</details>
-
-##### Tree test
+#### Tree test
 
 <details>
   <summary>Click here to expand and see the result!</summary>
@@ -234,23 +187,23 @@ These informations will be important for chosen the "good" rarefaction cut-off.
 </div>
 </details>
 
-##### Diversity metrix results
+#### Diversity metrix results
 
 <details>
   <summary>Click here to expand and see the result!</summary>
 
-###### relationships between alpha diversity and study metadata
+##### relationships between alpha diversity and study metadata
 
 - Faith PD group significance --> Nothing significatif
 - Evenness (Pielou) group significance --> Nothing significatif
 - Shannon group significance --> Nothing significatif
 
-###### relationships between beta diversity and study metadata 
+##### relationships between beta diversity and study metadata 
 
 - unweighted-unifrac-body-site-significance --> Bof
 - unweighted-unifrac-subject-group-significance --> Bof
 
-###### PCoA plot to explore beta diversity metric
+##### PCoA plot to explore beta diversity metric
 
 - unweighted unifrac data as input --> Bof
 - bray curtis as input --> Slighlty better ?
@@ -267,7 +220,7 @@ Bray-Curtis distance PCoA
 
 </details>
 
-##### BarPlot ok site/occurences 
+#### BarPlot ok site/occurences 
 
 <details>
   <summary>Click here to expand and see the result!</summary>
@@ -278,11 +231,59 @@ Bray-Curtis distance PCoA
   
 </details>
 
-### Second run for ITS2 :
+### Alpha rarefaction steps with rarefaction on 1818
+
+<details>
+  <summary>Click here to expand and see the result!</summary>
+
+<div align="center">
+<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_ITS2-alpha_rarefaction_1818_shannon.png" width="800">
+</div>
+<div align="center">
+<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_ITS2-alpha_rarefaction_1818_faith_pd.png" width="800">
+</div>
+<div align="center">
+<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_ITS2-alpha_rarefaction_1818_observed_otu.png" width="800">
+</div>
+</details>
+
+### Alpha rarefaction steps with rarefaction on 3972
+
+<details>
+  <summary>Click here to expand and see the result!</summary>
+
+<div align="center">
+<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_ITS2-alpha-rarefaction3972_shannon.png" width="800">
+</div>
+<div align="center">
+<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_ITS2-alpha-rarefaction3972_faith_pd.png" width="800">
+</div>
+<div align="center">
+<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_ITS2-alpha-rarefaction3972_observed_otu.png" width="800">
+</div>
+</details>
+
+### Alpha rarefaction steps with rarefaction on 21618
+
+<details>
+  <summary>Click here to expand and see the result!</summary>
+
+<div align="center">
+<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_ITS2-alpha-rarefaction21618_shannon.png" width="800">
+</div>
+<div align="center">
+<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_ITS2-alpha-rarefaction21618_faith_pd.png" width="800">
+</div>
+<div align="center">
+<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_ITS2-alpha-rarefaction21618_observed_otu.png" width="800">
+</div>
+</details>
+
+## Second run for ITS2 :
 
 Delete **JL5** (137 counts), **F2** (246 counts), **JC3** (2292 counts) and **JL2** (3999 counts) (the next one is F5 with 25768 counts) 
 
-## Bibliography/References:
+# Bibliography/References:
 
 
 - Peay K.G.; Kennedy P.G.; Bruns T.D. (2008). "Fungal community ecology: a hybrid beast with a molecular master". BioScience. 58 (9): 799–810. doi:10.1641/b580907. S2CID 18363490.
