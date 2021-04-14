@@ -116,9 +116,6 @@ The ITS region is the most widely sequenced DNA region in **molecular ecology of
 
 #### Per-sample sequence counts by Qiime2 before Denoise
 
-<details>
-  <summary>Click here to expand and see the result!</summary>
-
 | Sample ID                    | Before denoise | After denoise |
 |------------------------------|----------------|---------------|
 | F4_S249_joined.fastq.gzjoin  | 65331          | 50859         |
@@ -137,6 +134,8 @@ The ITS region is the most widely sequenced DNA region in **molecular ecology of
 | F2_S245_joined.fastq.gzjoin  | 246            | 223           |
 | JL5_S287_joined.fastq.gzjoin | 137            | 78            |
 
+<details>
+  <summary>Click here to expand</summary>
 
 JL5 (78 counts), F2 (223 counts), JC3 (1818 counts) and JL2 (3972 counts) are may be too low..
 
@@ -144,10 +143,8 @@ These informations will be important for chosen the "good" rarefaction cut-off.
 
 </details>
 
-#### Quality after demultiplexing check
-
 <details>
-  <summary>Click here to expand and see the result!</summary>
+  <summary>Click here for quality after demultiplexing check</summary>
 
 <div align="center">
 <img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_demultiplex_ITS2_run01.png" width="800">
@@ -159,7 +156,7 @@ These informations will be important for chosen the "good" rarefaction cut-off.
 ### Alpha rarefaction steps with rarefaction on 78
 
 <details>
-  <summary>Click here to expand and see the result!</summary>
+  <summary>Click here for alpha-diversity index</summary>
 
 <div align="center">
 <img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_ITS2-alpha-rarefaction78_shannon.png" width="800">
@@ -172,21 +169,16 @@ These informations will be important for chosen the "good" rarefaction cut-off.
 </div>
 </details>
 
-
-#### Tree test
-
 <details>
-  <summary>Click here to expand and see the result!</summary>
+  <summary>Click here for tree test</summary>
 
 <div align="center">
 <img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_tree_ITS2_run01.png" width="800">
 </div>
 </details>
 
-#### Diversity metrix results
-
 <details>
-  <summary>Click here to expand and see the result!</summary>
+  <summary>Click here for diversity metrix results</summary>
 
 ##### relationships between alpha diversity and study metadata
 
@@ -216,10 +208,10 @@ Bray-Curtis distance PCoA
 
 </details>
 
-#### BarPlot ok site/occurences 
-
 <details>
-  <summary>Click here to expand and see the result!</summary>
+  <summary>Click here for BarPlot site/occurences </summary>
+
+#### BarPlot ok site/occurences 
 
 <div align="center">
 <img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_Taxonomy_site_occurences_ITS2_run01.png" width="800">
@@ -230,7 +222,7 @@ Bray-Curtis distance PCoA
 ### Alpha rarefaction steps with rarefaction on 1818
 
 <details>
-  <summary>Click here to expand and see the result!</summary>
+  <summary>Click here for alpha-diversity index</summary>
 
 <div align="center">
 <img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_ITS2-alpha_rarefaction_1818_shannon.png" width="800">
@@ -246,7 +238,7 @@ Bray-Curtis distance PCoA
 ### Alpha rarefaction steps with rarefaction on 3972
 
 <details>
-  <summary>Click here to expand and see the result!</summary>
+  <summary>Click here for alpha-diversity index</summary>
 
 <div align="center">
 <img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_ITS2-alpha-rarefaction3972_shannon.png" width="800">
@@ -262,7 +254,7 @@ Bray-Curtis distance PCoA
 ### Alpha rarefaction steps with rarefaction on 21618
 
 <details>
-  <summary>Click here to expand and see the result!</summary>
+  <summary>Click here for alpha-diversity index</summary>
 
 <div align="center">
 <img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_ITS2-alpha-rarefaction21618_shannon.png" width="800">
