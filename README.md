@@ -180,6 +180,18 @@ These informations will be important for chosen the "good" rarefaction cut-off.
 <img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_ITS2-alpha-rarefaction3972_observed_otu.png" width="800">
 </div>
 
+##### Alpha rarefaction steps with rarefaction on 21618
+
+<div align="center">
+<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_ITS2-alpha-rarefaction21618_shannon.png" width="800">
+</div>
+<div align="center">
+<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_ITS2-alpha-rarefaction21618_faith_pd.png" width="800">
+</div>
+<div align="center">
+<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_ITS2-alpha-rarefaction21618_observed_otu.png" width="800">
+</div>
+
 ##### Tree test
 
 <div align="center">
