@@ -99,9 +99,16 @@ The ITS region is the most widely sequenced DNA region in **molecular ecology of
 
 Only for paired sequences, after cleanning steps.
 
+<button class="btn btn-primary" data-toggle="collapse" data-target="#BlockName"> Show/Hide </button>  
+<div id="BlockName" class="collapse">  
+
 <div align="center">
 <img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_fastqc_per_base_sequence_quality_plot_ITS2_run01.png" width="800">
 </div>
+
+</div>
+
+
 
 Adpaters content verification :
 
