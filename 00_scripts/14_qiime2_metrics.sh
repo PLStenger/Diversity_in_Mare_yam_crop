@@ -26,24 +26,24 @@ qiime diversity core-metrics-phylogenetic \
        --i-table ConTable.qza \
        --p-sampling-depth 21618 \
        --m-metadata-file sample-metadata.tsv \
-       #
+       
        --o-rarefied-table RarTable.qza \
-       #
+       
        --o-observed-otus-vector Vector-observed_asv.qza \
        --o-shannon-vector Vector-shannon.qza \
        --o-evenness-vector Vector-evenness.qza \
        --o-faith-pd-vector Vector-faith_pd.qza \
-       #
+       
        --o-jaccard-distance-matrix Matrix-jaccard.qza \
        --o-bray-curtis-distance-matrix Matrix-braycurtis.qza \
        --o-unweighted-unifrac-distance-matrix Matrix-unweighted_unifrac.qza \
        --o-weighted-unifrac-distance-matrix Matrix-weighted_unifrac.qza \
-       #
+       
        --o-jaccard-pcoa-results PCoA-jaccard.qza \
        --o-bray-curtis-pcoa-results PCoA-braycurtis.qza \
        --o-unweighted-unifrac-pcoa-results PCoA-unweighted_unifrac.qza \
        --o-weighted-unifrac-pcoa-results PCoA-weighted_unifrac.qza \
-       #
+       
        --o-jaccard-emperor Emperor-jaccard.qzv \        
        --o-bray-curtis-emperor Emperor-braycurtis.qzv \
        --o-unweighted-unifrac-emperor Emperor-unweighted_unifrac.qzv \
@@ -103,24 +103,24 @@ qiime diversity core-metrics-phylogenetic \
        --i-table ConTable.qza \
        --p-sampling-depth 29544 \
        --m-metadata-file sample-metadata.tsv \
-       #
+       
        --o-rarefied-table RarTable.qza \
-       #
+       
        --o-observed-otus-vector Vector-observed_asv.qza \
        --o-shannon-vector Vector-shannon.qza \
        --o-evenness-vector Vector-evenness.qza \
        --o-faith-pd-vector Vector-faith_pd.qza \
-       #
+       
        --o-jaccard-distance-matrix Matrix-jaccard.qza \
        --o-bray-curtis-distance-matrix Matrix-braycurtis.qza \
        --o-unweighted-unifrac-distance-matrix Matrix-unweighted_unifrac.qza \
        --o-weighted-unifrac-distance-matrix Matrix-weighted_unifrac.qza \
-       #
+       
        --o-jaccard-pcoa-results PCoA-jaccard.qza \
        --o-bray-curtis-pcoa-results PCoA-braycurtis.qza \
        --o-unweighted-unifrac-pcoa-results PCoA-unweighted_unifrac.qza \
        --o-weighted-unifrac-pcoa-results PCoA-weighted_unifrac.qza \
-       #
+       
        --o-jaccard-emperor Emperor-jaccard.qzv \        
        --o-bray-curtis-emperor Emperor-braycurtis.qzv \
        --o-unweighted-unifrac-emperor Emperor-unweighted_unifrac.qzv \
