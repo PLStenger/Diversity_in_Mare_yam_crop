@@ -78,6 +78,8 @@ First, open your terminal. Then, run these two command lines :
         >real	75m29.388s
         >user	50m12.821s
         >sys	3m7.610s
+    time nohup bash 14_qiime2_metrics.sh &> 14_qiime2_metrics.out
+
 
 ### For running MultiQC (work now only in Python3) :
 
