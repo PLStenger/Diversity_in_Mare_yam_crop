@@ -22,7 +22,7 @@ conda activate qiime2-2019.10
     #        --p-n-jobs {params.jobs} \
 
 qiime diversity core-metrics-phylogenetic \
-       --i-phylogeny RootedTree.qza \
+       --i-phylogeny rooted-tree.qza \
        --i-table ConTable.qza \
        --p-sampling-depth 21618 \
        --m-metadata-file sample-metadata.tsv \
@@ -99,7 +99,7 @@ conda activate qiime2-2019.10
     #        --p-n-jobs {params.jobs} \
 
 qiime diversity core-metrics-phylogenetic \
-       --i-phylogeny RootedTree.qza \
+       --i-phylogeny rooted-tree.qza \
        --i-table ConTable.qza \
        --p-sampling-depth 29544 \
        --m-metadata-file sample-metadata.tsv \
