@@ -9,6 +9,25 @@ eval "$(conda shell.bash hook)"
 conda activate qiime2-2019.10
 
 
+# table_contingency_filter :
+############################
+
+# Aim: filter features that show up in only one samples, based on
+#      the suspicion that these may not represent real biological diversity
+#      but rather PCR or sequencing errors (such as PCR chimeras)
+#      Use: qiime feature-table filter-features [OPTIONS]
+
+# contingency:
+    # min_obs: 2  # Remove features that are present in only a single sample !
+    # min_freq: 0 # Remove features with a total abundance (summed across all samples) of less than 0 !
+
+
+qiime feature-table filter-features  --i-table NegTable.qza \
+        					       --p-min-samples 2 \
+        					       --o-filtered-table ConTable.qza
+
+
+
 # sequence_contingency_filter :
 ###############################
 
