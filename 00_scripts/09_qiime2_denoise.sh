@@ -51,8 +51,8 @@ qiime quality-control exclude-seqs --i-query-sequences RepSeq.qza \
       					     --i-reference-sequences RepSeq.qza \
       					     --p-method vsearch \
       					     --p-threads 6 \
-      					     --p-perc-identity 0.97 \
-      					     --p-perc-query-aligned 0.97 \
+      					     --p-perc-identity 1.00 \
+      					     --p-perc-query-aligned 1.00 \
       					     --o-sequence-hits HitNegCtrl.qza \
       					     --o-sequence-misses NegRepSeq.qza
 
