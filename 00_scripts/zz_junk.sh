@@ -26,6 +26,8 @@ qiime feature-table filter-features  --i-table NegTable.qza \
         					       --p-min-samples 2 \
         					       --o-filtered-table ConTable.qza
 
+qiime feature-table summarize --i-table ConTable.qza --o-visualization ConTable.qzv
+qiime feature-table summarize --i-table NegTable.qza --o-visualization NegTable.qzv
 
 
 # sequence_contingency_filter :
@@ -41,4 +43,5 @@ qiime feature-table filter-features  --i-table NegTable.qza \
 
 qiime feature-table filter-seqs --i-data NegRepSeq.qza --i-table ConTable.qza --o-filtered-data ConRepSeq.qza
 
+qiime feature-table summarize --i-table ConRepSeq.qza --o-visualization ConRepSeq.qzv
 
