@@ -59,9 +59,9 @@ First, open your terminal. Then, run these two command lines :
         >user	1m27.684s
         >sys	0m20.047s
     time nohup bash 09_qiime2_denoise.sh &> 09_qiime2_denoise.out
-        >real	94m10.219s
-        >user	246m37.209s
-        >sys	5m52.654s
+        real	126m54.675s
+        user	293m11.617s
+        sys	9m0.347s
     time nohup bash 10_qiime2_tree.sh &> 10_qiime2_tree.out
         >real	35m4.471s
         >user	21m19.925s
