@@ -27,6 +27,21 @@ qiime quality-control exclude-seqs --i-query-sequences RepSeq.qza \
       					     --o-sequence-hits HitNegCtrl.qza \
       					     --o-sequence-misses NegRepSeq.qza
 
+
+# table_contamination_filter :
+##############################
+
+# Aim: filter features from table based on frequency and/or metadata
+#      Use: qiime feature-table filter-features [OPTIONS]
+
+# --p-exclude-ids: --p-no-exclude-ids If true, the samples selected by `metadata` or `where` parameters will be excluded from the filtered table instead of being retained. [default: False]:
+
+qiime feature-table filter-features --i-table Table.qza \
+     					      --m-metadata-file HitNegCtrl.qza \
+     					      --o-filtered-table NegTable.qza \
+     					      --p-exclude-ids
+
+
 # table_contingency_filter :
 ############################
 
@@ -46,6 +61,9 @@ qiime feature-table filter-features  --i-table NegTable.qza \
 
 qiime feature-table summarize --i-table ConTable.qza --o-visualization ConTable.qzv
 qiime feature-table summarize --i-table NegTable.qza --o-visualization NegTable.qzv
+qiime feature-table summarize --i-table NegRepSeq.qza --o-visualization NegRepSeq.qzv
+qiime feature-table summarize --i-table RepSeq.qza --o-visualization RepSeq.qzv
+
 
 
 # sequence_contingency_filter :
