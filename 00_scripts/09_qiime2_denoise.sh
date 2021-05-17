@@ -44,12 +44,15 @@ qiime dada2 denoise-single --i-demultiplexed-seqs demux.qza \
 #      to identify sequences that hit/miss the reference
 #      Use: qiime quality-control exclude-seqs [OPTIONS]
 
+# 0.97 is the default (see https://docs.qiime2.org/2020.2/plugins/available/quality-control/exclude-seqs/)
+# Whereas N. Fernandez put 1.00 but didn't work forward (" All features were filtered out of the data." error to the step "qiime feature-table filter-seqs")
+
 qiime quality-control exclude-seqs --i-query-sequences RepSeq.qza \
       					     --i-reference-sequences RepSeq.qza \
       					     --p-method vsearch \
       					     --p-threads 6 \
-      					     --p-perc-identity 1.00 \
-      					     --p-perc-query-aligned 1.00 \
+      					     --p-perc-identity 0.97 \
+      					     --p-perc-query-aligned 0.97 \
       					     --o-sequence-hits HitNegCtrl.qza \
       					     --o-sequence-misses NegRepSeq.qza
 
@@ -58,6 +61,8 @@ qiime quality-control exclude-seqs --i-query-sequences RepSeq.qza \
 
 # Aim: filter features from table based on frequency and/or metadata
 #      Use: qiime feature-table filter-features [OPTIONS]
+
+# --p-exclude-ids: --p-no-exclude-ids If true, the samples selected by `metadata` or `where` parameters will be excluded from the filtered table instead of being retained. [default: False]:
 
 qiime feature-table filter-features --i-table Table.qza \
      					      --m-metadata-file HitNegCtrl.qza \
