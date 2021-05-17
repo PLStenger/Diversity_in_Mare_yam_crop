@@ -21,7 +21,7 @@ conda activate qiime2-2019.10
 #       					     --p-threads 6 \
 
 qiime quality-control exclude-seqs --i-query-sequences RepSeq.qza \
-      					     --i-reference-sequences RepSeq.qza \
+      					     --i-reference-sequences /Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/05_QIIME2/ITS2/negctrl/RepSeq.qza \
       					     --p-method vsearch \
       					     --p-perc-identity 1.00 \
       					     --p-perc-query-aligned 1.00 \
