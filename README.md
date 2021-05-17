@@ -20,6 +20,7 @@ Diversity in Mare island (Loyalty island, New-Caledonia) yam's crop (*Dioscorea 
      * run **04_exploring_cleaned_data_with_ReadFastQC.R** script (ReadFastQC R package, https://github.com/PLStenger/ReadFastQC) for quick results exploration 
      * run multiqc .
 
+
 ## Run this pipeline
 
 ### Installing pipeline :
@@ -79,6 +80,10 @@ First, open your terminal. Then, run these two command lines :
         >user	50m12.821s
         >sys	3m7.610s
     time nohup bash 14_qiime2_metrics.sh &> 14_qiime2_metrics.out
+
+### Run Paired-end pipeline scripts in local by :
+
+    time nohup bash 08_qiime2_import_PE.sh &> 08_qiime2_import_PE.out
 
 
 ### For running MultiQC (work now only in Python3) :
