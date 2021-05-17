@@ -8,6 +8,24 @@ cd $DATADIRECTORY_ITS2_fungi
 eval "$(conda shell.bash hook)"
 conda activate qiime2-2019.10
 
+# sequence_contamination_filter :
+#################################
+
+# Aim: aligns feature sequences to a set of reference sequences
+#      to identify sequences that hit/miss the reference
+#      Use: qiime quality-control exclude-seqs [OPTIONS]
+
+# 0.97 is the default (see https://docs.qiime2.org/2020.2/plugins/available/quality-control/exclude-seqs/)
+# Whereas N. Fernandez put 1.00 but didn't work forward (" All features were filtered out of the data." error to the step "qiime feature-table filter-seqs")
+
+qiime quality-control exclude-seqs --i-query-sequences RepSeq.qza \
+      					     --i-reference-sequences RepSeq.qza \
+      					     --p-method vsearch \
+      					     --p-threads 6 \
+      					     --p-perc-identity 0.97 \
+      					     --p-perc-query-aligned 0.97 \
+      					     --o-sequence-hits HitNegCtrl.qza \
+      					     --o-sequence-misses NegRepSeq.qza
 
 # table_contingency_filter :
 ############################
