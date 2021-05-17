@@ -61,8 +61,9 @@ qiime feature-table filter-features  --i-table NegTable.qza \
 
 qiime feature-table summarize --i-table ConTable.qza --o-visualization ConTable.qzv
 qiime feature-table summarize --i-table NegTable.qza --o-visualization NegTable.qzv
-qiime feature-table summarize --i-table NegRepSeq.qza --o-visualization NegRepSeq.qzv
-qiime feature-table summarize --i-table RepSeq.qza --o-visualization RepSeq.qzv
+qiime feature-table tabulate-seqs --i-data NegRepSeq.qza --o-visualization NegRepSeq.qzv
+qiime feature-table tabulate-seqs --i-data RepSeq.qza --o-visualization RepSeq.qzv
+qiime feature-table tabulate-seqs --i-data HitNegCtrl.qza --o-visualization HitNegCtrl.qzv
 
 
 
