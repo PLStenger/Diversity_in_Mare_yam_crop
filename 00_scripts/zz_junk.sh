@@ -18,5 +18,5 @@ conda activate qiime2-2019.10
 qiime feature-table filter-seqs --i-data NegRepSeq.qza \
       					  --i-table ConTable.qza \
       					  --o-filtered-data ConRepSeq.qza \
-                  --output-dir $DATADIRECTORY_ITS2_fungi
+                  --output-dir $DATADIRECTORY_ITS2_fungi/out/
 
