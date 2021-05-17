@@ -38,8 +38,7 @@ qiime quality-control exclude-seqs --i-query-sequences RepSeq.qza \
 
 qiime feature-table filter-features --i-table Table.qza \
      					      --m-metadata-file HitNegCtrl.qza \
-     					      --o-filtered-table NegTable.qza \
-     					      --p-exclude-ids
+     					      --o-filtered-table NegTable.qza
 
 
 # table_contingency_filter :
