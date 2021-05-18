@@ -146,6 +146,9 @@ The ITS region is the most widely sequenced DNA region in **molecular ecology of
 
 Legend : F = Forest, SF = Short Fallow, LF = Long Fallow, SE = pipeline as Single-End (pipeline from https://gitlab.com/IAC_SolVeg/CNRT_BIOINDIC), PE = pipeline as Paired-End.
 
+
+Here, before denoise, **PE** allow to obtain **in average 824.9 sequences** (1796 sequences in max for LF1) **more than SE pipeline** (an average of **2.45% in more**, 4.65% in max for LF2).
+
 <details>
   <summary>Click here to expand</summary>
 
@@ -338,3 +341,6 @@ Delete **JL5** (137 counts), **F2** (246 counts), **JC3** (2292 counts) and **JL
 | F2         |  8925             |  5797            | 8927             | XXXXXXX          |
 
 Legend : F = Forest, SF = Short Fallow, LF = Long Fallow, SE = pipeline as Single-End (pipeline from https://gitlab.com/IAC_SolVeg/CNRT_BIOINDIC), PE = pipeline as Paired-End.
+
+
+Here, before denoise, **PE** allow to obtain **in average 30.07 sequences** (52 sequences in max for LF5) **more than SE pipeline** (an average of **0.04% in more**, 0.07% in max for LF2).
