@@ -303,3 +303,35 @@ Delete **JL5** (137 counts), **F2** (246 counts), **JC3** (2292 counts) and **JL
 
 - Peay K.G.; Kennedy P.G.; Bruns T.D. (2008). "Fungal community ecology: a hybrid beast with a molecular master". BioScience. 58 (9): 799–810. doi:10.1641/b580907. S2CID 18363490.
 - Schoch, C.L., Seifert, K.A., Huhndorf, S., Robert, V., Spouge, J.L., Levesque, C.A., Chen, W., Bolchacova, E., Voigt, K., Crous, P.W.; et al. (2012). "Nuclear Ribosomal Internal Transcribed Spacer (ITS) Region as a Universal DNA Barcode Marker for Fungi". PNAS. 109 (16): 6241–6246. doi:10.1073/pnas.1117018109. PMC 3341068. PMID 22454494.
+
+
+
+## V4
+
+### Context
+
+### Sequences quality results
+
+#### Per base sequence quality plot
+
+#### Per-sample sequence counts by Qiime2 before Denoise
+
+| Sample ID  | Before denoise SE | After denoise SE | After denoise PE | After denoise PE |
+|------------|-------------------|------------------|------------------|------------------|
+| SF4        |  108358           |  83183           | 108406           | XXXXXXX          |
+| LF5        |  103261           |  74653           | 103313           | XXXXXXX          |
+| SF5        |  101516           |  71800           | 101555           | XXXXXXX          |
+| SF2        |  88896            |  71746           | 88930            | XXXXXXX          |
+| F4         |  88488            |  68766           | 88533            | XXXXXXX          |
+| SF3        |  72746            |  56477           | 72773            | XXXXXXX          |
+| SF1        |  69635            |  56065           | 69662            | XXXXXXX          |
+| LF1        |  69614            |  53340           | 69644            | XXXXXXX          |
+| LF3        |  66873            |  51933           | 66899            | XXXXXXX          |
+| F1         |  64152            |  50617           | 64183            | XXXXXXX          |
+| F3         |  63601            |  48066           | 63630            | XXXXXXX          |
+| LF4        |  52577            |  41690           | 52598            | XXXXXXX          |
+| F5         |  39553            |  31247           | 39571            | XXXXXXX          |
+| LF2        |  32960            |  29544           | 32982            | XXXXXXX          |
+| F2         |  8925             |  5797            | 8927             | XXXXXXX          |
+
+Legend : F = Forest, SF = Short Fallow, LF = Long Fallow, SE = pipeline as Single-End (pipeline from https://gitlab.com/IAC_SolVeg/CNRT_BIOINDIC), PE = pipeline as Paired-End.
