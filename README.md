@@ -123,23 +123,23 @@ The ITS region is the most widely sequenced DNA region in **molecular ecology of
 
 #### Per-sample sequence counts by Qiime2 before Denoise
 
-| Sample ID                    | Before denoise | After denoise |
-|------------------------------|----------------|---------------|
-| F4_S249_joined.fastq.gzjoin  | 65331          | 50859         |
-| F3_S247_joined.fastq.gzjoin  | 62521          | 50043         |
-| JC5_S277_joined.fastq.gzjoin | 59947          | 47324         |
-| F1_S243_joined.fastq.gzjoin  | 51272          | 41188         |
-| JC2_S255_joined.fastq.gzjoin | 40401          | 32038         |
-| JC4_S275_joined.fastq.gzjoin | 37641          | 30307         |
-| JL1_S279_joined.fastq.gzjoin | 36987          | 30052         |
-| JL4_S285_joined.fastq.gzjoin | 33234          | 28133         |
-| JC1_S253_joined.fastq.gzjoin | 32209          | 25286         |
-| JL3_S283_joined.fastq.gzjoin | 29839          | 24892         |
-| F5_S251_joined.fastq.gzjoin  | 25768          | 21618         |
-| JL2_S281_joined.fastq.gzjoin | 3999           | 3972          |
-| JC3_S273_joined.fastq.gzjoin | 2292           | 1818          |
-| F2_S245_joined.fastq.gzjoin  | 246            | 223           |
-| JL5_S287_joined.fastq.gzjoin | 137            | 78            |
+| Sample ID  | Before denoise SE | After denoise SE | After denoise PE | After denoise PE |
+|------------|-------------------|------------------|------------------|------------------|
+| F4         | 65331             | 50859            | 66823            | XXXXXXX          |
+| F3         | 62521             | 50043            | 63670            | XXXXXXX          |
+| SF5        | 59947             | 47324            | 61513            | XXXXXXX          |
+| F1         | 51272             | 41188            | 52434            | XXXXXXX          |
+| SF2        | 40401             | 32038            | 41328            | XXXXXXX          |
+| LF1        | 37641             | 30307            | 39437            | XXXXXXX          |
+| SF4        | 36987             | 30052            | 37588            | XXXXXXX          |
+| LF4        | 33234             | 28133            | 33867            | XXXXXXX          |
+| SF1        | 32209             | 25286            | 33598            | XXXXXXX          |
+| LF3        | 29839             | 24892            | 30642            | XXXXXXX          |
+| F5         | 25768             | 21618            | 26530            | XXXXXXX          |
+| LF2        | 3999              | 3972             | 4033             | XXXXXXX          |
+| SF3        | 2292              | 1818             | 2338             | XXXXXXX          |
+| F2         | 246               | 223              | 258              | XXXXXXX          |
+| LF5        | 137               | 78               | 138              | XXXXXXX          |
 
 <details>
   <summary>Click here to expand</summary>
