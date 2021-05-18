@@ -21,7 +21,7 @@ conda activate qiime2-2019.10
 qiime tools import --type 'SampleData[PairedEndSequencesWithQuality]' \
 			    --input-path  $MANIFEST_FUNGI \
 			    --output-path $OUTPUT_ITS2_fungi/demux.qza \
-			    --input-format PairedEndFastqManifestPhred64V2
+			    --input-format PairedEndFastqManifestPhred33V2
 
 cd $OUTPUT_ITS2_fungi
 
@@ -42,7 +42,7 @@ conda activate qiime2-2019.10
 qiime tools import --type 'SampleData[PairedEndSequencesWithQuality]' \
 			    --input-path  $MANIFEST_BACTERIA \
 			    --output-path $OUTPUT_V4_bacteria/demux.qza \
-			    --input-format PairedEndFastqManifestPhred64V2
+			    --input-format PairedEndFastqManifestPhred33V2
 
 cd $OUTPUT_V4_bacteria
 
