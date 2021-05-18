@@ -141,6 +141,8 @@ The ITS region is the most widely sequenced DNA region in **molecular ecology of
 | F2         | 246               | 223              | 258              | XXXXXXX          |
 | LF5        | 137               | 78               | 138              | XXXXXXX          |
 
+Legend : F = Forest, SF = Short Fallow, LF = Long Fallow, SE = pipeline as Single-End (pipeline from https://gitlab.com/IAC_SolVeg/CNRT_BIOINDIC), PE = pipeline as Paired-End.
+
 <details>
   <summary>Click here to expand</summary>
 
