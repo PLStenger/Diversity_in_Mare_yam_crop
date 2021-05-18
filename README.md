@@ -84,6 +84,9 @@ First, open your terminal. Then, run these two command lines :
 ### Run Paired-end pipeline scripts in local by :
 
     time nohup bash 08_qiime2_import_PE.sh &> 08_qiime2_import_PE.out
+        >real	4m55.899s
+        >user	1m41.410s
+        >sys	0m20.118s
 
 
 ### For running MultiQC (work now only in Python3) :
