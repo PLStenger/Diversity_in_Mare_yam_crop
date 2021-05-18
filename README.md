@@ -87,7 +87,7 @@ First, open your terminal. Then, run these two command lines :
         >real	4m55.899s
         >user	1m41.410s
         >sys	0m20.118s
-
+    time nohup bash 09_qiime2_denoise_PE.sh &> 09_qiime2_denoise_PE.out
 
 ### For running MultiQC (work now only in Python3) :
 
