@@ -28,14 +28,15 @@ conda activate qiime2-2019.10
 #      chimeras and singletons sequences
 #      Use: qiime dada2 denoise-single [OPTIONS]
 
-qiime dada2 denoise-single --i-demultiplexed-seqs demux.qza \
-                           --p-n-threads 6 \
-                           --p-chimera-method 'consensus' \
-                           --p-trunc-len 0 \
-                           --p-trunc-q 0 \
-                           --o-representative-sequences RepSeq.qza \
-                           --o-table Table.qza \
-                           --o-denoising-stats Stats.qza
+# ICI C'EST "#"é CAR DEJA FAIT ET CA PREND DU TEMPS À RUNNER; donc penser à dé-"#"ser si nouveau run complet
+#qiime dada2 denoise-single --i-demultiplexed-seqs demux.qza \
+#                           --p-n-threads 6 \
+#                           --p-chimera-method 'consensus' \
+#                           --p-trunc-len 0 \
+#                           --p-trunc-q 0 \
+#                           --o-representative-sequences RepSeq.qza \
+#                           --o-table Table.qza \
+#                           --o-denoising-stats Stats.qza
 
 # sequence_contamination_filter :
 #################################
@@ -48,7 +49,7 @@ qiime dada2 denoise-single --i-demultiplexed-seqs demux.qza \
 # Whereas N. Fernandez put 1.00 but didn't work forward (" All features were filtered out of the data." error to the step "qiime feature-table filter-seqs")
 
 qiime quality-control exclude-seqs --i-query-sequences RepSeq.qza \
-      					     --i-reference-sequences RepSeq.qza \
+      					     --i-reference-sequences /Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/05_QIIME2/Negative_control/ITS2/RepSeq.qza \
       					     --p-method vsearch \
       					     --p-threads 6 \
       					     --p-perc-identity 1.00 \
@@ -143,14 +144,15 @@ conda activate qiime2-2019.10
 #      chimeras and singletons sequences
 #      Use: qiime dada2 denoise-single [OPTIONS]
 
-qiime dada2 denoise-single --i-demultiplexed-seqs demux.qza \
-                           --p-n-threads 6 \
-                           --p-chimera-method 'consensus' \
-                           --p-trunc-len 0 \
-                           --p-trunc-q 0 \
-                           --o-representative-sequences RepSeq.qza \
-                           --o-table Table.qza \
-                           --o-denoising-stats Stats.qza
+# ICI C'EST "#"é CAR DEJA FAIT ET CA PREND DU TEMPS À RUNNER; donc penser à dé-"#"ser si nouveau run complet
+#qiime dada2 denoise-single --i-demultiplexed-seqs demux.qza \
+#                           --p-n-threads 6 \
+#                           --p-chimera-method 'consensus' \
+#                           --p-trunc-len 0 \
+#                           --p-trunc-q 0 \
+#                           --o-representative-sequences RepSeq.qza \
+#                           --o-table Table.qza \
+#                           --o-denoising-stats Stats.qza
 
 # sequence_contamination_filter :
 #################################
@@ -160,7 +162,7 @@ qiime dada2 denoise-single --i-demultiplexed-seqs demux.qza \
 #      Use: qiime quality-control exclude-seqs [OPTIONS]
 
 qiime quality-control exclude-seqs --i-query-sequences RepSeq.qza \
-      					     --i-reference-sequences RepSeq.qza \
+      					     --i-reference-sequences /Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/05_QIIME2/Negative_control/V4/RepSeq.qza \
       					     --p-method vsearch \
       					     --p-threads 6 \
       					     --p-perc-identity 1.00 \
