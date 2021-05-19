@@ -48,6 +48,8 @@ conda activate qiime2-2019.10
 # 0.97 is the default (see https://docs.qiime2.org/2020.2/plugins/available/quality-control/exclude-seqs/)
 # Whereas N. Fernandez put 1.00 but didn't work forward (" All features were filtered out of the data." error to the step "qiime feature-table filter-seqs")
 
+# Here --i-reference-sequences correspond to the negative control sample (if you don't have any, like here, take another one from an old project, the one here is from the same sequencing line (but not same project))
+
 qiime quality-control exclude-seqs --i-query-sequences RepSeq.qza \
       					     --i-reference-sequences /Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/05_QIIME2/Negative_control/ITS2/RepSeq.qza \
       					     --p-method vsearch \
@@ -160,6 +162,8 @@ conda activate qiime2-2019.10
 # Aim: aligns feature sequences to a set of reference sequences
 #      to identify sequences that hit/miss the reference
 #      Use: qiime quality-control exclude-seqs [OPTIONS]
+
+# Here --i-reference-sequences correspond to the negative control sample (if you don't have any, like here, take another one from an old project, the one here is from the same sequencing line (but not same project))
 
 qiime quality-control exclude-seqs --i-query-sequences RepSeq.qza \
       					     --i-reference-sequences /Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/05_QIIME2/Negative_control/V4/RepSeq.qza \
