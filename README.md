@@ -100,7 +100,9 @@ First, open your terminal. Then, run these two command lines :
         > user	1m8.333s
         >sys	0m15.190s 
     time nohup bash 12_qiime2_calculate_and_explore_diversity_metrics_PE.sh &> 12_qiime2_calculate_and_explore_diversity_metrics_PE.out
-        >
+        >real	7m44.924s
+        >user	1m55.265s
+        >sys	0m34.381s
 
 ### For running MultiQC (work now only in Python3) :
 
@@ -155,7 +157,7 @@ The ITS region is the most widely sequenced DNA region in **molecular ecology of
 | LF2        | 3999              | 3972             | 4033              | 4011             |
 | SF3        | 2292              | 1818             | 2338              | 1959             |
 | F2         | 246               | 223              | 258               | 220              |
-| LF5        | 137               | 78               | 138             -  | 72               |
+| LF5        | 137               | 78               | 138               | 72               |
 
 Legend : F = Forest, SF = Short Fallow, LF = Long Fallow, SE = pipeline as Single-End (pipeline from https://gitlab.com/IAC_SolVeg/CNRT_BIOINDIC), PE = pipeline as Paired-End.
 
