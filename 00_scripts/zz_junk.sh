@@ -25,5 +25,6 @@ eval "$(conda shell.bash hook)"
 conda activate qiime2-2019.10
 
 
+qiime feature-table summarize --i-table Table.qza --o-visualization Table.qzv
 
 
