@@ -108,6 +108,7 @@ qiime feature-table filter-seqs --i-data NegRepSeq.qza \
 # Aim: Generate tabular view of feature identifier to sequence mapping
        # Use: qiime feature-table tabulate-seqs [OPTIONS]
 
+qiime feature-table summarize --i-table Table.qza --o-visualization Table.qzv
 qiime feature-table summarize --i-table ConTable.qza --o-visualization ConTable.qzv
 qiime feature-table summarize --i-table NegTable.qza --o-visualization NegTable.qzv
 qiime feature-table tabulate-seqs --i-data NegRepSeq.qza --o-visualization NegRepSeq.qzv
@@ -221,6 +222,7 @@ qiime feature-table filter-seqs --i-data NegRepSeq.qza \
 # Aim: Generate tabular view of feature identifier to sequence mapping
        # Use: qiime feature-table tabulate-seqs [OPTIONS]
 
+qiime feature-table summarize --i-table Table.qza --o-visualization Table.qzv
 qiime feature-table summarize --i-table ConTable.qza --o-visualization ConTable.qzv
 qiime feature-table summarize --i-table NegTable.qza --o-visualization NegTable.qzv
 qiime feature-table tabulate-seqs --i-data NegRepSeq.qza --o-visualization NegRepSeq.qzv
