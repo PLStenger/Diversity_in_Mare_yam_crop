@@ -103,6 +103,8 @@ First, open your terminal. Then, run these two command lines :
         >real	7m44.924s
         >user	1m55.265s
         >sys	0m34.381s
+    time nohup bash 13_qiime2_assign_taxonomy_PE.sh &> 13_qiime2_assign_taxonomy_PE.out
+        >
 
 ### For running MultiQC (work now only in Python3) :
 
