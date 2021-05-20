@@ -95,6 +95,7 @@ First, open your terminal. Then, run these two command lines :
         >real	18m50.095s
         >user	9m43.400s
         >sys	0m36.308s
+    time nohup bash 11_qiime2_rarefaction_PE.sh &> 11_qiime2_rarefaction_PE.out
 
 ### For running MultiQC (work now only in Python3) :
 
