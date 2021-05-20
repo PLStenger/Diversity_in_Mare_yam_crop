@@ -135,21 +135,21 @@ The ITS region is the most widely sequenced DNA region in **molecular ecology of
 
 | Sample ID  | Before denoise SE | After denoise SE | After denoise PE | After denoise PE |
 |------------|-------------------|------------------|------------------|------------------|
-| F4         | 65331             | 50859            | 66823            | XXXXXXX          |
-| F3         | 62521             | 50043            | 63670            | XXXXXXX          |
-| SF5        | 59947             | 47324            | 61513            | XXXXXXX          |
-| F1         | 51272             | 41188            | 52434            | XXXXXXX          |
-| SF2        | 40401             | 32038            | 41328            | XXXXXXX          |
-| LF1        | 37641             | 30307            | 39437            | XXXXXXX          |
-| SF4        | 36987             | 30052            | 37588            | XXXXXXX          |
-| LF4        | 33234             | 28133            | 33867            | XXXXXXX          |
-| SF1        | 32209             | 25286            | 33598            | XXXXXXX          |
-| LF3        | 29839             | 24892            | 30642            | XXXXXXX          |
-| F5         | 25768             | 21618            | 26530            | XXXXXXX          |
-| LF2        | 3999              | 3972             | 4033             | XXXXXXX          |
-| SF3        | 2292              | 1818             | 2338             | XXXXXXX          |
-| F2         | 246               | 223              | 258              | XXXXXXX          |
-| LF5        | 137               | 78               | 138              | XXXXXXX          |
+| F4         | 65331             | 50859            | 66823            | 57509            |
+| F3         | 62521             | 50043            | 63670            | 52848            |
+| SF5        | 59947             | 47324            | 61513            | 49934            |
+| F1         | 51272             | 41188            | 52434            | 44710            |
+| SF2        | 40401             | 32038            | 41328            | 33952            |
+| LF1        | 37641             | 30307            | 39437            | 32531            |
+| SF4        | 36987             | 30052            | 37588            | 31440            |
+| LF4        | 33234             | 28133            | 33867            | 29881            |
+| SF1        | 32209             | 25286            | 33598            | 29108            |
+| LF3        | 29839             | 24892            | 30642            | 26694            |
+| F5         | 25768             | 21618            | 26530            | 22941            |
+| LF2        | 3999              | 3972             | 4033             | 4011             |
+| SF3        | 2292              | 1818             | 2338             | 1959             |
+| F2         | 246               | 223              | 258              | 220              |
+| LF5        | 137               | 78               | 138              | 72               |
 
 Legend : F = Forest, SF = Short Fallow, LF = Long Fallow, SE = pipeline as Single-End (pipeline from https://gitlab.com/IAC_SolVeg/CNRT_BIOINDIC), PE = pipeline as Paired-End.
 
@@ -331,21 +331,21 @@ Delete **JL5** (137 counts), **F2** (246 counts), **JC3** (2292 counts) and **JL
 
 | Sample ID  | Before denoise SE | After denoise SE | After denoise PE | After denoise PE |
 |------------|-------------------|------------------|------------------|------------------|
-| SF4        |  108358           |  83183           | 108406           | XXXXXXX          |
-| LF5        |  103261           |  74653           | 103313           | XXXXXXX          |
-| SF5        |  101516           |  71800           | 101555           | XXXXXXX          |
-| SF2        |  88896            |  71746           | 88930            | XXXXXXX          |
-| F4         |  88488            |  68766           | 88533            | XXXXXXX          |
-| SF3        |  72746            |  56477           | 72773            | XXXXXXX          |
-| SF1        |  69635            |  56065           | 69662            | XXXXXXX          |
-| LF1        |  69614            |  53340           | 69644            | XXXXXXX          |
-| LF3        |  66873            |  51933           | 66899            | XXXXXXX          |
-| F1         |  64152            |  50617           | 64183            | XXXXXXX          |
-| F3         |  63601            |  48066           | 63630            | XXXXXXX          |
-| LF4        |  52577            |  41690           | 52598            | XXXXXXX          |
-| F5         |  39553            |  31247           | 39571            | XXXXXXX          |
-| LF2        |  32960            |  29544           | 32982            | XXXXXXX          |
-| F2         |  8925             |  5797            | 8927             | XXXXXXX          |
+| SF4        |  108358           |  83183           | 108406           | 88093            |
+| LF5        |  103261           |  74653           | 103313           | 81840            |
+| SF5        |  101516           |  71800           | 101555           | 80974            |
+| SF2        |  88896            |  71746           | 88930            | 72735            |
+| F4         |  88488            |  68766           | 88533            | 71148            |
+| SF3        |  72746            |  56477           | 72773            | 59059            |
+| SF1        |  69635            |  56065           | 69662            | 55726            |
+| LF1        |  69614            |  53340           | 69644            | 54339            |
+| LF3        |  66873            |  51933           | 66899            | 54271            |
+| F1         |  64152            |  50617           | 64183            | 52510            |
+| F3         |  63601            |  48066           | 63630            | 50073            |
+| LF4        |  52577            |  41690           | 52598            | 41865            |
+| F5         |  39553            |  31247           | 39571            | 29891            |
+| LF2        |  32960            |  29544           | 32982            | 25721            |
+| F2         |  8925             |  5797            | 8927             | 7332             |
 
 Legend : F = Forest, SF = Short Fallow, LF = Long Fallow, SE = pipeline as Single-End (pipeline from https://gitlab.com/IAC_SolVeg/CNRT_BIOINDIC), PE = pipeline as Paired-End.
 
