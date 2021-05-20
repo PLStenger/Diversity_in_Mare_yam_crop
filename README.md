@@ -91,6 +91,8 @@ First, open your terminal. Then, run these two command lines :
         >real	182m55.881s
         >user	386m16.256s
         >sys	12m38.602s
+    time nohup bash 10_qiime2_tree_PE.sh &> 10_qiime2_tree_PE.out
+        >
 
 ### For running MultiQC (work now only in Python3) :
 
