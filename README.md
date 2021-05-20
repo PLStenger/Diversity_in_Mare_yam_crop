@@ -96,9 +96,9 @@ First, open your terminal. Then, run these two command lines :
         >user	9m43.400s
         >sys	0m36.308s
     time nohup bash 11_qiime2_rarefaction_PE.sh &> 11_qiime2_rarefaction_PE.out
-        >real	3m9.755s
-        >user	0m29.002s
-        >sys	0m12.406s    
+        >real	4m29.032s
+        > user	1m8.333s
+        >sys	0m15.190s 
     time nohup bash 12_qiime2_calculate_and_explore_diversity_metrics_PE.sh &> 12_qiime2_calculate_and_explore_diversity_metrics_PE.out
         >
 
