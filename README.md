@@ -164,9 +164,12 @@ Here, **before denoise**, **PE** allow to obtain **in average 824.9 sequences** 
 **After denoise**, **PE** allow to obtain **in average 1998.6 sequences** (6650 sequences in max for F4) **more than SE pipeline** (an average of **5.12% in more**, 13.13% in max for SF1).
 
 <details>
+  <summary>Click here for seeing Single-End pipeline results</summary>
+
+<details>
   <summary>Click here to expand</summary>
 
-JL5 (78 counts), F2 (223 counts), JC3 (1818 counts) and JL2 (3972 counts) are may be too low..
+For SE: JL5 (78 counts), F2 (223 counts), JC3 (1818 counts) and JL2 (3972 counts) are may be too low..
 
 These informations will be important for chosen the "good" rarefaction cut-off.
 
@@ -324,7 +327,7 @@ Delete **JL5** (137 counts), **F2** (246 counts), **JC3** (2292 counts) and **JL
 - Peay K.G.; Kennedy P.G.; Bruns T.D. (2008). "Fungal community ecology: a hybrid beast with a molecular master". BioScience. 58 (9): 799–810. doi:10.1641/b580907. S2CID 18363490.
 - Schoch, C.L., Seifert, K.A., Huhndorf, S., Robert, V., Spouge, J.L., Levesque, C.A., Chen, W., Bolchacova, E., Voigt, K., Crous, P.W.; et al. (2012). "Nuclear Ribosomal Internal Transcribed Spacer (ITS) Region as a Universal DNA Barcode Marker for Fungi". PNAS. 109 (16): 6241–6246. doi:10.1073/pnas.1117018109. PMC 3341068. PMID 22454494.
 
-
+</details>
 
 ## V4
 
