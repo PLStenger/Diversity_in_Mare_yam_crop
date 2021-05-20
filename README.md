@@ -329,6 +329,96 @@ Delete **JL5** (137 counts), **F2** (246 counts), **JC3** (2292 counts) and **JL
 
 </details>
 
+
+
+
+
+
+
+<details>
+  <summary>Click here for seeing Paired-End pipeline results</summary>
+
+<details>
+  <summary>Click here to expand</summary>
+
+For PE: JL5 (72 counts), F2 (220 counts), JC3 (1959 counts) and JL2 (4011 counts) are may be too low..
+--> Same than SE
+
+These informations will be important for chosen the "good" rarefaction cut-off.
+
+</details>
+
+<details>
+  <summary>Click here for quality after demultiplexing check</summary>
+
+Need to be done !
+
+</details>
+
+### Alpha rarefaction steps with rarefaction on 22941
+
+<details>
+  <summary>Click here for alpha-diversity index</summary>
+
+</details>
+
+<details>
+  <summary>Click here for tree test</summary>
+
+<div align="center">
+<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_tree_ITS2_run01_PE.png" width="800">
+</div>
+</details>
+
+<details>
+  <summary>Click here for diversity metrix results</summary>
+
+##### relationships between alpha diversity and study metadata
+
+- Faith PD group significance --> Need to be done
+- Evenness (Pielou) group significance --> Need to be done
+- Shannon group significance --> Need to be done
+
+##### relationships between beta diversity and study metadata 
+
+- unweighted-unifrac-body-site-significance --> Need to be done
+- unweighted-unifrac-subject-group-significance --> Need to be done
+
+##### PCoA plot to explore beta diversity metric
+
+- unweighted unifrac data as input --> Need to be done
+- bray curtis as input --> Need to be done
+
+
+Bray-Curtis distance PCoA
+
+Need to be done
+
+</details>
+
+<details>
+  <summary>Click here for BarPlot site/occurences </summary>
+
+#### BarPlot ok site/occurences 
+
+Need to be done
+  
+</details>
+
+
+# Bibliography/References:
+
+
+- Peay K.G.; Kennedy P.G.; Bruns T.D. (2008). "Fungal community ecology: a hybrid beast with a molecular master". BioScience. 58 (9): 799–810. doi:10.1641/b580907. S2CID 18363490.
+- Schoch, C.L., Seifert, K.A., Huhndorf, S., Robert, V., Spouge, J.L., Levesque, C.A., Chen, W., Bolchacova, E., Voigt, K., Crous, P.W.; et al. (2012). "Nuclear Ribosomal Internal Transcribed Spacer (ITS) Region as a Universal DNA Barcode Marker for Fungi". PNAS. 109 (16): 6241–6246. doi:10.1073/pnas.1117018109. PMC 3341068. PMID 22454494.
+
+</details>
+
+
+
+
+
+
 ## V4
 
 ### Context
