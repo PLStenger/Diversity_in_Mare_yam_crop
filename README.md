@@ -134,28 +134,29 @@ The ITS region is the most widely sequenced DNA region in **molecular ecology of
 
 #### Per-sample sequence counts by Qiime2 before Denoise
 
-| Sample ID  | Before denoise SE | After denoise SE | After denoise PE | After denoise PE |
-|------------|-------------------|------------------|------------------|------------------|
-| F4         | 65331             | 50859            | 66823            | 57509            |
-| F3         | 62521             | 50043            | 63670            | 52848            |
-| SF5        | 59947             | 47324            | 61513            | 49934            |
-| F1         | 51272             | 41188            | 52434            | 44710            |
-| SF2        | 40401             | 32038            | 41328            | 33952            |
-| LF1        | 37641             | 30307            | 39437            | 32531            |
-| SF4        | 36987             | 30052            | 37588            | 31440            |
-| LF4        | 33234             | 28133            | 33867            | 29881            |
-| SF1        | 32209             | 25286            | 33598            | 29108            |
-| LF3        | 29839             | 24892            | 30642            | 26694            |
-| F5         | 25768             | 21618            | 26530            | 22941            |
-| LF2        | 3999              | 3972             | 4033             | 4011             |
-| SF3        | 2292              | 1818             | 2338             | 1959             |
-| F2         | 246               | 223              | 258              | 220              |
-| LF5        | 137               | 78               | 138              | 72               |
+| Sample ID  | Before denoise SE | After denoise SE | Before denoise PE | After denoise PE |
+|------------|-------------------|------------------|-------------------|------------------|
+| F4         | 65331             | 50859            | 66823             | 57509            |
+| F3         | 62521             | 50043            | 63670             | 52848            |
+| SF5        | 59947             | 47324            | 61513             | 49934            |
+| F1         | 51272             | 41188            | 52434             | 44710            |
+| SF2        | 40401             | 32038            | 41328             | 33952            |
+| LF1        | 37641             | 30307            | 39437             | 32531            |
+| SF4        | 36987             | 30052            | 37588             | 31440            |
+| LF4        | 33234             | 28133            | 33867             | 29881            |
+| SF1        | 32209             | 25286            | 33598             | 29108            |
+| LF3        | 29839             | 24892            | 30642             | 26694            |
+| F5         | 25768             | 21618            | 26530             | 22941            |
+| LF2        | 3999              | 3972             | 4033              | 4011             |
+| SF3        | 2292              | 1818             | 2338              | 1959             |
+| F2         | 246               | 223              | 258               | 220              |
+| LF5        | 137               | 78               | 138             -  | 72               |
 
 Legend : F = Forest, SF = Short Fallow, LF = Long Fallow, SE = pipeline as Single-End (pipeline from https://gitlab.com/IAC_SolVeg/CNRT_BIOINDIC), PE = pipeline as Paired-End.
 
 
-Here, before denoise, **PE** allow to obtain **in average 824.9 sequences** (1796 sequences in max for LF1) **more than SE pipeline** (an average of **2.45% in more**, 4.65% in max for LF2).
+Here, **before denoise**, **PE** allow to obtain **in average 824.9 sequences** (1796 sequences in max for LF1) **more than SE pipeline** (an average of **2.45% in more**, 4.65% in max for LF2).
+**After denoise**, **PE** allow to obtain **in average 1998.6 sequences** (6650 sequences in max for F4) **more than SE pipeline** (an average of **5.12% in more**, 13.13% in max for SF1).
 
 <details>
   <summary>Click here to expand</summary>
@@ -352,3 +353,4 @@ Legend : F = Forest, SF = Short Fallow, LF = Long Fallow, SE = pipeline as Singl
 
 
 Here, before denoise, **PE** allow to obtain **in average 30.07 sequences** (52 sequences in max for LF5) **more than SE pipeline** (an average of **0.04% in more**, 0.07% in max for LF2).
+**After denoise**, **PE** allow to obtain **in average 2043.53 sequences** (9174 sequences in max for SF5) **more than SE pipeline** (an average of **3.33% in more**, 20.94% in max for F2).
