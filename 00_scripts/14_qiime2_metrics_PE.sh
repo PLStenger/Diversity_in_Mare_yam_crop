@@ -38,10 +38,13 @@ qiime diversity core-metrics-phylogenetic \
        --o-jaccard-pcoa-results PCoA-jaccard.qza \
        --o-bray-curtis-pcoa-results PCoA-braycurtis.qza \
        --o-unweighted-unifrac-pcoa-results PCoA-unweighted_unifrac.qza \
-       --o-weighted-unifrac-pcoa-results PCoA-weighted_unifrac.qza 
-       
-       
-       #\
+       --o-weighted-unifrac-pcoa-results PCoA-weighted_unifrac.qza \
+       --o-jaccard-emperor Emperor-jaccard.qzv \
+       --o-bray-curtis-emperor Emperor-braycurtis.qzv \
+       --o-unweighted-unifrac-emperor Emperor-unweighted_unifrac.qzv \
+       --o-weighted-unifrac-emperor Emperor-weighted_unifrac.qzv \
+       --output-dir /Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/ITS2/visual/
+
       # --o-jaccard-emperor /Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/ITS2/visual/Emperor-jaccard.qzv \        
       # --o-bray-curtis-emperor /Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/ITS2/visual/Emperor-braycurtis.qzv \
       # --o-unweighted-unifrac-emperor /Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/ITS2/visual/Emperor-unweighted_unifrac.qzv \
@@ -113,7 +116,13 @@ qiime diversity core-metrics-phylogenetic \
        --o-jaccard-pcoa-results PCoA-jaccard.qza \
        --o-bray-curtis-pcoa-results PCoA-braycurtis.qza \
        --o-unweighted-unifrac-pcoa-results PCoA-unweighted_unifrac.qza \
-       --o-weighted-unifrac-pcoa-results PCoA-weighted_unifrac.qza 
+       --o-weighted-unifrac-pcoa-results PCoA-weighted_unifrac.qza \
+       --o-jaccard-emperor Emperor-jaccard.qzv \
+       --o-bray-curtis-emperor Emperor-braycurtis.qzv \
+       --o-unweighted-unifrac-emperor Emperor-unweighted_unifrac.qzv \
+       --o-weighted-unifrac-emperor Emperor-weighted_unifrac.qzv \
+       --output-dir /Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/V4/visual/
+
        
        #\
        #--o-jaccard-emperor /Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/V4/visual/Emperor-jaccard.qzv \        
