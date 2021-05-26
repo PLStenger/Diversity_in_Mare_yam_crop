@@ -26,29 +26,31 @@ qiime diversity core-metrics-phylogenetic \
        --i-table ConTable.qza \
        --p-sampling-depth 22941 \
        --m-metadata-file sample-metadata.tsv \
-       --o-rarefied-table RarTable.qza \
-       --o-observed-otus-vector Vector-observed_asv.qza \
-       --o-shannon-vector Vector-shannon.qza \
-       --o-evenness-vector Vector-evenness.qza \
-       --o-faith-pd-vector Vector-faith_pd.qza \
-       --o-jaccard-distance-matrix Matrix-jaccard.qza \
-       --o-bray-curtis-distance-matrix Matrix-braycurtis.qza \
-       --o-unweighted-unifrac-distance-matrix Matrix-unweighted_unifrac.qza \
-       --o-weighted-unifrac-distance-matrix Matrix-weighted_unifrac.qza \
-       --o-jaccard-pcoa-results PCoA-jaccard.qza \
-       --o-bray-curtis-pcoa-results PCoA-braycurtis.qza \
-       --o-unweighted-unifrac-pcoa-results PCoA-unweighted_unifrac.qza \
-       --o-weighted-unifrac-pcoa-results PCoA-weighted_unifrac.qza \
-       --o-jaccard-emperor Emperor-jaccard.qzv \
-       --o-bray-curtis-emperor Emperor-braycurtis.qzv \
-       --o-unweighted-unifrac-emperor Emperor-unweighted_unifrac.qzv \
-       --o-weighted-unifrac-emperor Emperor-weighted_unifrac.qzv \
-       --output-dir /Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/ITS2/visual/
+       --o-rarefied-table /Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/ITS2/core/RarTable.qza \
+       --o-observed-otus-vector /Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/ITS2/core/Vector-observed_asv.qza \
+       --o-shannon-vector /Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/ITS2/core/Vector-shannon.qza \
+       --o-evenness-vector /Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/ITS2/core/Vector-evenness.qza \
+       --o-faith-pd-vector /Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/ITS2/core/Vector-faith_pd.qza \
+       --o-jaccard-distance-matrix /Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/ITS2/core/Matrix-jaccard.qza \
+       --o-bray-curtis-distance-matrix /Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/ITS2/core/Matrix-braycurtis.qza \
+       --o-unweighted-unifrac-distance-matrix /Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/ITS2/core/Matrix-unweighted_unifrac.qza \
+       --o-weighted-unifrac-distance-matrix /Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/ITS2/core/Matrix-weighted_unifrac.qza \
+       --o-jaccard-pcoa-results /Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/ITS2/pcoa/PCoA-jaccard.qza \
+       --o-bray-curtis-pcoa-results /Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/ITS2/pcoa/PCoA-braycurtis.qza \
+       --o-unweighted-unifrac-pcoa-results /Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/ITS2/pcoa/PCoA-unweighted_unifrac.qza \
+       --o-weighted-unifrac-pcoa-results /Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/ITS2/pcoa/PCoA-weighted_unifrac.qza \
+       --o-jaccard-emperor /Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/ITS2/visual/Emperor-jaccard.qzv \        
+       --o-bray-curtis-emperor /Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/ITS2/visual/Emperor-braycurtis.qzv \
+       --o-unweighted-unifrac-emperor /Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/ITS2/visual/Emperor-unweighted_unifrac.qzv \
+       --o-weighted-unifrac-emperor /Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/ITS2/visual/Emperor-weighted_unifrac.qzv
 
-      # --o-jaccard-emperor /Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/ITS2/visual/Emperor-jaccard.qzv \        
-      # --o-bray-curtis-emperor /Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/ITS2/visual/Emperor-braycurtis.qzv \
-      # --o-unweighted-unifrac-emperor /Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/ITS2/visual/Emperor-unweighted_unifrac.qzv \
-      # --o-weighted-unifrac-emperor /Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/ITS2/visual/Emperor-weighted_unifrac.qzv
+
+    #   --o-jaccard-emperor Emperor-jaccard.qzv \
+    #   --o-bray-curtis-emperor Emperor-braycurtis.qzv \
+    #   --o-unweighted-unifrac-emperor Emperor-unweighted_unifrac.qzv \
+    #   --o-weighted-unifrac-emperor Emperor-weighted_unifrac.qzv \
+    #   --output-dir /Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/ITS2/visual/
+
 
 # sequence_rarefaction_filter:
 ##############################
