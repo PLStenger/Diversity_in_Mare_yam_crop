@@ -113,6 +113,7 @@ First, open your terminal. Then, run these two command lines :
         >real	26m25.815s
         >user	4m3.652s
         >sys	1m0.778s
+    time nohup bash 16_core_biom_PE.sh &> 16_core_biom_PE.out
 
 ### For running MultiQC (work now only in Python3) :
 
