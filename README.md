@@ -114,7 +114,9 @@ First, open your terminal. Then, run these two command lines :
         >user	4m3.652s
         >sys	1m0.778s
     time nohup bash 16_core_biom_PE.sh &> 16_core_biom_PE.out
-        >
+        >real	20m24.338s
+        >user	4m13.665s
+        >sys	0m40.704s
     time nohup bash 17_assign_taxonomy_after_filters_PE.sh &> 17_assign_taxonomy_after_filters_PE.out
         >
 
