@@ -18,19 +18,19 @@ conda activate qiime2-2019.10
 qiime feature-table filter-samples \
         --i-table RarTable.qza \
         --m-metadata-file sample-metadata.tsv \
-        --p-where 'Acronyme = \"F\"'  \
+        --p-where "[#SampleID] IN ('F1', 'F2', 'F3', 'F4', 'F5')"  \
         --o-filtered-table subtables/RarTable-Forest.qza
 
 qiime feature-table filter-samples \
         --i-table RarTable.qza \
         --m-metadata-file sample-metadata.tsv \
-        --p-where 'Acronyme = \"SF\"'  \
+        --p-where "[#SampleID] IN ('SF1', 'SF2', 'SF3', 'SF4', 'SF5')"  \
         --o-filtered-table subtables/RarTable-short_fallow.qza
 
 qiime feature-table filter-samples \
         --i-table RarTable.qza \
         --m-metadata-file sample-metadata.tsv \
-        --p-where 'Acronyme = \"LF\"'  \
+        --p-where "[#SampleID] IN ('LF1', 'LF2', 'LF3', 'LF4', 'LF5')"  \
         --o-filtered-table subtables/RarTable-Long_fallow.qza
            
 # Aim: Identify "core" features, which are features observed,
@@ -81,19 +81,19 @@ conda activate qiime2-2019.10
 qiime feature-table filter-samples \
         --i-table RarTable.qza \
         --m-metadata-file sample-metadata.tsv \
-        --p-where 'Acronyme = \"F\"'  \
+        --p-where "[#SampleID] IN ('F1', 'F2', 'F3', 'F4', 'F5')"  \
         --o-filtered-table subtables/RarTable-Forest.qza
 
 qiime feature-table filter-samples \
         --i-table RarTable.qza \
         --m-metadata-file sample-metadata.tsv \
-        --p-where 'Acronyme = \"SF\"'  \
+        --p-where "[#SampleID] IN ('SF1', 'SF2', 'SF3', 'SF4', 'SF5')"  \
         --o-filtered-table subtables/RarTable-short_fallow.qza
 
 qiime feature-table filter-samples \
         --i-table RarTable.qza \
         --m-metadata-file sample-metadata.tsv \
-        --p-where 'Acronyme = \"LF\"'  \
+        --p-where "[#SampleID] IN ('LF1', 'LF2', 'LF3', 'LF4', 'LF5')"  \
         --o-filtered-table subtables/RarTable-Long_fallow.qza
            
 # Aim: Identify "core" features, which are features observed,
