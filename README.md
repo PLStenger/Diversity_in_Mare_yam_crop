@@ -106,10 +106,11 @@ First, open your terminal. Then, run these two command lines :
     time nohup bash 13_qiime2_assign_taxonomy_PE.sh &> 13_qiime2_assign_taxonomy_PE.out
         >more or less real	126m
     time nohup bash 14_qiime2_metrics_PE.sh &> 14_qiime2_metrics_PE.out
-        >real	4m47.321s
-        >user	1m17.215s
-        >sys	0m27.244s
-
+        >real	27m19.952s
+        >user	3m48.645s
+        >sys	1m9.025s
+    time nohup bash 15_significance_PE.sh &> 15_significance_PE.out
+        >
 
 ### For running MultiQC (work now only in Python3) :
 
