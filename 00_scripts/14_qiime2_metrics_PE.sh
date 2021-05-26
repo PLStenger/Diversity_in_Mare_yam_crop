@@ -73,6 +73,72 @@ qiime feature-table summarize \
        --o-visualization RarTable.qzv
 
 
+# Aim: compute user-specified diversity metrics and pcoa with emperor plot :
+############################################################################
+
+# alpha_diversity; Aim: Compute a user-specified alpha diversity metric, for all samples in a feature table
+############################################################################################################
+
+# Simpson's index: Measures the relative abundance of the different species making up the sample richness.
+qiime diversity alpha --i-table RarTable.qza \
+        --p-metric simpson \
+        --o-alpha-diversity Vector-simpson.qza
+
+# Simpson evenness measure E: Diversity that account for the number of organisms and number of species.
+qiime diversity alpha --i-table RarTable.qza \
+        --p-metric simpson_e \
+        --o-alpha-diversity Vector-simpson_e.qza
+
+# Fisher's index: Relationship between the number of species and the abundance of each species.
+qiime diversity alpha --i-table RarTable.qza \
+        --p-metric fisher_alpha \
+        --o-alpha-diversity Vector-fisher_alpha.qza
+        
+# Pielou's evenness: Measure of relative evenness of species richness.
+qiime diversity alpha --i-table RarTable.qza \
+        --p-metric pielou_e \
+        --o-alpha-diversity Vector-pielou_e.qza        
+
+# Chao1's index: Estimates diversity from abundant data and number of rare taxa missed from under sampling.
+qiime diversity alpha --i-table RarTable.qza \
+        --p-metric chao1 \
+        --o-alpha-diversity Vector-chao1.qza   
+
+# Chao1 confidence interval: Confidence interval for richness estimator chao1.
+qiime diversity alpha --i-table RarTable.qza \
+        --p-metric chao1_ci \
+        --o-alpha-diversity Vector-chao1_ci.qza   
+
+# beta_diversity; Aim: Compute a user-specified beta diversity metric, for all pairs of samples in a feature table
+##################################################################################################################
+
+#         --p-n-jobs {params.jobs} \
+
+# Jaccard similarity index: Fraction of unique features, regardless of abundance.
+qiime diversity beta --i-table RarTable.qza \
+        --p-metric jaccard \
+        --o-distance-matrix Matrix-jaccard.qza
+
+qiime diversity pcoa --i-distance-matrix Matrix-jaccard.qza \
+        --o-pcoa pcoa/PCoA-jaccard.qza
+        
+qiime emperor plot --i-pcoa pcoa/PCoA-jaccard.qza \
+        --m-metadata-file sample-metadata.tsv \
+        --o-visualization visual/Emperor-jaccard.qzv
+        
+        
+# Bray-Curtis dissimilarity: Fraction of overabundant counts.
+qiime diversity beta --i-table RarTable.qza \
+        --p-metric braycurtis \
+        --o-distance-matrix Matrix-braycurtis.qza
+
+qiime diversity pcoa --i-distance-matrix Matrix-braycurtis.qza \
+        --o-pcoa pcoa/PCoA-braycurtis.qza
+
+qiime emperor plot --i-pcoa pcoa/PCoA-braycurtis.qza \
+        --m-metadata-file sample-metadata.tsv \
+        --o-visualization visual/Emperor-braycurtis.qzv
+
 
 ###############################################################
 ### For Bacteria
@@ -145,3 +211,69 @@ qiime feature-table summarize \
        --m-sample-metadata-file sample-metadata.tsv \
        --o-visualization RarTable.qzv
 
+
+# Aim: compute user-specified diversity metrics and pcoa with emperor plot :
+############################################################################
+
+# alpha_diversity; Aim: Compute a user-specified alpha diversity metric, for all samples in a feature table
+############################################################################################################
+
+# Simpson's index: Measures the relative abundance of the different species making up the sample richness.
+qiime diversity alpha --i-table RarTable.qza \
+        --p-metric simpson \
+        --o-alpha-diversity Vector-simpson.qza
+
+# Simpson evenness measure E: Diversity that account for the number of organisms and number of species.
+qiime diversity alpha --i-table RarTable.qza \
+        --p-metric simpson_e \
+        --o-alpha-diversity Vector-simpson_e.qza
+
+# Fisher's index: Relationship between the number of species and the abundance of each species.
+qiime diversity alpha --i-table RarTable.qza \
+        --p-metric fisher_alpha \
+        --o-alpha-diversity Vector-fisher_alpha.qza
+        
+# Pielou's evenness: Measure of relative evenness of species richness.
+qiime diversity alpha --i-table RarTable.qza \
+        --p-metric pielou_e \
+        --o-alpha-diversity Vector-pielou_e.qza        
+
+# Chao1's index: Estimates diversity from abundant data and number of rare taxa missed from under sampling.
+qiime diversity alpha --i-table RarTable.qza \
+        --p-metric chao1 \
+        --o-alpha-diversity Vector-chao1.qza   
+
+# Chao1 confidence interval: Confidence interval for richness estimator chao1.
+qiime diversity alpha --i-table RarTable.qza \
+        --p-metric chao1_ci \
+        --o-alpha-diversity Vector-chao1_ci.qza   
+
+# beta_diversity; Aim: Compute a user-specified beta diversity metric, for all pairs of samples in a feature table
+##################################################################################################################
+
+#         --p-n-jobs {params.jobs} \
+
+# Jaccard similarity index: Fraction of unique features, regardless of abundance.
+qiime diversity beta --i-table RarTable.qza \
+        --p-metric jaccard \
+        --o-distance-matrix Matrix-jaccard.qza
+
+qiime diversity pcoa --i-distance-matrix Matrix-jaccard.qza \
+        --o-pcoa pcoa/PCoA-jaccard.qza
+        
+qiime emperor plot --i-pcoa pcoa/PCoA-jaccard.qza \
+        --m-metadata-file sample-metadata.tsv \
+        --o-visualization visual/Emperor-jaccard.qzv
+        
+        
+# Bray-Curtis dissimilarity: Fraction of overabundant counts.
+qiime diversity beta --i-table RarTable.qza \
+        --p-metric braycurtis \
+        --o-distance-matrix Matrix-braycurtis.qza
+
+qiime diversity pcoa --i-distance-matrix Matrix-braycurtis.qza \
+        --o-pcoa pcoa/PCoA-braycurtis.qza
+
+qiime emperor plot --i-pcoa pcoa/PCoA-braycurtis.qza \
+        --m-metadata-file sample-metadata.tsv \
+        --o-visualization visual/Emperor-braycurtis.qzv
