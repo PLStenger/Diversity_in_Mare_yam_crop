@@ -36,35 +36,35 @@ qiime feature-table filter-samples \
 # Aim: Identify "core" features, which are features observed,
      # in a user-defined fraction of the samples
  
-qiime feature-table core-features
-        --i-table subtables/RarTable-Forest.qza
-        --p-min-fraction 0.1
-        --p-max-fraction 1.0
-        --p-steps 10
+qiime feature-table core-features \
+        --i-table subtables/RarTable-Forest.qza \
+        --p-min-fraction 0.1 \
+        --p-max-fraction 1.0 \
+        --p-steps 10 \
         --o-visualization visual/CoreBiom-Forest.qzv
  
-qiime feature-table core-features
-        --i-table subtables/RarTable-short_fallow.qza
-        --p-min-fraction 0.1
-        --p-max-fraction 1.0
-        --p-steps 10
+qiime feature-table core-features \
+        --i-table subtables/RarTable-short_fallow.qza \
+        --p-min-fraction 0.1 \
+        --p-max-fraction 1.0 \
+        --p-steps 10 \
         --o-visualization visual/CoreBiom-short_fallow.qzv 
  
-qiime feature-table core-features
-        --i-table subtables/RarTable-Long_fallow.qza
-        --p-min-fraction 0.1
-        --p-max-fraction 1.0
-        --p-steps 10
+qiime feature-table core-features \
+        --i-table subtables/RarTable-Long_fallow.qza \
+        --p-min-fraction 0.1 \
+        --p-max-fraction 1.0 \
+        --p-steps 10 \
         --o-visualization visual/CoreBiom-Long_fallow.qzv 
         
 # Aim: Identify "core" features, which are features observed,
      # in a user-defined fraction of the samples
 
-qiime feature-table core-features
-        --i-table RarTable.qza
-        --p-min-fraction 0.1
-        --p-max-fraction 1.0
-        --p-steps 10
+qiime feature-table core-features \
+        --i-table RarTable.qza \
+        --p-min-fraction 0.1 \
+        --p-max-fraction 1.0 \
+        --p-steps 10 \
         --o-visualization visual/CoreBiomAll.qzv 
 
 ###############################################################
@@ -99,35 +99,35 @@ qiime feature-table filter-samples \
 # Aim: Identify "core" features, which are features observed,
      # in a user-defined fraction of the samples
  
-qiime feature-table core-features
-        --i-table subtables/RarTable-Forest.qza
-        --p-min-fraction 0.1
-        --p-max-fraction 1.0
-        --p-steps 10
+qiime feature-table core-features \
+        --i-table subtables/RarTable-Forest.qza \
+        --p-min-fraction 0.1 \
+        --p-max-fraction 1.0 \
+        --p-steps 10 \
         --o-visualization visual/CoreBiom-Forest.qzv
  
-qiime feature-table core-features
-        --i-table subtables/RarTable-short_fallow.qza
-        --p-min-fraction 0.1
-        --p-max-fraction 1.0
-        --p-steps 10
+qiime feature-table core-features \
+        --i-table subtables/RarTable-short_fallow.qza \
+        --p-min-fraction 0.1 \
+        --p-max-fraction 1.0 \
+        --p-steps 10 \
         --o-visualization visual/CoreBiom-short_fallow.qzv 
  
-qiime feature-table core-features
-        --i-table subtables/RarTable-Long_fallow.qza
-        --p-min-fraction 0.1
-        --p-max-fraction 1.0
-        --p-steps 10
+qiime feature-table core-features \
+        --i-table subtables/RarTable-Long_fallow.qza \
+        --p-min-fraction 0.1 \
+        --p-max-fraction 1.0 \
+        --p-steps 10 \
         --o-visualization visual/CoreBiom-Long_fallow.qzv 
         
 # Aim: Identify "core" features, which are features observed,
      # in a user-defined fraction of the samples
 
-qiime feature-table core-features
-        --i-table RarTable.qza
-        --p-min-fraction 0.1
-        --p-max-fraction 1.0
-        --p-steps 10
+qiime feature-table core-features \
+        --i-table RarTable.qza \
+        --p-min-fraction 0.1 \
+        --p-max-fraction 1.0 \
+        --p-steps 10 \
         --o-visualization visual/CoreBiomAll.qzv 
         
         
