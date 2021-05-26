@@ -110,7 +110,9 @@ First, open your terminal. Then, run these two command lines :
         >user	3m48.645s
         >sys	1m9.025s
     time nohup bash 15_significance_PE.sh &> 15_significance_PE.out
-        >
+        >real	26m25.815s
+        >user	4m3.652s
+        >sys	1m0.778s
 
 ### For running MultiQC (work now only in Python3) :
 
