@@ -15,15 +15,15 @@ conda activate qiime2-2019.10
 
 # Aim: Import data to create a new QIIME 2 Artifact
 
-qiime tools import
-        --type 'FeatureData[Taxonomy]'
-        --input-format HeaderlessTSVTaxonomyFormat
-        --input-path /Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/data_input/Taxonomy-UNITE-V7-S-2017.12.01-dynamic.txt
+qiime tools import \
+        --type 'FeatureData[Taxonomy]' \
+        --input-format HeaderlessTSVTaxonomyFormat \
+        --input-path /Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/data_input/Taxonomy-UNITE-V7-S-2017.12.01-dynamic.txt \
         --output-path taxonomy/RefTaxo.qza
 
-qiime tools import
-        --type 'FeatureData[Sequence]'
-        --input-path /Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/data_input/Sequence-UNITE-V7-S-2017.12.01-dynamic.fasta
+qiime tools import \
+        --type 'FeatureData[Sequence]' \
+        --input-path /Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/data_input/Sequence-UNITE-V7-S-2017.12.01-dynamic.fasta \
         --output-path taxonomy/DataSeq.qza
 
 # Fungal ITS classifiers trained on the UNITE reference database do NOT benefit
@@ -101,15 +101,15 @@ conda activate qiime2-2019.10
 
 # Aim: Import data to create a new QIIME 2 Artifact
 
-qiime tools import
-        --type 'FeatureData[Taxonomy]'
-        --input-format HeaderlessTSVTaxonomyFormat
-        --input-path /Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/data_input/Taxonomy-SILVA-V132-2018.04.10-99.txt
+qiime tools import \
+        --type 'FeatureData[Taxonomy]' \
+        --input-format HeaderlessTSVTaxonomyFormat \
+        --input-path /Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/data_input/Taxonomy-SILVA-V132-2018.04.10-99.txt \
         --output-path taxonomy/RefTaxo.qza
 
-qiime tools import
-        --type 'FeatureData[Sequence]'
-        --input-path /Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/data_input/Sequence-SILVA-V132-2018.04.10-99.fasta
+qiime tools import \
+        --type 'FeatureData[Sequence]' \
+        --input-path /Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/data_input/Sequence-SILVA-V132-2018.04.10-99.fasta \
         --output-path taxonomy/DataSeq.qza
 
 
