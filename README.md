@@ -23,30 +23,6 @@ Diversity in Mare island (Loyalty island, New-Caledonia) yam's crop (*Dioscorea 
 
 ## Run this pipeline
 
-### Installing pipeline :
-
-First, open your terminal. Then, run these two command lines :
-
-    cd -place_in_your_local_computer
-    git clone https://github.com/PLStenger/Diversity_in_Mare_yam_crop.git
-
-### Update the pipeline in local by :
-
-    git pull
-    
-### If necessary, install softwares by :   
-
-    cd 99_softwares/
-    conda install -c bioconda fastqc
-    conda install -c bioconda trimmomatic
-    conda install -c bioconda multiqc
-
-### Run scripts in local by :
-
-    cd /Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop
-    
-    bash
-    nohup bash 00_quality_check_by_FastQC.sh &> 00_quality_check_by_FastQC.out
     nohup Rscript 01_01_exploring_data_with_ReadFastQC.R &> 01_01_exploring_data_with_ReadFastQC.out
     nohup bash 01_02_replicates_pooling.sh &> 01_02_replicates_pooling.out
     nohup bash 02_trimmomatic_q30.sh &> 02_trimmomatic_q30.out
