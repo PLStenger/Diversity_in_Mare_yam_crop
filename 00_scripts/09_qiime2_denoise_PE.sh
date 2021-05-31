@@ -24,19 +24,19 @@ conda activate qiime2-2019.10
 # dada2_denoise :
 #################
 
-# Aim: denoises single-end sequences, dereplicates them, and filters
+# Aim: denoises paired-end sequences, dereplicates them, and filters
 #      chimeras and singletons sequences
-#      Use: qiime dada2 denoise-single [OPTIONS]
 
-# ICI C'EST "#"é CAR DEJA FAIT ET CA PREND DU TEMPS À RUNNER; donc penser à dé-"#"ser si nouveau run complet
-#qiime dada2 denoise-single --i-demultiplexed-seqs demux.qza \
-#                           --p-n-threads 6 \
-#                           --p-chimera-method 'consensus' \
-#                           --p-trunc-len 0 \
-#                           --p-trunc-q 0 \
-#                           --o-representative-sequences RepSeq.qza \
-#                           --o-table Table.qza \
-#                           --o-denoising-stats Stats.qza
+# https://github.com/benjjneb/dada2/issues/477
+
+qiime dada2 denoise-paired --i-demultiplexed-seqs demux.qza \
+--o-table Table.qza  \
+--o-representative-sequences RepSeq.qza \
+--p-trim-left-f 6 \
+--p-trim-left-r 6 \
+--p-trunc-len-f 0 \
+--p-trunc-len-r 0 \
+--p-n-threads 20   
 
 # sequence_contamination_filter :
 #################################
