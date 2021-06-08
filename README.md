@@ -5,6 +5,9 @@ Diversity in Mare island (Loyalty island, New-Caledonia) yam's crop (*Dioscorea 
 
 ## Pipeline
 
+<details>
+  <summary>Click here to see parameters details of this pipeline</summary>
+
 1. FastQC on both ITS2 (Fungi) and V4 (bacteria) raw sequences for quality check
      * run **00_quality_check_by_FastQC.sh** script (FastQC tool)
      * run **01_exploring_data_with_ReadFastQC.R** script (ReadFastQC R package, https://github.com/PLStenger/ReadFastQC) for quick results exploration 
@@ -20,7 +23,14 @@ Diversity in Mare island (Loyalty island, New-Caledonia) yam's crop (*Dioscorea 
      * run **04_exploring_cleaned_data_with_ReadFastQC.R** script (ReadFastQC R package, https://github.com/PLStenger/ReadFastQC) for quick results exploration 
      * run multiqc .
 
+</details>
+
 ### Installing pipeline :
+
+
+<details>
+  <summary>Click here to see how to install this pipeline</summary>
+
 
 First, open your terminal. Then, run these two command lines :
 
@@ -43,6 +53,8 @@ First, open your terminal. Then, run these two command lines :
 
     sysctl hw.ncpu
     > hw.ncpu: 4
+    
+</details>    
 
 ### Run scripts in local by :
 
@@ -50,7 +62,10 @@ First, open your terminal. Then, run these two command lines :
     cd /Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop
     
     
-## Run this pipeline
+## Run this pipeline in Single-End version for Paired-End data (like in Fernandez et al 2021 - in prep)
+
+<details>
+  <summary>Click here to see the running command lines</summary>
 
     nohup Rscript 01_01_exploring_data_with_ReadFastQC.R &> 01_01_exploring_data_with_ReadFastQC.out
     nohup bash 01_02_replicates_pooling.sh &> 01_02_replicates_pooling.out
@@ -86,7 +101,13 @@ First, open your terminal. Then, run these two command lines :
         >sys	3m7.610s
     time nohup bash 14_qiime2_metrics.sh &> 14_qiime2_metrics.out
 
-### Run Paired-end pipeline scripts in local by :
+
+</details>  
+
+### Run the new Paired-end pipeline :
+
+<details>
+  <summary>Click here to see the running command lines</summary>
 
     time nohup bash 08_qiime2_import_PE.sh &> 08_qiime2_import_PE.out
         >real	4m55.899s
@@ -126,6 +147,8 @@ First, open your terminal. Then, run these two command lines :
         >real	149m10.832s
         >user	120m54.975s
         >sys	4m4.670s
+
+</details> 
 
 ### For running MultiQC (work now only in Python3) :
 
