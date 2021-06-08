@@ -1,0 +1,114 @@
+[2021-03-29 17:54:32,281] multiqc                                            [DEBUG  ]  No MultiQC config found: /Users/pierre-louisstenger/anaconda2/lib/python2.7/site-packages/multiqc-1.0.dev0-py2.7.egg/multiqc_config.yaml
+[2021-03-29 17:54:32,282] multiqc                                            [DEBUG  ]  No MultiQC config found: /Users/pierre-louisstenger/.multiqc_config.yaml
+[2021-03-29 17:54:32,282] multiqc                                            [DEBUG  ]  No MultiQC config found: multiqc_config.yaml
+[2021-03-29 17:54:32,283] multiqc                                            [DEBUG  ]  Command used: /Users/pierre-louisstenger/anaconda2/bin/multiqc .
+[2021-03-29 17:54:32,283] multiqc                                            [DEBUG  ]  Could not connect to multiqc.info for version check
+[2021-03-29 17:54:32,283] multiqc                                            [INFO   ]  This is MultiQC v1.0.dev0
+[2021-03-29 17:54:32,283] multiqc                                            [DEBUG  ]  Command     : /Users/pierre-louisstenger/anaconda2/bin/multiqc .
+[2021-03-29 17:54:32,284] multiqc                                            [DEBUG  ]  Working dir : /Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/01_quality_check/OUT_PUT_V4_bacteria
+[2021-03-29 17:54:32,284] multiqc                                            [INFO   ]  Template    : default
+[2021-03-29 17:54:32,285] multiqc                                            [INFO   ]  Searching '.'
+[2021-03-29 17:54:32,285] multiqc                                            [DEBUG  ]  Analysing modules: custom_content, peddy, methylQA, qualimap, preseq, quast, rseqc, busco, goleft_indexcov, snpeff, gatk, htseq, bcftools, featureCounts, picard, prokka, samblaster, samtools, bamtools, bismark, hicup, salmon, kallisto, slamdunk, star, tophat, bowtie2, bowtie1, cutadapt, trimmomatic, skewer, fastq_screen, fastqc, clusterflow
+[2021-03-29 17:54:32,286] multiqc                                            [DEBUG  ]  Using temporary directory for creating report: /var/folders/cb/vp0y0c9957q11tld09pq_qxw0000gn/T/tmphEdggR
+[2021-03-29 17:54:32,352] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: .DS_Store
+[2021-03-29 17:54:33,776] multiqc.modules.custom_content.custom_content      [DEBUG  ]  No custom content found
+[2021-03-29 17:54:33,973] multiqc.modules.peddy.peddy                        [DEBUG  ]  Could not find any reports in ('.',)
+[2021-03-29 17:54:34,027] multiqc.modules.methylQA.methylQA                  [DEBUG  ]  Could not find any reports in ('.',)
+[2021-03-29 17:54:34,035] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Using default Qualimap thresholds: 1, 5, 10, 30, 50
+[2021-03-29 17:54:34,311] multiqc.modules.qualimap.qualimap                  [DEBUG  ]  Could not find any reports in ('.',)
+[2021-03-29 17:54:36,744] multiqc.modules.preseq.preseq                      [DEBUG  ]  Could not find any preseq data in ('.',)
+[2021-03-29 17:54:36,795] multiqc.modules.quast.quast                        [DEBUG  ]  Could not find any reports in ('.',)
+[2021-03-29 17:54:43,209] multiqc.modules.rseqc.rseqc                        [DEBUG  ]  Could not find any reports in ('.',)
+[2021-03-29 17:54:43,256] multiqc.modules.busco.busco                        [DEBUG  ]  Could not find any reports in ('.',)
+[2021-03-29 17:54:43,346] multiqc.modules.goleft_indexcov.goleft_indexcov    [DEBUG  ]  Did not find goleft indexcov outputs in ('.',)
+[2021-03-29 17:54:44,711] multiqc.modules.snpeff.snpeff                      [DEBUG  ]  Could not find any data in ('.',)
+[2021-03-29 17:54:46,069] multiqc.modules.gatk.gatk                          [DEBUG  ]  Could not find any reports in ('.',)
+[2021-03-29 17:54:47,467] multiqc.modules.htseq.htseq                        [DEBUG  ]  Could not find any reports in ('.',)
+[2021-03-29 17:54:48,845] multiqc.modules.bcftools.bcftools                  [DEBUG  ]  Could not find any reports in ('.',)
+[2021-03-29 17:54:48,890] multiqc.modules.featureCounts.feature_counts       [DEBUG  ]  Could not find any reports in ('.',)
+[2021-03-29 17:55:04,261] multiqc.modules.picard.picard                      [DEBUG  ]  Could not find any reports in ('.',)
+[2021-03-29 17:55:04,321] multiqc.modules.prokka.prokka                      [DEBUG  ]  Could not find any Prokka data in ('.',)
+[2021-03-29 17:55:05,666] multiqc.modules.samblaster.samblaster              [DEBUG  ]  Could not find any data in ('.',)
+[2021-03-29 17:55:09,960] multiqc.modules.samtools.samtools                  [DEBUG  ]  Could not find any reports in ('.',)
+[2021-03-29 17:55:11,453] multiqc.modules.bamtools.bamtools                  [DEBUG  ]  Could not find any reports in ('.',)
+[2021-03-29 17:55:11,820] multiqc.modules.bismark.bismark                    [DEBUG  ]  Could not find any reports in ('.',)
+[2021-03-29 17:55:11,901] multiqc.modules.hicup.hicup                        [DEBUG  ]  Could not find any HiCUP data in ('.',)
+[2021-03-29 17:55:11,994] multiqc.modules.salmon.salmon                      [DEBUG  ]  Could not find any Salmon data in ('.',)
+[2021-03-29 17:55:13,427] multiqc.modules.kallisto.kallisto                  [DEBUG  ]  Could not find any reports in ('.',)
+[2021-03-29 17:55:23,063] multiqc.modules.slamdunk.slamdunk                  [DEBUG  ]  No slamdunk reports found.
+[2021-03-29 17:55:23,154] multiqc.modules.star.star                          [DEBUG  ]  Could not find any reports in ('.',)
+[2021-03-29 17:55:23,202] multiqc.modules.tophat.tophat                      [DEBUG  ]  Could not find any reports in ('.',)
+[2021-03-29 17:55:25,047] multiqc.modules.bowtie2.bowtie2                    [DEBUG  ]  Could not find any reports in ('.',)
+[2021-03-29 17:55:26,957] multiqc.modules.bowtie1.bowtie1                    [DEBUG  ]  Could not find any reports in ('.',)
+[2021-03-29 17:55:29,081] multiqc.modules.cutadapt.cutadapt                  [DEBUG  ]  Could not find any reports in ('.',)
+[2021-03-29 17:55:31,197] multiqc.modules.trimmomatic.trimmomatic            [DEBUG  ]  Could not find any Trimmomatic data in ('.',)
+[2021-03-29 17:55:33,769] multiqc.modules.skewer.skewer                      [DEBUG  ]  Could not find any data in ('.',)
+[2021-03-29 17:55:33,854] multiqc.modules.fastq_screen.fastq_screen          [DEBUG  ]  Could not find any reports in ('.',)
+[2021-03-29 17:55:42,170] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'F4_S249_L001_R1_001_fastqc.zip' as already parsed 'F4_S249_L001_R1_001'
+[2021-03-29 17:55:42,171] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'JL1_S279_L001_R1_001_fastqc.zip' as already parsed 'JL1_S279_L001_R1_001'
+[2021-03-29 17:55:42,172] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'JL1-B_S280_L001_R1_001_fastqc.zip' as already parsed 'JL1-B_S280_L001_R1_001'
+[2021-03-29 17:55:42,172] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'JC3_S273_L001_R2_001_fastqc.zip' as already parsed 'JC3_S273_L001_R2_001'
+[2021-03-29 17:55:42,174] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'JC5-B_S278_L001_R2_001_fastqc.zip' as already parsed 'JC5-B_S278_L001_R2_001'
+[2021-03-29 17:55:42,175] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'F1_S243_L001_R1_001_fastqc.zip' as already parsed 'F1_S243_L001_R1_001'
+[2021-03-29 17:55:42,176] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'F3-B_S248_L001_R1_001_fastqc.zip' as already parsed 'F3-B_S248_L001_R1_001'
+[2021-03-29 17:55:42,178] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'JC3-B_S274_L001_R2_001_fastqc.zip' as already parsed 'JC3-B_S274_L001_R2_001'
+[2021-03-29 17:55:42,179] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'JC1-B_S254_L001_R1_001_fastqc.zip' as already parsed 'JC1-B_S254_L001_R1_001'
+[2021-03-29 17:55:42,180] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'F2-B_S246_L001_R2_001_fastqc.zip' as already parsed 'F2-B_S246_L001_R2_001'
+[2021-03-29 17:55:42,181] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'JL5_S287_L001_R2_001_fastqc.zip' as already parsed 'JL5_S287_L001_R2_001'
+[2021-03-29 17:55:42,182] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'JC1_S253_L001_R1_001_fastqc.zip' as already parsed 'JC1_S253_L001_R1_001'
+[2021-03-29 17:55:42,182] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'JL4_S285_L001_R2_001_fastqc.zip' as already parsed 'JL4_S285_L001_R2_001'
+[2021-03-29 17:55:42,184] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'JC4-B_S276_L001_R1_001_fastqc.zip' as already parsed 'JC4-B_S276_L001_R1_001'
+[2021-03-29 17:55:42,184] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'JC3_S273_L001_R1_001_fastqc.zip' as already parsed 'JC3_S273_L001_R1_001'
+[2021-03-29 17:55:42,185] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'JC5-B_S278_L001_R1_001_fastqc.zip' as already parsed 'JC5-B_S278_L001_R1_001'
+[2021-03-29 17:55:42,186] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'JL1_S279_L001_R2_001_fastqc.zip' as already parsed 'JL1_S279_L001_R2_001'
+[2021-03-29 17:55:42,187] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'JL1-B_S280_L001_R2_001_fastqc.zip' as already parsed 'JL1-B_S280_L001_R2_001'
+[2021-03-29 17:55:42,187] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'F4_S249_L001_R2_001_fastqc.zip' as already parsed 'F4_S249_L001_R2_001'
+[2021-03-29 17:55:42,188] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'JC3-B_S274_L001_R1_001_fastqc.zip' as already parsed 'JC3-B_S274_L001_R1_001'
+[2021-03-29 17:55:42,189] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'F3-B_S248_L001_R2_001_fastqc.zip' as already parsed 'F3-B_S248_L001_R2_001'
+[2021-03-29 17:55:42,190] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'F1_S243_L001_R2_001_fastqc.zip' as already parsed 'F1_S243_L001_R2_001'
+[2021-03-29 17:55:42,191] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'JL5_S287_L001_R1_001_fastqc.zip' as already parsed 'JL5_S287_L001_R1_001'
+[2021-03-29 17:55:42,192] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'JC1_S253_L001_R2_001_fastqc.zip' as already parsed 'JC1_S253_L001_R2_001'
+[2021-03-29 17:55:42,192] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'JC1-B_S254_L001_R2_001_fastqc.zip' as already parsed 'JC1-B_S254_L001_R2_001'
+[2021-03-29 17:55:42,193] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'F2-B_S246_L001_R1_001_fastqc.zip' as already parsed 'F2-B_S246_L001_R1_001'
+[2021-03-29 17:55:42,194] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'JC4-B_S276_L001_R2_001_fastqc.zip' as already parsed 'JC4-B_S276_L001_R2_001'
+[2021-03-29 17:55:42,195] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'JL4_S285_L001_R1_001_fastqc.zip' as already parsed 'JL4_S285_L001_R1_001'
+[2021-03-29 17:55:42,197] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'JC5_S277_L001_R1_001_fastqc.zip' as already parsed 'JC5_S277_L001_R1_001'
+[2021-03-29 17:55:42,198] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'JL5-B_S288_L001_R1_001_fastqc.zip' as already parsed 'JL5-B_S288_L001_R1_001'
+[2021-03-29 17:55:42,198] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'F2_S245_L001_R1_001_fastqc.zip' as already parsed 'F2_S245_L001_R1_001'
+[2021-03-29 17:55:42,199] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'F1-B_S244_L001_R2_001_fastqc.zip' as already parsed 'F1-B_S244_L001_R2_001'
+[2021-03-29 17:55:42,200] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'JC2-B_S256_L001_R1_001_fastqc.zip' as already parsed 'JC2-B_S256_L001_R1_001'
+[2021-03-29 17:55:42,201] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'F4-B_S250_L001_R2_001_fastqc.zip' as already parsed 'F4-B_S250_L001_R2_001'
+[2021-03-29 17:55:42,201] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'F3_S247_L001_R1_001_fastqc.zip' as already parsed 'F3_S247_L001_R1_001'
+[2021-03-29 17:55:42,202] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'JL3-B_S284_L001_R1_001_fastqc.zip' as already parsed 'JL3-B_S284_L001_R1_001'
+[2021-03-29 17:55:42,203] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'JC4_S275_L001_R1_001_fastqc.zip' as already parsed 'JC4_S275_L001_R1_001'
+[2021-03-29 17:55:42,204] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'F5-B_S252_L001_R2_001_fastqc.zip' as already parsed 'F5-B_S252_L001_R2_001'
+[2021-03-29 17:55:42,205] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'JL3_S283_L001_R1_001_fastqc.zip' as already parsed 'JL3_S283_L001_R1_001'
+[2021-03-29 17:55:42,206] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'F5_S251_L001_R1_001_fastqc.zip' as already parsed 'F5_S251_L001_R1_001'
+[2021-03-29 17:55:42,207] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'JL2-B_S282_L001_R1_001_fastqc.zip' as already parsed 'JL2-B_S282_L001_R1_001'
+[2021-03-29 17:55:42,208] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'JC2_S255_L001_R1_001_fastqc.zip' as already parsed 'JC2_S255_L001_R1_001'
+[2021-03-29 17:55:42,210] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'JL4-B_S286_L001_R2_001_fastqc.zip' as already parsed 'JL4-B_S286_L001_R2_001'
+[2021-03-29 17:55:42,211] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'JL2_S281_L001_R1_001_fastqc.zip' as already parsed 'JL2_S281_L001_R1_001'
+[2021-03-29 17:55:42,212] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'F4-B_S250_L001_R1_001_fastqc.zip' as already parsed 'F4-B_S250_L001_R1_001'
+[2021-03-29 17:55:42,212] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'F2_S245_L001_R2_001_fastqc.zip' as already parsed 'F2_S245_L001_R2_001'
+[2021-03-29 17:55:42,213] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'F1-B_S244_L001_R1_001_fastqc.zip' as already parsed 'F1-B_S244_L001_R1_001'
+[2021-03-29 17:55:42,213] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'JC2-B_S256_L001_R2_001_fastqc.zip' as already parsed 'JC2-B_S256_L001_R2_001'
+[2021-03-29 17:55:42,214] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'JL5-B_S288_L001_R2_001_fastqc.zip' as already parsed 'JL5-B_S288_L001_R2_001'
+[2021-03-29 17:55:42,214] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'JC5_S277_L001_R2_001_fastqc.zip' as already parsed 'JC5_S277_L001_R2_001'
+[2021-03-29 17:55:42,215] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'JC4_S275_L001_R2_001_fastqc.zip' as already parsed 'JC4_S275_L001_R2_001'
+[2021-03-29 17:55:42,216] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'F5-B_S252_L001_R1_001_fastqc.zip' as already parsed 'F5-B_S252_L001_R1_001'
+[2021-03-29 17:55:42,217] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'JL3-B_S284_L001_R2_001_fastqc.zip' as already parsed 'JL3-B_S284_L001_R2_001'
+[2021-03-29 17:55:42,218] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'F3_S247_L001_R2_001_fastqc.zip' as already parsed 'F3_S247_L001_R2_001'
+[2021-03-29 17:55:42,219] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'F5_S251_L001_R2_001_fastqc.zip' as already parsed 'F5_S251_L001_R2_001'
+[2021-03-29 17:55:42,219] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'JL2-B_S282_L001_R2_001_fastqc.zip' as already parsed 'JL2-B_S282_L001_R2_001'
+[2021-03-29 17:55:42,220] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'JL3_S283_L001_R2_001_fastqc.zip' as already parsed 'JL3_S283_L001_R2_001'
+[2021-03-29 17:55:42,221] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'JL2_S281_L001_R2_001_fastqc.zip' as already parsed 'JL2_S281_L001_R2_001'
+[2021-03-29 17:55:42,223] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'JL4-B_S286_L001_R1_001_fastqc.zip' as already parsed 'JL4-B_S286_L001_R1_001'
+[2021-03-29 17:55:42,224] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'JC2_S255_L001_R2_001_fastqc.zip' as already parsed 'JC2_S255_L001_R2_001'
+[2021-03-29 17:55:42,268] multiqc.modules.fastqc.fastqc                      [INFO   ]  Found 60 reports
+[2021-03-29 17:55:57,531] multiqc.modules.clusterflow.clusterflow            [DEBUG  ]  Could not find any reports in ('.',)
+[2021-03-29 17:55:57,548] multiqc                                            [INFO   ]  Report      : multiqc_report.html
+[2021-03-29 17:55:57,549] multiqc                                            [INFO   ]  Data        : multiqc_data
+[2021-03-29 17:55:57,550] multiqc                                            [DEBUG  ]  Moving data file from '/var/folders/cb/vp0y0c9957q11tld09pq_qxw0000gn/T/tmphEdggR/multiqc_data/multiqc_fastqc.txt' to '/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/01_quality_check/OUT_PUT_V4_bacteria/multiqc_data'
+[2021-03-29 17:55:57,550] multiqc                                            [DEBUG  ]  Moving data file from '/var/folders/cb/vp0y0c9957q11tld09pq_qxw0000gn/T/tmphEdggR/multiqc_data/multiqc_general_stats.txt' to '/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/01_quality_check/OUT_PUT_V4_bacteria/multiqc_data'
+[2021-03-29 17:55:57,551] multiqc                                            [DEBUG  ]  Moving data file from '/var/folders/cb/vp0y0c9957q11tld09pq_qxw0000gn/T/tmphEdggR/multiqc_data/multiqc_sources.txt' to '/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/01_quality_check/OUT_PUT_V4_bacteria/multiqc_data'
+[2021-03-29 17:55:58,131] multiqc                                            [INFO   ]  MultiQC complete
