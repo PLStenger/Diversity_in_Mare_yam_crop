@@ -16,3 +16,8 @@ genome*
 *.gz
 *.out
 *.o*
+*.qza*
+*.qzv*
+*.tsv*
+*.csv*
+*.x*
