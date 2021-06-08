@@ -20,7 +20,36 @@ Diversity in Mare island (Loyalty island, New-Caledonia) yam's crop (*Dioscorea 
      * run **04_exploring_cleaned_data_with_ReadFastQC.R** script (ReadFastQC R package, https://github.com/PLStenger/ReadFastQC) for quick results exploration 
      * run multiqc .
 
+### Installing pipeline :
 
+First, open your terminal. Then, run these two command lines :
+
+    cd -place_in_your_local_computer
+    git clone https://github.com/PLStenger/Diversity_in_Mare_yam_crop.git
+
+### Update the pipeline in local by :
+
+    git pull
+    
+### If necessary, install softwares by :   
+
+    cd 99_softwares/
+    conda install -c bioconda fastqc
+    conda install -c bioconda trimmomatic
+    conda install -c bioconda multiqc
+
+
+### Know the number of CPU (threads) of your computer (here for MacOs) :   
+
+    sysctl hw.ncpu
+    > hw.ncpu: 4
+
+### Run scripts in local by :
+
+    # Put you in your working directory (as an example, for me it's :)
+    cd /Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop
+    
+    
 ## Run this pipeline
 
     nohup Rscript 01_01_exploring_data_with_ReadFastQC.R &> 01_01_exploring_data_with_ReadFastQC.out
