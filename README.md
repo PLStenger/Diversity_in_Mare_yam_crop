@@ -150,7 +150,7 @@ The ITS region is the most widely sequenced DNA region in **molecular ecology of
   <summary>Click here for per base sequence quality plot (Only for paired sequences, after cleanning steps)</summary>
   
   <div align="center">
-  <img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_fastqc_per_base_sequence_quality_plot_ITS2_run01.png" width="800">
+  <img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/99_images/zz_fastqc_per_base_sequence_quality_plot_ITS2_run01.png" width="800">
   </div>
 
 </details>
@@ -158,7 +158,7 @@ The ITS region is the most widely sequenced DNA region in **molecular ecology of
 <details>
   <summary>Click here for adpaters content verification</summary>
 <div align="center">
-<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_adapter_content_ITS2_run01.png" width="800">
+<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/99_images/zz_adapter_content_ITS2_run01.png" width="800">
 </div>
 </details>
 
@@ -204,7 +204,7 @@ These informations will be important for chosen the "good" rarefaction cut-off.
   <summary>Click here for quality after demultiplexing check</summary>
 
 <div align="center">
-<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_demultiplex_ITS2_run01.png" width="800">
+<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/99_images/zz_demultiplex_ITS2_run01.png" width="800">
 </div>
 
 --> Almost nothing below 20 : ok !
@@ -216,13 +216,13 @@ These informations will be important for chosen the "good" rarefaction cut-off.
   <summary>Click here for alpha-diversity index</summary>
 
 <div align="center">
-<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_ITS2-alpha-rarefaction78_shannon.png" width="800">
+<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/99_images/zz_ITS2-alpha-rarefaction78_shannon.png" width="800">
 </div>
 <div align="center">
-<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_ITS2-alpha-rarefaction78_faith_pd.png" width="800">
+<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/99_images/zz_ITS2-alpha-rarefaction78_faith_pd.png" width="800">
 </div>
 <div align="center">
-<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_ITS2-alpha-rarefaction78_observed_otu.png" width="800">
+<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/99_images/zz_ITS2-alpha-rarefaction78_observed_otu.png" width="800">
 </div>
 </details>
 
@@ -230,7 +230,7 @@ These informations will be important for chosen the "good" rarefaction cut-off.
   <summary>Click here for tree test</summary>
 
 <div align="center">
-<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_tree_ITS2_run01.png" width="800">
+<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/99_images/zz_tree_ITS2_run01.png" width="800">
 </div>
 </details>
 
@@ -254,13 +254,13 @@ These informations will be important for chosen the "good" rarefaction cut-off.
 - bray curtis as input --> Slighlty better ?
 
 <div align="center">
-<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_Color_legend_Bray_ITS2_run01.png" width="100">
+<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/99_images/zz_Color_legend_Bray_ITS2_run01.png" width="100">
 </div>
 
 Bray-Curtis distance PCoA
 
 <div align="center">
-<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_bray_curtis_ITS2_run01.png" width="800">
+<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/99_images/zz_bray_curtis_ITS2_run01.png" width="800">
 </div>
 
 </details>
@@ -271,7 +271,7 @@ Bray-Curtis distance PCoA
 #### BarPlot ok site/occurences 
 
 <div align="center">
-<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_Taxonomy_site_occurences_ITS2_run01.png" width="800">
+<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/99_images/zz_Taxonomy_site_occurences_ITS2_run01.png" width="800">
 </div>
   
 </details>
@@ -282,13 +282,13 @@ Bray-Curtis distance PCoA
   <summary>Click here for alpha-diversity index</summary>
 
 <div align="center">
-<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_ITS2-alpha_rarefaction_1818_shannon.png" width="800">
+<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/99_images/zz_ITS2-alpha_rarefaction_1818_shannon.png" width="800">
 </div>
 <div align="center">
-<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_ITS2-alpha_rarefaction_1818_faith_pd.png" width="800">
+<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/99_images/zz_ITS2-alpha_rarefaction_1818_faith_pd.png" width="800">
 </div>
 <div align="center">
-<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_ITS2-alpha_rarefaction_1818_observed_otu.png" width="800">
+<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/99_images/zz_ITS2-alpha_rarefaction_1818_observed_otu.png" width="800">
 </div>
 </details>
 
@@ -298,13 +298,13 @@ Bray-Curtis distance PCoA
   <summary>Click here for alpha-diversity index</summary>
 
 <div align="center">
-<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_ITS2-alpha-rarefaction3972_shannon.png" width="800">
+<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/99_images/zz_ITS2-alpha-rarefaction3972_shannon.png" width="800">
 </div>
 <div align="center">
-<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_ITS2-alpha-rarefaction3972_faith_pd.png" width="800">
+<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/99_images/zz_ITS2-alpha-rarefaction3972_faith_pd.png" width="800">
 </div>
 <div align="center">
-<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_ITS2-alpha-rarefaction3972_observed_otu.png" width="800">
+<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/99_images/zz_ITS2-alpha-rarefaction3972_observed_otu.png" width="800">
 </div>
 </details>
 
@@ -314,13 +314,13 @@ Bray-Curtis distance PCoA
   <summary>Click here for alpha-diversity index</summary>
 
 <div align="center">
-<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_ITS2-alpha-rarefaction21618_shannon.png" width="800">
+<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/99_images/zz_ITS2-alpha-rarefaction21618_shannon.png" width="800">
 </div>
 <div align="center">
-<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_ITS2-alpha-rarefaction21618_faith_pd.png" width="800">
+<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/99_images/zz_ITS2-alpha-rarefaction21618_faith_pd.png" width="800">
 </div>
 <div align="center">
-<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_ITS2-alpha-rarefaction21618_observed_otu.png" width="800">
+<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/99_images/zz_ITS2-alpha-rarefaction21618_observed_otu.png" width="800">
 </div>
 </details>
 
@@ -330,13 +330,13 @@ Bray-Curtis distance PCoA
   <summary>Click here for alpha-diversity index</summary>
 
 <div align="center">
-<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_ITS2-alpha-rarefaction50859_shannon.png" width="800">
+<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/99_images/zz_ITS2-alpha-rarefaction50859_shannon.png" width="800">
 </div>
 <div align="center">
-<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_ITS2-alpha-rarefaction50859_faith_pd.png" width="800">
+<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/99_images/zz_ITS2-alpha-rarefaction50859_faith_pd.png" width="800">
 </div>
 <div align="center">
-<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_ITS2-alpha-rarefaction50859_observed_otu.png" width="800">
+<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/99_images/zz_ITS2-alpha-rarefaction50859_observed_otu.png" width="800">
 </div>
 </details>
 
@@ -391,7 +391,7 @@ Need to be done !
   <summary>Click here for tree test</summary>
 
 <div align="center">
-<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/zz_tree_ITS2_run01_PE.png" width="800">
+<img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/99_images/zz_tree_ITS2_run01_PE.png" width="800">
 </div>
 </details>
 
