@@ -21,3 +21,10 @@ genome*
 *.tsv*
 *.csv*
 *.x*
+*.nwk
+*.Rhistory
+*.DS_Store
+*.gz*
+*.html
+*.yml
+*.pdf
