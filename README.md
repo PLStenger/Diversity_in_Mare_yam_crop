@@ -160,6 +160,9 @@ First, open your terminal. Then, run these two command lines :
 
 ## ITS2
 
+<details>
+  <summary>Click here to see ITS2 results</summary>
+
 ### Context
 Internal transcribed spacer (**ITS**) is the spacer DNA situated between the small-subunit ribosomal RNA (rRNA) and large-subunit rRNA genes in the chromosome or the corresponding transcribed region in the polycistronic rRNA precursor transcript.
 In bacteria and archaea, there is a single ITS, located between the 16S and 23S rRNA genes. Conversely, there are two ITSs in eukaryotes: ITS1 is located between 18S and 5.8S rRNA genes, while **ITS2** is between 5.8S and 28S (in opisthokonts, or 25S in plants) rRNA genes. ITS1 corresponds to the ITS in bacteria and archaea, while ITS2 originated as an insertion that interrupted the ancestral 23S rRNA gene.
@@ -462,12 +465,29 @@ Need to be done
 
 </details>
 
+</details> 
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 
 ## V4
+
+<details>
+  <summary>Click here to see V4 results</summary>
+
 
 ### Context
 
@@ -500,3 +520,6 @@ Legend : F = Forest, SF = Short Fallow, LF = Long Fallow, SE = pipeline as Singl
 
 Here, before denoise, **PE** allow to obtain **in average 30.07 sequences** (52 sequences in max for LF5) **more than SE pipeline** (an average of **0.04% in more**, 0.07% in max for LF2).
 **After denoise**, **PE** allow to obtain **in average 2043.53 sequences** (9174 sequences in max for SF5) **more than SE pipeline** (an average of **3.33% in more**, 20.94% in max for F2).
+
+
+</details> 
