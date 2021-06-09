@@ -56,13 +56,13 @@ First, open your terminal. Then, run these two command lines :
     
 </details>    
 
-### Run scripts in local by :
+## Run scripts in local :
 
     # Put you in your working directory (as an example, for me it's :)
     cd /Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop
     
     
-## Run this pipeline in Single-End version for Paired-End data (like in Fernandez et al 2021 - in prep)
+### Run this pipeline in Single-End version for Paired-End data (like in Fernandez et al 2021 - in prep)
 
 <details>
   <summary>Click here to see the running command lines</summary>
