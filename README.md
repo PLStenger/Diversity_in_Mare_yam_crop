@@ -156,7 +156,29 @@ First, open your terminal. Then, run these two command lines :
     python3.9 -m pip install multiqc
     python3 -m multiqc .
 
+
+
+
+
+
+
+
+
+
+
+
+
 # Preliminary results
+
+
+
+
+
+
+
+
+
+
 
 ## ITS2
 
@@ -164,11 +186,24 @@ First, open your terminal. Then, run these two command lines :
   <summary>Click here to see ITS2 results</summary>
 
 ### Context
+
+<details>
+  <summary>Click here to see the context</summary>
+  
 Internal transcribed spacer (**ITS**) is the spacer DNA situated between the small-subunit ribosomal RNA (rRNA) and large-subunit rRNA genes in the chromosome or the corresponding transcribed region in the polycistronic rRNA precursor transcript.
 In bacteria and archaea, there is a single ITS, located between the 16S and 23S rRNA genes. Conversely, there are two ITSs in eukaryotes: ITS1 is located between 18S and 5.8S rRNA genes, while **ITS2** is between 5.8S and 28S (in opisthokonts, or 25S in plants) rRNA genes. ITS1 corresponds to the ITS in bacteria and archaea, while ITS2 originated as an insertion that interrupted the ancestral 23S rRNA gene.
 The ITS region is the most widely sequenced DNA region in **molecular ecology of fungi** (*Peay et al 2008*) and has been recommended as the **universal fungal barcode sequence** (*Schoch et al 2012*).
 
+</details>
+
+
+
+
+
 ### Sequences quality results
+
+<details>
+  <summary>Click here to see the sequences quality results</summary>
 
 #### Per base sequence quality plot
 
@@ -188,7 +223,10 @@ The ITS region is the most widely sequenced DNA region in **molecular ecology of
 </div>
 </details>
 
-#### Per-sample sequence counts by Qiime2 before Denoise
+
+</details>
+
+### Per-sample sequence counts by Qiime2 before Denoise for i) Single-End (SE) pipeline and ii) Paired-End (PE) pipeline
 
 | Sample ID  | Before denoise SE | After denoise SE | Before denoise PE | After denoise PE |
 |------------|-------------------|------------------|-------------------|------------------|
