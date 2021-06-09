@@ -3,6 +3,10 @@ Diversity in Mare island (Loyalty island, New-Caledonia) yam's crop (*Dioscorea 
 
 <!-- This is commented out. -->
 
+  <div align="center">
+  <img src="https://github.com/PLStenger/Diversity_in_Mare_yam_crop/blob/main/99_images/map.png" width="800">
+  </div>
+
 ## Pipeline
 
 <details>
