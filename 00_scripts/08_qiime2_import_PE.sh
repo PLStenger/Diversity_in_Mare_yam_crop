@@ -6,8 +6,8 @@ DATADIRECTORY_V4_bacteria=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBa
 OUTPUT_ITS2_fungi=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/ITS2/
 OUTPUT_V4_bacteria=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/V4/
 
-MANIFEST_FUNGI=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/ITS2/manifest
-MANIFEST_BACTERIA=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/V4/manifest
+MANIFEST_FUNGI=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/98_database_files/ITS2/manifest
+MANIFEST_BACTERIA=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/98_database_files/V4/manifest
 
 ###############################################################
 ### For Fungi
@@ -25,7 +25,7 @@ qiime tools import --type 'SampleData[PairedEndSequencesWithQuality]' \
 
 cd $OUTPUT_ITS2_fungi
 
-qiime demux summarize --i-data demux.qza --o-visualization demux.qzv
+qiime demux summarize --i-data demux.qza --o-visualization visual/demux.qzv
 
 # for vizualisation :
 # https://view.qiime2.org
@@ -46,7 +46,7 @@ qiime tools import --type 'SampleData[PairedEndSequencesWithQuality]' \
 
 cd $OUTPUT_V4_bacteria
 
-qiime demux summarize --i-data demux.qza --o-visualization demux.qzv
+qiime demux summarize --i-data demux.qza --o-visualization visual/demux.qzv
 
 # for vizualisation :
 # https://view.qiime2.org
