@@ -45,6 +45,10 @@ First, open your terminal. Then, run these two command lines :
 
     git pull
     
+ or
+ 
+    git pull https://github.com/PLStenger/Diversity_in_Mare_yam_crop.git
+    
 ### If necessary, install softwares by :   
 
     cd 99_softwares/
