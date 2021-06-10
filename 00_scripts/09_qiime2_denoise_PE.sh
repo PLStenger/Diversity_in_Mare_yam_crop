@@ -51,7 +51,7 @@ qiime dada2 denoise-paired --i-demultiplexed-seqs demux.qza \
 # Here --i-reference-sequences correspond to the negative control sample (if you don't have any, like here, take another one from an old project, the one here is from the same sequencing line (but not same project))
 
 qiime quality-control exclude-seqs --i-query-sequences RepSeq.qza \
-      					     --i-reference-sequences /Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/05_QIIME2/Negative_control/ITS2/RepSeq.qza \
+      					     --i-reference-sequences /Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/98_database_files/ITS2/Negative_control_Sample_RepSeq_ITS2.qza\
       					     --p-method vsearch \
       					     --p-threads 6 \
       					     --p-perc-identity 1.00 \
@@ -108,27 +108,13 @@ qiime feature-table filter-seqs --i-data NegRepSeq.qza \
 # Aim: Generate tabular view of feature identifier to sequence mapping
        # Use: qiime feature-table tabulate-seqs [OPTIONS]
 
-qiime feature-table summarize --i-table Table.qza --o-visualization Table.qzv
-qiime feature-table summarize --i-table ConTable.qza --o-visualization ConTable.qzv
-qiime feature-table summarize --i-table NegTable.qza --o-visualization NegTable.qzv
-qiime feature-table tabulate-seqs --i-data NegRepSeq.qza --o-visualization NegRepSeq.qzv
-qiime feature-table tabulate-seqs --i-data RepSeq.qza --o-visualization RepSeq.qzv
-qiime feature-table tabulate-seqs --i-data HitNegCtrl.qza --o-visualization HitNegCtrl.qzv
+qiime feature-table summarize --i-table Table.qza --m-sample-metadata-file sample-metadata.tsv --o-visualization visual/Table.qzv
+qiime feature-table summarize --i-table ConTable.qza --m-sample-metadata-file sample-metadata.tsv --o-visualization visual/ConTable.qzv
+qiime feature-table summarize --i-table NegTable.qza --m-sample-metadata-file sample-metadata.tsv --o-visualization visual/NegTable.qzv
+qiime feature-table tabulate-seqs --i-data NegRepSeq.qza --o-visualization visual/NegRepSeq.qzv
+qiime feature-table tabulate-seqs --i-data RepSeq.qza --o-visualization visual/RepSeq.qzv
+qiime feature-table tabulate-seqs --i-data HitNegCtrl.qza --o-visualization visual/HitNegCtrl.qzv
 
-# table_summarize :
-###################
-
-qiime feature-table summarize --i-table Table.qza \
-        --m-sample-metadata-file sample-metadata.tsv \
-        --o-visualization Table.qzv
-
-qiime feature-table summarize --i-table ConTable.qza \
-        --m-sample-metadata-file sample-metadata.tsv \
-        --o-visualization ConTable.qzv
-
-qiime feature-table summarize --i-table NegTable.qza \
-        --m-sample-metadata-file sample-metadata.tsv \
-        --o-visualization NegTable.qzv
 
 
 ###############################################################
@@ -167,7 +153,7 @@ conda activate qiime2-2019.10
 # Here --i-reference-sequences correspond to the negative control sample (if you don't have any, like here, take another one from an old project, the one here is from the same sequencing line (but not same project))
 
 qiime quality-control exclude-seqs --i-query-sequences RepSeq.qza \
-      					     --i-reference-sequences /Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/05_QIIME2/Negative_control/V4/RepSeq.qza \
+      					     --i-reference-sequences /Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/98_database_files/V4/Negative_control_Sample_RepSeq_V4.qza \
       					     --p-method vsearch \
       					     --p-threads 6 \
       					     --p-perc-identity 1.00 \
@@ -222,24 +208,11 @@ qiime feature-table filter-seqs --i-data NegRepSeq.qza \
 # Aim: Generate tabular view of feature identifier to sequence mapping
        # Use: qiime feature-table tabulate-seqs [OPTIONS]
 
-qiime feature-table summarize --i-table Table.qza --o-visualization Table.qzv
-qiime feature-table summarize --i-table ConTable.qza --o-visualization ConTable.qzv
-qiime feature-table summarize --i-table NegTable.qza --o-visualization NegTable.qzv
-qiime feature-table tabulate-seqs --i-data NegRepSeq.qza --o-visualization NegRepSeq.qzv
-qiime feature-table tabulate-seqs --i-data RepSeq.qza --o-visualization RepSeq.qzv
-qiime feature-table tabulate-seqs --i-data HitNegCtrl.qza --o-visualization HitNegCtrl.qzv
+qiime feature-table summarize --i-table Table.qza --m-sample-metadata-file sample-metadata.tsv --o-visualization visual/Table.qzv
+qiime feature-table summarize --i-table ConTable.qza --m-sample-metadata-file sample-metadata.tsv --o-visualization visual/ConTable.qzv
+qiime feature-table summarize --i-table NegTable.qza --m-sample-metadata-file sample-metadata.tsv --o-visualization visual/NegTable.qzv
+qiime feature-table tabulate-seqs --i-data NegRepSeq.qza --o-visualization visual/NegRepSeq.qzv
+qiime feature-table tabulate-seqs --i-data RepSeq.qza --o-visualization visual/RepSeq.qzv
+qiime feature-table tabulate-seqs --i-data HitNegCtrl.qza --o-visualization visual/HitNegCtrl.qzv
 
-# table_summarize :
-###################
 
-qiime feature-table summarize --i-table Table.qza \
-        --m-sample-metadata-file sample-metadata.tsv \
-        --o-visualization Table.qzv
-
-qiime feature-table summarize --i-table ConTable.qza \
-        --m-sample-metadata-file sample-metadata.tsv \
-        --o-visualization ConTable.qzv
-
-qiime feature-table summarize --i-table NegTable.qza \
-        --m-sample-metadata-file sample-metadata.tsv \
-        --o-visualization NegTable.qzv
