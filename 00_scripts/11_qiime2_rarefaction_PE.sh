@@ -26,7 +26,7 @@ qiime diversity alpha-rarefaction \
   --i-table Table.qza \
   --i-phylogeny rooted-tree.qza \
   --p-max-depth 50124 \
-  --m-metadata-file METADATA_ITS2/sample-metadata.tsv \
+  --m-metadata-file $METADATA_ITS2/sample-metadata.tsv \
   --o-visualization alpha-rarefaction.qzv
   
 # Note: Interpreting alpha diversity metrics: it is important to understand that certain metrics are stricly qualitative (presence/absence), 
@@ -50,7 +50,7 @@ qiime diversity alpha-rarefaction \
   --i-table Table.qza \
   --i-phylogeny rooted-tree.qza \
   --p-max-depth 23698 \
-  --m-metadata-file METADATA_V4/sample-metadata.tsv \
+  --m-metadata-file $METADATA_V4/sample-metadata.tsv \
   --o-visualization alpha-rarefaction.qzv
   
 # Note: Interpreting alpha diversity metrics: it is important to understand that certain metrics are stricly qualitative (presence/absence), 
