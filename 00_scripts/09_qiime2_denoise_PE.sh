@@ -109,9 +109,12 @@ qiime feature-table filter-seqs --i-data NegRepSeq.qza \
 # Aim: Generate tabular view of feature identifier to sequence mapping
        # Use: qiime feature-table tabulate-seqs [OPTIONS]
 
-qiime feature-table summarize --i-table Table.qza --m-sample-metadata-file sample-metadata.tsv --o-visualization visual/Table.qzv
-qiime feature-table summarize --i-table ConTable.qza --m-sample-metadata-file sample-metadata.tsv --o-visualization visual/ConTable.qzv
-qiime feature-table summarize --i-table NegTable.qza --m-sample-metadata-file sample-metadata.tsv --o-visualization visual/NegTable.qzv
+#qiime feature-table summarize --i-table Table.qza --m-sample-metadata-file sample-metadata.tsv --o-visualization visual/Table.qzv
+qiime feature-table summarize --i-table Table.qza --o-visualization Table.qzv
+#qiime feature-table summarize --i-table ConTable.qza --m-sample-metadata-file sample-metadata.tsv --o-visualization visual/ConTable.qzv
+qiime feature-table summarize --i-table ConTable.qza --o-visualization visual/ConTable.qzv
+#qiime feature-table summarize --i-table NegTable.qza --m-sample-metadata-file sample-metadata.tsv --o-visualization visual/NegTable.qzv
+qiime feature-table summarize --i-table NegTable.qza --o-visualization visual/NegTable.qzv
 qiime feature-table tabulate-seqs --i-data NegRepSeq.qza --o-visualization visual/NegRepSeq.qzv
 qiime feature-table tabulate-seqs --i-data RepSeq.qza --o-visualization visual/RepSeq.qzv
 qiime feature-table tabulate-seqs --i-data HitNegCtrl.qza --o-visualization visual/HitNegCtrl.qzv
@@ -210,9 +213,12 @@ qiime feature-table filter-seqs --i-data NegRepSeq.qza \
 # Aim: Generate tabular view of feature identifier to sequence mapping
        # Use: qiime feature-table tabulate-seqs [OPTIONS]
 
-qiime feature-table summarize --i-table Table.qza --m-sample-metadata-file sample-metadata.tsv --o-visualization visual/Table.qzv
-qiime feature-table summarize --i-table ConTable.qza --m-sample-metadata-file sample-metadata.tsv --o-visualization visual/ConTable.qzv
-qiime feature-table summarize --i-table NegTable.qza --m-sample-metadata-file sample-metadata.tsv --o-visualization visual/NegTable.qzv
+#qiime feature-table summarize --i-table Table.qza --m-sample-metadata-file sample-metadata.tsv --o-visualization visual/Table.qzv
+qiime feature-table summarize --i-table Table.qza --o-visualization visual/Table.qzv
+#qiime feature-table summarize --i-table ConTable.qza --m-sample-metadata-file sample-metadata.tsv --o-visualization visual/ConTable.qzv
+qiime feature-table summarize --i-table ConTable.qza --o-visualization visual/ConTable.qzv
+#qiime feature-table summarize --i-table NegTable.qza --m-sample-metadata-file sample-metadata.tsv --o-visualization visual/NegTable.qzv
+qiime feature-table summarize --i-table NegTable.qza --o-visualization visual/NegTable.qzv
 qiime feature-table tabulate-seqs --i-data NegRepSeq.qza --o-visualization visual/NegRepSeq.qzv
 qiime feature-table tabulate-seqs --i-data RepSeq.qza --o-visualization visual/RepSeq.qzv
 qiime feature-table tabulate-seqs --i-data HitNegCtrl.qza --o-visualization visual/HitNegCtrl.qzv
