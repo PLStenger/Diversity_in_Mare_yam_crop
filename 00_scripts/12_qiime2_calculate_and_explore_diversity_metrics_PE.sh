@@ -40,31 +40,31 @@ qiime diversity core-metrics-phylogenetic \
   
 qiime diversity alpha-group-significance \
   --i-alpha-diversity core-metrics-results/faith_pd_vector.qza \
-  --m-metadata-file sample-metadata.tsv \
+  --m-metadata-file $METADATA_ITS2/sample-metadata.tsv \
   --o-visualization core-metrics-results/faith-pd-group-significance.qzv
 
 qiime diversity alpha-group-significance \
   --i-alpha-diversity core-metrics-results/evenness_vector.qza \
-  --m-metadata-file sample-metadata.tsv \
+  --m-metadata-file $METADATA_ITS2/sample-metadata.tsv \
   --o-visualization core-metrics-results/evenness-group-significance.qzv
 
 qiime diversity alpha-group-significance \
   --i-alpha-diversity core-metrics-results/shannon_vector.qza \
-  --m-metadata-file sample-metadata.tsv \
+  --m-metadata-file $METADATA_ITS2/sample-metadata.tsv \
   --o-visualization core-metrics-results/shannon_group-significance.qzv  
   
 # Now test for relationships between beta diversity and study metadata 
 
 qiime diversity beta-group-significance \
   --i-distance-matrix core-metrics-results/unweighted_unifrac_distance_matrix.qza \
-  --m-metadata-file sample-metadata.tsv \
+  --m-metadata-file $METADATA_ITS2/sample-metadata.tsv \
   --m-metadata-column BodySite \
   --o-visualization core-metrics-results/unweighted-unifrac-body-site-significance.qzv \
   --p-pairwise
 
 qiime diversity beta-group-significance \
   --i-distance-matrix core-metrics-results/unweighted_unifrac_distance_matrix.qza \
-  --m-metadata-file sample-metadata.tsv \
+  --m-metadata-file $METADATA_ITS2/sample-metadata.tsv \
   --m-metadata-column Subject \
   --o-visualization core-metrics-results/unweighted-unifrac-subject-group-significance.qzv \
   --p-pairwise
@@ -75,14 +75,14 @@ qiime diversity beta-group-significance \
 #first, use the unweighted unifrac data as input
 qiime emperor plot \
   --i-pcoa core-metrics-results/unweighted_unifrac_pcoa_results.qza \
-  --m-metadata-file sample-metadata.tsv \
+  --m-metadata-file $METADATA_ITS2/sample-metadata.tsv \
   --p-custom-axes DaysSinceExperimentStart \
   --o-visualization core-metrics-results/unweighted-unifrac-emperor-DaysSinceExperimentStart.qzv
 
 #now repeat with bray curtis
 qiime emperor plot \
   --i-pcoa core-metrics-results/bray_curtis_pcoa_results.qza \
-  --m-metadata-file sample-metadata.tsv \
+  --m-metadata-file $METADATA_ITS2/sample-metadata.tsv \
   --p-custom-axes DaysSinceExperimentStart \
   --o-visualization core-metrics-results/bray-curtis-emperor-DaysSinceExperimentStart.qzv
 
@@ -106,31 +106,31 @@ qiime diversity core-metrics-phylogenetic \
   
 qiime diversity alpha-group-significance \
   --i-alpha-diversity core-metrics-results/faith_pd_vector.qza \
-  --m-metadata-file sample-metadata.tsv \
+  --m-metadata-file $METADATA_V4/sample-metadata.tsv \
   --o-visualization core-metrics-results/faith-pd-group-significance.qzv
 
 qiime diversity alpha-group-significance \
   --i-alpha-diversity core-metrics-results/evenness_vector.qza \
-  --m-metadata-file sample-metadata.tsv \
+  --m-metadata-file $METADATA_V4/sample-metadata.tsv \
   --o-visualization core-metrics-results/evenness-group-significance.qzv
 
 qiime diversity alpha-group-significance \
   --i-alpha-diversity core-metrics-results/shannon_vector.qza \
-  --m-metadata-file sample-metadata.tsv \
+  --m-metadata-file $METADATA_V4/sample-metadata.tsv \
   --o-visualization core-metrics-results/shannon_group-significance.qzv  
   
 # Now test for relationships between beta diversity and study metadata 
 
 qiime diversity beta-group-significance \
   --i-distance-matrix core-metrics-results/unweighted_unifrac_distance_matrix.qza \
-  --m-metadata-file sample-metadata.tsv \
+  --m-metadata-file $METADATA_V4/sample-metadata.tsv \
   --m-metadata-column BodySite \
   --o-visualization core-metrics-results/unweighted-unifrac-body-site-significance.qzv \
   --p-pairwise
 
 qiime diversity beta-group-significance \
   --i-distance-matrix core-metrics-results/unweighted_unifrac_distance_matrix.qza \
-  --m-metadata-file sample-metadata.tsv \
+  --m-metadata-file $METADATA_V4/sample-metadata.tsv \
   --m-metadata-column Subject \
   --o-visualization core-metrics-results/unweighted-unifrac-subject-group-significance.qzv \
   --p-pairwise
@@ -141,13 +141,13 @@ qiime diversity beta-group-significance \
 #first, use the unweighted unifrac data as input
 qiime emperor plot \
   --i-pcoa core-metrics-results/unweighted_unifrac_pcoa_results.qza \
-  --m-metadata-file sample-metadata.tsv \
+  --m-metadata-file $METADATA_V4/sample-metadata.tsv \
   --p-custom-axes DaysSinceExperimentStart \
   --o-visualization core-metrics-results/unweighted-unifrac-emperor-DaysSinceExperimentStart.qzv
 
 #now repeat with bray curtis
 qiime emperor plot \
   --i-pcoa core-metrics-results/bray_curtis_pcoa_results.qza \
-  --m-metadata-file sample-metadata.tsv \
+  --m-metadata-file $METADATA_V4/sample-metadata.tsv \
   --p-custom-axes DaysSinceExperimentStart \
   --o-visualization core-metrics-results/bray-curtis-emperor-DaysSinceExperimentStart.qzv
