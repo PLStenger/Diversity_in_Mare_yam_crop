@@ -3,6 +3,11 @@
 DATADIRECTORY_ITS2_fungi=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/ITS2/
 DATADIRECTORY_V4_bacteria=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/V4/
 
+
+METADATA_ITS2=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/98_database_files/ITS2/
+METADATA_V4=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/98_database_files/V4/
+
+
 # Aim: classify reads by taxon using a fitted classifier
 
 # https://docs.qiime2.org/2019.10/tutorials/moving-pictures/
@@ -27,11 +32,11 @@ conda activate qiime2-2019.10
 
 qiime tools import --type 'FeatureData[Taxonomy]' \
   --input-format HeaderlessTSVTaxonomyFormat \
-  --input-path /Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/data_input/Taxonomy-UNITE-V7-S-2017.12.01-dynamic.txt \
+  --input-path /Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/98_database_files/ITS2/Taxonomy-UNITE-V7-S-2017.12.01-dynamic.txt \
   --output-path RefTaxo.qza
 
 qiime tools import --type 'FeatureData[Sequence]' \
-  --input-path /Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/data_input/Sequence-UNITE-V7-S-2017.12.01-dynamic.fasta \
+  --input-path /Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/98_database_files/ITS2/Sequence-UNITE-V7-S-2017.12.01-dynamic.fasta \
   --output-path DataSeq.qza
 
 
@@ -88,13 +93,13 @@ qiime metadata tabulate \
 qiime taxa barplot \
   --i-table Table.qza \
   --i-taxonomy taxonomy_reads-per-batch_0.qza \
-  --m-metadata-file sample-metadata.tsv \
+  --m-metadata-file $METADATA_ITS2/sample-metadata.tsv \
   --o-visualization taxa-bar-plots_reads-per-batch_0.qzv
 
 qiime taxa barplot \
   --i-table Table.qza \
   --i-taxonomy Taxonomy_reads-per-batch_1000.qza \
-  --m-metadata-file sample-metadata.tsv \
+  --m-metadata-file $METADATA_ITS2/sample-metadata.tsv \
   --o-visualization Taxa-bar-plots_reads-per-batch_1000.qzv
   
   
@@ -109,11 +114,11 @@ conda activate qiime2-2019.10
 
 qiime tools import --type 'FeatureData[Taxonomy]' \
   --input-format HeaderlessTSVTaxonomyFormat \
-  --input-path /Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/data_input/Taxonomy-SILVA-V132-2018.04.10-99.txt \
+  --input-path /Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/98_database_files/V4/Taxonomy-SILVA-V132-2018.04.10-99.txt \
   --output-path RefTaxo.qza
 
 qiime tools import --type 'FeatureData[Sequence]' \
-  --input-path /Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/data_input/Sequence-SILVA-V132-2018.04.10-99.fasta \
+  --input-path /Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/98_database_files/V4/Sequence-SILVA-V132-2018.04.10-99.fasta \
   --output-path DataSeq.qza
 
    
@@ -185,11 +190,11 @@ qiime metadata tabulate \
 qiime taxa barplot \
   --i-table Table.qza \
   --i-taxonomy taxonomy_reads-per-batch_0.qza \
-  --m-metadata-file sample-metadata.tsv \
+  --m-metadata-file $METADATA_V4/sample-metadata.tsv \
   --o-visualization taxa-bar-plots_reads-per-batch_0.qzv
 
 qiime taxa barplot \
   --i-table Table.qza \
   --i-taxonomy Taxonomy_reads-per-batch_1000.qza \
-  --m-metadata-file sample-metadata.tsv \
+  --m-metadata-file $METADATA_V4/sample-metadata.tsv \
   --o-visualization Taxa-bar-plots_reads-per-batch_1000.qzv
