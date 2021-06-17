@@ -3,6 +3,9 @@
 DATADIRECTORY_ITS2_fungi=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/ITS2/
 DATADIRECTORY_V4_bacteria=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/V4/
 
+METADATA_ITS2=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/98_database_files/ITS2/
+METADATA_V4=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/98_database_files/V4/
+
 
 ###############################################################
 ### For Fungi
@@ -18,12 +21,12 @@ conda activate qiime2-2019.10
 qiime tools import \
         --type 'FeatureData[Taxonomy]' \
         --input-format HeaderlessTSVTaxonomyFormat \
-        --input-path /Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/data_input/Taxonomy-UNITE-V7-S-2017.12.01-dynamic.txt \
+        --input-path /Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/98_database_files/ITS2/Taxonomy-UNITE-V7-S-2017.12.01-dynamic.txt \
         --output-path taxonomy/RefTaxo.qza
 
 qiime tools import \
         --type 'FeatureData[Sequence]' \
-        --input-path /Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/data_input/Sequence-UNITE-V7-S-2017.12.01-dynamic.fasta \
+        --input-path /Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/98_database_files/ITS2/Sequence-UNITE-V7-S-2017.12.01-dynamic.fasta \
         --output-path taxonomy/DataSeq.qza
 
 # Fungal ITS classifiers trained on the UNITE reference database do NOT benefit
@@ -79,13 +82,13 @@ qiime metadata tabulate \
 qiime taxa barplot \
   --i-table Table.qza \
   --i-taxonomy taxonomy/taxonomy_reads-per-batch_0_RepSeq.qza \
-  --m-metadata-file sample-metadata.tsv \
+  --m-metadata-file $METADATA_ITS2/sample-metadata.tsv \
   --o-visualization taxonomy/taxa-bar-plots_reads-per-batch_0_RepSeq.qzv
 
 qiime taxa barplot \
   --i-table Table.qza \
   --i-taxonomy taxonomy/Taxonomy_reads-per-batch_1000_ConRepSeq.qza \
-  --m-metadata-file sample-metadata.tsv \
+  --m-metadata-file $METADATA_ITS2/sample-metadata.tsv \
   --o-visualization taxonomy/Taxa-bar-plots_reads-per-batch_1000_ConRepSeq.qzv
 
 
@@ -104,12 +107,12 @@ conda activate qiime2-2019.10
 qiime tools import \
         --type 'FeatureData[Taxonomy]' \
         --input-format HeaderlessTSVTaxonomyFormat \
-        --input-path /Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/data_input/Taxonomy-SILVA-V132-2018.04.10-99.txt \
+        --input-path /Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/98_database_files/V4/Taxonomy-SILVA-V132-2018.04.10-99.txt \
         --output-path taxonomy/RefTaxo.qza
 
 qiime tools import \
         --type 'FeatureData[Sequence]' \
-        --input-path /Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/data_input/Sequence-SILVA-V132-2018.04.10-99.fasta \
+        --input-path /Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/98_database_files/V4/Sequence-SILVA-V132-2018.04.10-99.fasta \
         --output-path taxonomy/DataSeq.qza
 
 
@@ -181,11 +184,11 @@ qiime metadata tabulate \
 qiime taxa barplot \
   --i-table Table.qza \
   --i-taxonomy taxonomy/taxonomy_reads-per-batch_0_RepSeq.qza \
-  --m-metadata-file sample-metadata.tsv \
+  --m-metadata-file $METADATA_V4/sample-metadata.tsv \
   --o-visualization taxonomy/taxa-bar-plots_reads-per-batch_0_RepSeq.qzv
 
 qiime taxa barplot \
   --i-table Table.qza \
   --i-taxonomy taxonomy/Taxonomy_reads-per-batch_1000_ConRepSeq.qza \
-  --m-metadata-file sample-metadata.tsv \
+  --m-metadata-file $METADATA_V4/sample-metadata.tsv \
   --o-visualization taxonomy/Taxa-bar-plots_reads-per-batch_1000_ConRepSeq.qzv
