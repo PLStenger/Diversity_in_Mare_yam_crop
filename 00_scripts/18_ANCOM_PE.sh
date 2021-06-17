@@ -86,7 +86,7 @@ conda activate qiime2-2019.10
 qiime taxa collapse \
         --i-table core/RarTable.qza \
         --i-taxonomy taxonomy/Taxonomy.qza \
-        --p-level 2 \
+        --p-level '2' \
         --o-collapsed-table ancom/ColTable.qza
         
 ##########################################################################
