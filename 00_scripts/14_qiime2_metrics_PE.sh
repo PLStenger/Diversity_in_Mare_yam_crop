@@ -3,6 +3,9 @@
 DATADIRECTORY_ITS2_fungi=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/ITS2/
 DATADIRECTORY_V4_bacteria=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/V4/
 
+METADATA_ITS2=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/98_database_files/ITS2/
+METADATA_V4=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/98_database_files/V4/
+
 
 ###############################################################
 ### For Fungi
@@ -22,8 +25,8 @@ conda activate qiime2-2019.10
 qiime diversity core-metrics-phylogenetic \
        --i-phylogeny rooted-tree.qza \
        --i-table ConTable.qza \
-       --p-sampling-depth 22941 \
-       --m-metadata-file sample-metadata.tsv \
+       --p-sampling-depth 16708 \
+       --m-metadata-file $METADATA_ITS2/sample-metadata.tsv \
        --o-rarefied-table RarTable.qza \
        --o-observed-otus-vector core/Vector-observed_asv.qza \
        --o-shannon-vector core/Vector-shannon.qza \
@@ -69,7 +72,7 @@ qiime feature-table tabulate-seqs \
 
 qiime feature-table summarize \
        --i-table RarTable.qza \
-       --m-sample-metadata-file sample-metadata.tsv \
+       --m-sample-metadata-file $METADATA_ITS2/sample-metadata.tsv \
        --o-visualization RarTable.qzv
 
 
@@ -136,7 +139,7 @@ qiime diversity pcoa --i-distance-matrix Matrix-braycurtis.qza \
         --o-pcoa pcoa/PCoA-braycurtis.qza
 
 qiime emperor plot --i-pcoa pcoa/PCoA-braycurtis.qza \
-        --m-metadata-file sample-metadata.tsv \
+        --m-metadata-file $METADATA_ITS2/sample-metadata.tsv \
         --o-visualization visual/Emperor-braycurtis.qzv
 
 
@@ -162,8 +165,8 @@ conda activate qiime2-2019.10
 qiime diversity core-metrics-phylogenetic \
        --i-phylogeny rooted-tree.qza \
        --i-table ConTable.qza \
-       --p-sampling-depth 25721 \
-       --m-metadata-file sample-metadata.tsv \
+       --p-sampling-depth 2634 \
+       --m-metadata-file $METADATA_V4/sample-metadata.tsv \
        --o-rarefied-table RarTable.qza \
        --o-observed-otus-vector core/Vector-observed_asv.qza \
        --o-shannon-vector core/Vector-shannon.qza \
@@ -208,7 +211,7 @@ qiime feature-table tabulate-seqs \
 
 qiime feature-table summarize \
        --i-table RarTable.qza \
-       --m-sample-metadata-file sample-metadata.tsv \
+       --m-sample-metadata-file $METADATA_V4/sample-metadata.tsv \
        --o-visualization RarTable.qzv
 
 
@@ -262,7 +265,7 @@ qiime diversity pcoa --i-distance-matrix Matrix-jaccard.qza \
         --o-pcoa pcoa/PCoA-jaccard.qza
         
 qiime emperor plot --i-pcoa pcoa/PCoA-jaccard.qza \
-        --m-metadata-file sample-metadata.tsv \
+        --m-metadata-file $METADATA_V4/sample-metadata.tsv \
         --o-visualization visual/Emperor-jaccard.qzv
         
         
@@ -275,5 +278,5 @@ qiime diversity pcoa --i-distance-matrix Matrix-braycurtis.qza \
         --o-pcoa pcoa/PCoA-braycurtis.qza
 
 qiime emperor plot --i-pcoa pcoa/PCoA-braycurtis.qza \
-        --m-metadata-file sample-metadata.tsv \
+        --m-metadata-file $METADATA_V4/sample-metadata.tsv \
         --o-visualization visual/Emperor-braycurtis.qzv
