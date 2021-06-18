@@ -37,8 +37,8 @@ conda activate qiime2-2019.10
 
 
 qiime taxa collapse \
-        --i-table core/RarTable.qza \
-        --i-taxonomy taxonomy/Taxonomy.qza \
+        --i-table RarTable.qza \
+        --i-taxonomy taxonomy/taxonomy_reads-per-batch_0_RepSeq.qza \
         --p-level 2 \
         --o-collapsed-table ancom/ColTable.qza
         
@@ -55,7 +55,7 @@ qiime composition add-pseudocount \
 qiime composition ancom \
         --i-table ancom/CompTable.qza \
         --m-metadata-file $METADATA_ITS2/sample-metadata.tsv \
-        --m-metadata-column Acronyme \
+        --m-metadata-column 'Acronyme' \
         --o-visualization visual/Ancom.qzv
         
 ###############################################################
@@ -84,8 +84,8 @@ conda activate qiime2-2019.10
 
 
 qiime taxa collapse \
-        --i-table core/RarTable.qza \
-        --i-taxonomy taxonomy/Taxonomy.qza \
+        --i-table RarTable.qza \
+        --i-taxonomy taxonomy/taxonomy_reads-per-batch_0_RepSeq.qza \
         --p-level '2' \
         --o-collapsed-table ancom/ColTable.qza
         
@@ -102,7 +102,7 @@ qiime composition add-pseudocount \
 qiime composition ancom \
         --i-table ancom/CompTable.qza \
         --m-metadata-file $METADATA_V4/sample-metadata.tsv \
-        --m-metadata-column Acronyme \
+        --m-metadata-column 'Acronyme' \
         --o-visualization visual/Ancom.qzv
                 
         
