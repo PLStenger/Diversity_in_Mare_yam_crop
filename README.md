@@ -155,7 +155,11 @@ First, open your terminal. Then, run these two command lines :
         >real	168m33.260s
         >user	127m24.206s
         >sys	4m50.205s
-    time nohup bash 18_ANCOM_PE.sh &> 18_ANCOM_PE.out   
+    time nohup bash 18_ANCOM_PE.sh &> 18_ANCOM_PE.out 
+         >real	6m50.912s
+         >user	0m57.097s
+         >sys	0m21.047s
+    time nohup 19_GNEISS_PE.sh &> 19_GNEISS_PE.out
     
 
 </details> 
