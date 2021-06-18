@@ -24,7 +24,7 @@ conda activate qiime2-2019.10
 # Aim: Build bifurcating tree representing features hierarchical clustering
 
 qiime gneiss correlation-clustering \
-        --i-table core/RarTable.qza \
+        --i-table RarTable.qza \
         --o-clustering gneiss/CorrHierarchy.qza
 
 ##########################################################################
@@ -41,7 +41,7 @@ qiime gneiss correlation-clustering \
 # HERE IF NOT WORKING CHANGE BY THIS :         --m-gradient-column \
 
 qiime gneiss gradient-clustering \
-        --i-table core/RarTable.qza \
+        --i-table RarTable.qza \
         --m-gradient-file $METADATA_ITS2/sample-metadata.tsv \
         --m-gradient-column 'Acronym' \
         --o-clustering gneiss/GradHierarchy.qza
@@ -51,7 +51,7 @@ qiime gneiss gradient-clustering \
 # Aim: Calculate balances given a hierarchy
 
 qiime gneiss ilr-hierarchical \
-        --i-table core/RarTable.qza \
+        --i-table RarTable.qza \
         --i-tree gneiss/GradHierarchy.qza \
         --o-balances gneiss/Balance.qza
 
@@ -69,7 +69,7 @@ qiime gneiss ols-regression \
 # Aim: Visualize the feature table as a heatmap
 
 qiime gneiss dendrogram-heatmap \
-        --i-table core/RarTable.qza \
+        --i-table RarTable.qza \
         --i-tree gneiss/GradHierarchy.qza \
         --m-metadata-file $METADATA_ITS2/sample-metadata.tsv \
         --m-metadata-column 'Acronym' \
@@ -94,7 +94,7 @@ qiime gneiss dendrogram-heatmap \
     #- 7 # Species               /
 
 qiime gneiss balance-taxonomy \
-        --i-table core/RarTable.qza \
+        --i-table RarTable.qza \
         --i-tree gneiss/GradHierarchy.qza \
         --i-taxonomy taxonomy/Taxonomy.qza \
         --p-taxa-level '2' \
@@ -118,7 +118,7 @@ conda activate qiime2-2019.10
 # Aim: Build bifurcating tree representing features hierarchical clustering
 
 qiime gneiss correlation-clustering \
-        --i-table core/RarTable.qza \
+        --i-table RarTable.qza \
         --o-clustering gneiss/CorrHierarchy.qza
 
 ##########################################################################
@@ -135,7 +135,7 @@ qiime gneiss correlation-clustering \
 # HERE IF NOT WORKING CHANGE BY THIS :         --m-gradient-column \
 
 qiime gneiss gradient-clustering \
-        --i-table core/RarTable.qza \
+        --i-table RarTable.qza \
         --m-gradient-file $METADATA_V4/sample-metadata.tsv \
         --m-gradient-column 'Acronym' \
         --o-clustering gneiss/GradHierarchy.qza
@@ -145,7 +145,7 @@ qiime gneiss gradient-clustering \
 # Aim: Calculate balances given a hierarchy
 
 qiime gneiss ilr-hierarchical \
-        --i-table core/RarTable.qza \
+        --i-table RarTable.qza \
         --i-tree gneiss/GradHierarchy.qza \
         --o-balances gneiss/Balance.qza
 
@@ -163,7 +163,7 @@ qiime gneiss ols-regression \
 # Aim: Visualize the feature table as a heatmap
 
 qiime gneiss dendrogram-heatmap \
-        --i-table core/RarTable.qza \
+        --i-table RarTable.qza \
         --i-tree gneiss/GradHierarchy.qza \
         --m-metadata-file $METADATA_V4/sample-metadata.tsv \
         --m-metadata-column 'Acronym' \
@@ -188,7 +188,7 @@ qiime gneiss dendrogram-heatmap \
     #- 7 # Species               /
 
 qiime gneiss balance-taxonomy \
-        --i-table core/RarTable.qza \
+        --i-table RarTable.qza \
         --i-tree gneiss/GradHierarchy.qza \
         --i-taxonomy taxonomy/Taxonomy.qza \
         --p-taxa-level '2' \
