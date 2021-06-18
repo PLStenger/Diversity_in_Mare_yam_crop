@@ -36,14 +36,10 @@ qiime gneiss correlation-clustering \
 # compositional differences along the metadata category of your choice,
 # and it's possible to get false positives. Use gradient-clustering with caution.
 
-
-
-# HERE IF NOT WORKING CHANGE BY THIS :         --m-gradient-column \
-
 qiime gneiss gradient-clustering \
         --i-table RarTable.qza \
         --m-gradient-file $METADATA_ITS2/sample-metadata.tsv \
-        --m-gradient-column 'Acronym' \
+        --m-gradient-column \
         --o-clustering gneiss/GradHierarchy.qza
 
 
@@ -130,14 +126,10 @@ qiime gneiss correlation-clustering \
 # compositional differences along the metadata category of your choice,
 # and it's possible to get false positives. Use gradient-clustering with caution.
 
-
-
-# HERE IF NOT WORKING CHANGE BY THIS :         --m-gradient-column \
-
 qiime gneiss gradient-clustering \
         --i-table RarTable.qza \
         --m-gradient-file $METADATA_V4/sample-metadata.tsv \
-        --m-gradient-column 'Acronym' \
+        --m-gradient-column \
         --o-clustering gneiss/GradHierarchy.qza
 
 
