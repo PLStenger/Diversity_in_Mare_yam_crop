@@ -159,7 +159,7 @@ First, open your terminal. Then, run these two command lines :
          >real	6m50.912s
          >user	0m57.097s
          >sys	0m21.047s
-    time nohup 19_GNEISS_PE.sh &> 19_GNEISS_PE.out
+    time nohup bash 19_GNEISS_PE.sh &> 19_GNEISS_PE.out
     
 
 </details> 
