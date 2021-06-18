@@ -108,7 +108,7 @@ First, open your terminal. Then, run these two command lines :
         >user	50m12.821s
         >sys	3m7.610s
     time nohup bash 14_qiime2_metrics.sh &> 14_qiime2_metrics.out
-
+    
 
 </details>  
 
@@ -152,9 +152,11 @@ First, open your terminal. Then, run these two command lines :
         >user	4m13.665s
         >sys	0m40.704s
     time nohup bash 17_assign_taxonomy_after_filters_PE.sh &> 17_assign_taxonomy_after_filters_PE.out
-        >real	149m10.832s
-        >user	120m54.975s
-        >sys	4m4.670s
+        >real	168m33.260s
+        >user	127m24.206s
+        >sys	4m50.205s
+    time nohup bash 18_ANCOM_PE.sh &> 18_ANCOM_PE.out   
+    
 
 </details> 
 
