@@ -80,7 +80,7 @@ qiime gneiss dendrogram-heatmap \
         --i-table RarTable.qza \
         --i-tree gneiss/GradHierarchy.qza \
         --m-metadata-file $METADATA_ITS2/sample-metadata.tsv \
-        --m-metadata-column time \
+        --m-metadata-column Acronyme \
         --p-color-map 'seismic' \
         --p-method 'clr' \
         --p-ndim '10' \
@@ -108,7 +108,7 @@ qiime gneiss balance-taxonomy \
         --p-taxa-level '2' \
         --p-balance-name 'y0' \
         --m-metadata-file $METADATA_ITS2/sample-metadata.tsv \
-        --m-metadata-column time \
+        --m-metadata-column Acronyme \
         --o-visualization visual/y0TaxaSum.qz
 
 
@@ -176,7 +176,7 @@ qiime gneiss dendrogram-heatmap \
         --i-table RarTable.qza \
         --i-tree gneiss/GradHierarchy.qza \
         --m-metadata-file $METADATA_V4/sample-metadata.tsv \
-        --m-metadata-column time \
+        --m-metadata-column Acronyme \
         --p-color-map 'seismic' \
         --p-method 'clr' \
         --p-ndim '10' \
@@ -204,7 +204,7 @@ qiime gneiss balance-taxonomy \
         --p-taxa-level '2' \
         --p-balance-name 'y0' \
         --m-metadata-file $METADATA_V4/sample-metadata.tsv \
-        --m-metadata-column time \
+        --m-metadata-column Acronyme \
         --o-visualization visual/y0TaxaSum.qz
 
 
