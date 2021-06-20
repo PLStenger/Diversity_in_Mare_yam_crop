@@ -52,7 +52,7 @@ qiime gneiss correlation-clustering \
 qiime gneiss gradient-clustering \
         --i-table RarTable.qza \
         --m-gradient-file $METADATA_ITS2/sample-metadata.tsv \
-        --m-gradient-column Acronyme \
+        --m-gradient-column time \
         --o-clustering gneiss/GradHierarchy.qza
 
 ##########################################################################
