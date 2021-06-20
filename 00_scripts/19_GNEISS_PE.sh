@@ -43,12 +43,17 @@ qiime gneiss correlation-clustering \
 # compositional differences along the metadata category of your choice,
 # and it's possible to get false positives. Use gradient-clustering with caution.
 
+#qiime gneiss gradient-clustering \
+#        --i-table RarTable.qza \
+#        --m-gradient-file $METADATA_ITS2/sample-metadata.tsv \
+#        --m-gradient-column \
+#        --o-clustering gneiss/GradHierarchy.qza
+
 qiime gneiss gradient-clustering \
         --i-table RarTable.qza \
         --m-gradient-file $METADATA_ITS2/sample-metadata.tsv \
-        --m-gradient-column \
+        --m-gradient-column Acronyme \
         --o-clustering gneiss/GradHierarchy.qza
-
 
 ##########################################################################
 # Aim: Calculate balances given a hierarchy
@@ -142,7 +147,7 @@ qiime gneiss correlation-clustering \
 qiime gneiss gradient-clustering \
         --i-table RarTable.qza \
         --m-gradient-file $METADATA_V4/sample-metadata.tsv \
-        --m-gradient-column \
+        --m-gradient-column Acronyme \
         --o-clustering gneiss/GradHierarchy.qza
 
 
