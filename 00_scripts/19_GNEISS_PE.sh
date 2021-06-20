@@ -67,7 +67,7 @@ qiime gneiss ilr-hierarchical \
 # Aim: Perform linear regression on balances
 
 qiime gneiss ols-regression \
-        --p-formula 'Acronym' \
+        --p-formula time \
         --i-table gneiss/Balance.qza \
         --i-tree gneiss/GradHierarchy.qza \
         --m-metadata-file $METADATA_ITS2/sample-metadata.tsv \
@@ -80,7 +80,7 @@ qiime gneiss dendrogram-heatmap \
         --i-table RarTable.qza \
         --i-tree gneiss/GradHierarchy.qza \
         --m-metadata-file $METADATA_ITS2/sample-metadata.tsv \
-        --m-metadata-column 'Acronym' \
+        --m-metadata-column time \
         --p-color-map 'seismic' \
         --p-method 'clr' \
         --p-ndim '10' \
@@ -108,7 +108,7 @@ qiime gneiss balance-taxonomy \
         --p-taxa-level '2' \
         --p-balance-name 'y0' \
         --m-metadata-file $METADATA_ITS2/sample-metadata.tsv \
-        --m-metadata-column 'Acronym' \
+        --m-metadata-column time \
         --o-visualization visual/y0TaxaSum.qz
 
 
@@ -147,7 +147,7 @@ qiime gneiss correlation-clustering \
 qiime gneiss gradient-clustering \
         --i-table RarTable.qza \
         --m-gradient-file $METADATA_V4/sample-metadata.tsv \
-        --m-gradient-column Acronyme \
+        --m-gradient-column time \
         --o-clustering gneiss/GradHierarchy.qza
 
 
@@ -163,7 +163,7 @@ qiime gneiss ilr-hierarchical \
 # Aim: Perform linear regression on balances
 
 qiime gneiss ols-regression \
-        --p-formula 'Acronym' \
+        --p-formula time \
         --i-table gneiss/Balance.qza \
         --i-tree gneiss/GradHierarchy.qza \
         --m-metadata-file $METADATA_V4/sample-metadata.tsv \
@@ -176,7 +176,7 @@ qiime gneiss dendrogram-heatmap \
         --i-table RarTable.qza \
         --i-tree gneiss/GradHierarchy.qza \
         --m-metadata-file $METADATA_V4/sample-metadata.tsv \
-        --m-metadata-column 'Acronym' \
+        --m-metadata-column time \
         --p-color-map 'seismic' \
         --p-method 'clr' \
         --p-ndim '10' \
@@ -204,7 +204,7 @@ qiime gneiss balance-taxonomy \
         --p-taxa-level '2' \
         --p-balance-name 'y0' \
         --m-metadata-file $METADATA_V4/sample-metadata.tsv \
-        --m-metadata-column 'Acronym' \
+        --m-metadata-column time \
         --o-visualization visual/y0TaxaSum.qz
 
 
