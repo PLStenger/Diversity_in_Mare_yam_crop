@@ -4,8 +4,8 @@ DATADIRECTORY_ITS2_fungi=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBar
 DATADIRECTORY_V4_bacteria=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/V4/
 
 
-METADATA_ITS2=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/98_database_files/ITS2/
-METADATA_V4=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/98_database_files/V4/
+METADATA_ITS2=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/98_database_files/ITS2
+METADATA_V4=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/98_database_files/V4
 
 
 # Aim: identify features that are differentially abundant across groups
@@ -29,6 +29,13 @@ qiime gneiss correlation-clustering \
 
 ##########################################################################
 # Aim: Build bifurcating tree representing features hierarchical clustering
+
+
+# Build a bifurcating tree that represents a hierarchical clustering of
+# features.  The hiearchical clustering uses Ward hierarchical clustering
+# based on the mean difference of gradients that each feature is observed
+# in. This method is primarily used to sort the table to reveal the
+# underlying block-like structures.
 
 # Notes:
 # An important consideration for downstream analyses is  overfitting.
@@ -119,6 +126,12 @@ qiime gneiss correlation-clustering \
 
 ##########################################################################
 # Aim: Build bifurcating tree representing features hierarchical clustering
+
+# Build a bifurcating tree that represents a hierarchical clustering of
+# features.  The hiearchical clustering uses Ward hierarchical clustering
+# based on the mean difference of gradients that each feature is observed
+# in. This method is primarily used to sort the table to reveal the
+# underlying block-like structures.
 
 # Notes:
 # An important consideration for downstream analyses is  overfitting.
