@@ -104,7 +104,7 @@ qiime gneiss dendrogram-heatmap \
 qiime gneiss balance-taxonomy \
         --i-table RarTable.qza \
         --i-tree gneiss/GradHierarchy.qza \
-        --i-taxonomy taxonomy/Taxonomy.qza \
+        --i-taxonomy taxonomy/taxonomy_reads-per-batch_0_RepSeq.qza \
         --p-taxa-level '2' \
         --p-balance-name 'y0' \
         --m-metadata-file $METADATA_ITS2/sample-metadata.tsv \
@@ -200,7 +200,7 @@ qiime gneiss dendrogram-heatmap \
 qiime gneiss balance-taxonomy \
         --i-table RarTable.qza \
         --i-tree gneiss/GradHierarchy.qza \
-        --i-taxonomy taxonomy/Taxonomy.qza \
+        --i-taxonomy taxonomy/taxonomy_reads-per-batch_0_RepSeq.qza \
         --p-taxa-level '2' \
         --p-balance-name 'y0' \
         --m-metadata-file $METADATA_V4/sample-metadata.tsv \
