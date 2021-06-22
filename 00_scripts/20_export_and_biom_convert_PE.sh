@@ -18,13 +18,29 @@ conda activate qiime2-2019.10
 
 # Aim: Export QIIME2 subtables artifact.qza
 
-#qiime tools export \
-#        --input-path subtables/*.qza \
-#        --output-path export/subtables/ \
-
 qiime tools export \
         --input-path subtables/RarTable-Forest.qza \
         --output-path export/subtables/RarTable-Forest \
+
+qiime tools export \
+        --input-path subtables/RarTable-Long_fallow.qza \
+        --output-path export/subtables/RarTable-Long_fallow \
+
+qiime tools export \
+        --input-path subtables/RarTable-short_fallow.qza \
+        --output-path export/subtables/RarTable-short_fallow \
+
+
+for FILE in $(ls core/*.qza)
+
+do
+
+qiime tools export \
+        --input-path ${FILE##*/} \
+        --output-path export/core/${FILE##*/} \
+
+done;
+
 
 
 
