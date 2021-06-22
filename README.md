@@ -163,6 +163,7 @@ First, open your terminal. Then, run these two command lines :
          >real	7m47.600s
          >user	2m54.463s
          >sys	0m30.545s
+    time nohup bash 20_export_and_biom_convert_PE.sh &> 20_export_and_biom_convert_PE.out
 
 </details> 
 
