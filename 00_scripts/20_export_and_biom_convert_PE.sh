@@ -16,9 +16,20 @@ cd $DATADIRECTORY_ITS2_fungi
 eval "$(conda shell.bash hook)"
 conda activate qiime2-2019.10
 
+# Aim: Export QIIME2 subtables artifact.qza
+
+qiime tools export \
+        --input-path subtables/*.qza \
+        --output-path export/subtables/ \
+
+
+
+
+
+
 # Aim: Convert to/from the BIOM table format
 
-biom convert \
-        -i {input.biom_file} \
-        -o {output.tsv_file} \
-        --to-tsv
+#biom convert \
+#        -i  \
+#        -o {output.tsv_file} \
+#        --to-tsv
