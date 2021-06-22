@@ -23,8 +23,8 @@ conda activate qiime2-2019.10
 #        --output-path export/subtables/ \
 
 qiime tools export \
-        --input-path subtables/ \
-        --output-path export/subtables/ \
+        --input-path subtables/RarTable-Forest.qza \
+        --output-path export/subtables/RarTable-Forest \
 
 
 
