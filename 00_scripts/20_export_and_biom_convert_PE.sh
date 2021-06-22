@@ -18,10 +18,13 @@ conda activate qiime2-2019.10
 
 # Aim: Export QIIME2 subtables artifact.qza
 
-qiime tools export \
-        --input-path subtables/*.qza \
-        --output-path export/subtables/ \
+#qiime tools export \
+#        --input-path subtables/*.qza \
+#        --output-path export/subtables/ \
 
+qiime tools export \
+        --input-path subtables/ \
+        --output-path export/subtables/ \
 
 
 
