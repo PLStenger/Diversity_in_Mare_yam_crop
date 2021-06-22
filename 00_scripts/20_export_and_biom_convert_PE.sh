@@ -41,7 +41,9 @@ qiime tools export \
 
 done;
 
-
+qiime tools export \
+        --input-path core/Vector-faith_pd.qza \
+        --output-path export/core/Vector-faith_pd \
 
 
 
