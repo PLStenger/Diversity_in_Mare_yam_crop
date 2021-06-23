@@ -19,7 +19,9 @@ conda activate qiime2-2019.10
 
 # Aim: Sort biom tsv table by ASVs
 
-sed '1d ; s/\#OTU ID/ID/' export/core/RarTable/table-from-biom.tsv | sort -r > funguild/SortASV.tsv
+#sed '1d ; s/\#OTU ID/ID/' export/core/RarTable/table-from-biom.tsv | sort -r > funguild/SortASV.tsv
+sed '1d ; s/\#OTU ID/ID/' export/core/RarTable/feature-table.biom | sort -r > funguild/SortASV.tsv
+
 
 # Aim: Sort taxonomy tsv table by OTUs
 
