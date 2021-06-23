@@ -117,53 +117,46 @@ First, open your terminal. Then, run these two command lines :
 <details>
   <summary>Click here to see the running command lines</summary>
 
-    time nohup bash 08_qiime2_import_PE.sh &> 08_qiime2_import_PE.out
+    time nohup bash 00_quality_check_by_FastQC.sh &> 00_quality_check_by_FastQC.out
+    time nohup bash 01_replicates_pooling.sh &> 01_replicates_pooling.out
+    time nohup bash 02_trimmomatic_q30.sh &> 02_trimmomatic_q30.out
+    time nohup bash 03_cleaned_data_quality_check_by_FastQC.sh &> 03_cleaned_data_quality_check_by_FastQC.out
+    time nohup bash 04_qiime2_import_PE.sh &> 04_qiime2_import_PE.out
         >real	4m55.899s
         >user	1m41.410s
         >sys	0m20.118s
-    time nohup bash 09_qiime2_denoise_PE.sh &> 09_qiime2_denoise_PE.out
+    time nohup bash 05_qiime2_denoise_PE.sh &> 05_qiime2_denoise_PE.out
         >real	182m55.881s
         >user	386m16.256s
         >sys	12m38.602s
-    time nohup bash 10_qiime2_tree_PE.sh &> 10_qiime2_tree_PE.out
+    time nohup bash 06_qiime2_tree_PE.sh &> 06_qiime2_tree_PE.out
         >real	18m50.095s
         >user	9m43.400s
         >sys	0m36.308s
-    time nohup bash 11_qiime2_rarefaction_PE.sh &> 11_qiime2_rarefaction_PE.out
+    time nohup bash 07_qiime2_rarefaction_PE.sh &> 07_qiime2_rarefaction_PE.out
         >real	4m29.032s
         > user	1m8.333s
         >sys	0m15.190s 
-    time nohup bash 12_qiime2_calculate_and_explore_diversity_metrics_PE.sh &> 12_qiime2_calculate_and_explore_diversity_metrics_PE.out
+    time nohup bash 08_qiime2_calculate_and_explore_diversity_metrics_PE.sh &> 08_qiime2_calculate_and_explore_diversity_metrics_PE.out
         >real	7m44.924s
         >user	1m55.265s
         >sys	0m34.381s
-    time nohup bash 13_qiime2_assign_taxonomy_PE.sh &> 13_qiime2_assign_taxonomy_PE.out
-        >more or less real	126m
-    time nohup bash 14_qiime2_metrics_PE.sh &> 14_qiime2_metrics_PE.out
-        >real	27m19.952s
-        >user	3m48.645s
-        >sys	1m9.025s
-    time nohup bash 15_significance_PE.sh &> 15_significance_PE.out
-        >real	26m25.815s
-        >user	4m3.652s
-        >sys	1m0.778s
-    time nohup bash 16_core_biom_PE.sh &> 16_core_biom_PE.out
+    time nohup bash 08_core_biom_PE.sh &> 08_core_biom_PE.out
         >real	20m24.338s
         >user	4m13.665s
         >sys	0m40.704s
-    time nohup bash 17_assign_taxonomy_after_filters_PE.sh &> 17_assign_taxonomy_after_filters_PE.out
+    time nohup bash 10_qiime2_assign_taxonomy_PE.sh &> 10_qiime2_assign_taxonomy_PE.out
         >real	168m33.260s
         >user	127m24.206s
         >sys	4m50.205s
-    time nohup bash 18_ANCOM_PE.sh &> 18_ANCOM_PE.out 
+    time nohup bash 11_ANCOM_PE.sh &> 11_ANCOM_PE.out 
          >real	6m50.912s
          >user	0m57.097s
          >sys	0m21.047s
-    time nohup bash 19_GNEISS_PE.sh &> 19_GNEISS_PE.out
+    time nohup bash 12_GNEISS_PE.sh &> 12_GNEISS_PE.out
          >real	7m47.600s
          >user	2m54.463s
          >sys	0m30.545s
-    time nohup bash 20_export_and_biom_convert_PE.sh &> 20_export_and_biom_convert_PE.out
     time nohup bash 13_funguild.sh &> 13_funguild.out
 
 </details> 
