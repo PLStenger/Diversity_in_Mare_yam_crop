@@ -282,6 +282,53 @@ qiime emperor plot \
   --m-metadata-file $METADATA_ITS2/sample-metadata.tsv \
   --p-custom-axes Acronyme \
   --o-visualization core/bray-curtis-emperor-Acronyme.qzv
+  
+  
+qiime tools export --input-path visual/BetaSignification-braycurtis-Acronyme.qzv --output-path export/visual/BetaSignification-braycurtis-Acronyme
+qiime tools export --input-path visual/BetaSignification-jaccard-Acronyme.qzv --output-path export/visual/BetaSignification-jaccard-Acronyme
+qiime tools export --input-path visual/AlphaCorrelation-fisher_alpha.qzv --output-path export/visual/AlphaCorrelation-fisher_alpha
+qiime tools export --input-path visual/AlphaCorrelation-pielou_e.qzv --output-path export/visual/AlphaCorrelation-pielou_e
+qiime tools export --input-path visual/AlphaCorrelation-chao1.qzv --output-path export/visual/AlphaCorrelation-chao1
+qiime tools export --input-path visual/AlphaCorrelation-simpson_e.qzv --output-path export/visual/AlphaCorrelation-simpson_e
+qiime tools export --input-path visual/AlphaCorrelation-simpson.qzv --output-path export/visual/AlphaCorrelation-simpson
+qiime tools export --input-path visual/AlphaSignification-fisher_alpha.qzv --output-path export/visual/AlphaSignification-fisher_alpha
+qiime tools export --input-path visual/AlphaSignification-pielou_e.qzv --output-path export/visual/AlphaSignification-pielou_e
+qiime tools export --input-path visual/AlphaSignification-chao1.qzv --output-path export/visual/AlphaSignification-chao1
+qiime tools export --input-path visual/AlphaSignification-simpson_e.qzv --output-path export/visual/AlphaSignification-simpson_e
+qiime tools export --input-path visual/AlphaSignification-simpson.qzv --output-path export/visual/AlphaSignification-simpson
+qiime tools export --input-path visual/Emperor-braycurtis.qzv --output-path export/visual/Emperor-braycurtis
+qiime tools export --input-path visual/Emperor-jaccard.qzv --output-path export/visual/Emperor-jaccard
+qiime tools export --input-path visual/Emperor-weighted_unifrac.qzv --output-path export/visual/Emperor-weighted_unifrac
+qiime tools export --input-path visual/Emperor-unweighted_unifrac.qzv --output-path export/visual/Emperor-unweighted_unifrac 
+
+qiime tools export --input-path core/bray_curtis_distance_matrix.qza --output-path export/core/bray_curtis_distance_matrix
+qiime tools export --input-path core/bray_curtis_pcoa_results.qza --output-path export/core/bray_curtis_pcoa_results
+qiime tools export --input-path core/evenness_vector.qza --output-path export/core/evenness_vector
+qiime tools export --input-path core/faith_pd_vector.qza --output-path export/core/faith_pd_vector_BEFORE
+qiime tools export --input-path core/jaccard_distance_matrix.qza --output-path export/core/jaccard_distance_matrix
+qiime tools export --input-path core/jaccard_pcoa_results.qza --output-path export/core/jaccard_pcoa_results
+qiime tools export --input-path core/observed_otus_vector.qza --output-path export/core/observed_otus_vector
+qiime tools export --input-path core/rarefied_table.qza --output-path export/core/rarefied_table
+qiime tools export --input-path core/shannon_vector.qza --output-path export/core/shannon_vector
+qiime tools export --input-path core/unweighted_unifrac_distance_matrix.qza --output-path export/core/unweighted_unifrac_distance_matrix
+qiime tools export --input-path core/unweighted_unifrac_pcoa_results.qza --output-path export/core/unweighted_unifrac_pcoa_results
+qiime tools export --input-path core/weighted_unifrac_distance_matrix.qza --output-path export/core/weighted_unifrac_distance_matrix
+qiime tools export --input-path core/weighted_unifrac_pcoa_results.qza --output-path export/core/weighted_unifrac_pcoa_results
+
+qiime tools export --input-path core/Matrix-braycurtis.qza --output-path export/core/Matrix-braycurtis
+qiime tools export --input-path core/Matrix-jaccard.qza --output-path export/core/Matrix-jaccard
+qiime tools export --input-path core/Matrix-unweighted_unifrac.qza --output-path export/core/Matrix-unweighted_unifrac
+qiime tools export --input-path core/Matrix-weighted_unifrac.qza --output-path export/core/Matrix-weighted_unifrac
+qiime tools export --input-path core/Vector-evenness.qza --output-path export/core/Vector-evenness
+qiime tools export --input-path core/Vector-faith_pd.qza --output-path export/core/Vector-faith_pd
+qiime tools export --input-path core/Vector-observed_asv.qza --output-path export/core/Vector-observed_asv
+qiime tools export --input-path core/Vector-shannon.qza --output-path export/core/Vector-shannon
+
+qiime tools export --input-path pcoa/PCoA-braycurtis.qza --output-path export/pcoa/PCoA-braycurtis
+qiime tools export --input-path pcoa/PCoA-jaccard.qza --output-path export/pcoa/PCoA-jaccard
+qiime tools export --input-path pcoa/PCoA-unweighted_unifrac.qza --output-path export/pcoa/PCoA-unweighted_unifrac
+qiime tools export --input-path pcoa/PCoA-weighted_unifrac.qza --output-path export/pcoa/PCoA-weighted_unifrac
+
 
 ###############################################################
 ### For Bacteria
@@ -546,3 +593,48 @@ qiime emperor plot \
   --p-custom-axes Acronyme \
   --o-visualization core/bray-curtis-emperor-Acronyme.qzv
 
+
+qiime tools export --input-path visual/BetaSignification-braycurtis-Acronyme.qzv --output-path export/visual/BetaSignification-braycurtis-Acronyme
+qiime tools export --input-path visual/BetaSignification-jaccard-Acronyme.qzv --output-path export/visual/BetaSignification-jaccard-Acronyme
+qiime tools export --input-path visual/AlphaCorrelation-fisher_alpha.qzv --output-path export/visual/AlphaCorrelation-fisher_alpha
+qiime tools export --input-path visual/AlphaCorrelation-pielou_e.qzv --output-path export/visual/AlphaCorrelation-pielou_e
+qiime tools export --input-path visual/AlphaCorrelation-chao1.qzv --output-path export/visual/AlphaCorrelation-chao1
+qiime tools export --input-path visual/AlphaCorrelation-simpson_e.qzv --output-path export/visual/AlphaCorrelation-simpson_e
+qiime tools export --input-path visual/AlphaCorrelation-simpson.qzv --output-path export/visual/AlphaCorrelation-simpson
+qiime tools export --input-path visual/AlphaSignification-fisher_alpha.qzv --output-path export/visual/AlphaSignification-fisher_alpha
+qiime tools export --input-path visual/AlphaSignification-pielou_e.qzv --output-path export/visual/AlphaSignification-pielou_e
+qiime tools export --input-path visual/AlphaSignification-chao1.qzv --output-path export/visual/AlphaSignification-chao1
+qiime tools export --input-path visual/AlphaSignification-simpson_e.qzv --output-path export/visual/AlphaSignification-simpson_e
+qiime tools export --input-path visual/AlphaSignification-simpson.qzv --output-path export/visual/AlphaSignification-simpson
+qiime tools export --input-path visual/Emperor-braycurtis.qzv --output-path export/visual/Emperor-braycurtis
+qiime tools export --input-path visual/Emperor-jaccard.qzv --output-path export/visual/Emperor-jaccard
+qiime tools export --input-path visual/Emperor-weighted_unifrac.qzv --output-path export/visual/Emperor-weighted_unifrac
+qiime tools export --input-path visual/Emperor-unweighted_unifrac.qzv --output-path export/visual/Emperor-unweighted_unifrac 
+
+qiime tools export --input-path core/bray_curtis_distance_matrix.qza --output-path export/core/bray_curtis_distance_matrix
+qiime tools export --input-path core/bray_curtis_pcoa_results.qza --output-path export/core/bray_curtis_pcoa_results
+qiime tools export --input-path core/evenness_vector.qza --output-path export/core/evenness_vector
+qiime tools export --input-path core/faith_pd_vector.qza --output-path export/core/faith_pd_vector_BEFORE
+qiime tools export --input-path core/jaccard_distance_matrix.qza --output-path export/core/jaccard_distance_matrix
+qiime tools export --input-path core/jaccard_pcoa_results.qza --output-path export/core/jaccard_pcoa_results
+qiime tools export --input-path core/observed_otus_vector.qza --output-path export/core/observed_otus_vector
+qiime tools export --input-path core/rarefied_table.qza --output-path export/core/rarefied_table
+qiime tools export --input-path core/shannon_vector.qza --output-path export/core/shannon_vector
+qiime tools export --input-path core/unweighted_unifrac_distance_matrix.qza --output-path export/core/unweighted_unifrac_distance_matrix
+qiime tools export --input-path core/unweighted_unifrac_pcoa_results.qza --output-path export/core/unweighted_unifrac_pcoa_results
+qiime tools export --input-path core/weighted_unifrac_distance_matrix.qza --output-path export/core/weighted_unifrac_distance_matrix
+qiime tools export --input-path core/weighted_unifrac_pcoa_results.qza --output-path export/core/weighted_unifrac_pcoa_results
+
+qiime tools export --input-path core/Matrix-braycurtis.qza --output-path export/core/Matrix-braycurtis
+qiime tools export --input-path core/Matrix-jaccard.qza --output-path export/core/Matrix-jaccard
+qiime tools export --input-path core/Matrix-unweighted_unifrac.qza --output-path export/core/Matrix-unweighted_unifrac
+qiime tools export --input-path core/Matrix-weighted_unifrac.qza --output-path export/core/Matrix-weighted_unifrac
+qiime tools export --input-path core/Vector-evenness.qza --output-path export/core/Vector-evenness
+qiime tools export --input-path core/Vector-faith_pd.qza --output-path export/core/Vector-faith_pd
+qiime tools export --input-path core/Vector-observed_asv.qza --output-path export/core/Vector-observed_asv
+qiime tools export --input-path core/Vector-shannon.qza --output-path export/core/Vector-shannon
+
+qiime tools export --input-path pcoa/PCoA-braycurtis.qza --output-path export/pcoa/PCoA-braycurtis
+qiime tools export --input-path pcoa/PCoA-jaccard.qza --output-path export/pcoa/PCoA-jaccard
+qiime tools export --input-path pcoa/PCoA-unweighted_unifrac.qza --output-path export/pcoa/PCoA-unweighted_unifrac
+qiime tools export --input-path pcoa/PCoA-weighted_unifrac.qza --output-path export/pcoa/PCoA-weighted_unifrac
