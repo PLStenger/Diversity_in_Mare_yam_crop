@@ -56,7 +56,10 @@ qiime diversity beta-rarefaction \
         --p-color-scheme BrBG \
         --o-visualization visual/RareGraph-beta.qzv
   
-  
+qiime tools export --input-path visual/alpha-rarefaction.qzv --output-path export/visual/alpha-rarefaction
+qiime tools export --input-path visual/RareGraph-beta.qzv --output-path export/visual/RareGraph-beta
+
+
 ###############################################################
 ### For Bacteria
 ###############################################################
@@ -100,3 +103,6 @@ qiime diversity beta-rarefaction \
         --p-correlation-method spearman \
         --p-color-scheme BrBG \
         --o-visualization visual/RareGraph-beta.qzv
+
+qiime tools export --input-path visual/alpha-rarefaction.qzv --output-path export/visual/alpha-rarefaction
+qiime tools export --input-path visual/RareGraph-beta.qzv --output-path export/visual/RareGraph-beta
