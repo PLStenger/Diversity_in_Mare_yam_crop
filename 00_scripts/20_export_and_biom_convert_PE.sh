@@ -119,6 +119,29 @@ qiime tools export --input-path pcoa/PCoA-jaccard.qza --output-path export/pcoa/
 qiime tools export --input-path pcoa/PCoA-unweighted_unifrac.qza --output-path export/pcoa/PCoA-unweighted_unifrac
 qiime tools export --input-path pcoa/PCoA-weighted_unifrac.qza --output-path export/pcoa/PCoA-weighted_unifrac
 
+qiime tools export --input-path RarTable.qza --output-path export/table/RarTable
+qiime tools export --input-path RarRepSeq.qza --output-path export/table/RarRepSeq
+qiime tools export --input-path Classifier.qza --output-path export/table/Classifier
+qiime tools export --input-path RefSeq.qza --output-path export/table/RefSeq
+qiime tools export --input-path DataSeq.qza --output-path export/table/DataSeq
+qiime tools export --input-path RefTaxo.qza --output-path export/table/RefTaxo
+qiime tools export --input-path masked-aligned-RepSeq.qza --output-path export/table/masked-aligned-RepSeq
+qiime tools export --input-path aligned-RepSeq.qza --output-path export/table/aligned-RepSeq
+qiime tools export --input-path ConRepSeq.qza --output-path export/table/ConRepSeq
+qiime tools export --input-path ConTable.qza --output-path export/table/ConTable
+qiime tools export --input-path NegTable.qza --output-path export/table/NegTable
+qiime tools export --input-path NegRepSeq.qza --output-path export/table/NegRepSeq
+qiime tools export --input-path HitNegCtrl.qza --output-path export/table/HitNegCtrl
+qiime tools export --input-path SampleData.qza --output-path export/table/SampleData
+qiime tools export --input-path RepSeq.qza --output-path export/table/RepSeq
+qiime tools export --input-path Table.qza --output-path export/table/Table
+qiime tools export --input-path demux.qza --output-path export/table/demux
+qiime tools export --input-path RepSeq.qza --output-path export/table/RepSeq
+qiime tools export --input-path RepSeq.qza --output-path export/table/RepSeq
+qiime tools export --input-path RepSeq.qza --output-path export/table/RepSeq
+qiime tools export --input-path RepSeq.qza --output-path export/table/RepSeq
+
+
 ############################################################################################################
 ###### Biom convert
 
@@ -258,6 +281,31 @@ qiime tools export --input-path pcoa/PCoA-jaccard.qza --output-path export/pcoa/
 qiime tools export --input-path pcoa/PCoA-unweighted_unifrac.qza --output-path export/pcoa/PCoA-unweighted_unifrac
 qiime tools export --input-path pcoa/PCoA-weighted_unifrac.qza --output-path export/pcoa/PCoA-weighted_unifrac
 
+
+
+qiime tools export --input-path RarTable.qza --output-path export/table/RarTable
+qiime tools export --input-path RarRepSeq.qza --output-path export/table/RarRepSeq
+qiime tools export --input-path Classifier.qza --output-path export/table/Classifier
+qiime tools export --input-path RefSeq.qza --output-path export/table/RefSeq
+qiime tools export --input-path DataSeq.qza --output-path export/table/DataSeq
+qiime tools export --input-path RefTaxo.qza --output-path export/table/RefTaxo
+qiime tools export --input-path masked-aligned-RepSeq.qza --output-path export/table/masked-aligned-RepSeq
+qiime tools export --input-path aligned-RepSeq.qza --output-path export/table/aligned-RepSeq
+qiime tools export --input-path ConRepSeq.qza --output-path export/table/ConRepSeq
+qiime tools export --input-path ConTable.qza --output-path export/table/ConTable
+qiime tools export --input-path NegTable.qza --output-path export/table/NegTable
+qiime tools export --input-path NegRepSeq.qza --output-path export/table/NegRepSeq
+qiime tools export --input-path HitNegCtrl.qza --output-path export/table/HitNegCtrl
+qiime tools export --input-path SampleData.qza --output-path export/table/SampleData
+qiime tools export --input-path RepSeq.qza --output-path export/table/RepSeq
+qiime tools export --input-path Table.qza --output-path export/table/Table
+qiime tools export --input-path demux.qza --output-path export/table/demux
+qiime tools export --input-path RepSeq.qza --output-path export/table/RepSeq
+qiime tools export --input-path RepSeq.qza --output-path export/table/RepSeq
+qiime tools export --input-path RepSeq.qza --output-path export/table/RepSeq
+qiime tools export --input-path RepSeq.qza --output-path export/table/RepSeq
+
+
 ############################################################################################################
 ###### Biom convert
 
@@ -280,3 +328,7 @@ biom convert -i export/core/rarefied_table/feature-table.biom -o export/core/rar
 # Aim: Remove first line and rename '#OTU ID' into 'ASV'
 
 sed '1d ; s/\#OTU ID/ASV_ID/' export/core/rarefied_table/table-from-biom.tsv > export/core/rarefied_table/ASV.tsv
+
+
+
+
