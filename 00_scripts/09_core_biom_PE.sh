@@ -87,6 +87,30 @@ qiime tools export --input-path visual/CoreBiom-Long_fallow.qzv --output-path ex
 qiime tools export --input-path visual/CoreBiom-short_fallow.qzv --output-path export/visual/CoreBiom-short_fallow
 qiime tools export --input-path visual/CoreBiom-Forest.qzv --output-path export/visual/CoreBiom-Forest
 
+###### Biom convert
+
+# Aim: Convert to/from the BIOM table format
+
+biom convert -i export/subtables/RarTable-Forest/feature-table.biom -o export/subtables/RarTable-Forest/table-from-biom.tsv --to-tsv
+biom convert -i export/subtables/RarTable-Long_fallow/feature-table.biom -o export/subtables/RarTable-Long_fallow/table-from-biom.tsv --to-tsv
+biom convert -i export/subtables/RarTable-short_fallow/feature-table.biom -o export/subtables/RarTable-short_fallow/table-from-biom.tsv --to-tsv
+
+ # Aim: Remove first line and rename '#OTU ID' into 'ASV'
+ 
+ sed '1d ; s/\#OTU ID/ASV_ID/' export/subtables/RarTable-Forest/table-from-biom.tsv > export/subtables/RarTable-Forest/ASV.tsv
+ sed '1d ; s/\#OTU ID/ASV_ID/' export/subtables/RarTable-Long_fallow/table-from-biom.tsv > export/subtables/RarTable-Long_fallow/ASV.tsv
+ sed '1d ; s/\#OTU ID/ASV_ID/' export/subtables/RarTable-short_fallow/table-from-biom.tsv > export/subtables/RarTable-short_fallow/ASV.tsv
+ 
+ # Aim: Convert to/from the BIOM table format
+ 
+biom convert -i export/core/rarefied_table/feature-table.biom -o export/core/rarefied_table/table-from-biom.tsv --to-tsv
+
+# Aim: Remove first line and rename '#OTU ID' into 'ASV'
+
+sed '1d ; s/\#OTU ID/ASV_ID/' export/core/rarefied_table/table-from-biom.tsv > export/core/rarefied_table/ASV.tsv
+
+
+
 ###############################################################
 ### For Bacteria
 ###############################################################
@@ -166,3 +190,26 @@ qiime tools export --input-path visual/CoreBiomAll.qzv --output-path export/visu
 qiime tools export --input-path visual/CoreBiom-Long_fallow.qzv --output-path export/visual/CoreBiom-Long_fallow
 qiime tools export --input-path visual/CoreBiom-short_fallow.qzv --output-path export/visual/CoreBiom-short_fallow
 qiime tools export --input-path visual/CoreBiom-Forest.qzv --output-path export/visual/CoreBiom-Forest
+
+###### Biom convert
+
+# Aim: Convert to/from the BIOM table format
+
+biom convert -i export/subtables/RarTable-Forest/feature-table.biom -o export/subtables/RarTable-Forest/table-from-biom.tsv --to-tsv
+biom convert -i export/subtables/RarTable-Long_fallow/feature-table.biom -o export/subtables/RarTable-Long_fallow/table-from-biom.tsv --to-tsv
+biom convert -i export/subtables/RarTable-short_fallow/feature-table.biom -o export/subtables/RarTable-short_fallow/table-from-biom.tsv --to-tsv
+
+ # Aim: Remove first line and rename '#OTU ID' into 'ASV'
+ 
+ sed '1d ; s/\#OTU ID/ASV_ID/' export/subtables/RarTable-Forest/table-from-biom.tsv > export/subtables/RarTable-Forest/ASV.tsv
+ sed '1d ; s/\#OTU ID/ASV_ID/' export/subtables/RarTable-Long_fallow/table-from-biom.tsv > export/subtables/RarTable-Long_fallow/ASV.tsv
+ sed '1d ; s/\#OTU ID/ASV_ID/' export/subtables/RarTable-short_fallow/table-from-biom.tsv > export/subtables/RarTable-short_fallow/ASV.tsv
+ 
+ # Aim: Convert to/from the BIOM table format
+ 
+biom convert -i export/core/rarefied_table/feature-table.biom -o export/core/rarefied_table/table-from-biom.tsv --to-tsv
+
+# Aim: Remove first line and rename '#OTU ID' into 'ASV'
+
+sed '1d ; s/\#OTU ID/ASV_ID/' export/core/rarefied_table/table-from-biom.tsv > export/core/rarefied_table/ASV.tsv
+
