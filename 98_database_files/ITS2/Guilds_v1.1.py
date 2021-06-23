@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 '''
 Copyright (C) 2014-2015 Zewei Song
@@ -71,7 +72,7 @@ args = parser.parse_args()
 otu_file = args.otu
 
 #Detect delimiter in the input file
-with open(otu_file, 'rU') as f1:
+with open(otu_file, 'r') as f1:
     dialect = csv.Sniffer().sniff(f1.read())
     otu_delimiter = dialect.delimiter
 
@@ -89,11 +90,11 @@ else:
 ###########################################################################################
 
 # Import Function Database from GitHub, and get it ready.##################################
-print("FunGuild v1.0 Beta")
+print("FunGuild v1.1 Beta")
 
 database_name = args.db
 if database_name == 'fungi':
-    url = 'http://www.stbates.org/funguild_db.php'
+    url = 'http://www.stbates.org/funguild_db_2.php'
 elif database_name == 'nematode':
     url = 'http://www.stbates.org/nemaguild_db.php'
 
@@ -102,12 +103,17 @@ import json
 
 print('Connecting with FUNGuild database ...')
 db_url = requests.get(url)
-db_url = db_url.content.decode('utf-8').split('\n')[6].strip('[').strip(']</body>').replace('} , {', '} \n {').split('\n')
-
+#db_url = db_url.content.decode('utf-8').split('\n')[6].strip('[').strip(']</body>').replace('} , {', '} \n {').split('\n')
+db_url = db_url.content.decode('utf-8')
+db_url = db_url.split('\n')[6].strip('</body>')
+db_url = json.loads(db_url)
 db = []
 # For all species key works (replace space with underscore)
 for record in db_url:
-    current_record = json.loads(record)
+    # current_record = json.loads(record)
+    current_record = record
+    # needs to be int for sorting later
+    current_record['taxonomicLevel'] = int(current_record['taxonomicLevel'])
     if current_record['taxonomicLevel'] == 20: # If species level
         current_record['taxon'] = current_record['taxon'].replace(' ', '_')
     try:
@@ -165,6 +171,7 @@ elif 'Taxonomy' in header:
 #print(header)
 index_tax = header.index(lookup)
 index_notes = header.index('Notes')
+index_level = header.index('Taxon Level')
 
 #Abort if the column 'taxonomy' is not found
 if index_tax == -1:
@@ -232,7 +239,7 @@ print("Dereplicating and sorting the result...")
 #Dereplicate and write to output file##########################################################
 #Sort by OTU names and Level. Level is sorted from species to kingdom.
 otu_sort = otu_redundant[:]
-otu_sort.sort(key = itemgetter(index_tax), reverse = True) # Sort the redundant OTU table by Taxonomic Level.
+otu_sort.sort(key = itemgetter(index_level), reverse = True) # Sort the redundant OTU table by Taxonomic Level.
 otu_sort.sort(key = itemgetter(0)) # Sort the redundant OTU table by OTU ID.
 
 #Dereplicate the OTU table, unique OTU ID with lowest taxonomic level will be kept.
@@ -269,13 +276,13 @@ if args.matched:
         os.remove(matched_file)
     output = open(matched_file,'a')
 	#Write the matched list header
-    output.write('%s' % ('\t'.join(header))) #Header
+    output.write('%s\n' % ('\t'.join(header))) #Header
 
 	#Write the matched OTU table
     for item in unique_list:
         item[-1] = item[-1].encode('utf-8')
         rec = '\t'.join([str(i) for i in item])
-        output.write('%s' % rec)
+        output.write('%s\n' % rec)
     output.close()
 
 #Output unmatched OTUs to a new file
@@ -302,7 +309,7 @@ if args.unmatched:
 	if os.path.isfile(unmatched_file) == True:
 		os.remove(unmatched_file)
 	output_unmatched = open(unmatched_file, 'a')
-	output_unmatched.write('%s' % ('\t'.join(header)))
+	output_unmatched.write('%s\n' % ('\t'.join(header)))
 	for item in unmatched_list:
 		rec = '\t'.join(item)
 		output_unmatched.write('%s\n' % rec)
@@ -350,3 +357,4 @@ if args.matched or args.unmatched:
 stop = timeit.default_timer()
 runtime = round((stop-start),2)
 print("\nTotal calculating time: {} seconds.".format(runtime))
+####################################################################################################################
