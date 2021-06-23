@@ -283,6 +283,8 @@ qiime emperor plot \
   --p-custom-axes Acronyme \
   --o-visualization core/bray-curtis-emperor-Acronyme.qzv
   
+qiime tools export --input-path RarTable.qza --output-path export/table/RarTable
+qiime tools export --input-path RarRepSeq.qza --output-path export/table/RarRepSeq  
   
 qiime tools export --input-path visual/BetaSignification-braycurtis-Acronyme.qzv --output-path export/visual/BetaSignification-braycurtis-Acronyme
 qiime tools export --input-path visual/BetaSignification-jaccard-Acronyme.qzv --output-path export/visual/BetaSignification-jaccard-Acronyme
@@ -593,6 +595,8 @@ qiime emperor plot \
   --p-custom-axes Acronyme \
   --o-visualization core/bray-curtis-emperor-Acronyme.qzv
 
+qiime tools export --input-path RarTable.qza --output-path export/table/RarTable
+qiime tools export --input-path RarRepSeq.qza --output-path export/table/RarRepSeq
 
 qiime tools export --input-path visual/BetaSignification-braycurtis-Acronyme.qzv --output-path export/visual/BetaSignification-braycurtis-Acronyme
 qiime tools export --input-path visual/BetaSignification-jaccard-Acronyme.qzv --output-path export/visual/BetaSignification-jaccard-Acronyme
