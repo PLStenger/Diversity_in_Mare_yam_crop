@@ -167,11 +167,11 @@ First, open your terminal. Then, run these two command lines :
 
 </details> 
 
+:warning: **
 
+> :warning: **If you are using mobile browser**: Be very careful here!
 
-
-
-> :warning: **<details>
+<details>
   <summary>Click here to understand what are Real, User and Sys process time statistics</summary>
   
 ### Real, User and Sys process time statistics :
