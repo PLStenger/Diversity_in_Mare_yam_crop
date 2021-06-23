@@ -58,6 +58,11 @@ qiime composition ancom \
         --m-metadata-column 'Acronyme' \
         --o-visualization visual/Ancom.qzv
         
+qiime tools export --input-path visual/Ancom.qzv --output-path export/visual/Ancom
+qiime tools export --input-path ancom/ColTable.qza --output-path export/ancom/ColTable
+qiime tools export --input-path ancom/CompTable.qza --output-path export/ancom/CompTable
+        
+        
 ###############################################################
 ### For Bacteria
 ###############################################################
@@ -105,4 +110,6 @@ qiime composition ancom \
         --m-metadata-column 'Acronyme' \
         --o-visualization visual/Ancom.qzv
                 
-        
+qiime tools export --input-path visual/Ancom.qzv --output-path export/visual/Ancom
+qiime tools export --input-path ancom/ColTable.qza --output-path export/ancom/ColTable
+qiime tools export --input-path ancom/CompTable.qza --output-path export/ancom/CompTable
