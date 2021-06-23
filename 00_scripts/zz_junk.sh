@@ -12,9 +12,7 @@ cd $DATADIRECTORY_ITS2_fungi
 eval "$(conda shell.bash hook)"
 conda activate qiime2-2019.10
 
-#qiime feature-table summarize --i-table Table.qza --o-visualization visual/Table.qzv
-qiime feature-table summarize --i-table ConTable.qza --o-visualization visual/ConTable.qzv
-qiime feature-table summarize --i-table NegTable.qza --o-visualization visual/NegTable.qzv
+qiime tools export --input-path RarTable.qza --output-path export/core/RarTable
 
 
 ###############################################################
@@ -27,8 +25,5 @@ eval "$(conda shell.bash hook)"
 conda activate qiime2-2019.10
 
 
-#qiime feature-table summarize --i-table Table.qza --o-visualization visual/Table.qzv
-qiime feature-table summarize --i-table ConTable.qza --o-visualization visual/ConTable.qzv
-qiime feature-table summarize --i-table NegTable.qza --o-visualization visual/NegTable.qzv
 
 
