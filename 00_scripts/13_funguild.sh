@@ -35,4 +35,4 @@ paste funguild/SortASV.tsv funguild/FiltTaxo.tsv > funguild/TaxoASV.tsv
 
 # Aim: Parse fungal community datas by ecological guild with FUNGuild
 
-python3.5 $FUNGUILD -otu funguild/TaxoASV.tsv -db fungi 
+python3 $FUNGUILD -otu funguild/TaxoASV.tsv -db fungi 
