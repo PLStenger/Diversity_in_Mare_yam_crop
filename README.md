@@ -167,13 +167,14 @@ First, open your terminal. Then, run these two command lines :
 
 </details> 
 
-:warning: **
 
-> :warning: **If you are using mobile browser**: Be very careful here!
+> :warning: **Explanation of Real, User and Sys process time statistics below**
 
 <details>
   <summary>Click here to understand what are Real, User and Sys process time statistics</summary>
   
+These appears after you run the command line 'time', and it's corresponding for a 8 Go 1600 MHz DDR3 boot on MacOSX 10.14.6, 2.5 GHz Intel Core i5, SSD  
+ 
 ### Real, User and Sys process time statistics :
 
 One of these things is not like the other. Real refers to actual elapsed time; User and Sys refer to CPU time used only by the process.
