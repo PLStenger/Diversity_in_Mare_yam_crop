@@ -113,6 +113,7 @@ qiime tools export --input-path taxonomy/taxa-bar-plots_reads-per-batch_0.qzv --
 qiime tools export --input-path taxonomy/taxonomy_reads-per-batch_0.qzv --output-path export/taxonomy/taxonomy_reads-per-batch_0_visual
 qiime tools export --input-path taxonomy/taxonomy_reads-per-batch_0.qza --output-path export/taxonomy/taxonomy_reads-per-batch_0
 qiime tools export --input-path taxonomy/Taxonomy_reads-per-batch_1000.qza --output-path export/taxonomy/Taxonomy_reads-per-batch_1000
+qiime tools export --input-path taxonomy/Taxonomy_reads-per-batch_1000.qzv --output-path export/taxonomy/Taxonomy_reads-per-batch_1000_visual
 
   
 ###############################################################
