@@ -20,15 +20,19 @@ conda activate qiime2-2019.10
 
 qiime tools import --type 'SampleData[PairedEndSequencesWithQuality]' \
 			    --input-path  $MANIFEST_FUNGI \
-			    --output-path $OUTPUT_ITS2_fungi/demux.qza \
+			    --output-path $OUTPUT_ITS2_fungi/core/demux.qza \
 			    --input-format PairedEndFastqManifestPhred33V2
 
 cd $OUTPUT_ITS2_fungi
 
-qiime demux summarize --i-data demux.qza --o-visualization visual/demux.qzv
+qiime demux summarize --i-data core/demux.qza --o-visualization visual/demux.qzv
 
 # for vizualisation :
 # https://view.qiime2.org
+
+qiime tools export --input-path visual/demux.qzv --output-path export/visual/demux
+qiime tools export --input-path core/demux.qza --output-path export/core/demux
+
 
 ###############################################################
 ### For Bacteria
@@ -41,12 +45,15 @@ conda activate qiime2-2019.10
 
 qiime tools import --type 'SampleData[PairedEndSequencesWithQuality]' \
 			    --input-path  $MANIFEST_BACTERIA \
-			    --output-path $OUTPUT_V4_bacteria/demux.qza \
+			    --output-path $OUTPUT_V4_bacteria/core/demux.qza \
 			    --input-format PairedEndFastqManifestPhred33V2
 
 cd $OUTPUT_V4_bacteria
 
-qiime demux summarize --i-data demux.qza --o-visualization visual/demux.qzv
+qiime demux summarize --i-data core/demux.qza --o-visualization visual/demux.qzv
 
 # for vizualisation :
 # https://view.qiime2.org
+
+qiime tools export --input-path visual/demux.qzv --output-path export/visual/demux
+qiime tools export --input-path core/demux.qza --output-path export/core/demux
