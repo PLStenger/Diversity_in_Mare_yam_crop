@@ -116,6 +116,12 @@ First, open your terminal. Then, run these two command lines :
 
 <details>
   <summary>Click here to see the running command lines</summary>
+  
+  For running all the pipeline with only one script; run :
+  
+    time nohup bash 000_run_all_pipeline_in_one_script.sh &> 000_run_all_pipeline_in_one_script.out
+
+  For running all the pipeline with step by step; run one by one :
 
     time nohup bash 00_quality_check_by_FastQC.sh &> 00_quality_check_by_FastQC.out
     time nohup bash 01_replicates_pooling.sh &> 01_replicates_pooling.out
@@ -160,6 +166,24 @@ First, open your terminal. Then, run these two command lines :
     time nohup bash 13_funguild.sh &> 13_funguild.out
 
 </details> 
+
+
+
+
+
+<details>
+  <summary>Click here to understand what are **Real**, **User** and **Sys** process time statistics</summary>
+  
+### Real, User and Sys process time statistics :
+
+One of these things is not like the other. Real refers to actual elapsed time; User and Sys refer to CPU time used only by the process.
+
+- **Real** is wall clock time - time from start to finish of the call. This is all elapsed time including time slices used by other processes and time the process spends blocked (for example if it is waiting for I/O to complete).
+- **User** is the amount of CPU time spent in user-mode code (outside the kernel) within the process. This is only actual CPU time used in executing the process. Other processes and time the process spends blocked do not count towards this figure.
+- **Sys** is the amount of CPU time spent in the kernel within the process. This means executing CPU time spent in system calls within the kernel, as opposed to library code, which is still running in user-space. Like 'user', this is only CPU time used by the process. See below for a brief description of kernel mode (also known as 'supervisor' mode) and the system call mechanism.
+
+</details> 
+
 
 ### For running MultiQC (work now only in Python3) :
 
