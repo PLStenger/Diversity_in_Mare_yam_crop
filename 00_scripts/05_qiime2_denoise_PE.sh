@@ -133,6 +133,9 @@ qiime tools export --input-path core/Stats.qza  --output-path export/core/Stats
 qiime tools export --input-path visual/NegTable.qzv --output-path export/visual/NegTable
 qiime tools export --input-path visual/ConTable.qzv --output-path export/visual/ConTable
 qiime tools export --input-path visual/Table.qzv --output-path export/visual/Table
+qiime tools export --input-path visual/HitNegCtrl.qzv --output-path export/visual/HitNegCtrl
+qiime tools export --input-path visual/RepSeq.qzv --output-path export/visual/RepSeq
+qiime tools export --input-path visual/NegRepSeq.qzv --output-path export/visual/NegRepSeq
 
 ###############################################################
 ### For Bacteria
@@ -246,3 +249,6 @@ qiime tools export --input-path core/Stats.qza  --output-path export/core/Stats
 qiime tools export --input-path visual/NegTable.qzv --output-path export/visual/NegTable
 qiime tools export --input-path visual/ConTable.qzv --output-path export/visual/ConTable
 qiime tools export --input-path visual/Table.qzv --output-path export/visual/Table
+qiime tools export --input-path visual/HitNegCtrl.qzv --output-path export/visual/HitNegCtrl
+qiime tools export --input-path visual/RepSeq.qzv --output-path export/visual/RepSeq
+qiime tools export --input-path visual/NegRepSeq.qzv --output-path export/visual/NegRepSeq
