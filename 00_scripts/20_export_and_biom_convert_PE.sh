@@ -70,7 +70,7 @@ qiime tools export --input-path core-metrics-results/weighted_unifrac_distance_m
 qiime tools export --input-path core-metrics-results/weighted_unifrac_pcoa_results.qza --output-path export/core/weighted_unifrac_pcoa_results
 
 
-qiime tools export --input-path visual/demux.qzv --output-path export/visual/demux
+# ok qiime tools export --input-path visual/demux.qzv --output-path export/visual/demux
 qiime tools export --input-path visual/CoreBiomAll.qzv --output-path export/visual/CoreBiomAll
 qiime tools export --input-path visual/CoreBiom-Long_fallow.qzv --output-path export/visual/CoreBiom-Long_fallow
 qiime tools export --input-path visual/CoreBiom-short_fallow.qzv --output-path export/visual/CoreBiom-short_fallow
@@ -110,9 +110,9 @@ qiime tools export --input-path taxonomy/RefSeq.qza --output-path export/taxonom
 qiime tools export --input-path taxonomy/RefTaxo.qza --output-path export/taxonomy/RefTaxo
 qiime tools export --input-path taxonomy/taxonomy_reads-per-batch_0_RepSeq.qza --output-path export/taxonomy/taxonomy_reads-per-batch_0_RepSeq
 
-qiime tools export --input-path unrooted-tree.qza --output-path export/tree/unrooted-tree
-qiime tools export --input-path rooted-tree.qza --output-path export/tree/rooted-tree
-cp tree.nwk export/tree/tree.nwk
+# ok qiime tools export --input-path unrooted-tree.qza --output-path export/tree/unrooted-tree
+# ok qiime tools export --input-path rooted-tree.qza --output-path export/tree/rooted-tree
+# ok cp tree.nwk export/tree/tree.nwk
 
 qiime tools export --input-path pcoa/PCoA-braycurtis.qza --output-path export/pcoa/PCoA-braycurtis
 qiime tools export --input-path pcoa/PCoA-jaccard.qza --output-path export/pcoa/PCoA-jaccard
@@ -125,21 +125,18 @@ qiime tools export --input-path Classifier.qza --output-path export/table/Classi
 qiime tools export --input-path RefSeq.qza --output-path export/table/RefSeq
 qiime tools export --input-path DataSeq.qza --output-path export/table/DataSeq
 qiime tools export --input-path RefTaxo.qza --output-path export/table/RefTaxo
-qiime tools export --input-path masked-aligned-RepSeq.qza --output-path export/table/masked-aligned-RepSeq
-qiime tools export --input-path aligned-RepSeq.qza --output-path export/table/aligned-RepSeq
-qiime tools export --input-path ConRepSeq.qza --output-path export/table/ConRepSeq
+# ok qiime tools export --input-path masked-aligned-RepSeq.qza --output-path export/table/masked-aligned-RepSeq
+# ok qiime tools export --input-path aligned-RepSeq.qza --output-path export/table/aligned-RepSeq
+# ok qiime tools export --input-path ConRepSeq.qza --output-path export/table/ConRepSeq
 qiime tools export --input-path ConTable.qza --output-path export/table/ConTable
-qiime tools export --input-path NegTable.qza --output-path export/table/NegTable
-qiime tools export --input-path NegRepSeq.qza --output-path export/table/NegRepSeq
-qiime tools export --input-path HitNegCtrl.qza --output-path export/table/HitNegCtrl
+# ok qiime tools export --input-path NegTable.qza --output-path export/table/NegTable
+# ok qiime tools export --input-path NegRepSeq.qza --output-path export/table/NegRepSeq
+# ok qiime tools export --input-path HitNegCtrl.qza --output-path export/table/HitNegCtrl
 qiime tools export --input-path SampleData.qza --output-path export/table/SampleData
-qiime tools export --input-path RepSeq.qza --output-path export/table/RepSeq
+# ok qiime tools export --input-path RepSeq.qza --output-path export/table/RepSeq
 qiime tools export --input-path Table.qza --output-path export/table/Table
-qiime tools export --input-path demux.qza --output-path export/table/demux
-qiime tools export --input-path RepSeq.qza --output-path export/table/RepSeq
-qiime tools export --input-path RepSeq.qza --output-path export/table/RepSeq
-qiime tools export --input-path RepSeq.qza --output-path export/table/RepSeq
-qiime tools export --input-path RepSeq.qza --output-path export/table/RepSeq
+# ok qiime tools export --input-path demux.qza --output-path export/core/demux
+
 
 
 ############################################################################################################
@@ -258,9 +255,9 @@ qiime tools export --input-path visual/Emperor-jaccard.qzv --output-path export/
 qiime tools export --input-path visual/Emperor-weighted_unifrac.qzv --output-path export/visual/Emperor-weighted_unifrac
 qiime tools export --input-path visual/Emperor-unweighted_unifrac.qzv --output-path export/visual/Emperor-unweighted_unifrac
 qiime tools export --input-path visual/alpha-rarefaction.qzv --output-path export/visual/alpha-rarefaction
-qiime tools export --input-path visual/NegTable.qzv --output-path export/visual/NegTable
-qiime tools export --input-path visual/ConTable.qzv --output-path export/visual/ConTable
-qiime tools export --input-path visual/Table.qzv --output-path export/visual/Table
+# ok qiime tools export --input-path visual/NegTable.qzv --output-path export/visual/NegTable
+# ok qiime tools export --input-path visual/ConTable.qzv --output-path export/visual/ConTable
+# ok qiime tools export --input-path visual/Table.qzv --output-path export/visual/Table
 qiime tools export --input-path visual/HitNegCtrl.qzv --output-path export/visual/HitNegCtrl
 qiime tools export --input-path visual/RepSeq.qzv --output-path export/visual/RepSeq
 qiime tools export --input-path visual/NegRepSeq.qzv --output-path export/visual/NegRepSeq
