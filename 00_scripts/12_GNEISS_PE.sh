@@ -24,7 +24,7 @@ conda activate qiime2-2019.10
 # Aim: Build bifurcating tree representing features hierarchical clustering
 
 qiime gneiss correlation-clustering \
-        --i-table RarTable.qza \
+        --i-table core/RarTable.qza \
         --o-clustering gneiss/CorrHierarchy.qza
 
 ##########################################################################
@@ -50,7 +50,7 @@ qiime gneiss correlation-clustering \
 #        --o-clustering gneiss/GradHierarchy.qza
 
 qiime gneiss gradient-clustering \
-        --i-table RarTable.qza \
+        --i-table core/RarTable.qza \
         --m-gradient-file $METADATA_ITS2/sample-metadata.tsv \
         --m-gradient-column time \
         --o-clustering gneiss/GradHierarchy.qza
@@ -59,7 +59,7 @@ qiime gneiss gradient-clustering \
 # Aim: Calculate balances given a hierarchy
 
 qiime gneiss ilr-hierarchical \
-        --i-table RarTable.qza \
+        --i-table core/RarTable.qza \
         --i-tree gneiss/GradHierarchy.qza \
         --o-balances gneiss/Balance.qza
 
@@ -77,7 +77,7 @@ qiime gneiss ols-regression \
 # Aim: Visualize the feature table as a heatmap
 
 qiime gneiss dendrogram-heatmap \
-        --i-table RarTable.qza \
+        --i-table core/RarTable.qza \
         --i-tree gneiss/GradHierarchy.qza \
         --m-metadata-file $METADATA_ITS2/sample-metadata.tsv \
         --m-metadata-column Acronyme \
@@ -102,7 +102,7 @@ qiime gneiss dendrogram-heatmap \
     #- 7 # Species               /
 
 qiime gneiss balance-taxonomy \
-        --i-table RarTable.qza \
+        --i-table core/RarTable.qza \
         --i-tree gneiss/GradHierarchy.qza \
         --i-taxonomy taxonomy/taxonomy_reads-per-batch_0_RepSeq.qza \
         --p-taxa-level '2' \
@@ -111,6 +111,9 @@ qiime gneiss balance-taxonomy \
         --m-metadata-column Acronyme \
         --o-visualization visual/y0TaxaSum.qz
 
+qiime tools export --input-path visual/y0TaxaSum.qz.qzv --output-path export/visual/y0TaxaSum.qz
+qiime tools export --input-path visual/RegSum.qzv --output-path export/visual/RegSum
+qiime tools export --input-path visual/Regression.qzv --output-path export/visual/Regression
 
 ###############################################################
 ### For Bacteria
@@ -126,7 +129,7 @@ conda activate qiime2-2019.10
 # Aim: Build bifurcating tree representing features hierarchical clustering
 
 qiime gneiss correlation-clustering \
-        --i-table RarTable.qza \
+        --i-table core/RarTable.qza \
         --o-clustering gneiss/CorrHierarchy.qza
 
 ##########################################################################
@@ -145,7 +148,7 @@ qiime gneiss correlation-clustering \
 # and it's possible to get false positives. Use gradient-clustering with caution.
 
 qiime gneiss gradient-clustering \
-        --i-table RarTable.qza \
+        --i-table core/RarTable.qza \
         --m-gradient-file $METADATA_V4/sample-metadata.tsv \
         --m-gradient-column time \
         --o-clustering gneiss/GradHierarchy.qza
@@ -155,7 +158,7 @@ qiime gneiss gradient-clustering \
 # Aim: Calculate balances given a hierarchy
 
 qiime gneiss ilr-hierarchical \
-        --i-table RarTable.qza \
+        --i-table core/RarTable.qza \
         --i-tree gneiss/GradHierarchy.qza \
         --o-balances gneiss/Balance.qza
 
@@ -173,7 +176,7 @@ qiime gneiss ols-regression \
 # Aim: Visualize the feature table as a heatmap
 
 qiime gneiss dendrogram-heatmap \
-        --i-table RarTable.qza \
+        --i-table core/RarTable.qza \
         --i-tree gneiss/GradHierarchy.qza \
         --m-metadata-file $METADATA_V4/sample-metadata.tsv \
         --m-metadata-column Acronyme \
@@ -198,7 +201,7 @@ qiime gneiss dendrogram-heatmap \
     #- 7 # Species               /
 
 qiime gneiss balance-taxonomy \
-        --i-table RarTable.qza \
+        --i-table core/RarTable.qza \
         --i-tree gneiss/GradHierarchy.qza \
         --i-taxonomy taxonomy/taxonomy_reads-per-batch_0_RepSeq.qza \
         --p-taxa-level '2' \
@@ -207,4 +210,6 @@ qiime gneiss balance-taxonomy \
         --m-metadata-column Acronyme \
         --o-visualization visual/y0TaxaSum.qz
 
-
+qiime tools export --input-path visual/y0TaxaSum.qz.qzv --output-path export/visual/y0TaxaSum.qz
+qiime tools export --input-path visual/RegSum.qzv --output-path export/visual/RegSum
+qiime tools export --input-path visual/Regression.qzv --output-path export/visual/Regression
