@@ -3,6 +3,10 @@
 DATADIRECTORY_ITS2_fungi=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/ITS2/
 DATADIRECTORY_V4_bacteria=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/V4/
 
+METADATA_FUNGI=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/98_database_files/ITS2/sample-metadata.tsv
+METADATA_BACTERIA=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/98_database_files/V4/sample-metadata.tsv
+
+
 # https://chmi-sops.github.io/mydoc_qiime2.html
 
 # https://docs.qiime2.org/2021.2/plugins/available/dada2/denoise-single/
@@ -29,10 +33,10 @@ conda activate qiime2-2019.10
 
 # https://github.com/benjjneb/dada2/issues/477
 
-qiime dada2 denoise-paired --i-demultiplexed-seqs demux.qza \
---o-table Table.qza  \
---o-representative-sequences RepSeq.qza \
---o-denoising-stats SampleData \
+qiime dada2 denoise-paired --i-demultiplexed-seqs core/demux.qza \
+--o-table core/Table.qza  \
+--o-representative-sequences core/RepSeq.qza \
+--o-denoising-stats core/Stats.qza \
 --p-trim-left-f 0 \
 --p-trim-left-r 0 \
 --p-trunc-len-f 0 \
@@ -51,14 +55,14 @@ qiime dada2 denoise-paired --i-demultiplexed-seqs demux.qza \
 
 # Here --i-reference-sequences correspond to the negative control sample (if you don't have any, like here, take another one from an old project, the one here is from the same sequencing line (but not same project))
 
-qiime quality-control exclude-seqs --i-query-sequences RepSeq.qza \
+qiime quality-control exclude-seqs --i-query-sequences core/RepSeq.qza \
       					     --i-reference-sequences /Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/98_database_files/ITS2/Negative_control_Sample_RepSeq_ITS2.qza\
       					     --p-method vsearch \
       					     --p-threads 6 \
       					     --p-perc-identity 1.00 \
       					     --p-perc-query-aligned 1.00 \
-      					     --o-sequence-hits HitNegCtrl.qza \
-      					     --o-sequence-misses NegRepSeq.qza
+      					     --o-sequence-hits core/HitNegCtrl.qza \
+      					     --o-sequence-misses core/NegRepSeq.qza
 
 # table_contamination_filter :
 ##############################
@@ -68,9 +72,9 @@ qiime quality-control exclude-seqs --i-query-sequences RepSeq.qza \
 
 # --p-exclude-ids: --p-no-exclude-ids If true, the samples selected by `metadata` or `where` parameters will be excluded from the filtered table instead of being retained. [default: False]:
 
-qiime feature-table filter-features --i-table Table.qza \
-     					      --m-metadata-file HitNegCtrl.qza \
-     					      --o-filtered-table NegTable.qza \
+qiime feature-table filter-features --i-table core/Table.qza \
+     					      --m-metadata-file core/HitNegCtrl.qza \
+     					      --o-filtered-table core/NegTable.qza \
      					      --p-exclude-ids
 
 # table_contingency_filter :
@@ -86,10 +90,10 @@ qiime feature-table filter-features --i-table Table.qza \
     # min_freq: 0 # Remove features with a total abundance (summed across all samples) of less than 0 !
 
 
-qiime feature-table filter-features  --i-table NegTable.qza \
+qiime feature-table filter-features  --i-table core/NegTable.qza \
         					       --p-min-samples 2 \
         					       --p-min-frequency 0 \
-        					       --o-filtered-table ConTable.qza
+        					       --o-filtered-table core/ConTable.qza
 
 
 # sequence_contingency_filter :
@@ -98,9 +102,9 @@ qiime feature-table filter-features  --i-table NegTable.qza \
 # Aim: Filter features from sequence based on table and/or metadata
        # Use: qiime feature-table filter-seqs [OPTIONS]
 
-qiime feature-table filter-seqs --i-data NegRepSeq.qza \
-      					  --i-table ConTable.qza \
-      					  --o-filtered-data ConRepSeq.qza
+qiime feature-table filter-seqs --i-data core/NegRepSeq.qza \
+      					  --i-table core/ConTable.qza \
+      					  --o-filtered-data core/ConRepSeq.qza
 
 
 # sequence_summarize :
@@ -109,16 +113,21 @@ qiime feature-table filter-seqs --i-data NegRepSeq.qza \
 # Aim: Generate tabular view of feature identifier to sequence mapping
        # Use: qiime feature-table tabulate-seqs [OPTIONS]
 
-#qiime feature-table summarize --i-table Table.qza --m-sample-metadata-file sample-metadata.tsv --o-visualization visual/Table.qzv
-qiime feature-table summarize --i-table Table.qza --o-visualization Table.qzv
-#qiime feature-table summarize --i-table ConTable.qza --m-sample-metadata-file sample-metadata.tsv --o-visualization visual/ConTable.qzv
-qiime feature-table summarize --i-table ConTable.qza --o-visualization visual/ConTable.qzv
-#qiime feature-table summarize --i-table NegTable.qza --m-sample-metadata-file sample-metadata.tsv --o-visualization visual/NegTable.qzv
-qiime feature-table summarize --i-table NegTable.qza --o-visualization visual/NegTable.qzv
-qiime feature-table tabulate-seqs --i-data NegRepSeq.qza --o-visualization visual/NegRepSeq.qzv
-qiime feature-table tabulate-seqs --i-data RepSeq.qza --o-visualization visual/RepSeq.qzv
-qiime feature-table tabulate-seqs --i-data HitNegCtrl.qza --o-visualization visual/HitNegCtrl.qzv
+qiime feature-table summarize --i-table core/Table.qza --m-sample-metadata-file $METADATA_FUNGI --o-visualization visual/Table.qzv
+qiime feature-table summarize --i-table core/ConTable.qza --m-sample-metadata-file $METADATA_FUNGI --o-visualization visual/ConTable.qzv
+qiime feature-table summarize --i-table core/NegTable.qza --m-sample-metadata-file $METADATA_FUNGI --o-visualization visual/NegTable.qzv
+qiime feature-table tabulate-seqs --i-data core/NegRepSeq.qza --o-visualization visual/NegRepSeq.qzv
+qiime feature-table tabulate-seqs --i-data core/RepSeq.qza --o-visualization visual/RepSeq.qzv
+qiime feature-table tabulate-seqs --i-data core/HitNegCtrl.qza --o-visualization visual/HitNegCtrl.qzv
 
+
+qiime tools export --input-path core/Table.qza --output-path export/core/Table
+qiime tools export --input-path core/ConTable.qza --output-path export/core/ConTable
+qiime tools export --input-path core/NegTable.qza --output-path export/core/NegTable
+qiime tools export --input-path core/NegRepSeq.qza --output-path export/core/NegRepSeq
+qiime tools export --input-path core/RepSeq.qza --output-path export/core/RepSeq
+qiime tools export --input-path core/HitNegCtrl.qza --output-path export/core/HitNegCtrl
+qiime tools export --input-path core/ConRepSeq.qza --output-path export/core/ConRepSeq
 
 
 ###############################################################
@@ -138,10 +147,10 @@ conda activate qiime2-2019.10
 
 # https://github.com/benjjneb/dada2/issues/477
 
-qiime dada2 denoise-paired --i-demultiplexed-seqs demux.qza \
---o-table Table.qza  \
---o-representative-sequences RepSeq.qza \
---o-denoising-stats SampleData \
+qiime dada2 denoise-paired --i-demultiplexed-seqs core/demux.qza \
+--o-table core/Table.qza  \
+--o-representative-sequences core/RepSeq.qza \
+--o-denoising-stats core/Stats.qza \
 --p-trim-left-f 0 \
 --p-trim-left-r 0 \
 --p-trunc-len-f 0 \
@@ -157,14 +166,14 @@ qiime dada2 denoise-paired --i-demultiplexed-seqs demux.qza \
 
 # Here --i-reference-sequences correspond to the negative control sample (if you don't have any, like here, take another one from an old project, the one here is from the same sequencing line (but not same project))
 
-qiime quality-control exclude-seqs --i-query-sequences RepSeq.qza \
+qiime quality-control exclude-seqs --i-query-sequences core/RepSeq.qza \
       					     --i-reference-sequences /Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/98_database_files/V4/Negative_control_Sample_RepSeq_V4.qza \
       					     --p-method vsearch \
       					     --p-threads 6 \
       					     --p-perc-identity 1.00 \
       					     --p-perc-query-aligned 1.00 \
-      					     --o-sequence-hits HitNegCtrl.qza \
-      					     --o-sequence-misses NegRepSeq.qza
+      					     --o-sequence-hits core/HitNegCtrl.qza \
+      					     --o-sequence-misses core/NegRepSeq.qza
 
 # table_contamination_filter :
 ##############################
@@ -172,9 +181,9 @@ qiime quality-control exclude-seqs --i-query-sequences RepSeq.qza \
 # Aim: filter features from table based on frequency and/or metadata
 #      Use: qiime feature-table filter-features [OPTIONS]
 
-qiime feature-table filter-features --i-table Table.qza \
-     					      --m-metadata-file HitNegCtrl.qza \
-     					      --o-filtered-table NegTable.qza \
+qiime feature-table filter-features --i-table core/Table.qza \
+     					      --m-metadata-file core/HitNegCtrl.qza \
+     					      --o-filtered-table core/NegTable.qza \
      					      --p-exclude-ids
 
 # table_contingency_filter :
@@ -190,10 +199,10 @@ qiime feature-table filter-features --i-table Table.qza \
     # min_freq: 0 # Remove features with a total abundance (summed across all samples) of less than 0 !
 
 
-qiime feature-table filter-features  --i-table NegTable.qza \
+qiime feature-table filter-features  --i-table core/NegTable.qza \
         					       --p-min-samples 2 \
         					       --p-min-frequency 0 \
-        					       --o-filtered-table ConTable.qza
+        					       --o-filtered-table core/ConTable.qza
 
 
 # sequence_contingency_filter :
@@ -202,9 +211,9 @@ qiime feature-table filter-features  --i-table NegTable.qza \
 # Aim: Filter features from sequence based on table and/or metadata
        # Use: qiime feature-table filter-seqs [OPTIONS]
 
-qiime feature-table filter-seqs --i-data NegRepSeq.qza \
-      					  --i-table ConTable.qza \
-      					  --o-filtered-data ConRepSeq.qza
+qiime feature-table filter-seqs --i-data core/NegRepSeq.qza \
+      					  --i-table core/ConTable.qza \
+      					  --o-filtered-data core/ConRepSeq.qza
 
 
 # sequence_summarize :
@@ -213,14 +222,18 @@ qiime feature-table filter-seqs --i-data NegRepSeq.qza \
 # Aim: Generate tabular view of feature identifier to sequence mapping
        # Use: qiime feature-table tabulate-seqs [OPTIONS]
 
-#qiime feature-table summarize --i-table Table.qza --m-sample-metadata-file sample-metadata.tsv --o-visualization visual/Table.qzv
-qiime feature-table summarize --i-table Table.qza --o-visualization visual/Table.qzv
-#qiime feature-table summarize --i-table ConTable.qza --m-sample-metadata-file sample-metadata.tsv --o-visualization visual/ConTable.qzv
-qiime feature-table summarize --i-table ConTable.qza --o-visualization visual/ConTable.qzv
-#qiime feature-table summarize --i-table NegTable.qza --m-sample-metadata-file sample-metadata.tsv --o-visualization visual/NegTable.qzv
-qiime feature-table summarize --i-table NegTable.qza --o-visualization visual/NegTable.qzv
-qiime feature-table tabulate-seqs --i-data NegRepSeq.qza --o-visualization visual/NegRepSeq.qzv
-qiime feature-table tabulate-seqs --i-data RepSeq.qza --o-visualization visual/RepSeq.qzv
-qiime feature-table tabulate-seqs --i-data HitNegCtrl.qza --o-visualization visual/HitNegCtrl.qzv
+qiime feature-table summarize --i-table core/Table.qza --m-sample-metadata-file $METADATA_BACTERIA --o-visualization visual/Table.qzv
+qiime feature-table summarize --i-table core/ConTable.qza --m-sample-metadata-file $METADATA_BACTERIA --o-visualization visual/ConTable.qzv
+qiime feature-table summarize --i-table core/NegTable.qza --m-sample-metadata-file $METADATA_BACTERIA --o-visualization visual/NegTable.qzv
+qiime feature-table tabulate-seqs --i-data core/NegRepSeq.qza --o-visualization visual/NegRepSeq.qzv
+qiime feature-table tabulate-seqs --i-data core/RepSeq.qza --o-visualization visual/RepSeq.qzv
+qiime feature-table tabulate-seqs --i-data core/HitNegCtrl.qza --o-visualization visual/HitNegCtrl.qzv
 
 
+qiime tools export --input-path core/Table.qza --output-path export/core/Table
+qiime tools export --input-path core/ConTable.qza --output-path export/core/ConTable
+qiime tools export --input-path core/NegTable.qza --output-path export/core/NegTable
+qiime tools export --input-path core/NegRepSeq.qza --output-path export/core/NegRepSeq
+qiime tools export --input-path core/RepSeq.qza --output-path export/core/RepSeq
+qiime tools export --input-path core/HitNegCtrl.qza --output-path export/core/HitNegCtrl
+qiime tools export --input-path core/ConRepSeq.qza --output-path export/core/ConRepSeq
