@@ -172,7 +172,7 @@ First, open your terminal. Then, run these two command lines :
 
 
 <details>
-  <summary>Click here to understand what are **Real**, **User** and **Sys** process time statistics</summary>
+  <summary>> :warning: **Click here to understand what are Real, User and Sys process time statistics</summary>
   
 ### Real, User and Sys process time statistics :
 
