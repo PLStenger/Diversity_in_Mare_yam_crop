@@ -120,6 +120,9 @@ First, open your terminal. Then, run these two command lines :
   For running all the pipeline with only one script; run :
   
     time nohup bash 000_run_all_pipeline_in_one_script.sh &> 000_run_all_pipeline_in_one_script.out
+        >real	562m35.947s
+        >user	800m3.151s
+        >sys	35m17.207s
 
   For running all the pipeline with step by step; run one by one :
 
