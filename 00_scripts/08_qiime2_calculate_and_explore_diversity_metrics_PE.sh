@@ -159,17 +159,17 @@ qiime emperor plot --i-pcoa pcoa/PCoA-braycurtis.qza \
 # Now test for relationships between alpha diversity and study metadata   
   
 qiime diversity alpha-group-significance \
-  --i-alpha-diversity core/faith_pd_vector.qza \
+  --i-alpha-diversity core/Vector-faith_pd.qza \
   --m-metadata-file $METADATA_ITS2/sample-metadata.tsv \
   --o-visualization core/faith-pd-group-significance.qzv
 
 qiime diversity alpha-group-significance \
-  --i-alpha-diversity core/evenness_vector.qza \
+  --i-alpha-diversity core/Vector-evenness.qza \
   --m-metadata-file $METADATA_ITS2/sample-metadata.tsv \
   --o-visualization core/evenness-group-significance.qzv
 
 qiime diversity alpha-group-significance \
-  --i-alpha-diversity core/shannon_vector.qza \
+  --i-alpha-diversity core/Vector-shannon.qza \
   --m-metadata-file $METADATA_ITS2/sample-metadata.tsv \
   --o-visualization core/shannon_group-significance.qzv  
   
@@ -235,14 +235,14 @@ qiime diversity alpha-correlation --i-alpha-diversity core/Vector-pielou_e.qza \
 # Now test for relationships between beta diversity and study metadata 
 
 qiime diversity beta-group-significance \
-  --i-distance-matrix core/unweighted_unifrac_distance_matrix.qza \
+  --i-distance-matrix core/Matrix-unweighted_unifrac.qza \
   --m-metadata-file $METADATA_ITS2/sample-metadata.tsv \
   --m-metadata-column Acronyme \
   --o-visualization core/unweighted-unifrac-Acronyme-significance.qzv \
   --p-pairwise
 
 qiime diversity beta-group-significance \
-  --i-distance-matrix core/unweighted_unifrac_distance_matrix.qza \
+  --i-distance-matrix core/Matrix-unweighted_unifrac.qza \
   --m-metadata-file $METADATA_ITS2/sample-metadata.tsv \
   --m-metadata-column SampleID \
   --o-visualization core/unweighted-unifrac-SampleID-group-significance.qzv \
@@ -271,14 +271,14 @@ qiime diversity beta-group-significance --i-distance-matrix core/Matrix-braycurt
 
 #first, use the unweighted unifrac data as input
 qiime emperor plot \
-  --i-pcoa core/unweighted_unifrac_pcoa_results.qza \
+  --i-pcoa core/PCoA-unweighted_unifrac.qza \
   --m-metadata-file $METADATA_ITS2/sample-metadata.tsv \
   --p-custom-axes Acronyme \
   --o-visualization core/unweighted-unifrac-emperor-Acronyme.qzv
 
 #now repeat with bray curtis
 qiime emperor plot \
-  --i-pcoa core/bray_curtis_pcoa_results.qza \
+  --i-pcoa core/PCoA-braycurtis.qza \
   --m-metadata-file $METADATA_ITS2/sample-metadata.tsv \
   --p-custom-axes Acronyme \
   --o-visualization core/bray-curtis-emperor-Acronyme.qzv
@@ -304,16 +304,16 @@ qiime tools export --input-path visual/Emperor-weighted_unifrac.qzv --output-pat
 qiime tools export --input-path visual/Emperor-unweighted_unifrac.qzv --output-path export/visual/Emperor-unweighted_unifrac 
 
 qiime tools export --input-path core/bray_curtis_distance_matrix.qza --output-path export/core/bray_curtis_distance_matrix
-qiime tools export --input-path core/bray_curtis_pcoa_results.qza --output-path export/core/bray_curtis_pcoa_results
-qiime tools export --input-path core/evenness_vector.qza --output-path export/core/evenness_vector
-qiime tools export --input-path core/faith_pd_vector.qza --output-path export/core/faith_pd_vector_BEFORE
+qiime tools export --input-path core/PCoA-braycurtis.qza --output-path export/core/PCoA-braycurtis
+qiime tools export --input-path core/Vector-evenness.qza --output-path export/core/Vector-evenness
+qiime tools export --input-path core/Vector-faith_pd.qza --output-path export/core/Vector-faith_pd_BEFORE
 qiime tools export --input-path core/jaccard_distance_matrix.qza --output-path export/core/jaccard_distance_matrix
 qiime tools export --input-path core/jaccard_pcoa_results.qza --output-path export/core/jaccard_pcoa_results
 qiime tools export --input-path core/observed_otus_vector.qza --output-path export/core/observed_otus_vector
 qiime tools export --input-path core/rarefied_table.qza --output-path export/core/rarefied_table
-qiime tools export --input-path core/shannon_vector.qza --output-path export/core/shannon_vector
-qiime tools export --input-path core/unweighted_unifrac_distance_matrix.qza --output-path export/core/unweighted_unifrac_distance_matrix
-qiime tools export --input-path core/unweighted_unifrac_pcoa_results.qza --output-path export/core/unweighted_unifrac_pcoa_results
+qiime tools export --input-path core/Vector-shannon.qza --output-path export/core/Vector-shannon
+qiime tools export --input-path core/Matrix-unweighted_unifrac.qza --output-path export/core/Matrix-unweighted_unifrac
+qiime tools export --input-path core/PCoA-unweighted_unifrac.qza --output-path export/core/PCoA-unweighted_unifrac
 qiime tools export --input-path core/weighted_unifrac_distance_matrix.qza --output-path export/core/weighted_unifrac_distance_matrix
 qiime tools export --input-path core/weighted_unifrac_pcoa_results.qza --output-path export/core/weighted_unifrac_pcoa_results
 
@@ -471,17 +471,17 @@ qiime emperor plot --i-pcoa pcoa/PCoA-braycurtis.qza \
 # Now test for relationships between alpha diversity and study metadata   
   
 qiime diversity alpha-group-significance \
-  --i-alpha-diversity core/faith_pd_vector.qza \
+  --i-alpha-diversity core/Vector-faith_pd.qza \
   --m-metadata-file $METADATA_V4/sample-metadata.tsv \
   --o-visualization core/faith-pd-group-significance.qzv
 
 qiime diversity alpha-group-significance \
-  --i-alpha-diversity core/evenness_vector.qza \
+  --i-alpha-diversity core/Vector-evenness.qza \
   --m-metadata-file $METADATA_V4/sample-metadata.tsv \
   --o-visualization core/evenness-group-significance.qzv
 
 qiime diversity alpha-group-significance \
-  --i-alpha-diversity core/shannon_vector.qza \
+  --i-alpha-diversity core/Vector-shannon.qza \
   --m-metadata-file $METADATA_V4/sample-metadata.tsv \
   --o-visualization core/shannon_group-significance.qzv  
   
@@ -547,14 +547,14 @@ qiime diversity alpha-correlation --i-alpha-diversity core/Vector-pielou_e.qza \
 # Now test for relationships between beta diversity and study metadata 
 
 qiime diversity beta-group-significance \
-  --i-distance-matrix core/unweighted_unifrac_distance_matrix.qza \
+  --i-distance-matrix core/Matrix-unweighted_unifrac.qza \
   --m-metadata-file $METADATA_V4/sample-metadata.tsv \
   --m-metadata-column Acronyme \
   --o-visualization core/unweighted-unifrac-Acronyme-significance.qzv \
   --p-pairwise
 
 qiime diversity beta-group-significance \
-  --i-distance-matrix core/unweighted_unifrac_distance_matrix.qza \
+  --i-distance-matrix core/Matrix-unweighted_unifrac.qza \
   --m-metadata-file $METADATA_V4/sample-metadata.tsv \
   --m-metadata-column SampleID \
   --o-visualization core/unweighted-unifrac-SampleID-group-significance.qzv \
@@ -583,14 +583,14 @@ qiime diversity beta-group-significance --i-distance-matrix core/Matrix-braycurt
 
 #first, use the unweighted unifrac data as input
 qiime emperor plot \
-  --i-pcoa core/unweighted_unifrac_pcoa_results.qza \
+  --i-pcoa core/PCoA-unweighted_unifrac.qza \
   --m-metadata-file $METADATA_V4/sample-metadata.tsv \
   --p-custom-axes Acronyme \
   --o-visualization core/unweighted-unifrac-emperor-Acronyme.qzv
 
 #now repeat with bray curtis
 qiime emperor plot \
-  --i-pcoa core/bray_curtis_pcoa_results.qza \
+  --i-pcoa core/PCoA-braycurtis.qza \
   --m-metadata-file $METADATA_V4/sample-metadata.tsv \
   --p-custom-axes Acronyme \
   --o-visualization core/bray-curtis-emperor-Acronyme.qzv
@@ -616,16 +616,16 @@ qiime tools export --input-path visual/Emperor-weighted_unifrac.qzv --output-pat
 qiime tools export --input-path visual/Emperor-unweighted_unifrac.qzv --output-path export/visual/Emperor-unweighted_unifrac 
 
 qiime tools export --input-path core/bray_curtis_distance_matrix.qza --output-path export/core/bray_curtis_distance_matrix
-qiime tools export --input-path core/bray_curtis_pcoa_results.qza --output-path export/core/bray_curtis_pcoa_results
-qiime tools export --input-path core/evenness_vector.qza --output-path export/core/evenness_vector
-qiime tools export --input-path core/faith_pd_vector.qza --output-path export/core/faith_pd_vector_BEFORE
+qiime tools export --input-path core/PCoA-braycurtis.qza --output-path export/core/PCoA-braycurtis
+qiime tools export --input-path core/Vector-evenness.qza --output-path export/core/Vector-evenness
+qiime tools export --input-path core/Vector-faith_pd.qza --output-path export/core/Vector-faith_pd_BEFORE
 qiime tools export --input-path core/jaccard_distance_matrix.qza --output-path export/core/jaccard_distance_matrix
 qiime tools export --input-path core/jaccard_pcoa_results.qza --output-path export/core/jaccard_pcoa_results
 qiime tools export --input-path core/observed_otus_vector.qza --output-path export/core/observed_otus_vector
 qiime tools export --input-path core/rarefied_table.qza --output-path export/core/rarefied_table
-qiime tools export --input-path core/shannon_vector.qza --output-path export/core/shannon_vector
-qiime tools export --input-path core/unweighted_unifrac_distance_matrix.qza --output-path export/core/unweighted_unifrac_distance_matrix
-qiime tools export --input-path core/unweighted_unifrac_pcoa_results.qza --output-path export/core/unweighted_unifrac_pcoa_results
+qiime tools export --input-path core/Vector-shannon.qza --output-path export/core/Vector-shannon
+qiime tools export --input-path core/Matrix-unweighted_unifrac.qza --output-path export/core/Matrix-unweighted_unifrac
+qiime tools export --input-path core/PCoA-unweighted_unifrac.qza --output-path export/core/PCoA-unweighted_unifrac
 qiime tools export --input-path core/weighted_unifrac_distance_matrix.qza --output-path export/core/weighted_unifrac_distance_matrix
 qiime tools export --input-path core/weighted_unifrac_pcoa_results.qza --output-path export/core/weighted_unifrac_pcoa_results
 
