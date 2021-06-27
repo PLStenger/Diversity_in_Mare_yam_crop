@@ -10,6 +10,10 @@ METADATA_V4=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02
 
 # Aim: identify features that are differentially abundant across groups
 
+# Info here :
+# https://github.com/biocore/gneiss
+# https://biocore.github.io/gneiss/
+
 
 ###############################################################
 ### For Fungi
