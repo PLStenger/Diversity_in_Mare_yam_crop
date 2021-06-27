@@ -197,6 +197,10 @@ First, open your terminal. Then, run these two command lines :
 			>sys	0m3.511s
 
 
+	Only for developping
+	time nohup bash zz_junk.sh &> zz_junk.out
+
+
 </details> 
 
 
