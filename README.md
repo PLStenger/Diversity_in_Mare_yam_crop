@@ -187,9 +187,9 @@ First, open your terminal. Then, run these two command lines :
 			>sys	0m10.918s
 	
 	time nohup bash 12_GNEISS_PE.sh &> 12_GNEISS_PE.out
-			>real	10m32.396s
-			>user	9m23.513s
-			>sys	0m21.512s
+			>real	24m32.454s
+			>user	13m24.024s
+			>sys	0m38.742s
 	
 	time nohup bash 13_funguild.sh &> 13_funguild.out
 			>real	0m15.448s
