@@ -119,6 +119,44 @@ qiime tools export --input-path visual/y0TaxaSum.qz.qzv --output-path export/vis
 qiime tools export --input-path visual/RegSum.qzv --output-path export/visual/RegSum
 qiime tools export --input-path visual/Regression.qzv --output-path export/visual/Regression
 
+# Second test from : https://biocore.github.io/gneiss/docs/v0.4.0/tutorials/qiime2/88soils-qiime2-tutorial.html
+
+qiime composition add-pseudocount \
+    --i-table core/RarTable.qza \
+    --p-pseudocount 1 \
+    --o-composition-table gneiss/RarTable_composition.qza
+
+qiime gneiss dendrogram-heatmap \
+    --i-table gneiss/RarTable_composition.qza \
+    --i-tree gneiss/GradHierarchy.qza \
+    --m-metadata-file $METADATA_ITS2/sample-metadata.tsv \
+    --m-metadata-category "Acronyme" \
+    --o-visualization "Site_heatmap" \
+    --p-ndim 10 --verbose   
+
+qiime gneiss ilr-transform \
+    --i-table gneiss/RarTable_composition.qza \
+    --i-tree gneiss/GradHierarchy.qza \
+    --o-balances gneiss/RarTable_balances.qza
+
+qiime gneiss ols-regression \
+    --p-formula "F + SF + LF" \
+    --i-table gneiss/RarTable_balances.qza \
+    --i-tree gneiss/GradHierarchy.qza \
+    --m-metadata-file $METADATA_ITS2/sample-metadata.tsv \
+    --o-visualization visual/RarTable_regression_summary.qzv
+
+qiime gneiss balance-taxonomy \
+    --i-balances gneiss/RarTable_balances.qza \
+    --i-tree gneiss/GradHierarchy.qza \
+    --i-taxonomy taxonomy/taxonomy_reads-per-batch_0.qza \
+    --p-taxa-level 2 \
+    --p-balance-name 'y0' \
+    --m-metadata-file $METADATA_ITS2/sample-metadata.tsv \
+    --m-metadata-category 'Acronyme' \
+    --o-visualization visual/RarTable_y0_taxa_summary.qzv
+
+
 ###############################################################
 ### For Bacteria
 ###############################################################
