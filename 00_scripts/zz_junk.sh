@@ -27,7 +27,7 @@ qiime gneiss dendrogram-heatmap \
     --i-table gneiss/RarTable_composition.qza \
     --i-tree gneiss/GradHierarchy.qza \
     --m-metadata-file $METADATA_ITS2/sample-metadata.tsv \
-    --m-metadata-category "Acronyme" \
+    --m-metadata-column "Acronyme" \
     --o-visualization "Site_heatmap" \
     --p-ndim 10 --verbose   
 
@@ -50,7 +50,7 @@ qiime gneiss balance-taxonomy \
     --p-taxa-level 2 \
     --p-balance-name 'y0' \
     --m-metadata-file $METADATA_ITS2/sample-metadata.tsv \
-    --m-metadata-category 'Acronyme' \
+    --m-metadata-column 'Acronyme' \
     --o-visualization visual/RarTable_y0_taxa_summary.qzv
 
 
