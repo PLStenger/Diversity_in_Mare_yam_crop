@@ -40,11 +40,16 @@ qiime tools export --input-path subtables/RarTable-short_fallow.qza --output-pat
 qiime tools export --input-path subtables/RarTable-all.qza --output-path export/subtables/RarTable-all    
         
 #qiime tools export --input-path visual/CoreBiomAll.qzv --output-path export/visual/CoreBiomAll
-qiime tools export --input-path visual/CoreBiom-all.qzv --output-path export/visual/CoreBiom-all.qzv
+qiime tools export --input-path visual/CoreBiom-all.qzv --output-path export/visual/CoreBiom-all
 qiime tools export --input-path visual/CoreBiom-Long_fallow.qzv --output-path export/visual/CoreBiom-Long_fallow
 qiime tools export --input-path visual/CoreBiom-short_fallow.qzv --output-path export/visual/CoreBiom-short_fallow
 qiime tools export --input-path visual/CoreBiom-Forest.qzv --output-path export/visual/CoreBiom-Forest
 
+
+
+biom convert -i export/subtables/CoreBiom-all/feature-table.biom -o export/subtables/CoreBiom-all/table-from-biom.tsv --to-tsv
+
+sed '1d ; s/\#OTU ID/ASV_ID/' export/subtables/CoreBiom-all/table-from-biom.tsv > export/subtables/CoreBiom-all/ASV.tsv
 
 ###############################################################
 ### For Bacteria
