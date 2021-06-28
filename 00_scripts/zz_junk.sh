@@ -17,43 +17,15 @@ cd $DATADIRECTORY_ITS2_fungi
 eval "$(conda shell.bash hook)"
 conda activate qiime2-2019.10
 
-
-qiime composition add-pseudocount \
-    --i-table core/RarTable.qza \
-    --p-pseudocount 1 \
-    --o-composition-table gneiss/RarTable_composition.qza
-
-qiime gneiss dendrogram-heatmap \
-    --i-table gneiss/RarTable_composition.qza \
-    --i-tree gneiss/GradHierarchy.qza \
-    --m-metadata-file $METADATA_ITS2/sample-metadata.tsv \
-    --m-metadata-column "Acronyme" \
-    --o-visualization "Site_heatmap" \
-    --p-ndim 10 --verbose   
-
-qiime gneiss ilr-transform \
-    --i-table gneiss/RarTable_composition.qza \
-    --i-tree gneiss/GradHierarchy.qza \
-    --o-balances gneiss/RarTable_balances.qza
-
-qiime gneiss ols-regression \
-    --p-formula "F + SF + LF" \
-    --i-table gneiss/RarTable_balances.qza \
-    --i-tree gneiss/GradHierarchy.qza \
-    --m-metadata-file $METADATA_ITS2/sample-metadata.tsv \
-    --o-visualization visual/RarTable_regression_summary.qzv
-
-qiime gneiss balance-taxonomy \
-    --i-balances gneiss/RarTable_balances.qza \
-    --i-tree gneiss/GradHierarchy.qza \
-    --i-taxonomy taxonomy/taxonomy_reads-per-batch_0.qza \
-    --p-taxa-level 2 \
-    --p-balance-name 'y0' \
-    --m-metadata-file $METADATA_ITS2/sample-metadata.tsv \
-    --m-metadata-column 'Acronyme' \
-    --o-visualization visual/RarTable_y0_taxa_summary.qzv
-
-
+qiime tools export --input-path subtables/RarTable-Forest.qza --output-path export/subtables/RarTable-Forest 
+qiime tools export --input-path subtables/RarTable-Long_fallow.qza --output-path export/subtables/RarTable-Long_fallow 
+qiime tools export --input-path subtables/RarTable-short_fallow.qza --output-path export/subtables/RarTable-short_fallow       
+qiime tools export --input-path core/RarTable.qza --output-path export/subtables/RarTable_all    
+        
+qiime tools export --input-path visual/CoreBiomAll.qzv --output-path export/visual/CoreBiomAll
+qiime tools export --input-path visual/CoreBiom-Long_fallow.qzv --output-path export/visual/CoreBiom-Long_fallow
+qiime tools export --input-path visual/CoreBiom-short_fallow.qzv --output-path export/visual/CoreBiom-short_fallow
+qiime tools export --input-path visual/CoreBiom-Forest.qzv --output-path export/visual/CoreBiom-Forest
 
 
 ###############################################################
