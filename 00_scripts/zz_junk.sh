@@ -47,9 +47,9 @@ qiime tools export --input-path visual/CoreBiom-Forest.qzv --output-path export/
 
 
 
-biom convert -i export/subtables/CoreBiom-all/feature-table.biom -o export/subtables/CoreBiom-all/table-from-biom.tsv --to-tsv
+biom convert -i export/subtables/RarTable-all/feature-table.biom -o export/subtables/RarTable-all/table-from-biom.tsv --to-tsv
 
-sed '1d ; s/\#OTU ID/ASV_ID/' export/subtables/CoreBiom-all/table-from-biom.tsv > export/subtables/CoreBiom-all/ASV.tsv
+sed '1d ; s/\#OTU ID/ASV_ID/' export/subtables/RarTable-all/table-from-biom.tsv > export/subtables/RarTable-all/ASV.tsv
 
 ###############################################################
 ### For Bacteria
