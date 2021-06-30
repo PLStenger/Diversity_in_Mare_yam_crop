@@ -18,6 +18,10 @@ cd $DATADIRECTORY_ITS2_fungi
 eval "$(conda shell.bash hook)"
 conda activate qiime2-2019.10
 
+# Make the directory (mkdir) only if not existe already(-p)
+mkdir -p $OUTPUT_ITS2_fungi/core
+mkdir -p $OUTPUT_ITS2_fungi/visual
+
 qiime tools import --type 'SampleData[PairedEndSequencesWithQuality]' \
 			    --input-path  $MANIFEST_FUNGI \
 			    --output-path $OUTPUT_ITS2_fungi/core/demux.qza \
@@ -42,6 +46,10 @@ cd $DATADIRECTORY_V4_bacteria
 
 eval "$(conda shell.bash hook)"
 conda activate qiime2-2019.10
+
+# Make the directory (mkdir) only if not existe already(-p)
+mkdir -p $OUTPUT_V4_bacteria/core
+mkdir -p $OUTPUT_V4_bacteria/visual
 
 qiime tools import --type 'SampleData[PairedEndSequencesWithQuality]' \
 			    --input-path  $MANIFEST_BACTERIA \
