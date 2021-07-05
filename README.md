@@ -65,13 +65,30 @@ If necessary (only in development version), for updating the pipeline run :
     
 ### If necessary, install softwares by :   
 
+Download Anaconda here : https://www.anaconda.com/products/individual choose the one according to your OS (Windows, MacOS, Linux); here I choose the 'Anaconda3-2021.05-Linux-x86_64.sh'.
+
+Send your file in the '99_softwares/' directory with :
+
+:warning: You need to open a new terminal window in local, only the this uplaoding step.
+
+    scp -r path_to_downloaded_data_in_local/Anaconda-latest-Linux-x86_64.sh $CLUSTER_ADRESS://home/fungi/Diversity_in_Mare_yam_crop/99_softwares/
+
+Then go in the '99_softwares/' directory
+
     cd 99_softwares/
+   
+Run :
+
+    bash Anaconda-latest-Linux-x86_64.sh
+
+Then, ruyn :
+
+    bash
     conda install -c bioconda fastqc
     conda install -c bioconda trimmomatic
     conda install -c bioconda multiqc
 
-
-### Know the number of CPU (threads) of your computer (here for MacOs) :   
+### Know the number of CPU (threads) of your computer (here for MacOs) :
 
     sysctl hw.ncpu
     > hw.ncpu: 4
