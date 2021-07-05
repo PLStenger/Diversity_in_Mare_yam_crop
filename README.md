@@ -55,7 +55,7 @@ Put your data in the '00_raw_data' folder in the corresponding folders :
       scp -r path_to_your_raw_data_in_local/*.fastq.gz $CLUSTER_ADRESS://home/fungi/Diversity_in_Mare_yam_crop/00_raw_data/V4_bacteria
    
 
-If necessary for updating the pipeline run :
+If necessary (only in development version), for updating the pipeline run :
 
     git pull
     
