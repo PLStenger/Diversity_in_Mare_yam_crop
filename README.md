@@ -42,6 +42,8 @@ First, open your terminal. Then, run these two command lines :
     git clone https://github.com/PLStenger/Diversity_in_Mare_yam_crop.git
     
 Put your data in the '00_raw_data' folder in the corresponding folders :
+
+
 :warning: You need to open a new terminal window in local, only the this uplaoding step.
 
 - For ITS2 (Fungi) :
