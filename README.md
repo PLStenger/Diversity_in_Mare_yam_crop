@@ -40,8 +40,20 @@ First, open your terminal. Then, run these two command lines :
 
     cd -place_in_your_local_computer
     git clone https://github.com/PLStenger/Diversity_in_Mare_yam_crop.git
+    
+Put your data in the '00_raw_data' folder in the corresponding folders :
+:warning: You need to open a new terminal window in local, only the this uplaoding step.
 
-### Update the pipeline in local by :
+- For ITS2 (Fungi) :
+
+      scp -r path_to_your_raw_data_in_local/*.fastq.gz $CLUSTER_ADRESS://home/fungi/Diversity_in_Mare_yam_crop/00_raw_data/ITS2_fungi
+
+- For V4 (bacteria) :
+
+      scp -r path_to_your_raw_data_in_local/*.fastq.gz $CLUSTER_ADRESS://home/fungi/Diversity_in_Mare_yam_crop/00_raw_data/V4_bacteria
+   
+
+If necessary for updating the pipeline run :
 
     git pull
     
