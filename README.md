@@ -65,7 +65,7 @@ If necessary (only in development version), for updating the pipeline run :
     
 ### If necessary, install softwares by :   
 
-Download Anaconda here : https://www.anaconda.com/products/individual choose the one according to your OS (Windows, MacOS, Linux); here I choose the 'Anaconda3-2021.05-Linux-x86_64.sh'.
+Download Anaconda or, better, Miniconda3 (Python 3.9) here : https://www.anaconda.com/products/individual choose the one according to your OS (Windows, MacOS, Linux); here I choose the 'Anaconda3-2021.05-Linux-x86_64.sh'/'Miniconda3-py39_4.9.2-Linux-x86_64.sh'.
 
 Send your file in the '99_softwares/' directory with :
 
