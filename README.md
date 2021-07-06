@@ -191,26 +191,31 @@ Then, download all the necessary softwaures by :
   For running all the pipeline with step by step; run one by one :
 
 	time nohup bash 00_quality_check_by_FastQC.sh &> 00_quality_check_by_FastQC.out
-			>real	15m0.938s
-			>user	23m24.964s
-			>sys	1m30.933s
+			Local			Cluster
+			>real	15m0.938s	real	10m2,587s
+			>user	23m24.964s	user	13m7,749s
+			>sys	1m30.933s	sys	0m48,080s
 	
 	time nohup bash 01_replicates_pooling.sh &> 01_replicates_pooling.out
-			>real	0m12.089s
-			>user	0m0.284s
-			>sys	0m6.321s
+			Local			Cluster
+			>real	0m12.089s	real	0m4,587s
+			>user	0m0.284s	user	0m0,036s
+			>sys	0m6.321s	sys	0m0,907s
 	
 	time nohup bash 02_trimmomatic_q30.sh &> 02_trimmomatic_q30.out
-			>real	46m36.541s
-			>user	115m46.126s
-			>sys	4m42.181s
+			Local			Cluster
+			>real	46m36.541s	real	1m34,545s
+			>user	115m46.126s	user	4m24,690s
+			>sys	4m42.181s	sys	0m25,817s
 	
 	time nohup bash 03_cleaned_data_quality_check_by_FastQC.sh &> 03_cleaned_data_quality_check_by_FastQC.out
-			>real	15m13.915s
-			>user	22m30.925s
-			>sys	1m29.838s
+			Local			Cluster
+			>real	15m13.915s	real	8m24,390s
+			>user	22m30.925s	user	11m35,023s
+			>sys	1m29.838s	sys	0m33,590s
 	
 	time nohup bash 04_qiime2_import_PE.sh &> 04_qiime2_import_PE.out
+			Local
 			>real	4m16.097s
 			>user	1m54.078s
 			>sys	0m22.440s
