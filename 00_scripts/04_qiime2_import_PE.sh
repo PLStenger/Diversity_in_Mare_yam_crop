@@ -56,7 +56,7 @@ qiime tools export --input-path core/demux.qza --output-path export/core/demux
 cd $DATADIRECTORY_V4_bacteria
 
 eval "$(conda shell.bash hook)"
-conda activate qiime2-2019.10
+conda activate qiime2-2021.4
 
 # Make the directory (mkdir) only if not existe already(-p)
 mkdir -p $OUTPUT_V4_bacteria/core
