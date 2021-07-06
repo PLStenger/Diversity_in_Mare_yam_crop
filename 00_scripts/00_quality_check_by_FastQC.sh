@@ -12,13 +12,14 @@ DATA_DIRECTORY_V4_bacteria=/home/fungi/Diversity_in_Mare_yam_crop/00_raw_data/V4
 OUT_PUT_ITS2_fungi=/home/fungi/Diversity_in_Mare_yam_crop/01_quality_check/OUT_PUT_ITS2_fungi
 OUT_PUT_V4_bacteria=/home/fungi/Diversity_in_Mare_yam_crop/01_quality_check/OUT_PUT_V4_bacteria
 
-
 # pathways in local:
 #WORKING_DIRECTORY=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop
 #DATA_DIRECTORY_ITS2_fungi=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/00_raw_data/ITS2_fungi
 #DATA_DIRECTORY_V4_bacteria=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/00_raw_data/V4_bacteria
 #OUT_PUT_ITS2_fungi=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/01_quality_check/OUT_PUT_ITS2_fungi
 #OUT_PUT_V4_bacteria=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/01_quality_check/OUT_PUT_V4_bacteria
+
+conda activate fastqc
 
 cd $WORKING_DIRECTORY
 
