@@ -133,6 +133,22 @@ Then, download all the necessary softwaures by :
     # Put you in your working directory (as an example, for me it's :)
     cd /Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop
     
+> :warning: **Explanation of Real, User and Sys process time statistics below**
+
+<details>
+  <summary>Click here to understand what are Real, User and Sys process time statistics</summary>
+  
+These appears after you run the command line 'time', and it's corresponding for a 8 Go 1600 MHz DDR3 boot on MacOSX 10.14.6, 2.5 GHz Intel Core i5, SSD  
+ 
+### Real, User and Sys process time statistics :
+
+One of these things is not like the other. Real refers to actual elapsed time; User and Sys refer to CPU time used only by the process.
+
+- **Real** is wall clock time - time from start to finish of the call. This is all elapsed time including time slices used by other processes and time the process spends blocked (for example if it is waiting for I/O to complete).
+- **User** is the amount of CPU time spent in user-mode code (outside the kernel) within the process. This is only actual CPU time used in executing the process. Other processes and time the process spends blocked do not count towards this figure.
+- **Sys** is the amount of CPU time spent in the kernel within the process. This means executing CPU time spent in system calls within the kernel, as opposed to library code, which is still running in user-space. Like 'user', this is only CPU time used by the process. See below for a brief description of kernel mode (also known as 'supervisor' mode) and the system call mechanism.
+
+</details>     
     
 ### Run this pipeline in Single-End version for Paired-End data (like in Fernandez et al 2021 - in prep)
 
@@ -215,25 +231,28 @@ Then, download all the necessary softwaures by :
 			>sys	1m29.838s	sys	0m33,590s
 	
 	time nohup bash 04_qiime2_import_PE.sh &> 04_qiime2_import_PE.out
-			Local
-			>real	4m16.097s
-			>user	1m54.078s
-			>sys	0m22.440s
+			Local			Cluster
+			>real	4m16.097s	real	1m30,595s
+			>user	1m54.078s	user	1m28,997s
+			>sys	0m22.440s	sys	0m14,064s
 	
 	time nohup bash 05_qiime2_denoise_PE.sh &> 05_qiime2_denoise_PE.out
-			>real	258m37.391s
-			>user	490m55.497s
-			>sys	16m22.382s
+			Local			Cluster
+			>real	258m37.391s	real	119m10,621s
+			>user	490m55.497s	user	415m59,135s
+			>sys	16m22.382s	sys	8m37,648s
 	
 	time nohup bash 06_qiime2_tree_PE.sh &> 06_qiime2_tree_PE.out
-			>real	8m17.027s
-			>user	5m55.095s
-			>sys	0m31.508s
+			Local			Cluster
+			>real	8m17.027s	real	4m32,597s
+			>user	5m55.095s	user	4m34,506s
+			>sys	0m31.508s	sys	0m25,527s
 	
 	time nohup bash 07_qiime2_rarefaction_PE.sh &> 07_qiime2_rarefaction_PE.out
-			>real	1m45.833s
-			>user	0m57.637s
-			>sys	0m14.762s
+			Local			Cluster
+			>real	1m45.833s	
+			>user	0m57.637s	
+			>sys	0m14.762s	
 	
 	time nohup bash 08_qiime2_calculate_and_explore_diversity_metrics_PE.sh &> 08_qiime2_calculate_and_explore_diversity_metrics_PE.out
 			>real	35m11.058s
@@ -273,22 +292,7 @@ Then, download all the necessary softwaures by :
 </details> 
 
 
-> :warning: **Explanation of Real, User and Sys process time statistics below**
 
-<details>
-  <summary>Click here to understand what are Real, User and Sys process time statistics</summary>
-  
-These appears after you run the command line 'time', and it's corresponding for a 8 Go 1600 MHz DDR3 boot on MacOSX 10.14.6, 2.5 GHz Intel Core i5, SSD  
- 
-### Real, User and Sys process time statistics :
-
-One of these things is not like the other. Real refers to actual elapsed time; User and Sys refer to CPU time used only by the process.
-
-- **Real** is wall clock time - time from start to finish of the call. This is all elapsed time including time slices used by other processes and time the process spends blocked (for example if it is waiting for I/O to complete).
-- **User** is the amount of CPU time spent in user-mode code (outside the kernel) within the process. This is only actual CPU time used in executing the process. Other processes and time the process spends blocked do not count towards this figure.
-- **Sys** is the amount of CPU time spent in the kernel within the process. This means executing CPU time spent in system calls within the kernel, as opposed to library code, which is still running in user-space. Like 'user', this is only CPU time used by the process. See below for a brief description of kernel mode (also known as 'supervisor' mode) and the system call mechanism.
-
-</details> 
 
 
 ### For running MultiQC (work now only in Python3) :
