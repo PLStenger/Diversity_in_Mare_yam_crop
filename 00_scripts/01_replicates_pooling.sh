@@ -4,9 +4,15 @@
 DATADIRECTORY_V4_bacteria=/home/fungi/Diversity_in_Mare_yam_crop/00_raw_data/V4_bacteria
 OUTPUT_V4_bacteria=/Users/home/fungi/Diversity_in_Mare_yam_crop/01_pooled/V4_bacteria
 
+DATADIRECTORY_ITS2_fungi=/home/fungi/Diversity_in_Mare_yam_crop/00_raw_data/ITS2_fungi
+OUTPUT_ITS2_fungi=/home/fungi/Diversity_in_Mare_yam_crop/01_pooled/ITS2_fungi
+
 # pathways in local:
 #DATADIRECTORY_V4_bacteria=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/00_raw_data/V4_bacteria
 #OUTPUT_V4_bacteria=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/01_pooled/V4_bacteria
+
+#DATADIRECTORY_ITS2_fungi=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/00_raw_data/ITS2_fungi
+#OUTPUT_ITS2_fungi=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/01_pooled/ITS2_fungi
 
 cd $DATADIRECTORY_V4_bacteria
 
@@ -44,9 +50,6 @@ cat JL3-B_S284_L001_R2_001.fastq.gz JL3_S283_L001_R2_001.fastq.gz > $OUTPUT_V4_b
 cat JL4-B_S286_L001_R2_001.fastq.gz JL4_S285_L001_R2_001.fastq.gz > $OUTPUT_V4_bacteria/JL4_S285_R2.fastq.gz
 cat JL5-B_S288_L001_R2_001.fastq.gz JL5_S287_L001_R2_001.fastq.gz > $OUTPUT_V4_bacteria/JL5_S287_R2.fastq.gz
 
-
-DATADIRECTORY_ITS2_fungi=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/00_raw_data/ITS2_fungi
-OUTPUT_ITS2_fungi=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/01_pooled/ITS2_fungi
 
 cd $DATADIRECTORY_ITS2_fungi
 
