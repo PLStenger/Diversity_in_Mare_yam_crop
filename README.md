@@ -108,17 +108,17 @@ Then, download all the necessary softwaures by :
        conda deactivate
               
 4) QIIME2
+        
+	Follow instructions here https://docs.qiime2.org/2021.4/install/native/
 
-Follow instructions here https://docs.qiime2.org/2021.4/install/native/
-
-	# If you did'nt have yet 'wget' run : conda install wget
-	wget https://data.qiime2.org/distro/core/qiime2-2021.4-py38-linux-conda.yml
-	conda env create -n qiime2-2021.4 --file qiime2-2021.4-py38-linux-conda.yml
+	   # If you did'nt have yet 'wget' run : conda install wget
+	   wget https://data.qiime2.org/distro/core/qiime2-2021.4-py38-linux-conda.yml
+	   conda env create -n qiime2-2021.4 --file qiime2-2021.4-py38-linux-conda.yml
 	
-To activate/deactivate this environment, use :
+	To activate/deactivate this environment, use :
 
-	conda activate qiime2-2021.4
-	conda deactivate
+	   conda activate qiime2-2021.4
+	   conda deactivate
 	
  
 ### Know the number of CPU (threads) of your computer (here for MacOs) :
