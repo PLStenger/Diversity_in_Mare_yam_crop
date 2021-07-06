@@ -1,10 +1,18 @@
 #!/usr/bin/env bash
 
-DATADIRECTORY_ITS2_fungi=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/ITS2/
-DATADIRECTORY_V4_bacteria=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/V4/
+# pathways in cluster:
+DATADIRECTORY_ITS2_fungi=/home/fungi/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/ITS2/
+DATADIRECTORY_V4_bacteria=/home/fungi/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/V4/
 
-METADATA_ITS2=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/98_database_files/ITS2
-METADATA_V4=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/98_database_files/V4
+METADATA_ITS2=/home/fungi/Diversity_in_Mare_yam_crop/98_database_files/ITS2
+METADATA_V4=/home/fungi/Diversity_in_Mare_yam_crop/98_database_files/V4
+
+# pathways in local:
+#DATADIRECTORY_ITS2_fungi=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/ITS2/
+#DATADIRECTORY_V4_bacteria=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/V4/
+
+#METADATA_ITS2=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/98_database_files/ITS2
+#METADATA_V4=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/98_database_files/V4
 
 # Aim: rarefy a feature table to compare alpha/beta diversity results
 
@@ -18,14 +26,14 @@ METADATA_V4=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02
 cd $DATADIRECTORY_ITS2_fungi
 
 eval "$(conda shell.bash hook)"
-conda activate qiime2-2019.10
+conda activate qiime2-2021.4
 
 # Note: max-depth should be chosen based on Table.qzv
 
 qiime diversity alpha-rarefaction \
   --i-table core/Table.qza \
   --i-phylogeny tree/rooted-tree.qza \
-  --p-max-depth 50124 \
+  --p-max-depth 50121 \
   --p-min-depth 1 \
   --m-metadata-file $METADATA_ITS2/sample-metadata.tsv \
   --o-visualization visual/alpha-rarefaction.qzv
@@ -67,14 +75,14 @@ qiime tools export --input-path visual/RareGraph-beta.qzv --output-path export/v
 cd $DATADIRECTORY_V4_bacteria
 
 eval "$(conda shell.bash hook)"
-conda activate qiime2-2019.10
+conda activate qiime2-2021.4
 
 # Note: max-depth should be chosen based on Yable.qzv
 
 qiime diversity alpha-rarefaction \
   --i-table core/Table.qza \
   --i-phylogeny tree/rooted-tree.qza \
-  --p-max-depth 23698 \
+  --p-max-depth 23736 \
   --p-min-depth 1 \
   --m-metadata-file $METADATA_V4/sample-metadata.tsv \
   --o-visualization visual/alpha-rarefaction.qzv
