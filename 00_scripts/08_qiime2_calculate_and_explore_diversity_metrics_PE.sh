@@ -1,10 +1,19 @@
 #!/usr/bin/env bash
 
-DATADIRECTORY_ITS2_fungi=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/ITS2/
-DATADIRECTORY_V4_bacteria=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/V4/
+# pathways in cluster:
+DATADIRECTORY_ITS2_fungi=/home/fungi/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/ITS2/
+DATADIRECTORY_V4_bacteria=/home/fungi/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/V4/
 
-METADATA_ITS2=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/98_database_files/ITS2/
-METADATA_V4=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/98_database_files/V4/
+METADATA_ITS2=/home/fungi/Diversity_in_Mare_yam_crop/98_database_files/ITS2/
+METADATA_V4=/home/fungi/Diversity_in_Mare_yam_crop/98_database_files/V4/
+
+# pathways in local:
+#DATADIRECTORY_ITS2_fungi=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/ITS2/
+#DATADIRECTORY_V4_bacteria=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/V4/
+
+#METADATA_ITS2=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/98_database_files/ITS2/
+#METADATA_V4=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/98_database_files/V4/
+
 
 # Aim: perform diversity metrics and rarefaction
 
@@ -27,7 +36,11 @@ METADATA_V4=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02
 cd $DATADIRECTORY_ITS2_fungi
 
 eval "$(conda shell.bash hook)"
-conda activate qiime2-2019.10
+conda activate qiime2-2021.4
+
+# Make the directory (mkdir) only if not existe already(-p)
+mkdir -p pcoa
+mkdir -p export/pcoa
   
 # core_metrics_phylogenetic:
 ############################
@@ -37,7 +50,7 @@ conda activate qiime2-2019.10
 qiime diversity core-metrics-phylogenetic \
        --i-phylogeny tree/rooted-tree.qza \
        --i-table core/Table.qza \
-       --p-sampling-depth 16708 \
+       --p-sampling-depth 5569 \
        --m-metadata-file $METADATA_ITS2/sample-metadata.tsv \
        --o-rarefied-table core/RarTable.qza \
        --o-observed-otus-vector core/Vector-observed_asv.qza \
@@ -123,6 +136,11 @@ qiime diversity alpha --i-table core/RarTable.qza \
 qiime diversity alpha --i-table core/RarTable.qza \
         --p-metric chao1_ci \
         --o-alpha-diversity core/Vector-chao1_ci.qza   
+        
+# Chao1 confidence interval: Confidence interval for richness estimator chao1.
+qiime diversity alpha --i-table core/RarTable.qza \
+        --p-metric shannon \
+        --o-alpha-diversity core/Vector-shannon-second.qza           
 
 # beta_diversity; Aim: Compute a user-specified beta diversity metric, for all pairs of samples in a feature table
 ##################################################################################################################
@@ -339,7 +357,11 @@ qiime tools export --input-path pcoa/PCoA-weighted_unifrac.qza --output-path exp
 cd $DATADIRECTORY_V4_bacteria
 
 eval "$(conda shell.bash hook)"
-conda activate qiime2-2019.10
+conda activate qiime2-2021.4
+
+# Make the directory (mkdir) only if not existe already(-p)
+mkdir -p pcoa
+mkdir -p export/pcoa
 
 # core_metrics_phylogenetic:
 ############################
@@ -349,7 +371,7 @@ conda activate qiime2-2019.10
 qiime diversity core-metrics-phylogenetic \
        --i-phylogeny tree/rooted-tree.qza \
        --i-table core/Table.qza \
-       --p-sampling-depth 2634 \
+       --p-sampling-depth 2638 \
        --m-metadata-file $METADATA_V4/sample-metadata.tsv \
        --o-rarefied-table core/RarTable.qza \
        --o-observed-otus-vector core/Vector-observed_asv.qza \
