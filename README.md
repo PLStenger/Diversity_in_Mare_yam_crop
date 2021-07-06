@@ -81,13 +81,46 @@ Run :
 
     bash Anaconda-latest-Linux-x86_64.sh
 
-Then, ruyn :
+Then, download all the necessary softwaures by :
 
-    bash
-    conda install -c bioconda fastqc
-    conda install -c bioconda trimmomatic
-    conda install -c bioconda multiqc
+1) fastqc V-0.11.8
 
+       bash
+       conda create -n fastqc
+       conda activate fastqc
+       conda install -c bioconda/label/cf201901 fastqc
+       conda deactivate
+    
+2) trimmomatic V-0.38
+    
+       bash
+       conda create -n trimmomatic
+       conda activate trimmomatic
+       conda install -c bioconda/label/cf201901 trimmomatic 
+       conda deactivate
+       
+3) multiqc V-0.9.1a0
+    
+       bash
+       conda create -n multiqc
+       conda activate multiqc
+       conda install -c bioconda/label/cf201901 multiqc  
+       conda deactivate
+              
+4) QIIME2
+
+Follow instructions here https://docs.qiime2.org/2021.4/install/native/
+
+	# If you did'nt have yet 'wget' run : conda install wget
+	wget https://data.qiime2.org/distro/core/qiime2-2021.4-py38-linux-conda.yml
+	conda env create -n qiime2-2021.4 --file qiime2-2021.4-py38-linux-conda.yml
+	
+To activate/deactivate this environment, use :
+
+	conda activate qiime2-2021.4
+	conda deactivate
+	
+ 
 ### Know the number of CPU (threads) of your computer (here for MacOs) :
 
     sysctl hw.ncpu
