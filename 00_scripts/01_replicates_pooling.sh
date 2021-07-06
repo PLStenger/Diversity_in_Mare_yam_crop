@@ -2,7 +2,7 @@
 
 # pathways in cluster:
 DATADIRECTORY_V4_bacteria=/home/fungi/Diversity_in_Mare_yam_crop/00_raw_data/V4_bacteria
-OUTPUT_V4_bacteria=/Users/home/fungi/Diversity_in_Mare_yam_crop/01_pooled/V4_bacteria
+OUTPUT_V4_bacteria=/home/fungi/Diversity_in_Mare_yam_crop/01_pooled/V4_bacteria
 
 DATADIRECTORY_ITS2_fungi=/home/fungi/Diversity_in_Mare_yam_crop/00_raw_data/ITS2_fungi
 OUTPUT_ITS2_fungi=/home/fungi/Diversity_in_Mare_yam_crop/01_pooled/ITS2_fungi
