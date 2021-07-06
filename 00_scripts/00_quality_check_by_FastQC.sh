@@ -29,8 +29,25 @@ do
       fastqc $FILE -o $OUT_PUT_ITS2_fungi
 done ;
 
+conda deactivate fastqc
+conda activate multiqc
+
+# Run multiqc for quality summary
+
+multiqc $OUT_PUT_ITS2_fungi
+
+conda deactivate multiqc
+conda activate fastqc
+
 # For V4_bacteria
 for FILE in $(ls $DATA_DIRECTORY_V4_bacteria/*.fastq.gz)
 do
       fastqc $FILE -o $OUT_PUT_V4_bacteria
 done ;
+
+conda deactivate fastqc
+conda activate multiqc
+
+# Run multiqc for quality summary
+
+multiqc $OUT_PUT_V4_bacteria
