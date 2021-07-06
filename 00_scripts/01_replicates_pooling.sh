@@ -1,7 +1,12 @@
 #!/usr/bin/env bash
 
-DATADIRECTORY_V4_bacteria=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/00_raw_data/V4_bacteria
-OUTPUT_V4_bacteria=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/01_pooled/V4_bacteria
+# pathways in cluster:
+DATADIRECTORY_V4_bacteria=/home/fungi/Diversity_in_Mare_yam_crop/00_raw_data/V4_bacteria
+OUTPUT_V4_bacteria=/Users/home/fungi/Diversity_in_Mare_yam_crop/01_pooled/V4_bacteria
+
+# pathways in local:
+#DATADIRECTORY_V4_bacteria=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/00_raw_data/V4_bacteria
+#OUTPUT_V4_bacteria=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/01_pooled/V4_bacteria
 
 cd $DATADIRECTORY_V4_bacteria
 
