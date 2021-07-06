@@ -19,6 +19,7 @@ OUT_PUT_V4_bacteria=/home/fungi/Diversity_in_Mare_yam_crop/01_quality_check/OUT_
 #OUT_PUT_ITS2_fungi=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/01_quality_check/OUT_PUT_ITS2_fungi
 #OUT_PUT_V4_bacteria=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/01_quality_check/OUT_PUT_V4_bacteria
 
+eval "$(conda shell.bash hook)"
 conda activate fastqc
 
 cd $WORKING_DIRECTORY
