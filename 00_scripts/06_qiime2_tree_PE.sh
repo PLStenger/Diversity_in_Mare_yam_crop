@@ -16,6 +16,10 @@ DATADIRECTORY_V4_bacteria=/home/fungi/Diversity_in_Mare_yam_crop/05_QIIME2/Paire
 
 cd $DATADIRECTORY_ITS2_fungi
 
+# Make the directory (mkdir) only if not existe already(-p)
+mkdir -p tree
+mkdir -p export/tree
+
 eval "$(conda shell.bash hook)"
 conda activate qiime2-2021.4
 
@@ -60,9 +64,12 @@ qiime tools export --input-path tree/masked-aligned-RepSeq.qza --output-path exp
 
 cd $DATADIRECTORY_V4_bacteria
 
+# Make the directory (mkdir) only if not existe already(-p)
+mkdir -p tree
+mkdir -p export/tree
+
 eval "$(conda shell.bash hook)"
 conda activate qiime2-2021.4
-
 
 #carry out a multiple seqeunce alignment using Mafft
  qiime alignment mafft \
