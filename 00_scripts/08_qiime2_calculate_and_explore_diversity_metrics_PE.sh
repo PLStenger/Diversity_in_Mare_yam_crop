@@ -322,7 +322,6 @@ qiime tools export --input-path visual/Emperor-weighted_unifrac.qzv --output-pat
 qiime tools export --input-path visual/Emperor-unweighted_unifrac.qzv --output-path export/visual/Emperor-unweighted_unifrac 
 
 qiime tools export --input-path core/bray_curtis_distance_matrix.qza --output-path export/core/bray_curtis_distance_matrix
-qiime tools export --input-path pcoa/PCoA-braycurtis.qza --output-path export/pcoa/PCoA-braycurtis
 qiime tools export --input-path core/Vector-evenness.qza --output-path export/core/Vector-evenness
 qiime tools export --input-path core/Vector-faith_pd.qza --output-path export/core/Vector-faith_pd_BEFORE
 qiime tools export --input-path core/jaccard_distance_matrix.qza --output-path export/core/jaccard_distance_matrix
@@ -331,7 +330,6 @@ qiime tools export --input-path core/observed_otus_vector.qza --output-path expo
 qiime tools export --input-path core/rarefied_table.qza --output-path export/core/rarefied_table
 qiime tools export --input-path core/Vector-shannon.qza --output-path export/core/Vector-shannon
 qiime tools export --input-path core/Matrix-unweighted_unifrac.qza --output-path export/core/Matrix-unweighted_unifrac
-qiime tools export --input-path pcoa/PCoA-unweighted_unifrac.qza --output-path export/pcoa/PCoA-unweighted_unifrac
 qiime tools export --input-path core/weighted_unifrac_distance_matrix.qza --output-path export/core/weighted_unifrac_distance_matrix
 qiime tools export --input-path core/weighted_unifrac_pcoa_results.qza --output-path export/core/weighted_unifrac_pcoa_results
 
@@ -638,7 +636,6 @@ qiime tools export --input-path visual/Emperor-weighted_unifrac.qzv --output-pat
 qiime tools export --input-path visual/Emperor-unweighted_unifrac.qzv --output-path export/visual/Emperor-unweighted_unifrac 
 
 qiime tools export --input-path core/bray_curtis_distance_matrix.qza --output-path export/core/bray_curtis_distance_matrix
-qiime tools export --input-path pcoa/PCoA-braycurtis.qza --output-path export/core/PCoA-braycurtis
 qiime tools export --input-path core/Vector-evenness.qza --output-path export/core/Vector-evenness
 qiime tools export --input-path core/Vector-faith_pd.qza --output-path export/core/Vector-faith_pd_BEFORE
 qiime tools export --input-path core/jaccard_distance_matrix.qza --output-path export/core/jaccard_distance_matrix
@@ -647,7 +644,6 @@ qiime tools export --input-path core/observed_otus_vector.qza --output-path expo
 qiime tools export --input-path core/rarefied_table.qza --output-path export/core/rarefied_table
 qiime tools export --input-path core/Vector-shannon.qza --output-path export/core/Vector-shannon
 qiime tools export --input-path core/Matrix-unweighted_unifrac.qza --output-path export/core/Matrix-unweighted_unifrac
-qiime tools export --input-path pcoa/PCoA-unweighted_unifrac.qza --output-path export/core/PCoA-unweighted_unifrac
 qiime tools export --input-path core/weighted_unifrac_distance_matrix.qza --output-path export/core/weighted_unifrac_distance_matrix
 qiime tools export --input-path core/weighted_unifrac_pcoa_results.qza --output-path export/core/weighted_unifrac_pcoa_results
 
