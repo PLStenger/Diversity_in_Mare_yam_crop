@@ -53,7 +53,7 @@ qiime diversity core-metrics-phylogenetic \
        --p-sampling-depth 5569 \
        --m-metadata-file $METADATA_ITS2/sample-metadata.tsv \
        --o-rarefied-table core/RarTable.qza \
-       --o-observed-otus-vector core/Vector-observed_asv.qza \
+       --o-observed-features-vector core/Vector-observed_asv.qza \
        --o-shannon-vector core/Vector-shannon.qza \
        --o-evenness-vector core/Vector-evenness.qza \
        --o-faith-pd-vector core/Vector-faith_pd.qza \
@@ -374,7 +374,7 @@ qiime diversity core-metrics-phylogenetic \
        --p-sampling-depth 2638 \
        --m-metadata-file $METADATA_V4/sample-metadata.tsv \
        --o-rarefied-table core/RarTable.qza \
-       --o-observed-otus-vector core/Vector-observed_asv.qza \
+       --o-observed-features-vector core/Vector-observed_asv.qza \
        --o-shannon-vector core/Vector-shannon.qza \
        --o-evenness-vector core/Vector-evenness.qza \
        --o-faith-pd-vector core/Vector-faith_pd.qza \
