@@ -250,14 +250,15 @@ One of these things is not like the other. Real refers to actual elapsed time; U
 	
 	time nohup bash 07_qiime2_rarefaction_PE.sh &> 07_qiime2_rarefaction_PE.out
 			Local			Cluster
-			>real	1m45.833s	
-			>user	0m57.637s	
-			>sys	0m14.762s	
+			>real	1m45.833s	?
+			>user	0m57.637s	?
+			>sys	0m14.762s	.
 	
 	time nohup bash 08_qiime2_calculate_and_explore_diversity_metrics_PE.sh &> 08_qiime2_calculate_and_explore_diversity_metrics_PE.out
-			>real	35m11.058s
-			>user	11m18.333s
-			>sys	2m25.772s
+			Local			Cluster
+			>real	35m11.058s	?
+			>user	11m18.333s	?
+			>sys	2m25.772s	?
 	
 	time nohup bash 09_core_biom_PE.sh &> 09_core_biom_PE.out
 			>real	18m26.579s
