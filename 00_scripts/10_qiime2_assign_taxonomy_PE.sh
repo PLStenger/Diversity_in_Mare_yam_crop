@@ -72,7 +72,7 @@ cp taxonomy/DataSeq.qza taxonomy/RefSeq.qza
 scp -r taxonomy/RefSeq.qza /scratch_vol1/fungi/junk/taxonomy
 scp -r taxonomy/RefTaxo.qza /scratch_vol1/fungi/junk/taxonomy
 
-cd /scratch_vol1/fungi/junk/taxonomy
+cd /scratch_vol1/fungi/junk
 
 # Aim: Create a scikit-learn naive_bayes classifier for reads
 
@@ -83,7 +83,7 @@ qiime feature-classifier fit-classifier-naive-bayes \
 
 scp -r taxonomy/Classifier.qza /home/fungi/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/ITS2/taxonomy
 
-cd /home/fungi/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/ITS2/t
+cd /home/fungi/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/ITS2
 
 # Aim: Classify reads by taxon using a fitted classifier
 # --p-reads-per-batch 1000
