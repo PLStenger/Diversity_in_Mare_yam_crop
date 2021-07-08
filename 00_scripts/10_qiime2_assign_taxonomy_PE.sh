@@ -67,23 +67,15 @@ qiime tools import --type 'FeatureData[Sequence]' \
 
 cp taxonomy/DataSeq.qza taxonomy/RefSeq.qza
 
-# Now in order to deal with the "no left space" problem, we will sned temporarly the files in the SCRATCH part of the cluster
-
-scp -r taxonomy/RefSeq.qza /scratch_vol1/fungi/junk/taxonomy
-scp -r taxonomy/RefTaxo.qza /scratch_vol1/fungi/junk/taxonomy
-
-cd /scratch_vol1/fungi/junk
+# Now in order to deal with the "no left space" problem, we will sned temporarly the files in the SCRATCH part of the cluster, I directly did this step in local and then upload the file in cluster
 
 # Aim: Create a scikit-learn naive_bayes classifier for reads
 
-qiime feature-classifier fit-classifier-naive-bayes \
-  --i-reference-reads taxonomy/RefSeq.qza \
-  --i-reference-taxonomy taxonomy/RefTaxo.qza \
-  --o-classifier taxonomy/Classifier.qza
+#qiime feature-classifier fit-classifier-naive-bayes \
+#  --i-reference-reads taxonomy/RefSeq.qza \
+#  --i-reference-taxonomy taxonomy/RefTaxo.qza \
+#  --o-classifier taxonomy/Classifier.qza
 
-scp -r taxonomy/Classifier.qza /home/fungi/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/ITS2/taxonomy
-
-cd /home/fungi/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/ITS2
 
 # Aim: Classify reads by taxon using a fitted classifier
 # --p-reads-per-batch 1000
