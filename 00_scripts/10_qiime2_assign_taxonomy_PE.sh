@@ -119,25 +119,25 @@ qiime metadata tabulate \
 qiime taxa barplot \
   --i-table core/Table.qza \
   --i-taxonomy taxonomy/taxonomy.qza \
-  --m-metadata-file $DATABASE/sample-metadata.tsv \
+  --m-metadata-file $METADATA_ITS2/sample-metadata.tsv \
   --o-visualization taxonomy/taxa-bar-plots_reads-per-batch_taxonomy.qzv
   
 qiime taxa barplot \
   --i-table core/Table.qza \
   --i-taxonomy taxonomy/taxonomy_reads-per-batch_RepSeq.qza \
-  --m-metadata-file $DATABASE/sample-metadata.tsv \
+  --m-metadata-file $METADATA_ITS2/sample-metadata.tsv \
   --o-visualization taxonomy/taxa-bar-plots_reads-per-batch_RepSeq.qzv
 
 qiime taxa barplot \
   --i-table core/Table.qza \
   --i-taxonomy taxonomy/taxonomy_reads-per-batch_ConRepSeq.qza \
-  --m-metadata-file $DATABASE/sample-metadata.tsv \
+  --m-metadata-file $METADATA_ITS2/sample-metadata.tsv \
   --o-visualization taxonomy/taxa-bar-plots_reads-per-batch_ConRepSeq.qzv
   
 qiime taxa barplot \
   --i-table core/Table.qza \
   --i-taxonomy taxonomy/taxonomy_reads-per-batch_RarRepSeq.qza \
-  --m-metadata-file $DATABASE/sample-metadata.tsv \
+  --m-metadata-file $METADATA_ITS2/sample-metadata.tsv \
   --o-visualization taxonomy/taxa-bar-plots_reads-per-batch_RarRepSeq.qzv  
 
 qiime tools export --input-path taxonomy/Classifier.qza --output-path export/taxonomy/Classifier
@@ -278,25 +278,25 @@ qiime metadata tabulate \
 qiime taxa barplot \
   --i-table core/Table.qza \
   --i-taxonomy taxonomy/taxonomy.qza \
-  --m-metadata-file $DATABASE/sample-metadata.tsv \
+  --m-metadata-file $METADATA_V4/sample-metadata.tsv \
   --o-visualization taxonomy/taxa-bar-plots_reads-per-batch_taxonomy.qzv
   
 qiime taxa barplot \
   --i-table core/Table.qza \
   --i-taxonomy taxonomy/taxonomy_reads-per-batch_RepSeq.qza \
-  --m-metadata-file $DATABASE/sample-metadata.tsv \
+  --m-metadata-file $METADATA_V4/sample-metadata.tsv \
   --o-visualization taxonomy/taxa-bar-plots_reads-per-batch_RepSeq.qzv
 
 qiime taxa barplot \
   --i-table core/Table.qza \
   --i-taxonomy taxonomy/taxonomy_reads-per-batch_ConRepSeq.qza \
-  --m-metadata-file $DATABASE/sample-metadata.tsv \
+  --m-metadata-file $METADATA_V4/sample-metadata.tsv \
   --o-visualization taxonomy/taxa-bar-plots_reads-per-batch_ConRepSeq.qzv
   
 qiime taxa barplot \
   --i-table core/Table.qza \
   --i-taxonomy taxonomy/taxonomy_reads-per-batch_RarRepSeq.qza \
-  --m-metadata-file $DATABASE/sample-metadata.tsv \
+  --m-metadata-file $METADATA_V4/sample-metadata.tsv \
   --o-visualization taxonomy/taxa-bar-plots_reads-per-batch_RarRepSeq.qzv  
 
 qiime tools export --input-path taxonomy/Classifier.qza --output-path export/taxonomy/Classifier
