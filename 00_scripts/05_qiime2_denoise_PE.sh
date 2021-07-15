@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
 # pathways in cluster:
-DATADIRECTORY_ITS2_fungi=/home/fungi/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/ITS2/
-DATADIRECTORY_V4_bacteria=/home/fungi/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/V4/
+DATADIRECTORY_ITS2_fungi=/scratch_vol1/fungi/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/ITS2/
+DATADIRECTORY_V4_bacteria=/scratch_vol1/fungi/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/V4/
 
-METADATA_FUNGI=/home/fungi/Diversity_in_Mare_yam_crop/98_database_files/ITS2/sample-metadata.tsv
-METADATA_BACTERIA=/home/fungi/Diversity_in_Mare_yam_crop/98_database_files/V4/sample-metadata.tsv
+METADATA_FUNGI=/scratch_vol1/fungi/Diversity_in_Mare_yam_crop/98_database_files/ITS2/sample-metadata.tsv
+METADATA_BACTERIA=/scratch_vol1/fungi/Diversity_in_Mare_yam_crop/98_database_files/V4/sample-metadata.tsv
 
 # pathways in local:
 #DATADIRECTORY_ITS2_fungi=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/ITS2/
@@ -64,7 +64,7 @@ qiime dada2 denoise-paired --i-demultiplexed-seqs core/demux.qza \
 # Here --i-reference-sequences correspond to the negative control sample (if you don't have any, like here, take another one from an old project, the one here is from the same sequencing line (but not same project))
 
 qiime quality-control exclude-seqs --i-query-sequences core/RepSeq.qza \
-      					     --i-reference-sequences /home/fungi/Diversity_in_Mare_yam_crop/98_database_files/ITS2/Negative_control_Sample_RepSeq_ITS2.qza\
+      					     --i-reference-sequences /scratch_vol1/fungi/Diversity_in_Mare_yam_crop/98_database_files/ITS2/Negative_control_Sample_RepSeq_ITS2.qza\
       					     --p-method vsearch \
       					     --p-threads 6 \
       					     --p-perc-identity 1.00 \
@@ -182,7 +182,7 @@ qiime dada2 denoise-paired --i-demultiplexed-seqs core/demux.qza \
 # Here --i-reference-sequences correspond to the negative control sample (if you don't have any, like here, take another one from an old project, the one here is from the same sequencing line (but not same project))
 
 qiime quality-control exclude-seqs --i-query-sequences core/RepSeq.qza \
-      					     --i-reference-sequences /home/fungi/Diversity_in_Mare_yam_crop/98_database_files/V4/Negative_control_Sample_RepSeq_V4.qza \
+      					     --i-reference-sequences /scratch_vol1/fungi/Diversity_in_Mare_yam_crop/98_database_files/V4/Negative_control_Sample_RepSeq_V4.qza \
       					     --p-method vsearch \
       					     --p-threads 6 \
       					     --p-perc-identity 1.00 \
