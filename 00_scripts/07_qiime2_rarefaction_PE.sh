@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
 # pathways in cluster:
-DATADIRECTORY_ITS2_fungi=/home/fungi/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/ITS2/
-DATADIRECTORY_V4_bacteria=/home/fungi/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/V4/
+DATADIRECTORY_ITS2_fungi=/scratch_vol1/fungi/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/ITS2/
+DATADIRECTORY_V4_bacteria=/scratch_vol1/fungi/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/V4/
 
-METADATA_ITS2=/home/fungi/Diversity_in_Mare_yam_crop/98_database_files/ITS2
-METADATA_V4=/home/fungi/Diversity_in_Mare_yam_crop/98_database_files/V4
+METADATA_ITS2=/scratch_vol1/fungi/Diversity_in_Mare_yam_crop/98_database_files/ITS2
+METADATA_V4=/scratch_vol1/fungi/Diversity_in_Mare_yam_crop/98_database_files/V4
 
 # pathways in local:
 #DATADIRECTORY_ITS2_fungi=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/ITS2/
