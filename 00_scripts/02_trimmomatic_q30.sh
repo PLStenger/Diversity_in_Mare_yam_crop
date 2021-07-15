@@ -4,10 +4,10 @@
 # trimmomatic manual : http://www.usadellab.org/cms/uploads/supplementary/Trimmomatic/TrimmomaticManual_V0.32.pdf
 
 # pathways in cluster:
-DATADIRECTORY_ITS2_fungi=/home/fungi/Diversity_in_Mare_yam_crop/01_pooled/ITS2_fungi
-DATADIRECTORY_V4_bacteria=/home/fungi/Diversity_in_Mare_yam_crop/01_pooled/V4_bacteria
-DATAOUTPUT_ITS2_fungi=/home/fungi/Diversity_in_Mare_yam_crop/02_cleaned_data/DATAOUTPUT_ITS2_fungi
-DATAOUTPUT_V4_bacteria=/home/fungi/Diversity_in_Mare_yam_crop/02_cleaned_data/DATAOUTPUT_V4_bacteria
+DATADIRECTORY_ITS2_fungi=/scratch_vol1/fungi/Diversity_in_Mare_yam_crop/01_pooled/ITS2_fungi
+DATADIRECTORY_V4_bacteria=/scratch_vol1/fungi/Diversity_in_Mare_yam_crop/01_pooled/V4_bacteria
+DATAOUTPUT_ITS2_fungi=/scratch_vol1/fungi/Diversity_in_Mare_yam_crop/02_cleaned_data/DATAOUTPUT_ITS2_fungi
+DATAOUTPUT_V4_bacteria=/scratch_vol1/fungi/Diversity_in_Mare_yam_crop/02_cleaned_data/DATAOUTPUT_V4_bacteria
 
 # pathways in local:
 #DATADIRECTORY_ITS2_fungi=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/01_pooled/ITS2_fungi
@@ -18,7 +18,7 @@ DATAOUTPUT_V4_bacteria=/home/fungi/Diversity_in_Mare_yam_crop/02_cleaned_data/DA
 eval "$(conda shell.bash hook)"
 conda activate trimmomatic
 
-ADAPTERFILE=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/99_softwares/adapters_sequences.fasta
+ADAPTERFILE=/scratch_vol1/fungi/Diversity_in_Mare_yam_crop/99_softwares/adapters_sequences.fasta
 # cat $ADAPTERFILE
 #>Illumina_TruSeq_LT_R1 AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC
 #>Illumina_TruSeq_LT_R2 AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT
