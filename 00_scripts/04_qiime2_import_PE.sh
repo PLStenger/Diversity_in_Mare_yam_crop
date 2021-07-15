@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 
 # pathways in cluster:
-DATADIRECTORY_ITS2_fungi=/home/fungi/Diversity_in_Mare_yam_crop/02_cleaned_data/DATAOUTPUT_ITS2_fungi
-DATADIRECTORY_V4_bacteria=/home/fungi/Diversity_in_Mare_yam_crop/02_cleaned_data/DATAOUTPUT_V4_bacteria
+DATADIRECTORY_ITS2_fungi=/scratch_vol1/fungi/Diversity_in_Mare_yam_crop/02_cleaned_data/DATAOUTPUT_ITS2_fungi
+DATADIRECTORY_V4_bacteria=/scratch_vol1/fungi/Diversity_in_Mare_yam_crop/02_cleaned_data/DATAOUTPUT_V4_bacteria
 
-OUTPUT_ITS2_fungi=/home/fungi/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/ITS2
-OUTPUT_V4_bacteria=/home/fungi/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/V4
+OUTPUT_ITS2_fungi=/scratch_vol1/fungi/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/ITS2
+OUTPUT_V4_bacteria=/scratch_vol1/fungi/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/V4
 
-MANIFEST_FUNGI=/home/fungi/Diversity_in_Mare_yam_crop/98_database_files/ITS2/manifest_cluster
-MANIFEST_BACTERIA=/home/fungi/Diversity_in_Mare_yam_crop/98_database_files/V4/manifest_cluster
+MANIFEST_FUNGI=/scratch_vol1/fungi/Diversity_in_Mare_yam_crop/98_database_files/ITS2/manifest_cluster
+MANIFEST_BACTERIA=/scratch_vol1/fungi/Diversity_in_Mare_yam_crop/98_database_files/V4/manifest_cluster
 
 # pathways in local:
 #DATADIRECTORY_ITS2_fungi=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/02_cleaned_data/DATAOUTPUT_ITS2_fungi
