@@ -6,11 +6,11 @@
 # Correct tool citation : Andrews, S. (2010). FastQC: a quality control tool for high throughput sequence data.
 
 # pathways in cluster:
-WORKING_DIRECTORY=/home/fungi/Diversity_in_Mare_yam_crop
-DATA_DIRECTORY_ITS2_fungi=/home/fungi/Diversity_in_Mare_yam_crop/00_raw_data/ITS2_fungi
-DATA_DIRECTORY_V4_bacteria=/home/fungi/Diversity_in_Mare_yam_crop/00_raw_data/V4_bacteria
-OUT_PUT_ITS2_fungi=/home/fungi/Diversity_in_Mare_yam_crop/01_quality_check/OUT_PUT_ITS2_fungi
-OUT_PUT_V4_bacteria=/home/fungi/Diversity_in_Mare_yam_crop/01_quality_check/OUT_PUT_V4_bacteria
+WORKING_DIRECTORY=/scratch_vol1/fungi/Diversity_in_Mare_yam_crop
+DATA_DIRECTORY_ITS2_fungi=/scratch_vol1/fungi/Diversity_in_Mare_yam_crop/00_raw_data/ITS2_fungi
+DATA_DIRECTORY_V4_bacteria=/scratch_vol1/fungi/Diversity_in_Mare_yam_crop/00_raw_data/V4_bacteria
+OUT_PUT_ITS2_fungi=/scratch_vol1/fungi/Diversity_in_Mare_yam_crop/01_quality_check/OUT_PUT_ITS2_fungi
+OUT_PUT_V4_bacteria=/scratch_vol1/fungi/Diversity_in_Mare_yam_crop/01_quality_check/OUT_PUT_V4_bacteria
 
 # pathways in local:
 #WORKING_DIRECTORY=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop
