@@ -40,17 +40,17 @@ conda activate qiime2-2021.4
 mkdir -p taxonomy
 mkdir -p export/taxonomy
 
-#qiime tools import --type 'FeatureData[Taxonomy]' \
-#  --input-format HeaderlessTSVTaxonomyFormat \
-#  --input-path /home/fungi/Diversity_in_Mare_yam_crop/98_database_files/ITS2/Taxonomy-UNITE-V7-S-2017.12.01-dynamic.txt \
-#  --output-path taxonomy/RefTaxo.qza
+qiime tools import --type 'FeatureData[Taxonomy]' \
+  --input-format HeaderlessTSVTaxonomyFormat \
+  --input-path /scratch_vol1/fungi/Diversity_in_Mare_yam_crop/98_database_files/ITS2/Taxonomy-UNITE-V7-S-2017.12.01-dynamic.txt \
+  --output-path taxonomy/RefTaxo.qza
 
 # You will need to importe the "Sequence-UNITE-V7-S-2017.12.01-dynamic.fasta" file by yourself because it's to big for beeing upload by GitHub.
 # You can donwload it from here : https://gitlab.com/IAC_SolVeg/CNRT_BIOINDIC/-/tree/master/inp/qiime2/taxonomy/its2
 
-#qiime tools import --type 'FeatureData[Sequence]' \
-#  --input-path /home/fungi/Diversity_in_Mare_yam_crop/98_database_files/ITS2/Sequence-UNITE-V7-S-2017.12.01-dynamic.fasta \
-#  --output-path taxonomy/DataSeq.qza
+qiime tools import --type 'FeatureData[Sequence]' \
+  --input-path /scratch_vol1/fungi/Diversity_in_Mare_yam_crop/98_database_files/ITS2/Sequence-UNITE-V7-S-2017.12.01-dynamic.fasta \
+  --output-path taxonomy/DataSeq.qza
 
 
 # Fungal ITS classifiers trained on the UNITE reference database do NOT benefit
@@ -65,16 +65,16 @@ mkdir -p export/taxonomy
 
 # Aim: Rename import ITS2 DataSeq in ITS2 RefSeq for training.
 
-# cp taxonomy/DataSeq.qza taxonomy/RefSeq.qza
+cp taxonomy/DataSeq.qza taxonomy/RefSeq.qza
 
 # Now in order to deal with the "no left space" problem, we will sned temporarly the files in the SCRATCH part of the cluster, I directly did this step in local and then upload the file in cluster
 
 # Aim: Create a scikit-learn naive_bayes classifier for reads
 
-#qiime feature-classifier fit-classifier-naive-bayes \
-#  --i-reference-reads taxonomy/RefSeq.qza \
-#  --i-reference-taxonomy taxonomy/RefTaxo.qza \
-#  --o-classifier taxonomy/Classifier.qza
+qiime feature-classifier fit-classifier-naive-bayes \
+  --i-reference-reads taxonomy/RefSeq.qza \
+  --i-reference-taxonomy taxonomy/RefTaxo.qza \
+  --o-classifier taxonomy/Classifier.qza
 
 
 # Aim: Classify reads by taxon using a fitted classifier
@@ -235,7 +235,12 @@ mkdir -p export/taxonomy
 # mv SILVA-138-SSURef-515f-806r-Seqs.qza DataSeq.qza
 # mv SILVA-v138-515f-806r-consensus-taxonomy.qza RefTaxo.qza
 
+# Aim: Create a scikit-learn naive_bayes classifier for reads
 
+qiime feature-classifier fit-classifier-naive-bayes \
+  --i-reference-reads taxonomy/RefSeq.qza \
+  --i-reference-taxonomy taxonomy/RefTaxo.qza \
+  --o-classifier taxonomy/Classifier.qza
 
 # Aim: Create a scikit-learn naive_bayes classifier for reads
 
