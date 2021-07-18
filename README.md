@@ -214,15 +214,15 @@ One of these things is not like the other. Real refers to actual elapsed time; U
 	
 	time nohup bash 01_replicates_pooling.sh &> 01_replicates_pooling.out
 			Local			Cluster
-			>real	0m12.089s	real	0m4,587s
-			>user	0m0.284s	user	0m0,036s
-			>sys	0m6.321s	sys	0m0,907s
+			>real	0m12.089s	real	0m1,644s
+			>user	0m0.284s	user	0m0,079s
+			>sys	0m6.321s	sys	0m1,558s
 	
 	time nohup bash 02_trimmomatic_q30.sh &> 02_trimmomatic_q30.out
 			Local			Cluster
-			>real	46m36.541s	real	1m34,545s
-			>user	115m46.126s	user	4m24,690s
-			>sys	4m42.181s	sys	0m25,817s
+			>real	46m36.541s	real	13m13,605s
+			>user	115m46.126s	user	102m24,028s
+			>sys	4m42.181s	sys	2m12,431s
 	
 	time nohup bash 03_cleaned_data_quality_check_by_FastQC.sh &> 03_cleaned_data_quality_check_by_FastQC.out
 			Local			Cluster
@@ -250,21 +250,21 @@ One of these things is not like the other. Real refers to actual elapsed time; U
 	
 	time nohup bash 07_qiime2_rarefaction_PE.sh &> 07_qiime2_rarefaction_PE.out
 			Local			Cluster
-			>real	1m45.833s	?
-			>user	0m57.637s	?
-			>sys	0m14.762s	.
+			>real	1m45.833s	real    1m39,117s
+			>user	0m57.637s	user    4m26,996s
+			>sys	0m14.762s	sys     0m23,216s
 	
 	time nohup bash 08_qiime2_calculate_and_explore_diversity_metrics_PE.sh &> 08_qiime2_calculate_and_explore_diversity_metrics_PE.out
 			Local			Cluster
-			>real	35m11.058s	?
-			>user	11m18.333s	?
-			>sys	2m25.772s	?
+			>real	35m11.058s	real    8m35,653s
+			>user	11m18.333s	user    10m4,448s
+			>sys	2m25.772s	sys     3m27,243s
 	
 	time nohup bash 09_core_biom_PE.sh &> 09_core_biom_PE.out
 			Local			Cluster
-			>real	18m26.579s	?
-			>user	3m37.654s	?
-			>sys	0m49.689s	?
+			>real	18m26.579s	real    2m25,279s
+			>user	3m37.654s	user    2m53,403s
+			>sys	0m49.689s	sys     0m59,030s
 	
 	time nohup bash 10_qiime2_assign_taxonomy_PE.sh &> 10_qiime2_assign_taxonomy_PE.out
 			Local			Cluster
