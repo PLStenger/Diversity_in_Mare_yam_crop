@@ -28,12 +28,12 @@ cd $DATADIRECTORY_ITS2_fungi
 eval "$(conda shell.bash hook)"
 conda activate qiime2-2021.4
 
-# Note: max-depth should be chosen based on Table.qzv
+# Note: max-depth should be chosen based on ConTable.qzv
 
 qiime diversity alpha-rarefaction \
-  --i-table core/Table.qza \
+  --i-table core/ConTable.qza \
   --i-phylogeny tree/rooted-tree.qza \
-  --p-max-depth 50121 \
+  --p-max-depth 37746 \
   --p-min-depth 1 \
   --m-metadata-file $METADATA_ITS2/sample-metadata.tsv \
   --o-visualization visual/alpha-rarefaction.qzv
@@ -53,19 +53,19 @@ qiime diversity alpha-rarefaction \
 # --p-sampling-depth # The total frequency that each sample should be rarefied to prior to computing the diversity metric.  
 # --p-sampling-depth # Besoin de se baser sur les resultats de la rarefaction
 
-qiime diversity beta-rarefaction \
-        --i-table core/ConTable.qza \
-        --i-phylogeny tree/rooted-tree.qza \
-        --m-metadata-file $METADATA_ITS2/sample-metadata.tsv \ 
-        --p-clustering-method upgma \ 
-        --p-sampling-depth 16708 \ 
-        --p-iterations 10 \
-        --p-correlation-method spearman \
-        --p-color-scheme BrBG \
-        --o-visualization visual/RareGraph-beta.qzv
+#qiime diversity beta-rarefaction \
+#        --i-table core/ConTable.qza \
+#        --i-phylogeny tree/rooted-tree.qza \
+#        --m-metadata-file $METADATA_ITS2/sample-metadata.tsv \ 
+#        --p-clustering-method upgma \ 
+#        --p-sampling-depth 16708 \ 
+#        --p-iterations 10 \
+#        --p-correlation-method spearman \
+#        --p-color-scheme BrBG \
+#        --o-visualization visual/RareGraph-beta.qzv
   
 qiime tools export --input-path visual/alpha-rarefaction.qzv --output-path export/visual/alpha-rarefaction
-qiime tools export --input-path visual/RareGraph-beta.qzv --output-path export/visual/RareGraph-beta
+#qiime tools export --input-path visual/RareGraph-beta.qzv --output-path export/visual/RareGraph-beta
 
 
 ###############################################################
@@ -77,12 +77,12 @@ cd $DATADIRECTORY_V4_bacteria
 eval "$(conda shell.bash hook)"
 conda activate qiime2-2021.4
 
-# Note: max-depth should be chosen based on Yable.qzv
+# Note: max-depth should be chosen based on ConTable.qzv
 
 qiime diversity alpha-rarefaction \
-  --i-table core/Table.qza \
+  --i-table core/ConTable.qza \
   --i-phylogeny tree/rooted-tree.qza \
-  --p-max-depth 23736 \
+  --p-max-depth 13449 \
   --p-min-depth 1 \
   --m-metadata-file $METADATA_V4/sample-metadata.tsv \
   --o-visualization visual/alpha-rarefaction.qzv
@@ -101,16 +101,16 @@ qiime diversity alpha-rarefaction \
 # --p-sampling-depth # The total frequency that each sample should be rarefied to prior to computing the diversity metric.  
 # --p-sampling-depth # Besoin de se baser sur les resultats de la rarefaction
 
-qiime diversity beta-rarefaction \
-        --i-table core/ConTable.qza \
-        --i-phylogeny tree/rooted-tree.qza \
-        --m-metadata-file $METADATA_V4/sample-metadata.tsv \ 
-        --p-clustering-method upgma \ 
-        --p-sampling-depth 2634 \ 
-        --p-iterations 10 \
-        --p-correlation-method spearman \
-        --p-color-scheme BrBG \
-        --o-visualization visual/RareGraph-beta.qzv
+#qiime diversity beta-rarefaction \
+#        --i-table core/ConTable.qza \
+#        --i-phylogeny tree/rooted-tree.qza \
+#        --m-metadata-file $METADATA_V4/sample-metadata.tsv \ 
+#        --p-clustering-method upgma \ 
+#        --p-sampling-depth 2634 \ 
+#        --p-iterations 10 \
+#        --p-correlation-method spearman \
+#        --p-color-scheme BrBG \
+#        --o-visualization visual/RareGraph-beta.qzv
 
 qiime tools export --input-path visual/alpha-rarefaction.qzv --output-path export/visual/alpha-rarefaction
-qiime tools export --input-path visual/RareGraph-beta.qzv --output-path export/visual/RareGraph-beta
+#qiime tools export --input-path visual/RareGraph-beta.qzv --output-path export/visual/RareGraph-beta
