@@ -25,7 +25,7 @@ conda activate qiime2-2021.4
 
 #carry out a multiple seqeunce alignment using Mafft
  qiime alignment mafft \
-  --i-sequences core/RepSeq.qza \
+  --i-sequences core/ConRepSeq.qza \
   --o-alignment tree/aligned-RepSeq.qza
 
 #mask (or filter) the alignment to remove positions that are highly variable. These positions are generally considered to add noise to a resulting phylogenetic tree.
@@ -73,7 +73,7 @@ conda activate qiime2-2021.4
 
 #carry out a multiple seqeunce alignment using Mafft
  qiime alignment mafft \
-  --i-sequences core/RepSeq.qza \
+  --i-sequences core/ConRepSeq.qza \
   --o-alignment tree/aligned-RepSeq.qza
 
 ##mask (or filter) the alignment to remove positions that are highly variable. These positions are generally considered to add noise to a resulting phylogenetic tree.
