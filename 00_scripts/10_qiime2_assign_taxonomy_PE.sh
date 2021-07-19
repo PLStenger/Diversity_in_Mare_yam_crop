@@ -243,7 +243,8 @@ echo '##########################################################################
 ## You will need to rename the files like that : 
 
 # Doesn't work mv taxonomy/SILVA-v138-515f-806r-noSpeciesLabels-consensus-classifier.qza taxonomy/Classifier.qza
-mv taxonomy/SILVA-v138-515f-806r-classifier.qza taxonomy/Classifier.qza
+# Doesn't work mv taxonomy/SILVA-v138-515f-806r-classifier.qza taxonomy/Classifier.qza
+mv taxonomy/SILVA-v138-515f-806r-consensus-classifier.qza taxonomy/Classifier.qza
 
 # mv taxonomy/SILVA-138-SSURef-515f-806r-Seqs.qza taxonomy/DataSeq.qza
 #mv taxonomy/SILVA-v138-515f-806r-noSpeciesLabels-consensus-taxonomy.qza taxonomy/RefTaxo.qza
