@@ -133,13 +133,13 @@ qiime taxa barplot \
   --o-visualization taxonomy/taxa-bar-plots_reads-per-batch_RepSeq.qzv
 
 qiime taxa barplot \
-  --i-table core/Table.qza \
+  --i-table core/ConTable.qza \
   --i-taxonomy taxonomy/taxonomy_reads-per-batch_ConRepSeq.qza \
   --m-metadata-file $METADATA_ITS2/sample-metadata.tsv \
   --o-visualization taxonomy/taxa-bar-plots_reads-per-batch_ConRepSeq.qzv
   
 qiime taxa barplot \
-  --i-table core/Table.qza \
+  --i-table core/RarTable.qza \
   --i-taxonomy taxonomy/taxonomy_reads-per-batch_RarRepSeq.qza \
   --m-metadata-file $METADATA_ITS2/sample-metadata.tsv \
   --o-visualization taxonomy/taxa-bar-plots_reads-per-batch_RarRepSeq.qzv  
@@ -178,6 +178,11 @@ mkdir -p export/taxonomy
 # I'm doing this step in order to deal the no space left in cluster :
 export TMPDIR='/scratch_vol1/fungi'
 echo $TMPDIR
+
+echo '##############################################################################################################################'
+echo '### Bacteria ###'
+echo '##############################################################################################################################'
+
 
 ###### All this step was for "old" database, now we uysed new ones 
 ######
@@ -219,11 +224,11 @@ echo $TMPDIR
 ###### If your primer sequences are > 30 nt long, they most likely contain some
 ###### non-biological sequence !
 #####
-#####qiime feature-classifier extract-reads --i-sequences taxonomy/DataSeq.qza \
-#####        --p-f-primer 'GTGCCAGCMGCCGCGGTAA' \
-#####        --p-r-primer 'TCCTCCGCTTATTGATATGC' \
-#####        --o-reads taxonomy/RefSeq.qza 
-#####        
+qiime feature-classifier extract-reads --i-sequences taxonomy/DataSeq.qza \
+        --p-f-primer 'GTGCCAGCMGCCGCGGTAA' \
+        --p-r-primer 'TCCTCCGCTTATTGATATGC' \
+        --o-reads taxonomy/RefSeq.qza 
+       
 #####        #--p-trunc-len {params.length} \
 #####        
 #####        
@@ -289,13 +294,13 @@ qiime taxa barplot \
   --o-visualization taxonomy/taxa-bar-plots_reads-per-batch_RepSeq.qzv
 
 qiime taxa barplot \
-  --i-table core/Table.qza \
+  --i-table core/ConTable.qza \
   --i-taxonomy taxonomy/taxonomy_reads-per-batch_ConRepSeq.qza \
   --m-metadata-file $METADATA_V4/sample-metadata.tsv \
   --o-visualization taxonomy/taxa-bar-plots_reads-per-batch_ConRepSeq.qzv
   
 qiime taxa barplot \
-  --i-table core/Table.qza \
+  --i-table core/RarTable.qza \
   --i-taxonomy taxonomy/taxonomy_reads-per-batch_RarRepSeq.qza \
   --m-metadata-file $METADATA_V4/sample-metadata.tsv \
   --o-visualization taxonomy/taxa-bar-plots_reads-per-batch_RarRepSeq.qzv  
