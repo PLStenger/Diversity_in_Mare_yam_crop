@@ -242,9 +242,9 @@ echo '##########################################################################
         
 ## You will need to rename the files like that : 
 
-mv taxonomy/SILVA-v138-515f-806r-consensus-classifier.qza taxonomy/Classifier.qza
-mv taxonomy/SILVA-138-SSURef-515f-806r-Seqs.qza taxonomy/DataSeq.qza
-mv taxonomy/SILVA-v138-515f-806r-consensus-taxonomy.qza taxonomy/RefTaxo.qza
+mv taxonomy/SILVA-v138-515f-806r-noSpeciesLabels-consensus-classifier.qza taxonomy/Classifier.qza
+# mv taxonomy/SILVA-138-SSURef-515f-806r-Seqs.qza taxonomy/DataSeq.qza
+#mv taxonomy/SILVA-v138-515f-806r-noSpeciesLabels-consensus-taxonomy.qza taxonomy/RefTaxo.qza
 
 # Aim: Create a scikit-learn naive_bayes classifier for reads
 
