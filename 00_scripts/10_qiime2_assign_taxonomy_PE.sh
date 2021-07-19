@@ -42,40 +42,49 @@ conda activate qiime2-2021.4
 mkdir -p taxonomy
 mkdir -p export/taxonomy
 
-export TMPDIR='/scratch_vol1'
+export TMPDIR='/scratch_vol1/fungi'
 echo $TMPDIR
 
-qiime tools import --type 'FeatureData[Taxonomy]' \
-  --input-format HeaderlessTSVTaxonomyFormat \
-  --input-path /scratch_vol1/fungi/Diversity_in_Mare_yam_crop/98_database_files/ITS2/Taxonomy-UNITE-V7-S-2017.12.01-dynamic.txt \
-  --output-path taxonomy/RefTaxo.qza
+print 'ls /scratch_vol1/fungi'
+ls /scratch_vol1/fungi
 
-# You will need to importe the "Sequence-UNITE-V7-S-2017.12.01-dynamic.fasta" file by yourself because it's to big for beeing upload by GitHub.
-# You can donwload it from here : https://gitlab.com/IAC_SolVeg/CNRT_BIOINDIC/-/tree/master/inp/qiime2/taxonomy/its2
+print 'env'
+env
 
-qiime tools import --type 'FeatureData[Sequence]' \
-  --input-path /scratch_vol1/fungi/Diversity_in_Mare_yam_crop/98_database_files/ITS2/Sequence-UNITE-V7-S-2017.12.01-dynamic.fasta \
-  --output-path taxonomy/DataSeq.qza
+print 'df -h'
+df -h
 
-
-# Fungal ITS classifiers trained on the UNITE reference database do NOT benefit
-# from extracting / trimming reads to primer sites.
-# We recommend training UNITE classifiers on the full reference sequences !!!
-
-# Furthermore, we recommend the 'developer' sequences
-# (located within the QIIME-compatible release download),
-# because the standard versions of the sequences have already been trimmed to
-# the ITS region, excluding portions of flanking rRNA genes that may be present
-# in amplicons generated with standard ITS primers.
-
-# Aim: Rename import ITS2 DataSeq in ITS2 RefSeq for training.
-
-cp taxonomy/DataSeq.qza taxonomy/RefSeq.qza
-
-# Now in order to deal with the "no left space" problem, we will sned temporarly the files in the SCRATCH part of the cluster, I directly did this step in local and then upload the file in cluster
-
-# Aim: Create a scikit-learn naive_bayes classifier for reads
-
+##qiime tools import --type 'FeatureData[Taxonomy]' \
+##  --input-format HeaderlessTSVTaxonomyFormat \
+##  --input-path /scratch_vol1/fungi/Diversity_in_Mare_yam_crop/98_database_files/ITS2/Taxonomy-UNITE-V7-S-2017.12.01-dynamic.txt \
+##  --output-path taxonomy/RefTaxo.qza
+##
+### You will need to importe the "Sequence-UNITE-V7-S-2017.12.01-dynamic.fasta" file by yourself because it's to big for beeing upload by GitHub.
+### You can donwload it from here : https://gitlab.com/IAC_SolVeg/CNRT_BIOINDIC/-/tree/master/inp/qiime2/taxonomy/its2
+##
+##qiime tools import --type 'FeatureData[Sequence]' \
+##  --input-path /scratch_vol1/fungi/Diversity_in_Mare_yam_crop/98_database_files/ITS2/Sequence-UNITE-V7-S-2017.12.01-dynamic.fasta \
+##  --output-path taxonomy/DataSeq.qza
+##
+##
+### Fungal ITS classifiers trained on the UNITE reference database do NOT benefit
+### from extracting / trimming reads to primer sites.
+### We recommend training UNITE classifiers on the full reference sequences !!!
+##
+### Furthermore, we recommend the 'developer' sequences
+### (located within the QIIME-compatible release download),
+### because the standard versions of the sequences have already been trimmed to
+### the ITS region, excluding portions of flanking rRNA genes that may be present
+### in amplicons generated with standard ITS primers.
+##
+### Aim: Rename import ITS2 DataSeq in ITS2 RefSeq for training.
+##
+##cp taxonomy/DataSeq.qza taxonomy/RefSeq.qza
+##
+### Now in order to deal with the "no left space" problem, we will sned temporarly the files in the SCRATCH part of the cluster, I directly did this step in local and then upload the file in cluster
+##
+### Aim: Create a scikit-learn naive_bayes classifier for reads
+##
 qiime feature-classifier fit-classifier-naive-bayes \
   --i-reference-reads taxonomy/RefSeq.qza \
   --i-reference-taxonomy taxonomy/RefTaxo.qza \
