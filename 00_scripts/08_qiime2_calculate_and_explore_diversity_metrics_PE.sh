@@ -49,8 +49,8 @@ mkdir -p export/pcoa
 
 qiime diversity core-metrics-phylogenetic \
        --i-phylogeny tree/rooted-tree.qza \
-       --i-table core/Table.qza \
-       --p-sampling-depth 5569 \
+       --i-table core/ConTable.qza \
+       --p-sampling-depth 4194 \
        --m-metadata-file $METADATA_ITS2/sample-metadata.tsv \
        --o-rarefied-table core/RarTable.qza \
        --o-observed-features-vector core/Vector-observed_asv.qza \
@@ -88,6 +88,7 @@ qiime feature-table filter-seqs \
 qiime feature-table tabulate-seqs \
        --i-data core/RarRepSeq.qza \
        --o-visualization core/RarRepSeq.qzv
+           
 
 # summarize_table :
 ##################
@@ -368,8 +369,8 @@ mkdir -p export/pcoa
 
 qiime diversity core-metrics-phylogenetic \
        --i-phylogeny tree/rooted-tree.qza \
-       --i-table core/Table.qza \
-       --p-sampling-depth 2638 \
+       --i-table core/ConTable.qza \
+       --p-sampling-depth 1495 \
        --m-metadata-file $METADATA_V4/sample-metadata.tsv \
        --o-rarefied-table core/RarTable.qza \
        --o-observed-features-vector core/Vector-observed_asv.qza \
