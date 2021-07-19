@@ -7,6 +7,8 @@ DATADIRECTORY_V4_bacteria=/scratch_vol1/fungi/Diversity_in_Mare_yam_crop/05_QIIM
 METADATA_ITS2=/scratch_vol1/fungi/Diversity_in_Mare_yam_crop/98_database_files/ITS2/
 METADATA_V4=/scratch_vol1/fungi/Diversity_in_Mare_yam_crop/98_database_files/V4/
 
+TMPDIR=/scratch_vol1
+
 # pathways in local:
 #DATADIRECTORY_ITS2_fungi=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/ITS2/
 #DATADIRECTORY_V4_bacteria=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/05_QIIME2/Paired_end/V4/
@@ -40,7 +42,7 @@ conda activate qiime2-2021.4
 mkdir -p taxonomy
 mkdir -p export/taxonomy
 
-export TMPDIR='/taxonomy'
+export TMPDIR='/scratch_vol1'
 echo $TMPDIR
 
 qiime tools import --type 'FeatureData[Taxonomy]' \
