@@ -183,6 +183,7 @@ echo '##########################################################################
 echo '### Bacteria ###'
 echo '##############################################################################################################################'
 
+# Taxonomy-SILVA-V132-2018.04.10-99.txt and Sequence-SILVA-V132-2018.04.10-99.fasta can be downloaded here https://gitlab.com/IAC_SolVeg/CNRT_BIOINDIC/-/tree/master/inp/qiime2/taxonomy/v4
 
 # All this step was for "old" database, now we uysed new ones 
 
