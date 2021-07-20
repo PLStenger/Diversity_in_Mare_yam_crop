@@ -184,20 +184,18 @@ echo '### Bacteria ###'
 echo '##############################################################################################################################'
 
 
-###### All this step was for "old" database, now we uysed new ones 
-######
-######
-######
-#####qiime tools import --type 'FeatureData[Taxonomy]' \
-#####  --input-format HeaderlessTSVTaxonomyFormat \
-#####  --input-path /Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/98_database_files/V4/Taxonomy-SILVA-V132-2018.04.10-99.txt \
-#####  --output-path taxonomy/RefTaxo.qza
-#####
-#####qiime tools import --type 'FeatureData[Sequence]' \
-#####  --input-path /Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop/98_database_files/V4/Sequence-SILVA-V132-2018.04.10-99.fasta \
-#####  --output-path taxonomy/DataSeq.qza
-#####
-#####   
+# All this step was for "old" database, now we uysed new ones 
+
+qiime tools import --type 'FeatureData[Taxonomy]' \
+  --input-format HeaderlessTSVTaxonomyFormat \
+  --input-path taxonomy/Taxonomy-SILVA-V132-2018.04.10-99.txt \
+  --output-path taxonomy/RefTaxo.qza
+
+qiime tools import --type 'FeatureData[Sequence]' \
+  --input-path taxonomy/Sequence-SILVA-V132-2018.04.10-99.fasta \
+  --output-path taxonomy/DataSeq.qza
+
+   
 ###### Aim: Extract sequencing-like reads from a reference database.
 ###### Warning: For v4 only !!! Not for its2 !!! 
 #####
@@ -223,12 +221,12 @@ echo '##########################################################################
 #####
 ###### If your primer sequences are > 30 nt long, they most likely contain some
 ###### non-biological sequence !
-#####
-############qiime feature-classifier extract-reads --i-sequences taxonomy/DataSeq.qza \
-############        --p-f-primer 'GTGCCAGCMGCCGCGGTAA' \
-############        --p-r-primer 'TCCTCCGCTTATTGATATGC' \
-############        --o-reads taxonomy/RefSeq.qza 
-############       
+
+qiime feature-classifier extract-reads --i-sequences taxonomy/DataSeq.qza \
+        --p-f-primer 'GTGCCAGCMGCCGCGGTAA' \
+        --p-r-primer 'TCCTCCGCTTATTGATATGC' \
+        --o-reads taxonomy/RefSeq.qza 
+
 #################        #--p-trunc-len {params.length} \
 #####        
 #####        
@@ -244,17 +242,17 @@ echo '##########################################################################
 
 # Doesn't work mv taxonomy/SILVA-v138-515f-806r-noSpeciesLabels-consensus-classifier.qza taxonomy/Classifier.qza
 # Doesn't work mv taxonomy/SILVA-v138-515f-806r-classifier.qza taxonomy/Classifier.qza
-mv taxonomy/SILVA-v138-515f-806r-consensus-classifier.qza taxonomy/Classifier.qza
+# Doesn't work mv taxonomy/SILVA-v138-515f-806r-consensus-classifier.qza taxonomy/Classifier.qza
 
 # mv taxonomy/SILVA-138-SSURef-515f-806r-Seqs.qza taxonomy/DataSeq.qza
-#mv taxonomy/SILVA-v138-515f-806r-noSpeciesLabels-consensus-taxonomy.qza taxonomy/RefTaxo.qza
+# mv taxonomy/SILVA-v138-515f-806r-noSpeciesLabels-consensus-taxonomy.qza taxonomy/RefTaxo.qza
 
 # Aim: Create a scikit-learn naive_bayes classifier for reads
 
-#### qiime feature-classifier fit-classifier-naive-bayes \
-####   --i-reference-reads taxonomy/RefSeq.qza \
-####   --i-reference-taxonomy taxonomy/RefTaxo.qza \
-####   --o-classifier taxonomy/Classifier.qza
+qiime feature-classifier fit-classifier-naive-bayes \
+  --i-reference-reads taxonomy/RefSeq.qza \
+  --i-reference-taxonomy taxonomy/RefTaxo.qza \
+  --o-classifier taxonomy/Classifier.qza
 
 # Aim: Create a scikit-learn naive_bayes classifier for reads
 
