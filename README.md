@@ -128,10 +128,11 @@ Then, download all the necessary softwaures by :
     
 </details>    
 
-## Run scripts in local :
+## Run scripts in local or in cluster :
 
     # Put you in your working directory (as an example, for me it's :)
     cd /Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/05_Mare_ignames/Diversity_in_Mare_yam_crop
+    cd /scratch_vol1/fungi/Diversity_in_Mare_yam_crop/00_scripts
     
 > :warning: **Explanation of Real, User and Sys process time statistics below**
 
